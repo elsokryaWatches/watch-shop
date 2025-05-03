@@ -1,4 +1,5 @@
 import "./About.css";
+import { Link } from "react-router-dom";
 
 export default function About() {
   return (
@@ -24,7 +25,9 @@ export default function About() {
                 allowing our customers to tailor their watches to reflect their
                 personal tastes and preferences.
               </p>
-              <button className="aboutBtn">contact us</button>
+              <button className="aboutBtn">
+                <Link to={"/contact"}>contact us</Link>
+              </button>
             </div>
           </div>
         </div>

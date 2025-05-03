@@ -86,9 +86,12 @@
         padding: 10px 15px;
         border: none;
         background-color: #004609;
-        color: #fff;
         text-transform: uppercase !important;
         transition: all 0.4s ease-in-out;
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
 
         &:hover {
           outline: 1px solid #004609;

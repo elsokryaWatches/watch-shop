@@ -29,9 +29,13 @@
       padding: 5px 20px;
       margin: 10px 0px;
       background-color: transparent;
-      color: #fff;
       letter-spacing: 1px;
       outline: 1px solid #fff;
+
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
 
       &:hover {
         outline: 2px solid #fff;

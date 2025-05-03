@@ -39,15 +39,23 @@
           transform: translate(-50%, -50%);
           padding: 5px 10px;
           background-color: #000;
-          color: #fff;
           border: none;
           text-transform: uppercase !important;
           transition: all 0.3s ease-in-out;
 
+          a {
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+          }
+
           &:hover {
-            color: #000;
             background-color: #fff;
             outline: 1px solid #000;
+
+            a {
+              color: #000;
+            }
           }
         }
       }

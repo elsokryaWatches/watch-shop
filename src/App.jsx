@@ -9,6 +9,7 @@ const Men = lazy(() => import("./components/Men/Men"));
 const Women = lazy(() => import("./components/Women/Women"));
 const Young = lazy(() => import("./components/Young/Young"));
 const Contact = lazy(() => import("./components/Contact/Contact"));
+const Shop = lazy(() => import("./components/Shop/Shop"));
 
 const createRoute = (path, element) => ({
   path,
@@ -28,6 +29,7 @@ export default function App() {
         createRoute("women", <Women />),
         createRoute("young", <Young />),
         createRoute("contact", <Contact />),
+        createRoute("shop", <Shop />),
       ],
     },
   ]);

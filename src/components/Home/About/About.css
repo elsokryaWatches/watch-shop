@@ -22,9 +22,13 @@
         margin: 20px 0px;
         text-transform: uppercase !important;
         background-color: #004609;
-        color: #fff;
         border: none;
         transition: all 0.4s ease-in-out;
+
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
 
         &:hover {
           outline: 1px solid #004609;

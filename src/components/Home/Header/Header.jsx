@@ -1,4 +1,5 @@
 import "./Header.css";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -12,7 +13,9 @@ export default function Header() {
             <div className="textOverlay">
               <h5>ELEGANCE IN EVERY TICK</h5>
               <h2>custom seiko modded watches</h2>
-              <button className="headerBtn">shop all</button>
+              <button className="headerBtn">
+                <Link to={"/shop"}>shop all</Link>
+              </button>
             </div>
           </div>
         </div>

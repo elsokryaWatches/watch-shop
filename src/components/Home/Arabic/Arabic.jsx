@@ -1,4 +1,5 @@
 import "./Arabic.css";
+import { Link } from "react-router-dom";
 
 export default function Arabic() {
   return (
@@ -40,7 +41,9 @@ export default function Arabic() {
               </div>
             </div>
             <div className="toShop center col-10">
-              <button className="arabicBtn">view all</button>
+              <button className="arabicBtn">
+                <Link to={"/shop"}>view all</Link>
+              </button>
             </div>
           </div>
         </div>

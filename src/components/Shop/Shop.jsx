@@ -1,18 +1,10 @@
 import { Link } from "react-router-dom";
-export default function Men() {
+export default function Shop() {
   return (
     <>
       <div className="shop">
         <div className="container-fluid">
           <div className="shopInner row">
-            <div className="shopHeader col-12">
-              <div className="backgroundLayer">
-                <img src="/imgs/pexels-pixabay-277319.jpg" alt="" />
-              </div>
-              <div className="textLayer">
-                <h2>men watches</h2>
-              </div>
-            </div>
             <div className="navModels col-12">
               <button className="navBtn">
                 <Link to={"/men"}>men watches</Link>

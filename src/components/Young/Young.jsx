@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export default function Young() {
   return (
     <>
@@ -14,6 +15,20 @@ export default function Young() {
               <div className="textLayer">
                 <h2>young watches</h2>
               </div>
+            </div>
+            <div className="navModels col-12">
+              <button className="navBtn">
+                <Link to={"/men"}>men watches</Link>
+              </button>
+              <button className="navBtn">
+                <Link to={"/women"}>women watches</Link>
+              </button>
+              <button className="navBtn">
+                <Link to={"/young"}>young watches</Link>
+              </button>
+              <button className="navBtn">
+                <Link to={"/wallets"}>wallets</Link>
+              </button>
             </div>
             <div className="Watches row col-12">
               <div className="watchItem center col-3">
