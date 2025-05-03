@@ -1,0 +1,41 @@
+.header {
+  .backgroundLayer {
+    padding: 0;
+    z-index: -111;
+    filter: brightness(50%);
+  }
+
+  .textOverlay {
+    position: absolute;
+    text-align: center;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    h5 {
+      color: #fff;
+      width: fit-content;
+      background-color: #0000007c;
+      padding: 5px;
+      margin: auto;
+      margin-bottom: 10px;
+    }
+    h2 {
+      color: #fff;
+      margin-bottom: 10px;
+      font-family: EN-PlayfairDisplay !important;
+    }
+    .headerBtn {
+      padding: 5px 20px;
+      margin: 10px 0px;
+      background-color: transparent;
+      color: #fff;
+      letter-spacing: 1px;
+      outline: 1px solid #fff;
+
+      &:hover {
+        outline: 2px solid #fff;
+      }
+    }
+  }
+}

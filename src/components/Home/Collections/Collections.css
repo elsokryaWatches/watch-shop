@@ -1,0 +1,56 @@
+.collection {
+  padding: 50px 0px;
+  .collectionInner {
+    justify-content: center;
+    align-items: center;
+
+    .collHeader {
+      text-align: center;
+      h6 {
+        width: fit-content;
+        margin: auto;
+        margin-bottom: 20px;
+        padding: 5px;
+        background-color: #5c5a5a7c;
+        color: #000;
+        text-transform: uppercase !important;
+      }
+      h2 {
+        color: #000;
+        margin-bottom: 10px;
+        font-family: EN-PlayfairDisplay !important;
+        letter-spacing: 2px;
+        font-size: 50px;
+      }
+    }
+
+    .items {
+      justify-content: center;
+      align-items: center;
+
+      .item {
+        text-align: center;
+        position: relative;
+
+        .itemBtn {
+          position: absolute;
+          bottom: -5%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          padding: 5px 10px;
+          background-color: #000;
+          color: #fff;
+          border: none;
+          text-transform: uppercase !important;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            color: #000;
+            background-color: #fff;
+            outline: 1px solid #000;
+          }
+        }
+      }
+    }
+  }
+}

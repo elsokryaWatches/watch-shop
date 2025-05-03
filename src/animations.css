@@ -1,0 +1,35 @@
+@keyframes fromLeft {
+  from {
+    transform: translateX(-70px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes fromRight {
+  from {
+    transform: translateX(70px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes fromBottom {
+  from {
+    transform: translateY(200px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

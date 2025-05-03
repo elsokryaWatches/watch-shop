@@ -1,0 +1,35 @@
+.about {
+  background-color: #f1f1f1;
+  padding: 50px 0px;
+
+  .aboutInner {
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    .text {
+      text-align: start;
+      h2 {
+        font-size: 50px;
+        font-family: EN-PlayfairDisplay;
+        margin-bottom: 10px;
+        text-transform: uppercase !important;
+      }
+      p {
+        margin-bottom: 10px;
+      }
+      .aboutBtn {
+        padding: 10px 15px;
+        margin: 20px 0px;
+        text-transform: uppercase !important;
+        background-color: #004609;
+        color: #fff;
+        border: none;
+        transition: all 0.4s ease-in-out;
+
+        &:hover {
+          outline: 1px solid #004609;
+        }
+      }
+    }
+  }
+}

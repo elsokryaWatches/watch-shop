@@ -1,0 +1,52 @@
+.navBar {
+  position: sticky;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  z-index: 111;
+  padding: 10px 0px;
+  background-color: #fff;
+
+  .navbarInner {
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    font-family: EN-Bold !important;
+
+    .navList {
+      list-style: none;
+      text-align: center;
+      .navItem {
+        display: inline;
+        margin: 0px 20px;
+        position: relative;
+
+        .navLink {
+          text-decoration: none;
+          color: #000;
+          transition: all 0.3s ease-in-out;
+        }
+
+        &::after {
+          content: "";
+          background-color: #000;
+          height: 2px;
+          width: 0%;
+          position: absolute;
+          bottom: -5px;
+          left: 0%;
+          transition: all 0.3s ease-in-out;
+        }
+
+        &:hover {
+          .navLink {
+            letter-spacing: 1px;
+          }
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
