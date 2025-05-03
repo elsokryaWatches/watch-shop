@@ -19,7 +19,7 @@ export default function Navbar() {
                 </Link>
               </li>
               <li className="navItem">
-                <Link className="navLink" to={"/"}>
+                <Link className="navLink" to={"/contact"}>
                   contact
                 </Link>
               </li>

@@ -8,6 +8,7 @@ const Wallets = lazy(() => import("./components/Wallets/Wallets"));
 const Men = lazy(() => import("./components/Men/Men"));
 const Women = lazy(() => import("./components/Women/Women"));
 const Young = lazy(() => import("./components/Young/Young"));
+const Contact = lazy(() => import("./components/Contact/Contact"));
 
 const createRoute = (path, element) => ({
   path,
@@ -26,6 +27,7 @@ export default function App() {
         createRoute("men", <Men />),
         createRoute("women", <Women />),
         createRoute("young", <Young />),
+        createRoute("contact", <Contact />),
       ],
     },
   ]);
