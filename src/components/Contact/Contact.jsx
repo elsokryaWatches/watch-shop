@@ -3,6 +3,9 @@ export default function Contact() {
   return (
     <>
       <div className="contact">
+        <div className="backgroundLayer">
+          <img src="imgs/pexels-olly-845451.jpg" alt="" />
+        </div>
         <div className="container-fluid">
           <div className="contactInner row">
             <form className="contactForm col-10" action="">

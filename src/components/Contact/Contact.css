@@ -1,11 +1,19 @@
 .contact {
   padding: 50px 0px;
 
+  .backgroundLayer {
+    position: absolute;
+    inset: 0;
+    padding: 0;
+    z-index: -111;
+    filter: brightness(30%);
+  }
   .contactInner {
     justify-content: center;
 
     .contactForm {
-      background-image: linear-gradient(to bottom, #004609, #2e8339);
+      background-image: linear-gradient(to bottom, #00460986, #2e83397c);
+      backdrop-filter: blur(10px);
       color: #fff;
       width: fit-content;
       padding: 10px 5px;
@@ -47,7 +55,7 @@
           transition: all 0.3s ease-in-out;
 
           &:hover {
-            background-color: #2e8339;
+            background-color: #2e83397c;
             color: #fff;
             box-shadow: 0 0 10px #fff;
           }
