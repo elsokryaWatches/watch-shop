@@ -1,8 +1,13 @@
 .wallets {
-  position: fixed;
-  inset: 0;
-  background-image: url("/imgs/SL-070720-32260-33.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  text-align: center;
+  padding: 100px 0px;
+  h1 {
+    font-family: EN-PlayfairDisplay;
+    width: fit-content;
+    margin: auto;
+    padding: 50px;
+    color: #fff;
+    background-color: #000000;
+    border-radius: 30px;
+  }
 }
