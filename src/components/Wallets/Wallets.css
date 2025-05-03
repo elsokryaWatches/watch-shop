@@ -3,12 +3,10 @@
   padding: 100px 0px;
   h1 {
     font-family: EN-PlayfairDisplay;
-    width: fit-content;
-    margin: auto;
+    text-transform: uppercase !important;
+    font-weight: bolder;
+    letter-spacing: 2px;
     padding: 50px;
-    color: #fff;
-    background-color: #000000;
-    border-radius: 30px;
-    box-shadow: 0 0 10px #000;
+    color: #000;
   }
 }
