@@ -15,7 +15,7 @@ import "./Footer.css";
 export default function Footer() {
   return (
     <>
-      <div className="footer">
+      <div className="footer center">
         <div className="container-fluid">
           <div className="footerInner row">
             <div className="footerSec col-3">
