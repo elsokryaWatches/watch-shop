@@ -1,6 +1,6 @@
 import { lazy, Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Layout from "./Components/Layout/Layout";
+import Layout from "./components/Layout/Layout";
 import LoadingSpinner from "./Components/LoadingSpinner/LoadingSpinner";
 
 const Home = lazy(() => import("./components/Home/Home"));
