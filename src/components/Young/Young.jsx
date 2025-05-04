@@ -26,18 +26,8 @@ export default function Young() {
             <div className="Watches row col-12">
               <div className="watchItem center col-3">
                 <div className="img">
-                  <img src="imgs/black_aquanaut.webp" alt="" />
-                </div>
-                <div className="info">
-                  <h6>seiko royal green arabic dial mod</h6>
-                  <h5>1500 EGP</h5>
-                  <button className="addBtn">{t("add to cart")}</button>
-                </div>
-              </div>
-              <div className="watchItem center col-3">
-                <div className="img">
                   <img
-                    src="imgs/black_royal_oak_8dba3736-a84e-4704-aa62-7b7d8c202855.webp"
+                    src="imgs/9c3682d1-3c49-4c77-8646-8280a6cf8103_png.webp"
                     alt=""
                   />
                 </div>
@@ -49,7 +39,7 @@ export default function Young() {
               </div>
               <div className="watchItem center col-3">
                 <div className="img">
-                  <img src="imgs/greenarabicdial.webp" alt="" />
+                  <img src="imgs/aqua_marine_daytona.webp" alt="" />
                 </div>
                 <div className="info">
                   <h6>seiko royal green arabic dial mod</h6>
@@ -59,7 +49,7 @@ export default function Young() {
               </div>
               <div className="watchItem center col-3">
                 <div className="img">
-                  <img src="imgs/IMG_4958.webp" alt="" />
+                  <img src="imgs/batmangmt.webp" alt="" />
                 </div>
                 <div className="info">
                   <h6>seiko royal green arabic dial mod</h6>
@@ -69,7 +59,17 @@ export default function Young() {
               </div>
               <div className="watchItem center col-3">
                 <div className="img">
-                  <img src="imgs/navy_blue_nautilus.webp" alt="" />
+                  <img src="imgs/black_panda_daytona.webp" alt="" />
+                </div>
+                <div className="info">
+                  <h6>seiko royal green arabic dial mod</h6>
+                  <h5>1500 EGP</h5>
+                  <button className="addBtn">{t("add to cart")}</button>
+                </div>
+              </div>
+              <div className="watchItem center col-3">
+                <div className="img">
+                  <img src="imgs/black_white_daytona.webp" alt="" />
                 </div>
                 <div className="info">
                   <h6>seiko royal green arabic dial mod</h6>
@@ -99,10 +99,7 @@ export default function Young() {
               </div>
               <div className="watchItem center col-3">
                 <div className="img">
-                  <img
-                    src="imgs/TwoToneRoseGoldChocolateDial_06f7ac83-3783-459f-9de0-7e612ac84f64.webp"
-                    alt=""
-                  />
+                  <img src="imgs/cokegmt.webp" alt="" />
                 </div>
                 <div className="info">
                   <h6>seiko royal green arabic dial mod</h6>
@@ -112,7 +109,7 @@ export default function Young() {
               </div>
               <div className="watchItem center col-3">
                 <div className="img">
-                  <img src="imgs/WhiteSeikoSantosMod.webp" alt="" />
+                  <img src="imgs/emerald_daytona.webp" alt="" />
                 </div>
                 <div className="info">
                   <h6>seiko royal green arabic dial mod</h6>
@@ -122,7 +119,7 @@ export default function Young() {
               </div>
               <div className="watchItem center col-3">
                 <div className="img">
-                  <img src="imgs/Untitleddesign_9_1.webp" alt="" />
+                  <img src="imgs/golden_jade.webp" alt="" />
                 </div>
                 <div className="info">
                   <h6>seiko royal green arabic dial mod</h6>

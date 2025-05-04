@@ -76,17 +76,10 @@ export default function Men() {
               </div>
               <div className="watchItem center col-3">
                 <div className="img">
-                  <img src="imgs/panda_daytona.webp" alt="" />
-                </div>
-                <div className="info">
-                  <h6>seiko royal green arabic dial mod</h6>
-                  <h5>1500 EGP</h5>
-                  <button className="addBtn">{t("add to cart")}</button>
-                </div>
-              </div>
-              <div className="watchItem center col-3">
-                <div className="img">
-                  <img src="imgs/pepsigmt.webp" alt="" />
+                  <img
+                    src="imgs/3c3ed1e6-6894-48bd-9339-7c82202768c0_png.webp"
+                    alt=""
+                  />
                 </div>
                 <div className="info">
                   <h6>seiko royal green arabic dial mod</h6>
@@ -97,9 +90,19 @@ export default function Men() {
               <div className="watchItem center col-3">
                 <div className="img">
                   <img
-                    src="imgs/TwoToneRoseGoldChocolateDial_06f7ac83-3783-459f-9de0-7e612ac84f64.webp"
+                    src="imgs/black_royal_oak_8dba3736-a84e-4704-aa62-7b7d8c202855.webp"
                     alt=""
                   />
+                </div>
+                <div className="info">
+                  <h6>seiko royal green arabic dial mod</h6>
+                  <h5>1500 EGP</h5>
+                  <button className="addBtn">{t("add to cart")}</button>
+                </div>
+              </div>
+              <div className="watchItem center col-3">
+                <div className="img">
+                  <img src="imgs/blackarabicdial.webp" alt="" />
                 </div>
                 <div className="info">
                   <h6>seiko royal green arabic dial mod</h6>
