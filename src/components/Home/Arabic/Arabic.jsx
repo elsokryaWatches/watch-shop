@@ -47,7 +47,7 @@ export default function Arabic() {
             </div>
             <div className="toShop center col-10">
               <button className="arabicBtn">
-                <Link to={"/shop"}>{t("arabicBtn")}</Link>
+                <Link to={"/datejust"}>{t("arabicBtn")}</Link>
               </button>
             </div>
           </div>

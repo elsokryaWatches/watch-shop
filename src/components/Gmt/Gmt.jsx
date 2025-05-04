@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "../../i18n";
 import { useTranslation } from "react-i18next";
+import CollectionsNav from "../CollectionNav";
 
 export default function Gmt() {
   const [t] = useTranslation();
@@ -10,6 +11,7 @@ export default function Gmt() {
       <div className="shop">
         <div className="container-fluid">
           <div className="shopInner row">
+            <CollectionsNav />
             <div className="Watches row col-12">
               <div className="watchItem center col-3">
                 <div className="img">
