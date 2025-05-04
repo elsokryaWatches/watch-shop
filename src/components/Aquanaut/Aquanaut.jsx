@@ -13,8 +13,18 @@ export default function Aquanaut() {
             <div className="Watches row col-12">
               <div className="watchItem center col-3">
                 <div className="img">
+                  <img src="imgs/chocolateaquanaut.webp" alt="" />
+                </div>
+                <div className="info">
+                  <h6>seiko royal green arabic dial mod</h6>
+                  <h5>1500 EGP</h5>
+                  <button className="addBtn">{t("add to cart")}</button>
+                </div>
+              </div>
+              <div className="watchItem center col-3">
+                <div className="img">
                   <img
-                    src="imgs/batgirlgmt_f430153f-92c6-4b78-817a-6f833b89e1a1.webp"
+                    src="imgs/IMG_3823_393b27ce-9890-4508-b972-522cd1dd31ed.webp"
                     alt=""
                   />
                 </div>
@@ -26,7 +36,7 @@ export default function Aquanaut() {
               </div>
               <div className="watchItem center col-3">
                 <div className="img">
-                  <img src="imgs/batmangmt.webp" alt="" />
+                  <img src="imgs/navyblueaquanaut.webp" alt="" />
                 </div>
                 <div className="info">
                   <h6>seiko royal green arabic dial mod</h6>
@@ -36,7 +46,7 @@ export default function Aquanaut() {
               </div>
               <div className="watchItem center col-3">
                 <div className="img">
-                  <img src="imgs/cokegmt.webp" alt="" />
+                  <img src="imgs/olivegreenaquanaut.webp" alt="" />
                 </div>
                 <div className="info">
                   <h6>seiko royal green arabic dial mod</h6>
@@ -46,7 +56,7 @@ export default function Aquanaut() {
               </div>
               <div className="watchItem center col-3">
                 <div className="img">
-                  <img src="imgs/goldgmt.webp" alt="" />
+                  <img src="imgs/silveraquanaut.webp" alt="" />
                 </div>
                 <div className="info">
                   <h6>seiko royal green arabic dial mod</h6>
@@ -56,7 +66,7 @@ export default function Aquanaut() {
               </div>
               <div className="watchItem center col-3">
                 <div className="img">
-                  <img src="imgs/rootbeergmt.webp" alt="" />
+                  <img src="imgs/tiffanyblueaquanaut.webp" alt="" />
                 </div>
                 <div className="info">
                   <h6>seiko royal green arabic dial mod</h6>
@@ -66,27 +76,7 @@ export default function Aquanaut() {
               </div>
               <div className="watchItem center col-3">
                 <div className="img">
-                  <img src="imgs/spritegmt.webp" alt="" />
-                </div>
-                <div className="info">
-                  <h6>seiko royal green arabic dial mod</h6>
-                  <h5>1500 EGP</h5>
-                  <button className="addBtn">{t("add to cart")}</button>
-                </div>
-              </div>
-              <div className="watchItem center col-3">
-                <div className="img">
-                  <img src="imgs/twotonegmt.webp" alt="" />
-                </div>
-                <div className="info">
-                  <h6>seiko royal green arabic dial mod</h6>
-                  <h5>1500 EGP</h5>
-                  <button className="addBtn">{t("add to cart")}</button>
-                </div>
-              </div>
-              <div className="watchItem center col-3">
-                <div className="img">
-                  <img src="imgs/pepsigmt.webp" alt="" />
+                  <img src="imgs/black_aquanaut.webp" alt="" />
                 </div>
                 <div className="info">
                   <h6>seiko royal green arabic dial mod</h6>
