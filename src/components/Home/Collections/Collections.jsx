@@ -31,7 +31,7 @@ export default function Collections() {
               <div className="item center col-2">
                 <img src="imgs/panda_daytona.webp" alt="" />
                 <button className="itemBtn fadeIn">
-                  <Link to={"/shop"}>daytona</Link>
+                  <Link to={"/daytona"}>daytona</Link>
                 </button>
               </div>
               <div className="item fromRight col-2">
