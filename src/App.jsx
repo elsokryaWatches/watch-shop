@@ -14,6 +14,7 @@ const Gmt = lazy(() => import("./components/Gmt/Gmt"));
 const Aquanaut = lazy(() => import("./components/Aquanaut/Aquanaut"));
 const Daytona = lazy(() => import("./components/Daytona/Daytona"));
 const Datejust = lazy(() => import("./components/Datejust/Datejust"));
+const Nautilus = lazy(() => import("./components/Nautilus/Nautilus"));
 
 const createRoute = (path, element) => ({
   path,
@@ -38,6 +39,7 @@ export default function App() {
         createRoute("aquanaut", <Aquanaut />),
         createRoute("daytona", <Daytona />),
         createRoute("datejust", <Datejust />),
+        createRoute("nautilus", <Nautilus />),
       ],
     },
   ]);

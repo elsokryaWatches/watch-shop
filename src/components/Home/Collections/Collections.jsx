@@ -43,7 +43,7 @@ export default function Collections() {
               <div className="item fromRight col-2">
                 <img src="imgs/navy_blue_nautilus.webp" alt="" />
                 <button className="itemBtn fadeIn">
-                  <Link to={"/shop"}>nautilus</Link>
+                  <Link to={"/nautilus"}>nautilus</Link>
                 </button>
               </div>
             </div>
