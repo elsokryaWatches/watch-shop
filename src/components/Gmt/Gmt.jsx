@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "../../i18n";
 import { useTranslation } from "react-i18next";
 import CollectionsNav from "../CollectionNav";
+import UpBtn from "../upBtn/UpBtn";
 
 export default function Gmt() {
   const [t] = useTranslation();
@@ -105,6 +106,7 @@ export default function Gmt() {
           </div>
         </div>
       </div>
+      <UpBtn />
     </>
   );
 }

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import ShopNav from "../ShopNav";
 import "../../i18n";
 import { useTranslation } from "react-i18next";
+import UpBtn from "../upBtn/UpBtn";
 
 export default function Women() {
   const [t] = useTranslation();
@@ -139,6 +140,7 @@ export default function Women() {
           </div>
         </div>
       </div>
+      <UpBtn />
     </>
   );
 }

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "../../i18n";
 import { useTranslation } from "react-i18next";
 import CollectionsNav from "../CollectionNav";
+import UpBtn from "../upBtn/UpBtn";
 
 export default function Nautilus() {
   const [t] = useTranslation();
@@ -134,6 +135,7 @@ export default function Nautilus() {
           </div>
         </div>
       </div>
+      <UpBtn />
     </>
   );
 }

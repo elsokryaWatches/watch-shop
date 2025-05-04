@@ -1,6 +1,7 @@
 import "./Contact.css";
 import "../../i18n";
 import { useTranslation } from "react-i18next";
+import UpBtn from "../upBtn/UpBtn";
 
 export default function Contact() {
   const [t] = useTranslation();
@@ -70,6 +71,7 @@ export default function Contact() {
           </div>
         </div>
       </div>
+      <UpBtn />
     </>
   );
 }
