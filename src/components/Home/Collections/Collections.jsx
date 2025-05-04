@@ -37,7 +37,7 @@ export default function Collections() {
               <div className="item fromRight col-2">
                 <img src="imgs/greenarabicdial.webp" alt="" />
                 <button className="itemBtn fadeIn">
-                  <Link to={"/shop"}>datejust</Link>
+                  <Link to={"/datejust"}>datejust</Link>
                 </button>
               </div>
               <div className="item fromRight col-2">
