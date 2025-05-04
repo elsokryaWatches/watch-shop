@@ -1,3 +1,93 @@
+.offCanvTrigger {
+  display: none;
+  background-color: #004609 !important;
+  color: #fff;
+  border-radius: 0;
+  border: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 111;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #fff !important;
+    color: #004609;
+    outline: 1px solid #fff;
+  }
+}
+
+.offcanvas {
+  background-color: #ffffffbb;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+
+  .offcanvas-body {
+    position: relative;
+
+    .offcanvasList {
+      list-style: none;
+
+      .offCanvItem {
+        padding: 10px 0px;
+        position: relative;
+        width: fit-content;
+        margin: auto 0px;
+        transition: all 0.3s ease-in-out;
+
+        .offcanvLink {
+          text-decoration: none;
+          color: #004609;
+          transition: all 0.3s ease-in-out;
+        }
+
+        &:hover {
+          padding: 20px 0px;
+
+          .offcanvLink {
+            letter-spacing: 2px;
+          }
+        }
+      }
+    }
+    .offcanvFooter {
+      padding: 30px 10px;
+      background-color: #004609;
+      position: fixed;
+      bottom: 0%;
+      left: 0%;
+
+      .offFooterHeader {
+        color: #fff;
+      }
+
+      .offFooterBody {
+        .socials {
+          .offcanvFooterLink {
+            text-decoration: none;
+            color: #fff;
+            margin-inline-end: 10px;
+            font-size: 20px;
+          }
+        }
+        .cont {
+          .offcanvFooterLink {
+            text-decoration: none;
+            display: block;
+            color: #fff;
+            margin: 10px 0px;
+            font-size: 20px;
+
+            span {
+              margin-inline-start: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 .navBar {
   position: sticky;
   top: 0%;
@@ -16,6 +106,7 @@
     .navList {
       list-style: none;
       text-align: center;
+
       .navItem {
         display: inline;
         margin: 0px 20px;
@@ -23,7 +114,7 @@
 
         .navLink {
           text-decoration: none;
-          color: #000;
+          color: #004609;
           transition: all 0.3s ease-in-out;
         }
 
