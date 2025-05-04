@@ -1,7 +1,24 @@
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+import Flag from "react-world-flags";
+import "../../i18n";
+import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 
 export default function Navbar() {
+  const [t, i18n] = useTranslation();
+
+  useEffect(() => {
+    const savedLang = localStorage.getItem("language");
+    if (savedLang) {
+      i18n.changeLanguage(savedLang);
+    }
+  }, [i18n]);
+
+  const handleLangChange = (language) => {
+    i18n.changeLanguage(language);
+    localStorage.setItem("language", language);
+  };
   return (
     <>
       <div className="navBar">
@@ -15,12 +32,12 @@ export default function Navbar() {
             <div className="navList col-4">
               <li className="navItem">
                 <Link className="navLink" to={"/"}>
-                  home
+                  {t("home")}
                 </Link>
               </li>
               <li className="navItem">
                 <Link className="navLink" to={"/contact"}>
-                  contact
+                  {t("contact")}
                 </Link>
               </li>
               <li className="navItem dropdown">
@@ -31,27 +48,27 @@ export default function Navbar() {
                   aria-expanded="false"
                   to={"/shop"}
                 >
-                  shop
+                  {t("shop")}
                 </Link>
                 <ul className="dropdown-menu">
                   <li>
                     <Link className="dropdown-item" to={"/men"}>
-                      men watches
+                      {t("men watches")}
                     </Link>
                   </li>
                   <li>
                     <Link className="dropdown-item" to={"/women"}>
-                      women watches
+                      {t("women watches")}
                     </Link>
                   </li>
                   <li>
                     <Link className="dropdown-item" to={"/young"}>
-                      young watches
+                      {t("young watches")}
                     </Link>
                   </li>
                   <li>
                     <Link className="dropdown-item" to={"/wallets"}>
-                      wallets
+                      {t("wallets")}
                     </Link>
                   </li>
                 </ul>
@@ -63,14 +80,24 @@ export default function Navbar() {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  langauge
+                  {t("langauge")}
                 </Link>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link className="dropdown-item">english</Link>
+                    <Link
+                      className="dropdown-item"
+                      onClick={() => handleLangChange("en")}
+                    >
+                      {t("english")} <Flag code="gb" height="10" />
+                    </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item">arabic</Link>
+                    <Link
+                      className="dropdown-item"
+                      onClick={() => handleLangChange("ar")}
+                    >
+                      {t("arabic")} <Flag code="eg" height="10" />
+                    </Link>
                   </li>
                 </ul>
               </li>
