@@ -2,7 +2,7 @@
   padding: 50px 0px;
 
   .backgroundLayer {
-    position: absolute;
+    position: fixed;
     inset: 0;
     padding: 0;
     z-index: -111;
