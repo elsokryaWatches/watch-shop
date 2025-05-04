@@ -23,13 +23,20 @@ export default function Contact() {
                   type="text"
                   name="name"
                   id="fullName"
+                  required
                 />
               </div>
               <div className="inputContainer row">
                 <label htmlFor="phone" className="col-10">
                   {t("phone nubmer")}
                 </label>
-                <input className="col-10" type="tel" name="phone" id="phone" />
+                <input
+                  className="col-10"
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  required
+                />
               </div>
               <div className="inputContainer row">
                 <label htmlFor="email" className="col-10">
@@ -51,6 +58,7 @@ export default function Contact() {
                   name="msg"
                   id="msg"
                   rows={10}
+                  required
                 ></textarea>
               </div>
               <div className="submit">
