@@ -19,13 +19,13 @@ export default function Collections() {
               <div className="item fromLeft col-2">
                 <img src="imgs/pepsigmt.webp" alt="" />
                 <button className="itemBtn fadeIn">
-                  <Link to={"/shop"}>gmt</Link>
+                  <Link to={"/gmt"}>gmt</Link>
                 </button>
               </div>
               <div className="item fromLeft col-2">
                 <img src="imgs/black_aquanaut.webp" alt="" />
                 <button className="itemBtn fadeIn">
-                  <Link to={"/shop"}>aquanaut</Link>
+                  <Link to={"/aquanaut"}>aquanaut</Link>
                 </button>
               </div>
               <div className="item center col-2">

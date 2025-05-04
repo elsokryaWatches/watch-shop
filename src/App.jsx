@@ -10,6 +10,8 @@ const Women = lazy(() => import("./components/Women/Women"));
 const Young = lazy(() => import("./components/Young/Young"));
 const Contact = lazy(() => import("./components/Contact/Contact"));
 const Shop = lazy(() => import("./components/Shop/Shop"));
+const Gmt = lazy(() => import("./components/Gmt/Gmt"));
+const Aquanaut = lazy(() => import("./components/Aquanaut/Aquanaut"));
 
 const createRoute = (path, element) => ({
   path,
@@ -30,6 +32,8 @@ export default function App() {
         createRoute("young", <Young />),
         createRoute("contact", <Contact />),
         createRoute("shop", <Shop />),
+        createRoute("gmt", <Gmt />),
+        createRoute("aquanaut", <Aquanaut />),
       ],
     },
   ]);
