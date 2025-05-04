@@ -56,6 +56,15 @@ img {
           color: #004609;
         }
       }
+
+      .selected {
+        background-color: #004609;
+
+        a {
+          text-decoration: none;
+          color: #fff;
+        }
+      }
     }
 
     .shopHeader {
