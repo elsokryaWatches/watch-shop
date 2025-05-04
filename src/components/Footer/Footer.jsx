@@ -12,14 +12,19 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import "./Footer.css";
 
+import "../../i18n";
+import { useTranslation } from "react-i18next";
+
 export default function Footer() {
+  const [t] = useTranslation();
+
   return (
     <>
       <div className="footer center">
         <div className="container-fluid">
           <div className="footerInner row">
             <div className="footerSec col-3">
-              <h3>contacts</h3>
+              <h3>{t("contact")}</h3>
               <ul className="footerList">
                 <li className="FooterListItem">
                   <Link
@@ -70,38 +75,38 @@ export default function Footer() {
                     target="_blank"
                   >
                     <FontAwesomeIcon icon={faLocationDot} />
-                    <span>El-Tahrir Square, Cairo Governorate</span>
+                    <span>{t("address")}</span>
                   </Link>
                 </li>
               </ul>
             </div>
             <div className="footerSec col-3">
-              <h3>our products</h3>
+              <h3>{t("our products")}</h3>
               <ul className="footerList">
                 <li className="FooterListItem">
                   <Link className="FooterLink" to={"/men"}>
-                    men watches
+                    {t("men watches")}
                   </Link>
                 </li>
                 <li className="FooterListItem">
                   <Link className="FooterLink" to={"/women"}>
-                    women watches
+                    {t("women watches")}
                   </Link>
                 </li>
                 <li className="FooterListItem">
                   <Link className="FooterLink" to={"/young"}>
-                    young watches
+                    {t("young watches")}
                   </Link>
                 </li>
                 <li className="FooterListItem">
                   <Link className="FooterLink" to={"/wallets"}>
-                    wallets
+                    {t("wallets")}
                   </Link>
                 </li>
               </ul>
             </div>
             <div className="footerSec col-3">
-              <h3>custom mods</h3>
+              <h3>{t("arabicHH6")}</h3>
               <div className="gallery row">
                 <div className="img col-4">
                   <img src="imgs/greenarabicdial.webp" alt="" />

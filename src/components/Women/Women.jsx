@@ -1,5 +1,11 @@
 import { Link } from "react-router-dom";
+import ShopNav from "../ShopNav";
+import "../../i18n";
+import { useTranslation } from "react-i18next";
+
 export default function Women() {
+  const [t] = useTranslation();
+
   return (
     <>
       <div className="shop">
@@ -10,23 +16,10 @@ export default function Women() {
                 <img src="/imgs/pexels-the-5th-50003-179909.jpg" alt="" />
               </div>
               <div className="textLayer">
-                <h2>women watches</h2>
+                <h2>{t("women watches")}</h2>
               </div>
             </div>
-            <div className="navModels col-12">
-              <button className="navBtn">
-                <Link to={"/men"}>men watches</Link>
-              </button>
-              <button className="navBtn">
-                <Link to={"/women"}>women watches</Link>
-              </button>
-              <button className="navBtn">
-                <Link to={"/young"}>young watches</Link>
-              </button>
-              <button className="navBtn">
-                <Link to={"/wallets"}>wallets</Link>
-              </button>
-            </div>
+            <ShopNav />
             <div className="Watches row col-12">
               <div className="watchItem center col-3">
                 <div className="img">
@@ -35,7 +28,7 @@ export default function Women() {
                 <div className="info">
                   <h6>seiko royal green arabic dial mod</h6>
                   <h5>1500 EGP</h5>
-                  <button className="addBtn">add to cart</button>
+                  <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
               <div className="watchItem center col-3">
@@ -48,7 +41,7 @@ export default function Women() {
                 <div className="info">
                   <h6>seiko royal green arabic dial mod</h6>
                   <h5>1500 EGP</h5>
-                  <button className="addBtn">add to cart</button>
+                  <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
               <div className="watchItem center col-3">
@@ -58,7 +51,7 @@ export default function Women() {
                 <div className="info">
                   <h6>seiko royal green arabic dial mod</h6>
                   <h5>1500 EGP</h5>
-                  <button className="addBtn">add to cart</button>
+                  <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
               <div className="watchItem center col-3">
@@ -68,7 +61,7 @@ export default function Women() {
                 <div className="info">
                   <h6>seiko royal green arabic dial mod</h6>
                   <h5>1500 EGP</h5>
-                  <button className="addBtn">add to cart</button>
+                  <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
               <div className="watchItem center col-3">
@@ -78,7 +71,7 @@ export default function Women() {
                 <div className="info">
                   <h6>seiko royal green arabic dial mod</h6>
                   <h5>1500 EGP</h5>
-                  <button className="addBtn">add to cart</button>
+                  <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
               <div className="watchItem center col-3">
@@ -88,7 +81,7 @@ export default function Women() {
                 <div className="info">
                   <h6>seiko royal green arabic dial mod</h6>
                   <h5>1500 EGP</h5>
-                  <button className="addBtn">add to cart</button>
+                  <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
               <div className="watchItem center col-3">
@@ -98,7 +91,7 @@ export default function Women() {
                 <div className="info">
                   <h6>seiko royal green arabic dial mod</h6>
                   <h5>1500 EGP</h5>
-                  <button className="addBtn">add to cart</button>
+                  <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
               <div className="watchItem center col-3">
@@ -111,7 +104,7 @@ export default function Women() {
                 <div className="info">
                   <h6>seiko royal green arabic dial mod</h6>
                   <h5>1500 EGP</h5>
-                  <button className="addBtn">add to cart</button>
+                  <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
               <div className="watchItem center col-3">
@@ -121,7 +114,7 @@ export default function Women() {
                 <div className="info">
                   <h6>seiko royal green arabic dial mod</h6>
                   <h5>1500 EGP</h5>
-                  <button className="addBtn">add to cart</button>
+                  <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
               <div className="watchItem center col-3">
@@ -131,12 +124,14 @@ export default function Women() {
                 <div className="info">
                   <h6>seiko royal green arabic dial mod</h6>
                   <h5>1500 EGP</h5>
-                  <button className="addBtn">add to cart</button>
+                  <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
             </div>
             <div className="toCart col-10">
-              <button className="toCartBtn">to cart</button>
+              <button className="toCartBtn">
+                <Link to={""}>{t("to cart")}</Link>
+              </button>
             </div>
           </div>
         </div>

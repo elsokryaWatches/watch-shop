@@ -1,15 +1,20 @@
 import "./Arabic.css";
 import { Link } from "react-router-dom";
 
+import "../../../i18n";
+import { useTranslation } from "react-i18next";
+
 export default function Arabic() {
+  const [t] = useTranslation();
+
   return (
     <>
       <div className="arabicColl">
         <div className="container-fluid">
           <div className="arabCollInner row">
             <div className="arCollHeader col-12">
-              <h6>custom dials</h6>
-              <h2>seiko arabic dial</h2>
+              <h6>{t("arabicHH6")}</h6>
+              <h2>{t("arabicHH2")}</h2>
             </div>
             <div className="items row col-12">
               <div className="item center col-3">
@@ -42,7 +47,7 @@ export default function Arabic() {
             </div>
             <div className="toShop center col-10">
               <button className="arabicBtn">
-                <Link to={"/shop"}>view all</Link>
+                <Link to={"/shop"}>{t("arabicBtn")}</Link>
               </button>
             </div>
           </div>

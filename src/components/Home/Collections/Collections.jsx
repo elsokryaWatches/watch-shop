@@ -1,15 +1,19 @@
 import "./Collections.css";
 import { Link } from "react-router-dom";
+import "../../../i18n";
+import { useTranslation } from "react-i18next";
 
 export default function Collections() {
+  const [t] = useTranslation();
+
   return (
     <>
       <div className="collection">
         <div className="container-fluid">
           <div className="collectionInner row">
             <div className="collHeader col-12">
-              <h6>custom seiko mods</h6>
-              <h2>collections</h2>
+              <h6>{t("collectionHH6")}</h6>
+              <h2>{t("collectionHH2")}</h2>
             </div>
             <div className="items row col-12">
               <div className="item fromLeft col-2">

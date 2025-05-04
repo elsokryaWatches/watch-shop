@@ -1,7 +1,11 @@
 import "./Header.css";
 import { Link } from "react-router-dom";
 
+import "../../../i18n";
+import { useTranslation } from "react-i18next";
+
 export default function Header() {
+  const [t] = useTranslation();
   return (
     <>
       <div className="header">
@@ -11,10 +15,10 @@ export default function Header() {
         <div className="container-fluid">
           <div className="headerInner">
             <div className="textOverlay">
-              <h5>ELEGANCE IN EVERY TICK</h5>
-              <h2>custom seiko modded watches</h2>
+              <h5>{t("headerH5")}</h5>
+              <h2>{t("headerH2")}</h2>
               <button className="headerBtn">
-                <Link to={"/shop"}>shop all</Link>
+                <Link to={"/shop"}>{t("headerBtn")}</Link>
               </button>
             </div>
           </div>

@@ -1,5 +1,10 @@
 import "./Contact.css";
+import "../../i18n";
+import { useTranslation } from "react-i18next";
+
 export default function Contact() {
+  const [t] = useTranslation();
+
   return (
     <>
       <div className="contact">
@@ -11,7 +16,7 @@ export default function Contact() {
             <form className="contactForm col-10" action="">
               <div className="inputContainer row">
                 <label htmlFor="fullName" className="col-10">
-                  full name
+                  {t("full name")}
                 </label>
                 <input
                   className="col-10"
@@ -22,13 +27,13 @@ export default function Contact() {
               </div>
               <div className="inputContainer row">
                 <label htmlFor="phone" className="col-10">
-                  phone nubmer
+                  {t("phone nubmer")}
                 </label>
                 <input className="col-10" type="tel" name="phone" id="phone" />
               </div>
               <div className="inputContainer row">
                 <label htmlFor="email" className="col-10">
-                  email address
+                  {t("email address")}
                 </label>
                 <input
                   className="col-10"
@@ -39,7 +44,7 @@ export default function Contact() {
               </div>
               <div className="inputContainer row">
                 <label htmlFor="msg" className="col-10">
-                  your message
+                  {t("your message")}
                 </label>
                 <textarea
                   className="col-10"
@@ -50,7 +55,7 @@ export default function Contact() {
               </div>
               <div className="submit">
                 <button className="submitBtn" type="submit">
-                  send
+                  {t("send")}
                 </button>
               </div>
             </form>
