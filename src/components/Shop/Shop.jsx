@@ -14,7 +14,7 @@ export default function Shop() {
           <div className="shopInner row">
             <ShopNav />
             <div className="Watches row col-12">
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/black_aquanaut.webp" alt="" />
                 </div>
@@ -24,7 +24,7 @@ export default function Shop() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img
                     src="imgs/black_royal_oak_8dba3736-a84e-4704-aa62-7b7d8c202855.webp"
@@ -37,7 +37,7 @@ export default function Shop() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/greenarabicdial.webp" alt="" />
                 </div>
@@ -47,7 +47,7 @@ export default function Shop() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/IMG_4958.webp" alt="" />
                 </div>
@@ -57,7 +57,7 @@ export default function Shop() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/navy_blue_nautilus.webp" alt="" />
                 </div>
@@ -67,7 +67,7 @@ export default function Shop() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/panda_daytona.webp" alt="" />
                 </div>
@@ -77,7 +77,7 @@ export default function Shop() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/pepsigmt.webp" alt="" />
                 </div>
@@ -87,7 +87,7 @@ export default function Shop() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img
                     src="imgs/TwoToneRoseGoldChocolateDial_06f7ac83-3783-459f-9de0-7e612ac84f64.webp"
@@ -100,7 +100,7 @@ export default function Shop() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/WhiteSeikoSantosMod.webp" alt="" />
                 </div>
@@ -110,7 +110,7 @@ export default function Shop() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/Untitleddesign_9_1.webp" alt="" />
                 </div>
@@ -123,7 +123,7 @@ export default function Shop() {
             </div>
             <div className="toCart col-10">
               <button className="toCartBtn">
-                <Link to={"cart"}>{t("to cart")}</Link>
+                <Link to={"/cart"}>{t("to cart")}</Link>
               </button>
             </div>
           </div>
