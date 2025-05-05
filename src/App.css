@@ -95,7 +95,7 @@ body {
         transform: translate(-50%, -50%);
 
         h2 {
-          font-family: EN-PlayfairDisplay !important;
+          font-family: EN-PlayfairDisplay, AR-Zain !important;
           text-transform: uppercase !important;
           color: #fff;
           filter: drop-shadow(0 0 10px #fff);
