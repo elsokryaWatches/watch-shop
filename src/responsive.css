@@ -3,7 +3,7 @@
     display: block;
   }
 
-  .offCanvTrigger {
+  .smallHeaderBar {
     display: none;
   }
 }
@@ -13,7 +13,7 @@
     display: none;
   }
 
-  .offCanvTrigger {
+  .smallHeaderBar {
     display: block;
   }
 }
@@ -22,9 +22,6 @@
   :root {
     font-size: 15px;
   }
-}
-
-@media screen and (max-width: 768px) {
 }
 
 @media screen and (max-width: 576px) {

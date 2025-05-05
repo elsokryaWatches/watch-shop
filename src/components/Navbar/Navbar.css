@@ -1,18 +1,35 @@
-.offCanvTrigger {
-  background-color: #004609 !important;
-  color: #fff;
-  border-radius: 0;
-  border: none;
-  position: fixed;
-  top: 10px;
-  left: 10px;
+.smallHeaderBar {
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0%;
+  left: 0%;
+  right: 0%;
   z-index: 111;
-  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+  padding: 10px 0px;
 
-  &:hover {
-    background-color: #fff !important;
-    color: #004609;
-    outline: 1px solid #fff;
+  .logo {
+    width: 20%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .offCanvTrigger {
+    background-color: #004609 !important;
+    color: #fff;
+    border-radius: 0;
+    border: none;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #fff !important;
+      color: #004609;
+      outline: 1px solid #fff;
+    }
   }
 }
 
@@ -20,7 +37,7 @@
   background-color: #ffffffbb;
   backdrop-filter: blur(10px);
   overflow: hidden;
-  width: 40dvw !important;
+  width: 50dvw !important;
 
   .offcanvas-body {
     position: relative;

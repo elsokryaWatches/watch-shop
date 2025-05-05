@@ -35,15 +35,22 @@ export default function Navbar() {
   return (
     <>
       {/* offcanvas */}
-      <button
-        className="btn offCanvTrigger"
-        type="button"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasScrolling"
-        aria-controls="offcanvasScrolling"
-      >
-        <FontAwesomeIcon icon={faBars} />
-      </button>
+      <div className="smallHeaderBar">
+        <div className="logo ">
+          <Link to={"/"}>
+            <img src="imgs/Ofilan_Watches_Logo_Enlarged_v1.avif" alt="" />
+          </Link>
+        </div>
+        <button
+          className="btn offCanvTrigger"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasScrolling"
+          aria-controls="offcanvasScrolling"
+        >
+          <FontAwesomeIcon icon={faBars} />
+        </button>
+      </div>
 
       <div
         className="offcanvas offcanvas-start"
