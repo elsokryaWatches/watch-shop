@@ -3,6 +3,7 @@ import "../../i18n";
 import { useTranslation } from "react-i18next";
 import UpBtn from "../UpBtn/UpBtn";
 import { Helmet } from "react-helmet";
+import Navbar from "../Navbar/Navbar";
 
 export default function Contact() {
   const [t] = useTranslation();
@@ -12,6 +13,7 @@ export default function Contact() {
       <Helmet>
         <title>Watch Shop - Contact</title>
       </Helmet>
+      <Navbar />
       <div className="contact">
         <div className="backgroundLayer"></div>
         <div className="container-fluid">

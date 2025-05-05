@@ -30,20 +30,20 @@ export default function App() {
 
       children: [
         createRoute("", <Home />),
-        createRoute("wallets", <Wallets />),
         createRoute("men", <Men />),
         createRoute("women", <Women />),
         createRoute("young", <Young />),
-        createRoute("contact", <Contact />),
         createRoute("shop", <Shop />),
         createRoute("gmt", <Gmt />),
         createRoute("aquanaut", <Aquanaut />),
         createRoute("daytona", <Daytona />),
         createRoute("datejust", <Datejust />),
         createRoute("nautilus", <Nautilus />),
-        createRoute("cart", <Cart />),
       ],
     },
+    createRoute("cart", <Cart />),
+    createRoute("contact", <Contact />),
+    createRoute("wallets", <Wallets />),
   ]);
   return <RouterProvider router={routes} />;
 }
