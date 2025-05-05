@@ -78,7 +78,7 @@ export default function Navbar() {
                 {t("contact")}
               </Link>
             </li>
-            <li className="offCanvItem dropdown">
+            <li className="offCanvItem dropend">
               <Link
                 className="offcanvLink dropdown-toggle"
                 type="button"
@@ -111,7 +111,7 @@ export default function Navbar() {
                 </li>
               </ul>
             </li>
-            <li className="offCanvItem dropdown">
+            <li className="offCanvItem dropend">
               <Link
                 className="offcanvLink dropdown-toggle"
                 type="button"
