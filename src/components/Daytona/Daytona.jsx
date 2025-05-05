@@ -137,7 +137,7 @@ export default function Daytona() {
             </div>
             <div className="toCart col-10">
               <button className="toCartBtn">
-                <Link to={""}>{t("to cart")}</Link>
+                <Link to={"cart"}>{t("to cart")}</Link>
               </button>
             </div>
           </div>

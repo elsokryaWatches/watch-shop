@@ -10,6 +10,7 @@ const Women = lazy(() => import("./components/Women/Women"));
 const Young = lazy(() => import("./components/Young/Young"));
 const Contact = lazy(() => import("./components/Contact/Contact"));
 const Shop = lazy(() => import("./components/Shop/Shop"));
+const Cart = lazy(() => import("./components/Cart/Cart"));
 const Gmt = lazy(() => import("./components/Gmt/Gmt"));
 const Aquanaut = lazy(() => import("./components/Aquanaut/Aquanaut"));
 const Daytona = lazy(() => import("./components/Daytona/Daytona"));
@@ -40,6 +41,7 @@ export default function App() {
         createRoute("daytona", <Daytona />),
         createRoute("datejust", <Datejust />),
         createRoute("nautilus", <Nautilus />),
+        createRoute("cart", <Cart />),
       ],
     },
   ]);
