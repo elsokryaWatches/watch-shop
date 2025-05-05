@@ -1,0 +1,69 @@
+.cart {
+  padding: 50px 0px;
+
+  .backgroundLayer {
+    position: fixed;
+    background-image: url("/imgs/pexels-karolina-grabowska-5632402.jpg");
+    background-position: center;
+    background-size: cover;
+    inset: 0;
+    padding: 0;
+    z-index: -111;
+    filter: brightness(30%);
+  }
+  .cartInner {
+    justify-content: center;
+
+    .cartForm {
+      background-image: linear-gradient(to bottom, #00460986, #2e83397c);
+      backdrop-filter: blur(10px);
+      color: #fff;
+      width: fit-content;
+      padding: 10px 5px;
+      border-radius: 15px;
+
+      .inputContainer {
+        justify-content: center;
+        gap: 5px;
+        margin: 10px 0px;
+
+        label {
+          padding: 0;
+        }
+
+        input,
+        textarea {
+          border: none;
+          border-radius: 10px;
+          padding: 5px;
+          transition: all 0.4s ease-in-out;
+
+          &:focus {
+            outline: none;
+            box-shadow: 0 0 10px #fff;
+          }
+        }
+      }
+
+      .submit {
+        text-align: center;
+
+        .submitBtn {
+          background-color: #fff;
+          color: #004609;
+          border: none;
+          padding: 5px 10px;
+          border-radius: 10px;
+          text-transform: uppercase !important;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            background-color: #2e83397c;
+            color: #fff;
+            box-shadow: 0 0 10px #fff;
+          }
+        }
+      }
+    }
+  }
+}

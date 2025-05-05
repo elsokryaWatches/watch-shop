@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next";
 import UpBtn from "../upBtn/UpBtn";
 
 export default function Cart() {
+  const [t] = useTranslation();
+
   return (
     <>
       <div className="cart">
@@ -48,7 +50,7 @@ export default function Cart() {
               </div>
               <div className="inputContainer row">
                 <label htmlFor="address" className="col-10">
-                  {t("formAddress")}
+                  {t("FormAddress")}
                 </label>
                 <input
                   className="col-10"
@@ -56,6 +58,23 @@ export default function Cart() {
                   name="address"
                   id="address"
                 />
+              </div>
+              <div className="inputContainer row">
+                <label htmlFor="selected" className="col-10">
+                  {t("selected")}
+                </label>
+                <textarea
+                  name="selectedItems"
+                  id="selected"
+                  className="col-10"
+                  readOnly
+                  placeholder={t("cartTextArea")}
+                ></textarea>
+              </div>
+              <div className="submit">
+                <button className="submitBtn" type="submit">
+                  {t("send")}
+                </button>
               </div>
             </form>
           </div>

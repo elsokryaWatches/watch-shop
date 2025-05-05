@@ -29,5 +29,7 @@
   "email address": "email address",
   "your message": "your message",
   "send": "send",
-  "FormAddress": "address"
+  "FormAddress": "address",
+  "selected": "selected items",
+  "cartTextArea": "here will show customers selected items"
 }

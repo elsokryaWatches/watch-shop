@@ -29,5 +29,7 @@
   "email address": "البريد الالكتروني",
   "your message": "رسالتك",
   "send": "ارسال",
-  "FormAddress": "العنوان"
+  "FormAddress": "العنوان",
+  "selected": "الطلبات",
+  "cartTextArea": "هنا تعرض طلبات العميل"
 }
