@@ -8,7 +8,7 @@ export default function home() {
   return (
     <>
       <Helmet>
-        <title>Watch Shop - Home Page</title>
+        <title>El Sokkaria - Home Page</title>
       </Helmet>
       <About />
       <Collections />

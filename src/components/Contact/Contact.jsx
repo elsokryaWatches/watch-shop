@@ -11,7 +11,7 @@ export default function Contact() {
   return (
     <>
       <Helmet>
-        <title>Watch Shop - Contact</title>
+        <title>El Sokkaria - Contact</title>
       </Helmet>
       <Navbar />
       <div className="contact">

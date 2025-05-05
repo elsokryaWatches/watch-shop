@@ -11,7 +11,7 @@ export default function Daytona() {
   return (
     <>
       <Helmet>
-        <title>Watch Shop - Daytona Collection</title>
+        <title>El Sokkaria - Daytona Collection</title>
       </Helmet>
       <div className="shop">
         <div className="container-fluid">

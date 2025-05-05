@@ -11,7 +11,7 @@ export default function Young() {
   return (
     <>
       <Helmet>
-        <title>Watch Shop - Young Collection</title>
+        <title>El Sokkaria - Young Collection</title>
       </Helmet>
       <div className="shop">
         <div className="container-fluid">

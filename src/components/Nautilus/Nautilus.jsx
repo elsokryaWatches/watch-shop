@@ -11,7 +11,7 @@ export default function Nautilus() {
   return (
     <>
       <Helmet>
-        <title>Watch Shop - Nautilus Collection</title>
+        <title>El Sokkaria - Nautilus Collection</title>
       </Helmet>
       <div className="shop">
         <div className="container-fluid">

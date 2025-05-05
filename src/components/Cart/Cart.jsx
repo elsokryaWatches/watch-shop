@@ -11,7 +11,7 @@ export default function Cart() {
   return (
     <>
       <Helmet>
-        <title>Watch Shop - Cart</title>
+        <title>El Sokkaria - Cart</title>
       </Helmet>
       <Navbar />
       <div className="cart">

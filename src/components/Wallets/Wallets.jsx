@@ -10,7 +10,7 @@ export default function Wallets() {
   return (
     <>
       <Helmet>
-        <title>Watch Shop - Wallets Collection</title>
+        <title>El Sokkaria - Wallets Collection</title>
       </Helmet>
       <Navbar />
       <div className="wallets">

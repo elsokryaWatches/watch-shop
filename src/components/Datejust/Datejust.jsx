@@ -11,7 +11,7 @@ export default function Datejust() {
   return (
     <>
       <Helmet>
-        <title>Watch Shop - Datejust Collection</title>
+        <title>El Sokkaria - Datejust Collection</title>
       </Helmet>
       <div className="shop">
         <div className="container-fluid">

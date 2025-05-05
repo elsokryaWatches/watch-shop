@@ -11,7 +11,7 @@ export default function Gmt() {
   return (
     <>
       <Helmet>
-        <title>Watch Shop - Gmt Collection</title>
+        <title>El Sokkaria - Gmt Collection</title>
       </Helmet>
       <div className="shop">
         <div className="container-fluid">
