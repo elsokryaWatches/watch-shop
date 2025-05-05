@@ -17,6 +17,9 @@
 img {
   width: 100%;
 }
+body {
+  height: 100dvh;
+}
 
 .fromLeft {
   animation: fromLeft linear forwards;
