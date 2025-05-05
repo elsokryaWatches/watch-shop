@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import ShopNav from "../ShopNav";
 import "../../i18n";
 import { useTranslation } from "react-i18next";
-import UpBtn from "../upBtn/UpBtn";
+import UpBtn from "../UpBtn/UpBtn";
 
 export default function Shop() {
   const [t] = useTranslation();
