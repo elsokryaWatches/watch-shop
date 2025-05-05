@@ -1,13 +1,17 @@
 import "./Contact.css";
 import "../../i18n";
 import { useTranslation } from "react-i18next";
-import UpBtn from "../upBtn/UpBtn";
+import UpBtn from "../UpBtn/UpBtn";
+import { Helmet } from "react-helmet";
 
 export default function Contact() {
   const [t] = useTranslation();
 
   return (
     <>
+      <Helmet>
+        <title>Watch Shop - Contact</title>
+      </Helmet>
       <div className="contact">
         <div className="backgroundLayer"></div>
         <div className="container-fluid">

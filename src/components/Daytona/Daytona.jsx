@@ -2,13 +2,17 @@ import { Link } from "react-router-dom";
 import "../../i18n";
 import { useTranslation } from "react-i18next";
 import CollectionsNav from "../CollectionNav";
-import UpBtn from "../upBtn/UpBtn";
+import UpBtn from "../UpBtn/UpBtn";
+import { Helmet } from "react-helmet";
 
 export default function Daytona() {
   const [t] = useTranslation();
 
   return (
     <>
+      <Helmet>
+        <title>Watch Shop - Daytona Collection</title>
+      </Helmet>
       <div className="shop">
         <div className="container-fluid">
           <div className="shopInner row">
