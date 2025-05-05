@@ -4,6 +4,11 @@
 
 :root {
   font-size: 16px + 0.25vw;
+  --primary-color: #dfb602;
+  --secondry-color: #d1b744;
+  --white: #fff;
+  --trans-blur: #ffffffbb;
+  --black: #000;
 }
 
 * {
@@ -56,21 +61,21 @@ body {
 
       .navBtn {
         padding: 5px 10px;
-        border: 1px solid #004609;
-        background-color: #fff;
+        border: 1px solid var(--primary-color);
+        background-color: var(--white);
 
         a {
           text-decoration: none;
-          color: #004609;
+          color: var(--primary-color);
         }
       }
 
       .selected {
-        background-color: #004609;
+        background-color: var(--primary-color);
 
         a {
           text-decoration: none;
-          color: #fff;
+          color: var(--white);
         }
       }
     }
@@ -98,7 +103,7 @@ body {
           font-family: EN-PlayfairDisplay, AR-Zain !important;
           text-transform: uppercase !important;
           color: #fff;
-          filter: drop-shadow(0 0 10px #fff);
+          filter: drop-shadow(0 0 10px var(--white));
         }
       }
     }
@@ -128,14 +133,14 @@ body {
           }
 
           .addBtn {
-            background-color: #004609;
+            background-color: var(--primary-color);
             text-transform: uppercase !important;
-            color: #fff;
+            color: var(--white);
             padding: 5px 10px;
             border: none;
 
             &:hover {
-              outline: 1px solid #004609;
+              outline: 1px solid var(--primary-color);
             }
           }
         }
@@ -157,7 +162,7 @@ body {
       .toCartBtn {
         padding: 10px 20px;
         border: none;
-        background-color: #004609;
+        background-color: var(--primary-color);
         text-transform: uppercase !important;
 
         a {
@@ -166,7 +171,7 @@ body {
         }
 
         &:hover {
-          outline: 1px solid #004609;
+          outline: 1px solid var(--primary-color);
         }
       }
     }
@@ -178,10 +183,10 @@ body {
   bottom: 5%;
   right: 1%;
   border: none;
-  outline: 1px solid #004609;
+  outline: 1px solid var(--primary-color);
   border-radius: 0;
   padding: 5px 10px;
-  color: #004609;
+  color: var(--primary-color);
   font-weight: bolder;
   background-color: #fff;
   z-index: 111;

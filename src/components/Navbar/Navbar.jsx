@@ -5,11 +5,6 @@ import {
   faEnvelope,
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
-import {
-  faFacebookF,
-  faInstagram,
-  faPinterest,
-} from "@fortawesome/free-brands-svg-icons";
 
 import { Link } from "react-router-dom";
 import "./Navbar.css";

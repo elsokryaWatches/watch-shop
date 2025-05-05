@@ -6,7 +6,7 @@
   left: 0%;
   right: 0%;
   z-index: 111;
-  background-color: #fff;
+  background-color: var(--white);
   padding: 10px 0px;
 
   .logo {
@@ -16,8 +16,8 @@
   }
 
   .offCanvTrigger {
-    background-color: #004609 !important;
-    color: #fff;
+    background-color: var(--primary-color) !important;
+    color: var(--black);
     border-radius: 0;
     border: none;
     position: fixed;
@@ -26,15 +26,15 @@
     transition: all 0.3s ease-in-out;
 
     &:hover {
-      background-color: #fff !important;
-      color: #004609;
-      outline: 1px solid #fff;
+      background-color: var(--white) !important;
+      color: var(--primary-color);
+      outline: 1px solid var(--white);
     }
   }
 }
 
 .offcanvas {
-  background-color: #ffffffbb;
+  background-color: var(--trans-blur);
   backdrop-filter: blur(10px);
   overflow: hidden;
   width: 50dvw !important;
@@ -54,7 +54,7 @@
 
         .offcanvLink {
           text-decoration: none;
-          color: #004609;
+          color: var(--black);
           transition: all 0.3s ease-in-out;
         }
 
@@ -69,38 +69,10 @@
     }
     .offcanvFooter {
       padding: 30px 10px;
-      background-color: #004609;
+      background-color: var(--primary-color);
       position: fixed;
       bottom: 0%;
       left: 0%;
-
-      .offFooterHeader {
-        color: #fff;
-      }
-
-      .offFooterBody {
-        .socials {
-          .offcanvFooterLink {
-            text-decoration: none;
-            color: #fff;
-            margin-inline-end: 10px;
-            font-size: 20px;
-          }
-        }
-        .cont {
-          .offcanvFooterLink {
-            text-decoration: none;
-            display: block;
-            color: #fff;
-            margin: 10px 0px;
-            font-size: 20px;
-
-            span {
-              margin-inline-start: 10px;
-            }
-          }
-        }
-      }
     }
   }
 }
@@ -112,7 +84,7 @@
   right: 0%;
   z-index: 111;
   padding: 10px 0px;
-  background-color: #fff;
+  background-color: var(--white);
 
   .navbarInner {
     justify-content: center;
@@ -131,13 +103,13 @@
 
         .navLink {
           text-decoration: none;
-          color: #004609;
+          color: var(--black);
           transition: all 0.3s ease-in-out;
         }
 
         &::after {
           content: "";
-          background-color: #000;
+          background-color: var(--black);
           height: 2px;
           width: 0%;
           position: absolute;
