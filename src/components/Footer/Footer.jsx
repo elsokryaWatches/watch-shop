@@ -23,7 +23,7 @@ export default function Footer() {
       <div className="footer center">
         <div className="container-fluid">
           <div className="footerInner row">
-            <div className="footerSec col-md-10 col-lg-5">
+            <div className="footerSec col-5">
               <h3>{t("contact")}</h3>
               <ul className="footerList">
                 <li className="FooterListItem">
@@ -80,7 +80,7 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="footerSec col-md-10 col-lg-5">
+            <div className="footerSec col-5">
               <h3>{t("our products")}</h3>
               <ul className="footerList">
                 <li className="FooterListItem">
