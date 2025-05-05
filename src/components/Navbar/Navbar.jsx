@@ -40,8 +40,8 @@ export default function Navbar() {
           className="btn offCanvTrigger"
           type="button"
           data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasScrolling"
-          aria-controls="offcanvasScrolling"
+          data-bs-target="#offcanvasExample"
+          aria-controls="offcanvasExample"
         >
           <FontAwesomeIcon icon={faBars} />
         </button>
@@ -49,14 +49,12 @@ export default function Navbar() {
 
       <div
         className="offcanvas offcanvas-start"
-        data-bs-scroll="true"
-        data-bs-backdrop="false"
         tabindex="-1"
-        id="offcanvasScrolling"
-        aria-labelledby="offcanvasScrollingLabel"
+        id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel"
       >
         <div className="offcanvas-header">
-          <h5 className="offcanvas-title" id="offcanvasScrollingLabel">
+          <h5 className="offcanvas-title" id="offcanvasExampleLabel">
             <Link to={"/"}>
               <img src="imgs/elsokkaria_logo-removebg-preview.png" alt="" />
             </Link>
