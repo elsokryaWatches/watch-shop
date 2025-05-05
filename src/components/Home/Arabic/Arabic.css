@@ -17,7 +17,7 @@
       h2 {
         color: #000;
         margin-bottom: 10px;
-        font-family: EN-PlayfairDisplay !important;
+        font-family: EN-PlayfairDisplay, AR-Zain !important;
         letter-spacing: 2px;
         font-size: 50px;
         text-transform: uppercase !important;
@@ -43,7 +43,7 @@
         h6 {
           position: relative;
           color: #000;
-          font-family: EN-PlayfairDisplay !important;
+          font-family: EN-PlayfairDisplay, AR-Zain !important;
           width: fit-content;
           margin: 5px auto;
           letter-spacing: 1px;
