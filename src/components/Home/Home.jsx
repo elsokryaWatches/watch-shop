@@ -1,4 +1,3 @@
-import Header from "./Header/Header";
 import Collections from "./Collections/Collections";
 import About from "./About/About";
 import Arabic from "./Arabic/Arabic";
@@ -11,9 +10,8 @@ export default function home() {
       <Helmet>
         <title>Watch Shop - Home Page</title>
       </Helmet>
-      <Header />
-      <Collections />
       <About />
+      <Collections />
       <Arabic />
       <UpBtn />
     </>

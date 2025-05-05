@@ -11,11 +11,11 @@
         margin: auto;
         margin-bottom: 20px;
         padding: 5px;
-        color: #000;
+        color: var(--text);
         text-transform: uppercase !important;
       }
       h2 {
-        color: #000;
+        color: var(--text);
         margin-bottom: 10px;
         font-family: EN-PlayfairDisplay, AR-Zain !important;
         letter-spacing: 2px;
@@ -42,7 +42,7 @@
 
         h6 {
           position: relative;
-          color: #000;
+          color: var(--black);
           font-family: EN-PlayfairDisplay, AR-Zain !important;
           width: fit-content;
           margin: 5px auto;
@@ -50,7 +50,7 @@
 
           &::after {
             content: "";
-            background-color: #002405;
+            background-color: var(--primary-color);
             height: 2px;
             width: 0%;
             position: absolute;
@@ -60,7 +60,7 @@
           }
 
           &:hover {
-            color: #002405;
+            color: var(--primary-color);
 
             &::after {
               width: 100%;
@@ -85,16 +85,16 @@
       .arabicBtn {
         padding: 10px 15px;
         border: none;
-        background-color: #004609;
+        background-color: var(--primary-color);
         text-transform: uppercase !important;
         transition: all 0.4s ease-in-out;
         a {
-          color: #fff;
+          color: var(--white);
           text-decoration: none;
         }
 
         &:hover {
-          outline: 1px solid #004609;
+          outline: 1px solid var(--primary-color);
         }
       }
     }

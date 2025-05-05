@@ -16,7 +16,11 @@
     justify-content: center;
 
     .contactForm {
-      background-image: linear-gradient(to bottom, #00460986, #2e83397c);
+      background-image: linear-gradient(
+        to bottom,
+        var(--primary-color),
+        var(--secondry-color)
+      );
       backdrop-filter: blur(10px);
       color: #fff;
       width: fit-content;
@@ -41,7 +45,7 @@
 
           &:focus {
             outline: none;
-            box-shadow: 0 0 10px #fff;
+            box-shadow: 0 0 10px var(--white);
           }
         }
       }
@@ -50,8 +54,8 @@
         text-align: center;
 
         .submitBtn {
-          background-color: #fff;
-          color: #004609;
+          background-color: var(--white);
+          color: var(--primary-color);
           border: none;
           padding: 5px 10px;
           border-radius: 10px;
@@ -59,9 +63,9 @@
           transition: all 0.3s ease-in-out;
 
           &:hover {
-            background-color: #2e83397c;
-            color: #fff;
-            box-shadow: 0 0 10px #fff;
+            background-color: var(--secondry-color);
+            color: var(--text);
+            box-shadow: 0 0 10px var(--white);
           }
         }
       }

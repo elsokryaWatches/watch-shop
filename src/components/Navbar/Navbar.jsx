@@ -33,7 +33,7 @@ export default function Navbar() {
       <div className="smallHeaderBar">
         <div className="logo ">
           <Link to={"/"}>
-            <img src="imgs/Ofilan_Watches_Logo_Enlarged_v1.avif" alt="" />
+            <img src="imgs/elsokkaria_logo-removebg-preview.png" alt="" />
           </Link>
         </div>
         <button
@@ -58,7 +58,7 @@ export default function Navbar() {
         <div className="offcanvas-header">
           <h5 className="offcanvas-title" id="offcanvasScrollingLabel">
             <Link to={"/"}>
-              <img src="imgs/Ofilan_Watches_Logo_Enlarged_v1.avif" alt="" />
+              <img src="imgs/elsokkaria_logo-removebg-preview.png" alt="" />
             </Link>
           </h5>
           <button
@@ -189,7 +189,7 @@ export default function Navbar() {
           <div className="navbarInner row">
             <div className="logo col-1">
               <Link to={"/"}>
-                <img src="imgs\Ofilan_Watches_Logo_Enlarged_v1.avif" alt="" />
+                <img src="imgs/elsokkaria_logo-removebg-preview.png" alt="" />
               </Link>
             </div>
             <div className="navList col-6">

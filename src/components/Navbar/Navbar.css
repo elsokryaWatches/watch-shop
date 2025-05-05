@@ -17,7 +17,7 @@
 
   .offCanvTrigger {
     background-color: var(--primary-color) !important;
-    color: var(--black);
+    color: var(--white);
     border-radius: 0;
     border: none;
     position: fixed;
@@ -54,7 +54,7 @@
 
         .offcanvLink {
           text-decoration: none;
-          color: var(--black);
+          color: var(--primary-color);
           transition: all 0.3s ease-in-out;
         }
 
@@ -66,13 +66,15 @@
           }
         }
       }
-    }
-    .offcanvFooter {
-      padding: 30px 10px;
-      background-color: var(--primary-color);
-      position: fixed;
-      bottom: 0%;
-      left: 0%;
+
+      .dropdown,
+      .dropend {
+        .dropdown-menu {
+          .dropdown-item {
+            color: var(--primary-color);
+          }
+        }
+      }
     }
   }
 }
@@ -103,13 +105,13 @@
 
         .navLink {
           text-decoration: none;
-          color: var(--black);
+          color: var(--primary-color);
           transition: all 0.3s ease-in-out;
         }
 
         &::after {
           content: "";
-          background-color: var(--black);
+          background-color: var(--primary-color);
           height: 2px;
           width: 0%;
           position: absolute;
@@ -124,6 +126,14 @@
           }
           &::after {
             width: 100%;
+          }
+        }
+      }
+
+      .dropdown {
+        .dropdown-menu {
+          .dropdown-item {
+            color: var(--primary-color);
           }
         }
       }
