@@ -22,7 +22,7 @@ export default function Women() {
             </div>
             <ShopNav />
             <div className="Watches row col-12">
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img
                     src="imgs/8df3f1cd-4e35-485c-b42a-48ac6f350151_png.webp"
@@ -35,7 +35,7 @@ export default function Women() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img
                     src="imgs/18c89bd5-cdf6-4930-afda-494323253aaf_png.webp"
@@ -48,7 +48,7 @@ export default function Women() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img
                     src="imgs/a66f7f41-de5e-4379-b2f3-3381e2b352a8_png.webp"
@@ -61,7 +61,7 @@ export default function Women() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/chameleon_daytona.webp" alt="" />
                 </div>
@@ -71,7 +71,7 @@ export default function Women() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/chocolate_daytona.webp" alt="" />
                 </div>
@@ -81,7 +81,7 @@ export default function Women() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/chocolateaquanaut.webp" alt="" />
                 </div>
@@ -91,7 +91,7 @@ export default function Women() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/IMG_1283.webp" alt="" />
                 </div>
@@ -101,7 +101,7 @@ export default function Women() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/IMG_1285.webp" alt="" />
                 </div>
@@ -111,7 +111,7 @@ export default function Women() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/IMG_4957.webp" alt="" />
                 </div>
@@ -121,7 +121,7 @@ export default function Women() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/IMG_4958.webp" alt="" />
                 </div>

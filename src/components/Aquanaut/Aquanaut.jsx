@@ -14,7 +14,7 @@ export default function Aquanaut() {
           <div className="shopInner row">
             <CollectionsNav />
             <div className="Watches row col-12">
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/chocolateaquanaut.webp" alt="" />
                 </div>
@@ -24,7 +24,7 @@ export default function Aquanaut() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img
                     src="imgs/IMG_3823_393b27ce-9890-4508-b972-522cd1dd31ed.webp"
@@ -37,7 +37,7 @@ export default function Aquanaut() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/navyblueaquanaut.webp" alt="" />
                 </div>
@@ -47,7 +47,7 @@ export default function Aquanaut() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/olivegreenaquanaut.webp" alt="" />
                 </div>
@@ -57,7 +57,7 @@ export default function Aquanaut() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/silveraquanaut.webp" alt="" />
                 </div>
@@ -67,7 +67,7 @@ export default function Aquanaut() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/tiffanyblueaquanaut.webp" alt="" />
                 </div>
@@ -77,7 +77,7 @@ export default function Aquanaut() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/black_aquanaut.webp" alt="" />
                 </div>

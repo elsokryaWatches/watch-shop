@@ -25,7 +25,7 @@ export default function Young() {
             </div>
             <ShopNav />
             <div className="Watches row col-12">
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img
                     src="imgs/9c3682d1-3c49-4c77-8646-8280a6cf8103_png.webp"
@@ -38,7 +38,7 @@ export default function Young() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/aqua_marine_daytona.webp" alt="" />
                 </div>
@@ -48,7 +48,7 @@ export default function Young() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/batmangmt.webp" alt="" />
                 </div>
@@ -58,7 +58,7 @@ export default function Young() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/black_panda_daytona.webp" alt="" />
                 </div>
@@ -68,7 +68,7 @@ export default function Young() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/black_white_daytona.webp" alt="" />
                 </div>
@@ -78,7 +78,7 @@ export default function Young() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/panda_daytona.webp" alt="" />
                 </div>
@@ -88,7 +88,7 @@ export default function Young() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/pepsigmt.webp" alt="" />
                 </div>
@@ -98,7 +98,7 @@ export default function Young() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/cokegmt.webp" alt="" />
                 </div>
@@ -108,7 +108,7 @@ export default function Young() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/emerald_daytona.webp" alt="" />
                 </div>
@@ -118,7 +118,7 @@ export default function Young() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/golden_jade.webp" alt="" />
                 </div>

@@ -14,7 +14,7 @@ export default function Gmt() {
           <div className="shopInner row">
             <CollectionsNav />
             <div className="Watches row col-12">
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img
                     src="imgs/batgirlgmt_f430153f-92c6-4b78-817a-6f833b89e1a1.webp"
@@ -27,7 +27,7 @@ export default function Gmt() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/batmangmt.webp" alt="" />
                 </div>
@@ -37,7 +37,7 @@ export default function Gmt() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/cokegmt.webp" alt="" />
                 </div>
@@ -47,7 +47,7 @@ export default function Gmt() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/goldgmt.webp" alt="" />
                 </div>
@@ -57,7 +57,7 @@ export default function Gmt() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/rootbeergmt.webp" alt="" />
                 </div>
@@ -67,7 +67,7 @@ export default function Gmt() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/spritegmt.webp" alt="" />
                 </div>
@@ -77,7 +77,7 @@ export default function Gmt() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/twotonegmt.webp" alt="" />
                 </div>
@@ -87,7 +87,7 @@ export default function Gmt() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/pepsigmt.webp" alt="" />
                 </div>

@@ -73,9 +73,10 @@ img {
     }
 
     .shopHeader {
-      padding: 20px 0px;
+      padding: 0px;
       text-align: center;
       position: relative;
+      top: 0%;
 
       .backgroundLayer {
         padding: 0;

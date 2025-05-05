@@ -14,7 +14,7 @@ export default function Daytona() {
           <div className="shopInner row">
             <CollectionsNav />
             <div className="Watches row col-12">
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/aqua_marine_daytona.webp" alt="" />
                 </div>
@@ -24,7 +24,7 @@ export default function Daytona() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/black_panda_daytona.webp" alt="" />
                 </div>
@@ -34,7 +34,7 @@ export default function Daytona() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/black_white_daytona.webp" alt="" />
                 </div>
@@ -44,7 +44,7 @@ export default function Daytona() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/chameleon_daytona.webp" alt="" />
                 </div>
@@ -54,7 +54,7 @@ export default function Daytona() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/champagne_daytona.webp" alt="" />
                 </div>
@@ -64,7 +64,7 @@ export default function Daytona() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/chocolate_daytona.webp" alt="" />
                 </div>
@@ -74,7 +74,7 @@ export default function Daytona() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/emerald_daytona.webp" alt="" />
                 </div>
@@ -84,7 +84,7 @@ export default function Daytona() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/golden_jade.webp" alt="" />
                 </div>
@@ -94,7 +94,7 @@ export default function Daytona() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/platinum_daytona.webp" alt="" />
                 </div>
@@ -104,7 +104,7 @@ export default function Daytona() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/rose_gold_daytona.webp" alt="" />
                 </div>
@@ -114,7 +114,7 @@ export default function Daytona() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/royal_blue_daytona.webp" alt="" />
                 </div>
@@ -124,7 +124,7 @@ export default function Daytona() {
                   <button className="addBtn">{t("add to cart")}</button>
                 </div>
               </div>
-              <div className="watchItem center col-3">
+              <div className="watchItem center col-md-5 col-lg-3">
                 <div className="img">
                   <img src="imgs/two_tone_daytona.webp" alt="" />
                 </div>
