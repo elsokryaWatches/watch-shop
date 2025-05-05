@@ -62,7 +62,6 @@ export default function Contact() {
                   className="col-10"
                   name="msg"
                   id="msg"
-                  rows={10}
                   required
                 ></textarea>
               </div>
