@@ -1,5 +1,4 @@
 .offCanvTrigger {
-  display: none;
   background-color: #004609 !important;
   color: #fff;
   border-radius: 0;
@@ -21,6 +20,7 @@
   background-color: #ffffffbb;
   backdrop-filter: blur(10px);
   overflow: hidden;
+  width: 40dvw !important;
 
   .offcanvas-body {
     position: relative;

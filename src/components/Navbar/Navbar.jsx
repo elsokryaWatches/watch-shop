@@ -160,72 +160,23 @@ export default function Navbar() {
               </Link>
               <ul className="dropdown-menu">
                 <li>
-                  <Link
+                  <button
                     className="dropdown-item"
                     onClick={() => handleLangChange("en")}
                   >
                     {t("english")} <Flag code="gb" height="10" />
-                  </Link>
+                  </button>
                 </li>
                 <li>
-                  <Link
+                  <button
                     className="dropdown-item"
                     onClick={() => handleLangChange("ar")}
                   >
                     {t("arabic")} <Flag code="eg" height="10" />
-                  </Link>
+                  </button>
                 </li>
               </ul>
             </li>
-          </div>
-
-          <div className="offcanvFooter row">
-            <div className="offFooterHeader col-12">
-              <h3>{t("contact")}</h3>
-            </div>
-            <div className="offFooterBody col-12">
-              <div className="socials">
-                <Link
-                  className="offcanvFooterLink"
-                  to={"https://www.facebook.com"}
-                  target="_blank"
-                >
-                  <FontAwesomeIcon icon={faFacebookF} />
-                </Link>
-                <Link
-                  className="offcanvFooterLink"
-                  to={"https://www.Instagram.com"}
-                  target="_blank"
-                >
-                  <FontAwesomeIcon icon={faInstagram} />
-                </Link>
-                <Link
-                  className="offcanvFooterLink"
-                  to={"https://www.Pinterest.com"}
-                  target="_blank"
-                >
-                  <FontAwesomeIcon icon={faPinterest} />
-                </Link>
-              </div>
-              <div className="cont">
-                <Link className="offcanvFooterLink">
-                  <FontAwesomeIcon icon={faPhone} />
-                  <span>01033926177</span>
-                </Link>
-                <Link className="offcanvFooterLink">
-                  <FontAwesomeIcon icon={faEnvelope} />
-                  <span>watchshop@gmail.com</span>
-                </Link>
-                <Link
-                  className="offcanvFooterLink"
-                  to={"https://maps.app.goo.gl/FZDL3sZzJ8BUYerJ7"}
-                  target="_blank"
-                >
-                  <FontAwesomeIcon icon={faLocationDot} />
-                  <span>{t("address")}</span>
-                </Link>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -239,7 +190,7 @@ export default function Navbar() {
                 <img src="imgs\Ofilan_Watches_Logo_Enlarged_v1.avif" alt="" />
               </Link>
             </div>
-            <div className="navList col-5">
+            <div className="navList col-6">
               <li className="navItem">
                 <Link className="navLink" to={"/"}>
                   {t("home")}
@@ -332,20 +283,20 @@ export default function Navbar() {
                 </Link>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link
+                    <button
                       className="dropdown-item"
                       onClick={() => handleLangChange("en")}
                     >
                       {t("english")} <Flag code="gb" height="10" />
-                    </Link>
+                    </button>
                   </li>
                   <li>
-                    <Link
+                    <button
                       className="dropdown-item"
                       onClick={() => handleLangChange("ar")}
                     >
                       {t("arabic")} <Flag code="eg" height="10" />
-                    </Link>
+                    </button>
                   </li>
                 </ul>
               </li>

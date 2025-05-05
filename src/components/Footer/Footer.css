@@ -10,11 +10,13 @@
   .footerInner {
     justify-content: center;
     align-items: baseline;
+    gap: 15px;
 
     .footerSec {
       h3 {
         color: #fff;
         text-transform: uppercase !important;
+        padding: 0px;
       }
 
       .footerList {
@@ -32,17 +34,6 @@
               margin-inline-start: 10px;
             }
           }
-        }
-      }
-
-      .gallery {
-        justify-content: start;
-        align-items: center;
-        gap: 10px;
-
-        .img {
-          padding: 0;
-          margin: 0;
         }
       }
     }

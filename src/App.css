@@ -1,5 +1,10 @@
 @import url(./fonts.css);
 @import url(./animations.css);
+@import url(./responsive.css);
+
+:root {
+  font-size: 16px + 0.25vw;
+}
 
 * {
   box-sizing: border-box;
@@ -173,6 +178,7 @@ img {
   border-radius: 0;
   padding: 5px 10px;
   color: #004609;
+  font-weight: bolder;
   background-color: #fff;
   z-index: 111;
 }

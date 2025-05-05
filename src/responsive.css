@@ -1,0 +1,34 @@
+@media screen and (min-width: 1200px) {
+  .navBar {
+    display: block;
+  }
+
+  .offCanvTrigger {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .navBar {
+    display: none;
+  }
+
+  .offCanvTrigger {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  :root {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 576px) {
+  :root {
+    font-size: 12px;
+  }
+}

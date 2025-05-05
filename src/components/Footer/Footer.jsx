@@ -23,7 +23,7 @@ export default function Footer() {
       <div className="footer center">
         <div className="container-fluid">
           <div className="footerInner row">
-            <div className="footerSec col-3">
+            <div className="footerSec col-md-10 col-lg-5">
               <h3>{t("contact")}</h3>
               <ul className="footerList">
                 <li className="FooterListItem">
@@ -80,7 +80,7 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="footerSec col-3">
+            <div className="footerSec col-md-10 col-lg-5">
               <h3>{t("our products")}</h3>
               <ul className="footerList">
                 <li className="FooterListItem">
@@ -104,26 +104,6 @@ export default function Footer() {
                   </Link>
                 </li>
               </ul>
-            </div>
-            <div className="footerSec col-3">
-              <h3>{t("arabicHH6")}</h3>
-              <div className="gallery row">
-                <div className="img col-4">
-                  <img src="imgs/greenarabicdial.webp" alt="" />
-                </div>
-                <div className="img col-4">
-                  <img src="imgs/IMG_4958.webp" alt="" />
-                </div>
-                <div className="img col-4">
-                  <img
-                    src="imgs/TwoToneRoseGoldChocolateDial_06f7ac83-3783-459f-9de0-7e612ac84f64.webp"
-                    alt=""
-                  />
-                </div>
-                <div className="img col-4">
-                  <img src="imgs/Untitleddesign_9_1.webp" alt="" />
-                </div>
-              </div>
             </div>
           </div>
         </div>

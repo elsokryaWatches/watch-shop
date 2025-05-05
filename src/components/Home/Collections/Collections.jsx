@@ -16,31 +16,31 @@ export default function Collections() {
               <h2>{t("collectionHH2")}</h2>
             </div>
             <div className="items row col-12">
-              <div className="item fromLeft col-2">
+              <div className="item fromLeft col-xl-2 col-lg-3 col-md-5">
                 <img src="imgs/pepsigmt.webp" alt="" />
                 <button className="itemBtn fadeIn">
                   <Link to={"/gmt"}>gmt</Link>
                 </button>
               </div>
-              <div className="item fromLeft col-2">
+              <div className="item fromLeft col-xl-2 col-lg-3 col-md-5">
                 <img src="imgs/black_aquanaut.webp" alt="" />
                 <button className="itemBtn fadeIn">
                   <Link to={"/aquanaut"}>aquanaut</Link>
                 </button>
               </div>
-              <div className="item center col-2">
+              <div className="item center col-xl-2 col-lg-3 col-md-5">
                 <img src="imgs/panda_daytona.webp" alt="" />
                 <button className="itemBtn fadeIn">
                   <Link to={"/daytona"}>daytona</Link>
                 </button>
               </div>
-              <div className="item fromRight col-2">
+              <div className="item fromRight col-xl-2 col-lg-3 col-md-5">
                 <img src="imgs/greenarabicdial.webp" alt="" />
                 <button className="itemBtn fadeIn">
                   <Link to={"/datejust"}>datejust</Link>
                 </button>
               </div>
-              <div className="item fromRight col-2">
+              <div className="item fromRight col-xl-2 col-lg-3 col-md-5">
                 <img src="imgs/navy_blue_nautilus.webp" alt="" />
                 <button className="itemBtn fadeIn">
                   <Link to={"/nautilus"}>nautilus</Link>
