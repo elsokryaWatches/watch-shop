@@ -19,6 +19,7 @@
   padding: 0;
   text-transform: capitalize !important;
   font-family: Lato-Black, DimaNaskh;
+  letter-spacing: 1px;
 }
 
 img {

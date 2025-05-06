@@ -1,6 +1,9 @@
-import Collections from "./Collections/Collections";
 import About from "./About/About";
-import Arabic from "./Arabic/Arabic";
+import Watches from "./Watches/Watches";
+import Wallets from "./Wallets/Wallets";
+import Belts from "./Belts/Belts";
+import Perfumes from "./Perfumes/Perfumes";
+import Shoes from "./Shoes/Shoes";
 import UpBtn from "../UpBtn/UpBtn";
 import { Helmet } from "react-helmet";
 
@@ -11,8 +14,11 @@ export default function home() {
         <title>El Sokkaria - Home Page</title>
       </Helmet>
       <About />
-      <Collections />
-      <Arabic />
+      <Watches />
+      <Wallets />
+      <Belts />
+      <Perfumes />
+      <Shoes />
       <UpBtn />
     </>
   );

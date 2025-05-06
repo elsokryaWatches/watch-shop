@@ -10,7 +10,6 @@ export default function ShopNav() {
     { path: "/men", text: "men watches" },
     { path: "/women", text: "women watches" },
     { path: "/young", text: "young watches" },
-    { path: "/wallets", text: "wallets" },
   ];
 
   return (

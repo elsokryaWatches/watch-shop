@@ -104,49 +104,6 @@ export default function Navbar() {
                     {t("young watches")}
                   </Link>
                 </li>
-                <li>
-                  <Link className="dropdown-item" to={"/wallets"}>
-                    {t("wallets")}
-                  </Link>
-                </li>
-              </ul>
-            </li>
-            <li className="offCanvItem dropend">
-              <Link
-                className="offcanvLink dropdown-toggle"
-                type="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                to={"/shop"}
-              >
-                {t("collectionHH2")}
-              </Link>
-              <ul className="dropdown-menu">
-                <li>
-                  <Link className="dropdown-item" to={"/gmt"}>
-                    gmt
-                  </Link>
-                </li>
-                <li>
-                  <Link className="dropdown-item" to={"/aquanaut"}>
-                    aquanaut
-                  </Link>
-                </li>
-                <li>
-                  <Link className="dropdown-item" to={"/daytona"}>
-                    daytona
-                  </Link>
-                </li>
-                <li>
-                  <Link className="dropdown-item" to={"/datejust"}>
-                    datejust
-                  </Link>
-                </li>
-                <li>
-                  <Link className="dropdown-item" to={"/nautilus"}>
-                    nautilus
-                  </Link>
-                </li>
               </ul>
             </li>
             <li className="offCanvItem dropdown">
@@ -225,49 +182,6 @@ export default function Navbar() {
                   <li>
                     <Link className="dropdown-item" to={"/young"}>
                       {t("young watches")}
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to={"/wallets"}>
-                      {t("wallets")}
-                    </Link>
-                  </li>
-                </ul>
-              </li>
-              <li className="navItem dropdown">
-                <Link
-                  className="navLink dropdown-toggle"
-                  type="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                  to={"/shop"}
-                >
-                  {t("collectionHH2")}
-                </Link>
-                <ul className="dropdown-menu">
-                  <li>
-                    <Link className="dropdown-item" to={"/gmt"}>
-                      gmt
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to={"/aquanaut"}>
-                      aquanaut
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to={"/daytona"}>
-                      daytona
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to={"/datejust"}>
-                      datejust
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to={"/nautilus"}>
-                      nautilus
                     </Link>
                   </li>
                 </ul>

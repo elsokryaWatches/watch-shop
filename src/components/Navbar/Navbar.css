@@ -94,6 +94,12 @@
     align-items: center;
     font-family: EN-Bold !important;
 
+    .logo {
+      img {
+        width: 60%;
+      }
+    }
+
     .navList {
       list-style: none;
       text-align: center;

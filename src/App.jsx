@@ -4,18 +4,12 @@ import Layout from "./components/Layout/Layout";
 import LoadingSpinner from "./components/LoadingSpinner/LoadingSpinner";
 
 const Home = lazy(() => import("./components/Home/Home"));
-const Wallets = lazy(() => import("./components/Wallets/Wallets"));
 const Men = lazy(() => import("./components/Men/Men"));
 const Women = lazy(() => import("./components/Women/Women"));
 const Young = lazy(() => import("./components/Young/Young"));
 const Contact = lazy(() => import("./components/Contact/Contact"));
 const Shop = lazy(() => import("./components/Shop/Shop"));
 const Cart = lazy(() => import("./components/Cart/Cart"));
-const Gmt = lazy(() => import("./components/Gmt/Gmt"));
-const Aquanaut = lazy(() => import("./components/Aquanaut/Aquanaut"));
-const Daytona = lazy(() => import("./components/Daytona/Daytona"));
-const Datejust = lazy(() => import("./components/Datejust/Datejust"));
-const Nautilus = lazy(() => import("./components/Nautilus/Nautilus"));
 
 const createRoute = (path, element) => ({
   path,
@@ -34,16 +28,10 @@ export default function App() {
         createRoute("women", <Women />),
         createRoute("young", <Young />),
         createRoute("shop", <Shop />),
-        createRoute("gmt", <Gmt />),
-        createRoute("aquanaut", <Aquanaut />),
-        createRoute("daytona", <Daytona />),
-        createRoute("datejust", <Datejust />),
-        createRoute("nautilus", <Nautilus />),
       ],
     },
     createRoute("cart", <Cart />),
     createRoute("contact", <Contact />),
-    createRoute("wallets", <Wallets />),
   ]);
   return <RouterProvider router={routes} />;
 }
