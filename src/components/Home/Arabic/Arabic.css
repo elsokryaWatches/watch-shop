@@ -17,7 +17,7 @@
       h2 {
         color: var(--text);
         margin-bottom: 10px;
-        font-family: EN-PlayfairDisplay, AR-Zain !important;
+        font-family: Lato-Black, DimaNaskh !important;
         letter-spacing: 2px;
         font-size: 50px;
         text-transform: uppercase !important;
@@ -43,7 +43,7 @@
         h6 {
           position: relative;
           color: var(--black);
-          font-family: EN-PlayfairDisplay, AR-Zain !important;
+          font-family: Lato-Black, DimaNaskh !important;
           width: fit-content;
           margin: 5px auto;
           letter-spacing: 1px;

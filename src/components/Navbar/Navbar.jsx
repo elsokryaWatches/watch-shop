@@ -33,7 +33,7 @@ export default function Navbar() {
       <div className="smallHeaderBar">
         <div className="logo ">
           <Link to={"/"}>
-            <img src="imgs/elsokkaria_logo-removebg-preview.png" alt="" />
+            <img src="imgs/logo.svg" alt="" />
           </Link>
         </div>
         <button
@@ -187,7 +187,7 @@ export default function Navbar() {
           <div className="navbarInner row">
             <div className="logo col-1">
               <Link to={"/"}>
-                <img src="imgs/elsokkaria_logo-removebg-preview.png" alt="" />
+                <img src="imgs/logo.svg" alt="" />
               </Link>
             </div>
             <div className="navList col-6">

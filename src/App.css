@@ -18,12 +18,13 @@
   margin: 0;
   padding: 0;
   text-transform: capitalize !important;
-  font-family: EN-Ubuntu, AR-Zain;
+  font-family: Lato-Black, DimaNaskh;
 }
 
 img {
   width: 100%;
 }
+
 body {
   height: 100dvh;
 }
@@ -102,7 +103,7 @@ body {
         transform: translate(-50%, -50%);
 
         h2 {
-          font-family: EN-PlayfairDisplay, AR-Zain !important;
+          font-family: Lato-Black, DimaNaskh !important;
           text-transform: uppercase !important;
           color: var(--white);
           filter: drop-shadow(0 0 10px var(--white));

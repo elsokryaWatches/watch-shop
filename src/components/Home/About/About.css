@@ -10,7 +10,7 @@
       text-align: start;
       h2 {
         font-size: 50px;
-        font-family: EN-PlayfairDisplay, AR-Zain;
+        font-family: Lato-Black, DimaNaskh !important;
         color: var(--text);
         margin-bottom: 10px;
         text-transform: uppercase !important;

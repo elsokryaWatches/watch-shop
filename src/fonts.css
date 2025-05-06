@@ -1,14 +1,9 @@
 @font-face {
-  font-family: EN-PlayfairDisplay;
-  src: url(/fonts/PlayfairDisplay-Regular.ttf);
+  font-family: DimaNaskh;
+  src: url(/fonts/DimaNaskh.ttf);
 }
 
 @font-face {
-  font-family: EN-Ubuntu;
-  src: url(/fonts/Ubuntu-Regular.ttf);
-}
-
-@font-face {
-  font-family: AR-Zain;
-  src: url(/fonts/Zain-Bold.ttf);
+  font-family: Lato-Black;
+  src: url(/fonts/Lato-Black.ttf);
 }
