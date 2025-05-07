@@ -2,10 +2,14 @@
   "contact": "اتصل بنا",
   "home": "الصفحه الاساسيه",
   "shop": "المتجر",
+  "watches": "الساعات",
+  "belts": "الأحزمه",
+  "perfumes": "العطور",
+  "shoes": "الأحذيه",
+  "wallets": "المحافظ",
   "men watches": "ساعات رجالي",
   "women watches": "ساعات نسائي",
   "young watches": "ساعات شبابي",
-  "wallets": "محافظ",
   "langauge": "اللغه",
   "english": "الانجليزيه",
   "arabic": "العربيه",
@@ -31,5 +35,6 @@
   "send": "ارسال",
   "FormAddress": "العنوان",
   "selected": "الطلبات",
-  "cartTextArea": "هنا تعرض طلبات العميل"
+  "cartTextArea": "هنا تعرض طلبات العميل",
+  "whatsapp": "واتساب"
 }

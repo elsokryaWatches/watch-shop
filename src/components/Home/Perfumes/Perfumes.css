@@ -1,0 +1,23 @@
+.perfumes {
+  padding: 50px 0px;
+  background-color: var(--gray-bg);
+
+  .perfumesInner {
+    justify-content: center;
+    .perfumesHeader {
+      text-align: center;
+      h2 {
+        color: var(--white);
+        text-transform: uppercase !important;
+        width: fit-content;
+        margin: auto;
+        background-color: var(--text-tr-bg);
+        padding: 10px;
+      }
+    }
+    .perfumesContents {
+      padding: 20px 0px;
+      text-align: center;
+    }
+  }
+}

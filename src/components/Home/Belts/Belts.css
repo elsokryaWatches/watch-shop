@@ -1,0 +1,22 @@
+.belts {
+  padding: 50px 0px;
+
+  .beltsInner {
+    justify-content: center;
+    .beltsHeader {
+      text-align: center;
+      h2 {
+        color: var(--white);
+        text-transform: uppercase !important;
+        width: fit-content;
+        margin: auto;
+        background-color: var(--text-tr-bg);
+        padding: 10px;
+      }
+    }
+    .beltsContents {
+      padding: 20px 0px;
+      text-align: center;
+    }
+  }
+}

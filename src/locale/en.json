@@ -2,10 +2,14 @@
   "contact": "contact",
   "home": "home",
   "shop": "shop",
+  "watches": "watches",
+  "belts": "belts",
+  "perfumes": "perfumes",
+  "shoes": "shoes",
+  "wallets": "wallets",
   "men watches": "men watches",
   "women watches": "women watches",
   "young watches": "young watches",
-  "wallets": "wallets",
   "langauge": "langauge",
   "english": "english",
   "arabic": "arabic",
@@ -31,5 +35,6 @@
   "send": "send",
   "FormAddress": "address",
   "selected": "selected items",
-  "cartTextArea": "here will show customers selected items"
+  "cartTextArea": "here will show customers selected items",
+  "whatsapp": "whatsapp"
 }

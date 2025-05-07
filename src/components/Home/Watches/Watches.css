@@ -1,0 +1,18 @@
+.watches {
+  padding: 50px 0px;
+
+  .watchesInner {
+    justify-content: center;
+    .watchesHeader {
+      text-align: center;
+      h2 {
+        color: var(--white);
+        text-transform: uppercase !important;
+        width: fit-content;
+        margin: auto;
+        background-color: var(--text-tr-bg);
+        padding: 10px;
+      }
+    }
+  }
+}

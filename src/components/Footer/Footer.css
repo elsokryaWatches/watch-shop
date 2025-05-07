@@ -6,6 +6,9 @@
   left: 0%;
   right: 0%;
   z-index: 111;
+  animation: FooterDrag linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0%;
 
   .footerInner {
     justify-content: center;

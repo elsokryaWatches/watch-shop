@@ -1,0 +1,23 @@
+.wallets {
+  padding: 50px 0px;
+  background-color: var(--gray-bg);
+
+  .walletsInner {
+    justify-content: center;
+    .walletsHeader {
+      text-align: center;
+      h2 {
+        color: var(--white);
+        text-transform: uppercase !important;
+        width: fit-content;
+        margin: auto;
+        background-color: var(--text-tr-bg) !important;
+        padding: 10px;
+      }
+    }
+    .walletsContents {
+      padding: 20px 0px;
+      text-align: center;
+    }
+  }
+}
