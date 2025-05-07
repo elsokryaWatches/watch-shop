@@ -1,23 +1,23 @@
-import "./LogIn.css";
+import "./Sign_Up.css";
 import "../../i18n";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import Navbar from "../Navbar/Navbar";
 import LogNav from "../LogNav";
 
-export default function LogIn() {
+export default function Sign_Up() {
   const [t] = useTranslation();
 
   return (
     <>
       <Helmet>
-        <title>El Sokkaria - Log In</title>
+        <title>El Sokkaria - Sign Up</title>
       </Helmet>
       <Navbar />
-      <div className="logIn">
+      <div className="signup">
         <div className="container-fluid">
           <LogNav />
-          <form className="logInForm" method="POST">
+          <form className="signupForm" method="POST">
             <div className="inputContainer row">
               <label className="col-10" htmlFor="username">
                 {t("username")}
@@ -26,7 +26,19 @@ export default function LogIn() {
                 className="col-10"
                 type="text"
                 id="username"
-                name="LogInUserName"
+                name="userName"
+                required
+              />
+            </div>
+            <div className="inputContainer row">
+              <label className="col-10" htmlFor="email">
+                {t("email address")}
+              </label>
+              <input
+                className="col-10"
+                type="email"
+                id="email"
+                name="email"
                 required
               />
             </div>
@@ -38,12 +50,12 @@ export default function LogIn() {
                 className="col-10"
                 type="password"
                 id="password"
-                name="logInPassWord"
+                name="passWord"
                 required
               />
             </div>
-            <button type="submit" name="send" className="logInBtn">
-              {t("login")}
+            <button type="submit" name="send" className="signUpBtn">
+              {t("signup")}
             </button>
           </form>
         </div>

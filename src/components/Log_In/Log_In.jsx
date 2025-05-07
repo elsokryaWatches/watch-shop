@@ -1,23 +1,23 @@
-import "./SignUp.css";
+import "./Log_In.css";
 import "../../i18n";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import Navbar from "../Navbar/Navbar";
 import LogNav from "../LogNav";
 
-export default function SignUp() {
+export default function Log_In() {
   const [t] = useTranslation();
 
   return (
     <>
       <Helmet>
-        <title>El Sokkaria - Sign Up</title>
+        <title>El Sokkaria - Log In</title>
       </Helmet>
       <Navbar />
-      <div className="signup">
+      <div className="logIn">
         <div className="container-fluid">
           <LogNav />
-          <form className="signupForm" method="POST">
+          <form className="logInForm" method="POST">
             <div className="inputContainer row">
               <label className="col-10" htmlFor="username">
                 {t("username")}
@@ -26,19 +26,7 @@ export default function SignUp() {
                 className="col-10"
                 type="text"
                 id="username"
-                name="userName"
-                required
-              />
-            </div>
-            <div className="inputContainer row">
-              <label className="col-10" htmlFor="email">
-                {t("email address")}
-              </label>
-              <input
-                className="col-10"
-                type="email"
-                id="email"
-                name="email"
+                name="LogInUserName"
                 required
               />
             </div>
@@ -50,12 +38,12 @@ export default function SignUp() {
                 className="col-10"
                 type="password"
                 id="password"
-                name="passWord"
+                name="logInPassWord"
                 required
               />
             </div>
-            <button type="submit" name="send" className="signUpBtn">
-              {t("signup")}
+            <button type="submit" name="send" className="logInBtn">
+              {t("login")}
             </button>
           </form>
         </div>

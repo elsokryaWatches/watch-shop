@@ -9,8 +9,8 @@ const Women = lazy(() => import("./components/Women/Women"));
 const Straps = lazy(() => import("./components/Straps/Straps"));
 const Shop = lazy(() => import("./components/Shop/Shop"));
 const Cart = lazy(() => import("./components/Cart/Cart"));
-const SignUp = lazy(() => import("./components/SignUp/SignUp"));
-const LogIn = lazy(() => import("./components/LogIn/LogIn"));
+const SignUp = lazy(() => import("./components/Sign_Up/Sign_Up"));
+const LogIn = lazy(() => import("./components/Log_In/Log_In"));
 
 const createRoute = (path, element) => ({
   path,
