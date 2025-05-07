@@ -1,4 +1,4 @@
-import "./shoes.css";
+import "./Shoes.css";
 import "../../../i18n";
 import { useTranslation } from "react-i18next";
 
