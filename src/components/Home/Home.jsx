@@ -11,7 +11,7 @@ export default function home() {
   return (
     <>
       <Helmet>
-        <title>El Sokkaria - Home Page</title>
+        <title>El Sokrya - Home Page</title>
       </Helmet>
       <About />
       <Watches />

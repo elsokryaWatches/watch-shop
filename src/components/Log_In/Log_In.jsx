@@ -1,4 +1,5 @@
 import "./Log_In.css";
+import { Link } from "react-router-dom";
 import "../../i18n";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
@@ -11,7 +12,7 @@ export default function Log_In() {
   return (
     <>
       <Helmet>
-        <title>El Sokkaria - Log In</title>
+        <title>El Sokrya - Log In</title>
       </Helmet>
       <Navbar />
       <div className="logIn">
@@ -45,6 +46,10 @@ export default function Log_In() {
             <button type="submit" name="send" className="logInBtn">
               {t("login")}
             </button>
+            <div className="toSignup">
+              <h6>{t("loginBottom")}</h6>
+              <Link to={"/signup"}>{t("signup")}</Link>
+            </div>
           </form>
         </div>
       </div>

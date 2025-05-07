@@ -48,5 +48,7 @@
   "signup": "إنشاء حساب",
   "username": "اسم المستخدم",
   "password": "كلمة السر",
-  "strapFromTextArea": "الاسترابات المطلوبه"
+  "strapFromTextArea": "الاسترابات المطلوبه",
+  "loginBottom": "لا تملك حسابا ؟",
+  "signupBottom": "بالفعل تملك حسابا ؟"
 }

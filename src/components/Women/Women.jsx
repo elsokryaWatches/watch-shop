@@ -11,7 +11,7 @@ export default function Women() {
   return (
     <>
       <Helmet>
-        <title>El Sokkaria - Women Collection</title>
+        <title>El Sokrya - Women Collection</title>
       </Helmet>
       <div className="shop">
         <div className="container-fluid">
