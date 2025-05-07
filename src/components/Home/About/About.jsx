@@ -13,7 +13,7 @@ export default function About() {
         <div className="container-fluid">
           <div className="aboutInner row">
             <div className="img fadeIn col-md-10 col-lg-4">
-              <img src="imgs/Untitled_design_1.webp" alt="" />
+              <img src="imgs/aboutUs.webp" alt="" />
             </div>
             <div className="text col-md-10 col-lg-6">
               <h2>{t("about us")}</h2>

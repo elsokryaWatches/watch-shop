@@ -38,5 +38,15 @@
   "landMark": "land mark",
   "selected": "selected items",
   "cartTextArea": "here will show customers selected items",
-  "whatsapp": "whatsapp"
+  "whatsapp": "whatsapp",
+  "telegram": "telegram",
+  "facebook": "facebook",
+  "instagram": "instagram",
+  "skmei": "skmei",
+  "straps": "straps",
+  "login": "login",
+  "signup": "signup",
+  "username": "username",
+  "password": "password",
+  "strapFromTextArea": "needed straps"
 }

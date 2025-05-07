@@ -37,7 +37,15 @@
   background-color: var(--trans-blur);
   backdrop-filter: blur(10px);
   overflow: hidden;
-  width: 50dvw !important;
+  width: 60dvw !important;
+
+  .offcanvas-header {
+    .offcanvas-title {
+      img {
+        width: 50%;
+      }
+    }
+  }
 
   .offcanvas-body {
     position: relative;
@@ -46,7 +54,7 @@
       list-style: none;
 
       .offCanvItem {
-        padding: 10px 0px;
+        padding: 20px 0px;
         position: relative;
         width: fit-content;
         margin: auto 0px;
@@ -59,8 +67,6 @@
         }
 
         &:hover {
-          padding: 20px 0px;
-
           .offcanvLink {
             letter-spacing: 2px;
           }
@@ -70,8 +76,11 @@
       .dropdown,
       .dropend {
         .dropdown-menu {
+          padding: 10px;
           .dropdown-item {
+            text-align: start;
             color: var(--primary-color);
+            text-decoration: none;
             span {
               margin-inline-start: 5px !important;
             }

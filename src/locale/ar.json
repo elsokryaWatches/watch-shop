@@ -38,5 +38,15 @@
   "landMark": "اقرب علامه مميزه",
   "selected": "الطلبات",
   "cartTextArea": "هنا تعرض طلبات العميل",
-  "whatsapp": "واتساب"
+  "whatsapp": "واتساب",
+  "telegram": "تيليجرام",
+  "facebook": "فيسبوك",
+  "instagram": "انستجرام",
+  "skmei": "الاسكيمي",
+  "straps": "الاسترابات",
+  "login": "تسجيل دخول",
+  "signup": "إنشاء حساب",
+  "username": "اسم المستخدم",
+  "password": "كلمة السر",
+  "strapFromTextArea": "الاسترابات المطلوبه"
 }

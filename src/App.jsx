@@ -6,9 +6,11 @@ import LoadingSpinner from "./components/LoadingSpinner/LoadingSpinner";
 const Home = lazy(() => import("./components/Home/Home"));
 const Men = lazy(() => import("./components/Men/Men"));
 const Women = lazy(() => import("./components/Women/Women"));
-const Young = lazy(() => import("./components/Young/Young"));
+const Straps = lazy(() => import("./components/Straps/Straps"));
 const Shop = lazy(() => import("./components/Shop/Shop"));
 const Cart = lazy(() => import("./components/Cart/Cart"));
+const SignUp = lazy(() => import("./components/SignUp/SignUp"));
+const LogIn = lazy(() => import("./components/LogIn/LogIn"));
 
 const createRoute = (path, element) => ({
   path,
@@ -25,11 +27,13 @@ export default function App() {
         createRoute("", <Home />),
         createRoute("men", <Men />),
         createRoute("women", <Women />),
-        createRoute("young", <Young />),
         createRoute("shop", <Shop />),
       ],
     },
     createRoute("cart", <Cart />),
+    createRoute("straps", <Straps />),
+    createRoute("signup", <SignUp />),
+    createRoute("login", <LogIn />),
   ]);
   return <RouterProvider router={routes} />;
 }

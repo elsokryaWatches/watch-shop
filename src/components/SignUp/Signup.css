@@ -1,0 +1,83 @@
+.signup {
+  padding: 30px 0px;
+
+  .navLogs {
+    padding: 20px 0px;
+    text-align: center;
+
+    .navBtn {
+      padding: 5px 10px;
+      border: 1px solid var(--primary-color);
+      background-color: var(--white);
+
+      a {
+        text-decoration: none;
+        color: var(--primary-color);
+      }
+    }
+
+    .selected {
+      background-color: var(--primary-color);
+
+      a {
+        text-decoration: none;
+        color: var(--white);
+      }
+    }
+  }
+
+  .signupForm {
+    padding: 30px 0px !important;
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    background-image: linear-gradient(
+      to bottom,
+      var(--secondry-color),
+      var(--primary-color)
+    );
+    backdrop-filter: blur(10px);
+    color: var(--white);
+    width: fit-content;
+    padding: 10px 5px;
+    border-radius: 15px;
+
+    .inputContainer {
+      justify-content: center;
+      gap: 5px;
+      margin: 10px 0px;
+
+      label {
+        padding: 0;
+      }
+
+      input {
+        border: none;
+        border-radius: 10px;
+        padding: 5px;
+        transition: all 0.4s ease-in-out;
+
+        &:focus {
+          outline: none;
+          box-shadow: 0 0 10px var(--white);
+        }
+      }
+    }
+
+    .signUpBtn {
+      background-color: var(--white);
+      color: var(--primary-color);
+      border: none;
+      padding: 5px 10px;
+      border-radius: 10px;
+      text-transform: uppercase !important;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: var(--secondry-color);
+        color: var(--text);
+        box-shadow: 0 0 10px var(--white);
+      }
+    }
+  }
+}

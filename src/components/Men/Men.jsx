@@ -18,7 +18,7 @@ export default function Men() {
           <div className="shopInner row">
             <div className="shopHeader col-12">
               <div className="backgroundLayer">
-                <img src="/imgs/pexels-pixabay-277319.jpg" alt="" />
+                <img src="/imgs/men-Bg.jpg" alt="" />
               </div>
               <div className="textLayer">
                 <h2>{t("men watches")}</h2>

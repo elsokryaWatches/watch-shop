@@ -9,7 +9,6 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import Flag from "react-world-flags";
 import "../../i18n";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
@@ -57,7 +56,7 @@ export default function Navbar() {
         <div className="offcanvas-header">
           <h5 className="offcanvas-title" id="offcanvasExampleLabel">
             <Link to={"/"}>
-              <img src="imgs/elsokkaria_logo-removebg-preview.png" alt="" />
+              <img src="imgs/logo.svg" alt="" />
             </Link>
           </h5>
           <button
@@ -74,9 +73,14 @@ export default function Navbar() {
                 {t("home")}
               </Link>
             </li>
-            <li className="navItem dropdown">
+            <li className="offCanvItem">
+              <Link className="offcanvLink" to={"/login"}>
+                {t("login")}
+              </Link>
+            </li>
+            <li className="offCanvItem dropdown">
               <Link
-                className="navLink dropdown-toggle"
+                className="offcanvLink dropdown-toggle"
                 type="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -146,7 +150,7 @@ export default function Navbar() {
                     className="dropdown-item"
                     onClick={() => handleLangChange("en")}
                   >
-                    {t("english")} <Flag code="gb" height="10" />
+                    {t("english")}
                   </button>
                 </li>
                 <li>
@@ -154,7 +158,7 @@ export default function Navbar() {
                     className="dropdown-item"
                     onClick={() => handleLangChange("ar")}
                   >
-                    {t("arabic")} <Flag code="eg" height="10" />
+                    {t("arabic")}
                   </button>
                 </li>
               </ul>
@@ -176,6 +180,11 @@ export default function Navbar() {
               <li className="navItem">
                 <Link className="navLink" to={"/"}>
                   {t("home")}
+                </Link>
+              </li>
+              <li className="navItem">
+                <Link className="navLink" to={"/login"}>
+                  {t("login")}
                 </Link>
               </li>
               <li className="navItem dropdown">
@@ -250,7 +259,7 @@ export default function Navbar() {
                       className="dropdown-item"
                       onClick={() => handleLangChange("en")}
                     >
-                      {t("english")} <Flag code="gb" height="10" />
+                      {t("english")}
                     </button>
                   </li>
                   <li>
@@ -258,7 +267,7 @@ export default function Navbar() {
                       className="dropdown-item"
                       onClick={() => handleLangChange("ar")}
                     >
-                      {t("arabic")} <Flag code="eg" height="10" />
+                      {t("arabic")}
                     </button>
                   </li>
                 </ul>

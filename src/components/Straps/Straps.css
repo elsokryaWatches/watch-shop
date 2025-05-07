@@ -1,0 +1,67 @@
+.strapsForm {
+  background-image: linear-gradient(
+    to bottom,
+    var(--primary-color),
+    var(--secondry-color)
+  );
+  backdrop-filter: blur(10px);
+  color: var(--white);
+  width: fit-content;
+  padding: 10px 5px;
+  border-radius: 15px;
+
+  .header {
+    text-align: center;
+    img {
+      width: 20%;
+      margin: auto;
+    }
+    h6 {
+      margin: 5px 0px;
+      letter-spacing: 2px;
+      color: var(--primary-color);
+    }
+  }
+  .inputContainer {
+    justify-content: center;
+    gap: 5px;
+    margin: 10px 0px;
+
+    label {
+      padding: 0;
+    }
+
+    input,
+    textarea {
+      border: none;
+      border-radius: 10px;
+      padding: 5px;
+      transition: all 0.4s ease-in-out;
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 10px var(--white);
+      }
+    }
+  }
+
+  .submit {
+    text-align: center;
+
+    .submitBtn {
+      background-color: var(--white);
+      color: var(--primary-color);
+      border: none;
+      padding: 5px 10px;
+      border-radius: 10px;
+      text-transform: uppercase !important;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: var(--secondry-color);
+        color: var(--text);
+        box-shadow: 0 0 10px var(--white);
+      }
+    }
+  }
+}

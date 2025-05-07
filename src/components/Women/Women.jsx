@@ -18,7 +18,7 @@ export default function Women() {
           <div className="shopInner row">
             <div className="shopHeader col-12">
               <div className="backgroundLayer">
-                <img src="/imgs/pexels-the-5th-50003-179909.jpg" alt="" />
+                <img src="/imgs/women-Bg.jpg" alt="" />
               </div>
               <div className="textLayer">
                 <h2>{t("women watches")}</h2>

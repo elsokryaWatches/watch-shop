@@ -7,14 +7,12 @@ export default function ShopNav() {
   const location = useLocation();
 
   const buttons = [
-    { path: "/skmei", text: "skmei" },
-    { path: "/men", text: "men watches" },
-    { path: "/women", text: "women watches" },
-    { path: "/straps", text: "straps" },
+    { path: "/login", text: "login" },
+    { path: "/signup", text: "signup" },
   ];
 
   return (
-    <div className="navModels col-12">
+    <div className="navLogs col-12">
       {buttons.map((button) => (
         <button
           key={button.path}

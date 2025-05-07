@@ -1,28 +1,33 @@
-import "./Cart.css";
+import ShopNav from "../ShopNav";
+import "./Straps.css";
 import "../../i18n";
 import { useTranslation } from "react-i18next";
 import UpBtn from "../UpBtn/UpBtn";
 import { Helmet } from "react-helmet";
 import Navbar from "../Navbar/Navbar";
 
-export default function Cart() {
+export default function Straps() {
   const [t] = useTranslation();
 
   return (
     <>
       <Helmet>
-        <title>El Sokkaria - Cart</title>
+        <title>El Sokkaria - Straps</title>
       </Helmet>
       <Navbar />
-      <div className="cart">
-        <div className="backgroundLayer"></div>
+      <div className="shop">
         <div className="container-fluid">
-          <div className="cartInner row">
-            <form className="cartForm col-10" method="POST">
-              <div className="header">
-                <img src="imgs/logo.svg" alt="" />
-                <h6>01550089872</h6>
+          <div className="shopInner row">
+            <div className="shopHeader col-12">
+              <div className="backgroundLayer">
+                <img src="/imgs/straps-Bg.jpg" alt="" />
               </div>
+              <div className="textLayer">
+                <h2>{t("straps")}</h2>
+              </div>
+            </div>
+            <ShopNav />
+            <form className="strapsForm col-10" method="POST">
               <div className="inputContainer row">
                 <label htmlFor="fullName" className="col-10">
                   {t("full name")}
@@ -92,15 +97,13 @@ export default function Cart() {
                 />
               </div>
               <div className="inputContainer row">
-                <label htmlFor="selected" className="col-10">
-                  {t("selected")}
+                <label htmlFor="straps" className="col-10">
+                  {t("strapFromTextArea")}
                 </label>
                 <textarea
                   name="selectedItems"
                   id="selected"
                   className="col-10"
-                  readOnly
-                  placeholder={t("cartTextArea")}
                 ></textarea>
               </div>
               <div className="submit">
