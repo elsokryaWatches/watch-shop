@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
 import Navbar from "../Navbar/Navbar";
 import LogNav from "../LogNav";
 
-export default function Signup() {
+export default function SignUp() {
   const [t] = useTranslation();
 
   return (
