@@ -1,4 +1,4 @@
-import "./Signup.css";
+import "./SignUp.css";
 import "../../i18n";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
