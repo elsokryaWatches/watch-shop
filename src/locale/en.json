@@ -33,7 +33,9 @@
   "email address": "email address",
   "your message": "your message",
   "send": "send",
-  "FormAddress": "address",
+  "gov": "governorate",
+  "city": "city",
+  "landMark": "land mark",
   "selected": "selected items",
   "cartTextArea": "here will show customers selected items",
   "whatsapp": "whatsapp"

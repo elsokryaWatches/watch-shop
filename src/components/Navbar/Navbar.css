@@ -72,6 +72,9 @@
         .dropdown-menu {
           .dropdown-item {
             color: var(--primary-color);
+            span {
+              margin-inline-start: 5px !important;
+            }
           }
         }
       }
@@ -140,6 +143,9 @@
         .dropdown-menu {
           .dropdown-item {
             color: var(--primary-color);
+            span {
+              margin-inline-start: 5px !important;
+            }
           }
         }
       }

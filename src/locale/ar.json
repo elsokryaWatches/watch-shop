@@ -33,7 +33,9 @@
   "email address": "البريد الالكتروني",
   "your message": "رسالتك",
   "send": "ارسال",
-  "FormAddress": "العنوان",
+  "gov": "المحافظه",
+  "city": "المدينه",
+  "landMark": "اقرب علامه مميزه",
   "selected": "الطلبات",
   "cartTextArea": "هنا تعرض طلبات العميل",
   "whatsapp": "واتساب"

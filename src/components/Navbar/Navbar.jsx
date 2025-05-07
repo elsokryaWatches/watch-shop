@@ -5,6 +5,7 @@ import {
   faEnvelope,
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 import { Link } from "react-router-dom";
 import "./Navbar.css";
@@ -73,10 +74,34 @@ export default function Navbar() {
                 {t("home")}
               </Link>
             </li>
-            <li className="offCanvItem">
-              <Link className="offcanvLink" to={"/contact"}>
+            <li className="navItem dropdown">
+              <Link
+                className="navLink dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
                 {t("contact")}
               </Link>
+              <ul className="dropdown-menu">
+                <li>
+                  <a
+                    className="dropdown-item"
+                    href="https://wa.me/201550089872?text=أنا%20عميل%20اون%20لاين"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FontAwesomeIcon icon={faWhatsapp} />
+                    <span>{t("whatsapp")}</span>
+                  </a>
+                </li>
+                <li>
+                  <Link className="dropdown-item">
+                    <FontAwesomeIcon icon={faEnvelope} />
+                    <span>elsokryaforwatches@gmail.com</span>
+                  </Link>
+                </li>
+              </ul>
             </li>
             <li className="offCanvItem dropend">
               <Link
@@ -153,10 +178,34 @@ export default function Navbar() {
                   {t("home")}
                 </Link>
               </li>
-              <li className="navItem">
-                <Link className="navLink" to={"/contact"}>
+              <li className="navItem dropdown">
+                <Link
+                  className="navLink dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
                   {t("contact")}
                 </Link>
+                <ul className="dropdown-menu">
+                  <li>
+                    <a
+                      className="dropdown-item"
+                      href="https://wa.me/201550089872?text=أنا%20عميل%20اون%20لاين"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FontAwesomeIcon icon={faWhatsapp} />
+                      <span>{t("whatsapp")}</span>
+                    </a>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item">
+                      <FontAwesomeIcon icon={faEnvelope} />
+                      <span>elsokryaforwatches@gmail.com</span>
+                    </Link>
+                  </li>
+                </ul>
               </li>
               <li className="navItem dropdown">
                 <Link

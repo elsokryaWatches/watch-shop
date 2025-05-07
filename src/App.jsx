@@ -7,7 +7,6 @@ const Home = lazy(() => import("./components/Home/Home"));
 const Men = lazy(() => import("./components/Men/Men"));
 const Women = lazy(() => import("./components/Women/Women"));
 const Young = lazy(() => import("./components/Young/Young"));
-const Contact = lazy(() => import("./components/Contact/Contact"));
 const Shop = lazy(() => import("./components/Shop/Shop"));
 const Cart = lazy(() => import("./components/Cart/Cart"));
 
@@ -31,7 +30,6 @@ export default function App() {
       ],
     },
     createRoute("cart", <Cart />),
-    createRoute("contact", <Contact />),
   ]);
   return <RouterProvider router={routes} />;
 }

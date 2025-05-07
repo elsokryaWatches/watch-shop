@@ -19,6 +19,10 @@ export default function Cart() {
         <div className="container-fluid">
           <div className="cartInner row">
             <form className="cartForm col-10" action="">
+              <div className="header">
+                <img src="imgs/logo.svg" alt="" />
+                <h6>01550089872</h6>
+              </div>
               <div className="inputContainer row">
                 <label htmlFor="fullName" className="col-10">
                   {t("full name")}
@@ -55,8 +59,30 @@ export default function Cart() {
                 />
               </div>
               <div className="inputContainer row">
-                <label htmlFor="address" className="col-10">
-                  {t("FormAddress")}
+                <label htmlFor="governorate" className="col-10">
+                  {t("gov")}
+                </label>
+                <input
+                  className="col-10"
+                  type="text"
+                  name="address"
+                  id="address"
+                />
+              </div>
+              <div className="inputContainer row">
+                <label htmlFor="city" className="col-10">
+                  {t("city")}
+                </label>
+                <input
+                  className="col-10"
+                  type="text"
+                  name="address"
+                  id="address"
+                />
+              </div>
+              <div className="inputContainer row">
+                <label htmlFor="land_Mark" className="col-10">
+                  {t("landMark")}
                 </label>
                 <input
                   className="col-10"

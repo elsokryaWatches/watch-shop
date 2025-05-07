@@ -18,8 +18,8 @@
     .cartForm {
       background-image: linear-gradient(
         to bottom,
-        var(--primary-color),
-        var(--secondry-color)
+        var(--secondry-color),
+        var(--primary-color)
       );
       backdrop-filter: blur(10px);
       color: var(--white);
@@ -27,6 +27,18 @@
       padding: 10px 5px;
       border-radius: 15px;
 
+      .header {
+        text-align: center;
+        img {
+          width: 20%;
+          margin: auto;
+        }
+        h6 {
+          margin: 5px 0px;
+          letter-spacing: 2px;
+          color: var(--primary-color);
+        }
+      }
       .inputContainer {
         justify-content: center;
         gap: 5px;
