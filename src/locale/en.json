@@ -50,5 +50,13 @@
   "password": "password",
   "strapFromTextArea": "needed straps",
   "loginBottom": "don't have an account ?",
-  "signupBottom": "already have an account ?"
+  "signupBottom": "already have an account ?",
+  "incorrectPassword": "incorrect password",
+  "incorrectEmail": "incorrect email",
+  "invalidPassword": "invalid password",
+  "invalidEmail": "invalid email",
+  "invalidUserName": "invalid username",
+  "usernameExist": "username already exist, choose another one",
+  "emailExist": "email already exist, choose another one",
+  "allFieldsRequired": "all fields are required"
 }

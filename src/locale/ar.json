@@ -50,5 +50,13 @@
   "password": "كلمة السر",
   "strapFromTextArea": "الاسترابات المطلوبه",
   "loginBottom": "لا تملك حسابا ؟",
-  "signupBottom": "بالفعل تملك حسابا ؟"
+  "signupBottom": "بالفعل تملك حسابا ؟",
+  "incorrectPassword": "كلمة مرور خاطئه",
+  "incorrectEmail": "بريد الكتروني خاطئ",
+  "invalidPassword": "كلمة مرور غير صالحه",
+  "invalidEmail": "بريد الكتروني غير صالح",
+  "invalidUserName": "اسم مستخدم غير صالح",
+  "usernameExist": "اسم المستخدم موجود بالفعل, اختر اسم مستخدم اخر",
+  "emailExist": "البريد الالكتروني موجود بالفعل, اختر بريد الكتروني اخر",
+  "allFieldsRequired": "من فضلك املأ كل الخانات"
 }
