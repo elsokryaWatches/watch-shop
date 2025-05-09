@@ -7,7 +7,7 @@ import Shoes from "./Shoes/Shoes";
 import UpBtn from "../UpBtn/UpBtn";
 import { Helmet } from "react-helmet";
 
-export default function home() {
+export default function Home() {
   return (
     <>
       <Helmet>

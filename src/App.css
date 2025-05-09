@@ -11,6 +11,7 @@
   --gray-bg: #f1f1f1;
   --text-tr-bg: #927c5694;
   --text: #524530;
+  --discount: #48fd00;
 }
 
 * {
@@ -86,6 +87,101 @@ body {
           color: var(--white);
           filter: drop-shadow(0 0 10px var(--white));
         }
+      }
+    }
+
+    .Watches {
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0px;
+      gap: 20px;
+
+      .watch {
+        position: relative;
+        color: var(--text);
+        padding: 0px;
+
+        .discount {
+          position: absolute;
+          padding: 5px;
+          top: 0;
+          background-color: var(--discount);
+          z-index: 11;
+
+          .discount_percentage {
+            margin-inline-end: 10px;
+          }
+        }
+
+        .img {
+          overflow: hidden;
+
+          img {
+            transition: all 0.3s ease-in-out;
+          }
+
+          &:hover {
+            img {
+              transform: scale(1.1);
+            }
+          }
+        }
+
+        .details {
+          padding: 0px 10px;
+          text-align: center;
+
+          .price {
+            margin: 10px 0px;
+          }
+        }
+
+        .btns {
+          text-align: center;
+
+          .addToCart,
+          .moreDetails {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            border: none;
+            background-color: var(--primary-color);
+            color: var(--white) !important;
+            text-transform: uppercase !important;
+
+            a {
+              text-decoration: none;
+            }
+
+            &:hover {
+              outline: 1px solid var(--primary-color);
+            }
+          }
+        }
+      }
+    }
+
+    .pagination {
+      .nextBtn,
+      .prevBtn {
+        padding: 5px;
+        border: none;
+        background-color: var(--primary-color);
+        color: var(--white);
+      }
+
+      .pagNum {
+        background-color: var(--text-tr-bg) !important;
+        border: none;
+        color: var(--text);
+        padding: 5px;
+      }
+
+      .currPagNum {
+        background-color: var(--text) !important;
+        border: none;
+        color: var(--white);
+        padding: 5px;
       }
     }
 
