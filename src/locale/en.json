@@ -73,7 +73,7 @@
   "movement": "movement",
   "specs": "specs",
   "diameter": "diameter",
-  "caseThickness": "caseThickness",
+  "case_thickness": "caseThickness",
   "weight": "weight",
   "features": "features",
   "waterResistant": "waterResistant",
@@ -89,5 +89,12 @@
   "editCart": "edit cart",
   "ordered": "ordered items",
   "emptyCart": "cart is empty",
-  "removeFromCart": "remove from cart"
+  "removeFromCart": "remove from cart",
+  "noFeaturesAvailable": "No features available",
+  "gender": "Gender",
+  "outer_frame": "Outer Frame",
+  "discount_valid_until": "Discount valid until",
+  "hours": "hours",
+  "minutes": "minutes",
+  "seconds": "seconds"
 }

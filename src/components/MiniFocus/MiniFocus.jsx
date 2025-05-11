@@ -170,7 +170,11 @@ export default function MiniFocus() {
                     </h5>
                   </div>
                   <div className="btns">
-                    <button className="moreDetails">{t("details")}</button>
+                    <button className="moreDetails">
+                      <Link to="/product_details" state={{ watch }}>
+                        {t("details")}
+                      </Link>
+                    </button>
                     <button
                       className="addToCart"
                       onClick={() => handleAddToCart(watch.code)}

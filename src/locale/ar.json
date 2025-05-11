@@ -73,7 +73,7 @@
   "movement": "الحركه",
   "specs": "الخصائص",
   "diameter": "القطر",
-  "caseThickness": "سمك الهيكل",
+  "case_thickness": "سمك الهيكل",
   "weight": "الوزن",
   "features": "الامكانيات",
   "waterResistant": "مقاومة الماء",
@@ -89,5 +89,12 @@
   "editCart": "تعديل الطلبات",
   "ordered": "العناصر المطلوبه",
   "emptyCart": "عربة التسوق فارغه",
-  "removeFromCart": "ازاله من عربة التسوق"
+  "removeFromCart": "ازاله من عربة التسوق",
+  "noFeaturesAvailable": "لا يوجد خصائص متوفره",
+  "gender": "النوع",
+  "outer_frame": "الفريم الخارجي",
+  "discount_valid_until": "مدة الخصم",
+  "hours": "ساعه",
+  "minutes": "دقيقه",
+  "seconds": "ثانيه"
 }

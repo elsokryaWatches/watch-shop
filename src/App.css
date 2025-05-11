@@ -197,6 +197,7 @@ body {
 
             a {
               text-decoration: none;
+              color: var(--white);
             }
 
             &:hover {

@@ -1,0 +1,33 @@
+.prodDet {
+  .imgSide {
+    .imgNavBtns {
+      .imgNav {
+        padding: 5px;
+        border-radius: 0%;
+        border: none;
+        background-color: var(--primary-color);
+        color: var(--white);
+        margin: 0px 10px;
+      }
+    }
+  }
+  .textSide {
+    color: var(--text);
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    .toCartBtn {
+      cursor: pointer;
+      padding: 10px 20px;
+      border: none;
+      background-color: var(--primary-color);
+      text-transform: uppercase !important;
+      color: var(--white);
+
+      &:hover {
+        outline: 1px solid var(--primary-color);
+      }
+    }
+  }
+}

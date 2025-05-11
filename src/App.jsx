@@ -9,6 +9,7 @@ const MiniFocus = lazy(() => import("./components/MiniFocus/MiniFocus"));
 const Straps = lazy(() => import("./components/Straps/Straps"));
 const Cart = lazy(() => import("./components/Cart/Cart"));
 const CartCheck = lazy(() => import("./components/CartCheck/CartCheck"));
+const ProdDetails = lazy(() => import("./components/ProdDetails/ProdDetails"));
 const SignUp = lazy(() => import("./components/Sign_Up/Sign_Up"));
 const LogIn = lazy(() => import("./components/Log_In/Log_In"));
 
@@ -31,6 +32,7 @@ export default function App() {
     },
     createRoute("cart", <Cart />),
     createRoute("cartcheck", <CartCheck />),
+    createRoute("product_details", <ProdDetails />),
     createRoute("straps", <Straps />),
     createRoute("signup", <SignUp />),
     createRoute("login", <LogIn />),
