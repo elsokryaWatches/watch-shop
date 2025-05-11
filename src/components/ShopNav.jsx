@@ -8,8 +8,7 @@ export default function ShopNav() {
 
   const buttons = [
     { path: "/skmei", text: "skmei" },
-    { path: "/men", text: "men watches" },
-    { path: "/women", text: "women watches" },
+    { path: "/minifocus", text: "MiniFocus" },
     { path: "/straps", text: "straps" },
   ];
 

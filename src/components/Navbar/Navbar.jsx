@@ -1,11 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
-  faBars,
-  faPhone,
-  faEnvelope,
-  faLocationDot,
-} from "@fortawesome/free-solid-svg-icons";
-import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+  faInstagram,
+  faFacebook,
+  faTelegram,
+  faWhatsapp,
+} from "@fortawesome/free-brands-svg-icons";
 
 import { Link } from "react-router-dom";
 import "./Navbar.css";
@@ -99,6 +99,45 @@ export default function Navbar() {
                     <span>{t("whatsapp")}</span>
                   </a>
                 </li>
+                <li className="dropdown-item">
+                  <Link
+                    className="navLink"
+                    to={"https://t.me/+UGdVEHUgToXTtkzi"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FontAwesomeIcon icon={faTelegram} />
+                    <span>{t("telegram")}</span>
+                  </Link>
+                </li>
+                <li className="dropdown-item">
+                  <Link
+                    className="navLink"
+                    to={"https://www.facebook.com/share/15gycfcaZc/"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FontAwesomeIcon icon={faFacebook} />
+                    <span>{t("facebook")}</span>
+                  </Link>
+                </li>
+                <li className="dropdown-item">
+                  <Link
+                    className="navLink"
+                    to={"https://www.instagram.com/elsokrya_for_watches"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FontAwesomeIcon icon={faInstagram} />
+                    <span>{t("instagram")}</span>
+                  </Link>
+                </li>
+                <li className="dropdown-item">
+                  <Link className="navLink">
+                    <FontAwesomeIcon icon={faPhone} />
+                    <span>01550089872</span>
+                  </Link>
+                </li>
                 <li>
                   <Link className="dropdown-item">
                     <FontAwesomeIcon icon={faEnvelope} />
@@ -119,18 +158,18 @@ export default function Navbar() {
               </Link>
               <ul className="dropdown-menu">
                 <li>
-                  <Link className="dropdown-item" to={"/men"}>
-                    {t("men watches")}
+                  <Link className="dropdown-item" to={"/skmei"}>
+                    {t("SKMEI watches")}
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to={"/women"}>
-                    {t("women watches")}
+                  <Link className="dropdown-item" to={"/minifocus"}>
+                    {t("MiniFocus watches")}
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to={"/young"}>
-                    {t("young watches")}
+                  <Link className="dropdown-item" to={"/straps"}>
+                    {t("straps")}
                   </Link>
                 </li>
               </ul>
@@ -208,6 +247,45 @@ export default function Navbar() {
                       <span>{t("whatsapp")}</span>
                     </a>
                   </li>
+                  <li className="dropdown-item">
+                    <Link
+                      className="navLink"
+                      to={"https://t.me/+UGdVEHUgToXTtkzi"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FontAwesomeIcon icon={faTelegram} />
+                      <span>{t("telegram")}</span>
+                    </Link>
+                  </li>
+                  <li className="dropdown-item">
+                    <Link
+                      className="navLink"
+                      to={"https://www.facebook.com/share/15gycfcaZc/"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FontAwesomeIcon icon={faFacebook} />
+                      <span>{t("facebook")}</span>
+                    </Link>
+                  </li>
+                  <li className="dropdown-item">
+                    <Link
+                      className="navLink"
+                      to={"https://www.instagram.com/elsokrya_for_watches"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FontAwesomeIcon icon={faInstagram} />
+                      <span>{t("instagram")}</span>
+                    </Link>
+                  </li>
+                  <li className="dropdown-item">
+                    <Link className="navLink">
+                      <FontAwesomeIcon icon={faPhone} />
+                      <span>01550089872</span>
+                    </Link>
+                  </li>
                   <li>
                     <Link className="dropdown-item">
                       <FontAwesomeIcon icon={faEnvelope} />
@@ -228,18 +306,18 @@ export default function Navbar() {
                 </Link>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link className="dropdown-item" to={"/men"}>
-                      {t("men watches")}
+                    <Link className="dropdown-item" to={"/skmei"}>
+                      {t("SKMEI watches")}
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to={"/women"}>
-                      {t("women watches")}
+                    <Link className="dropdown-item" to={"/minifocus"}>
+                      {t("MiniFocus watches")}
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to={"/young"}>
-                      {t("young watches")}
+                    <Link className="dropdown-item" to={"/straps"}>
+                      {t("straps")}
                     </Link>
                   </li>
                 </ul>

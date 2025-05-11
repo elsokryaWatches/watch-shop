@@ -3,11 +3,15 @@ import { Link } from "react-router-dom";
 import "../../i18n";
 import { useTranslation } from "react-i18next";
 import UpBtn from "../UpBtn/UpBtn";
+import ShopNav from "../ShopNav";
 import { Helmet } from "react-helmet";
 
 export default function Skmei() {
   const [t, i18n] = useTranslation();
   const [watches, setWatches] = useState([]);
+
+  const [searchTerm, setSearchTerm] = useState("");
+  const [searchResults, setSearchResults] = useState(null);
 
   const [addedToCart, setAddedToCart] = useState(() => {
     return JSON.parse(localStorage.getItem("orders")) || [];
@@ -41,6 +45,24 @@ export default function Skmei() {
     setAddedToCart((prev) => [...prev, code]);
   };
 
+  const handleSearch = () => {
+    const results = watches.filter((watch) =>
+      `${watch.brand[i18n.language]} ${watch.model[i18n.language]} ${
+        watch.movement[i18n.language]
+      }`
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase())
+    );
+    setSearchResults(results);
+    setCurrentPage(1);
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      handleSearch();
+    }
+  };
+
   return (
     <>
       <Helmet>
@@ -57,56 +79,73 @@ export default function Skmei() {
                 <h2>{t("SKMEI watches")}</h2>
               </div>
             </div>
+            <ShopNav />
+            <div className="search-bar col-12 my-3 d-flex justify-content-center">
+              <input
+                type="text"
+                placeholder={t("search")}
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                onKeyDown={handleKeyDown}
+                className="form-control w-50 me-2"
+              />
+              <button onClick={handleSearch} className="searchBtn">
+                {t("search")}
+              </button>
+            </div>
             <div className="Watches row col-12">
-              {currentWatches.map((watch) => (
-                <div
-                  className="watch homeSecAnimation col-9 col-lg-2"
-                  key={watch.code}
-                >
-                  <div className="discount">
-                    <span className="discount_percentage">
-                      {watch.price.discount_percentage}%
-                    </span>
-                    <span className="discount_period">
-                      {t("for")} {watch.discount.valid_until} {t("days")}
-                    </span>
-                  </div>
-                  <div className="img">
-                    <img src={watch.images[0]} alt="" />
-                  </div>
-                  <div className="details">
-                    <h4 className="name">
-                      {watch.brand[i18n.language]} {watch.model[i18n.language]}
-                      <br />
-                      {watch.movement[i18n.language]}
-                    </h4>
-                    <del>
-                      <h5 className="price">
-                        {watch.price.original} {watch.price.currency}
+              {(searchResults || currentWatches)
+                .slice(indexOfFirstWatch, indexOfLastWatch)
+                .map((watch) => (
+                  <div
+                    className="watch homeSecAnimation col-9 col-lg-2"
+                    key={watch.code}
+                  >
+                    <div className="discount">
+                      <span className="discount_percentage">
+                        {watch.price.discount_percentage}%
+                      </span>
+                      <span className="discount_period">
+                        {t("for")} {watch.discount.valid_until} {t("days")}
+                      </span>
+                    </div>
+                    <div className="img">
+                      <img src={watch.images[0]} alt="" />
+                    </div>
+                    <div className="details">
+                      <h4 className="name">
+                        {watch.brand[i18n.language]}{" "}
+                        {watch.model[i18n.language]}
+                        <br />
+                        {watch.movement[i18n.language]}
+                      </h4>
+                      <del>
+                        <h5 className="price">
+                          {watch.price.original} {watch.price.currency}
+                        </h5>
+                      </del>
+                      <h4 className="dis_price">
+                        {watch.price.final} {watch.price.currency}
+                      </h4>
+                      <h5 className="stock">
+                        <strong>{t("stock")}: </strong>
+                        {watch.stock}
                       </h5>
-                    </del>
-                    <h4 className="dis_price">
-                      {watch.price.final} {watch.price.currency}
-                    </h4>
-                    <h5 className="stock">
-                      <strong>{t("stock")}: </strong>
-                      {watch.stock}
-                    </h5>
+                    </div>
+                    <div className="btns">
+                      <button className="moreDetails">{t("details")}</button>
+                      <button
+                        className="addToCart"
+                        onClick={() => handleAddToCart(watch.code)}
+                        disabled={addedToCart.includes(watch.code)}
+                      >
+                        {addedToCart.includes(watch.code)
+                          ? t("addedToCart")
+                          : t("add to cart")}
+                      </button>
+                    </div>
                   </div>
-                  <div className="btns">
-                    <button className="moreDetails">{t("details")}</button>
-                    <button
-                      className="addToCart"
-                      onClick={() => handleAddToCart(watch.code)}
-                      disabled={addedToCart.includes(watch.code)}
-                    >
-                      {addedToCart.includes(watch.code)
-                        ? t("addedToCart")
-                        : t("add to cart")}
-                    </button>
-                  </div>
-                </div>
-              ))}
+                ))}
               <div className="pagination col-12 d-flex justify-content-center mt-4">
                 <button
                   className="prevBtn"

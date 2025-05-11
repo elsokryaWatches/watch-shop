@@ -90,6 +90,48 @@ body {
       }
     }
 
+    .search-bar {
+      input {
+        border: none;
+        border-radius: 0;
+        outline: 1px solid var(--secondry-color);
+
+        &:focus {
+          outline: 1px solid var(--primary-color);
+          border: none;
+          box-shadow: none;
+        }
+      }
+      .searchBtn {
+        padding: 10px 20px;
+        border: none;
+        background-color: var(--primary-color);
+        color: var(--white);
+        text-transform: uppercase !important;
+
+        &:hover {
+          outline: 1px solid var(--primary-color);
+        }
+      }
+    }
+
+    .genderFilter {
+      text-align: center;
+
+      .navBtn {
+        padding: 10px 20px;
+        border: 1px solid var(--primary-color) !important;
+        background-color: transparent;
+        color: var(--text);
+        text-transform: uppercase !important;
+      }
+
+      .selected {
+        background-color: var(--primary-color);
+        color: var(--white);
+      }
+    }
+
     .Watches {
       justify-content: center;
       align-items: center;
@@ -115,8 +157,12 @@ body {
 
         .img {
           overflow: hidden;
+          text-align: center;
 
           img {
+            width: 15.625rem;
+            height: 15.625rem;
+            object-fit: contain;
             transition: all 0.3s ease-in-out;
           }
 

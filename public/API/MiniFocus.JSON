@@ -57,10 +57,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An0000001M/1.jpg",
-        "public/imgs/MiniFocus/An0000001M/2.jpg",
-        "public/imgs/MiniFocus/An0000001M/3.jpg",
-        "public/imgs/MiniFocus/An0000001M/4.jpg"
+        "/imgs/MiniFocus/An0000001M/1.jpg",
+        "/imgs/MiniFocus/An0000001M/2.jpg",
+        "/imgs/MiniFocus/An0000001M/3.jpg",
+        "/imgs/MiniFocus/An0000001M/4.jpg"
       ]
     },
     {
@@ -120,11 +120,11 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An0000002/1.jpg",
-        "public/imgs/MiniFocus/An0000002/2.jpg",
-        "public/imgs/MiniFocus/An0000002/3.jpg",
-        "public/imgs/MiniFocus/An0000002/4.jpg",
-        "public/imgs/MiniFocus/An0000002/5.jpg"
+        "/imgs/MiniFocus/An0000002/1.jpg",
+        "/imgs/MiniFocus/An0000002/2.jpg",
+        "/imgs/MiniFocus/An0000002/3.jpg",
+        "/imgs/MiniFocus/An0000002/4.jpg",
+        "/imgs/MiniFocus/An0000002/5.jpg"
       ]
     },
     {
@@ -184,11 +184,11 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An0000003/1.jpg",
-        "public/imgs/MiniFocus/An0000003/2.jpg",
-        "public/imgs/MiniFocus/An0000003/3.jpg",
-        "public/imgs/MiniFocus/An0000003/4.jpg",
-        "public/imgs/MiniFocus/An0000003/5.jpg"
+        "/imgs/MiniFocus/An0000003/1.jpg",
+        "/imgs/MiniFocus/An0000003/2.jpg",
+        "/imgs/MiniFocus/An0000003/3.jpg",
+        "/imgs/MiniFocus/An0000003/4.jpg",
+        "/imgs/MiniFocus/An0000003/5.jpg"
       ]
     },
     {
@@ -248,10 +248,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000010/1.jpg",
-        "public/imgs/MiniFocus/An00000010/2.jpg",
-        "public/imgs/MiniFocus/An00000010/3.jpg",
-        "public/imgs/MiniFocus/An00000010/4.jpg"
+        "/imgs/MiniFocus/An00000010/1.jpg",
+        "/imgs/MiniFocus/An00000010/2.jpg",
+        "/imgs/MiniFocus/An00000010/3.jpg",
+        "/imgs/MiniFocus/An00000010/4.jpg"
       ]
     },
     {
@@ -311,9 +311,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000011M/1.jpg",
-        "public/imgs/MiniFocus/An00000011M/2.jpg",
-        "public/imgs/MiniFocus/An00000011M/3.jpg"
+        "/imgs/MiniFocus/An00000011M/1.jpg",
+        "/imgs/MiniFocus/An00000011M/2.jpg",
+        "/imgs/MiniFocus/An00000011M/3.jpg"
       ]
     },
     {
@@ -373,10 +373,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000012/1.jpg",
-        "public/imgs/MiniFocus/An00000012/2.jpg",
-        "public/imgs/MiniFocus/An00000012/3.jpg",
-        "public/imgs/MiniFocus/An00000012/4.jpg"
+        "/imgs/MiniFocus/An00000012/1.jpg",
+        "/imgs/MiniFocus/An00000012/2.jpg",
+        "/imgs/MiniFocus/An00000012/3.jpg",
+        "/imgs/MiniFocus/An00000012/4.jpg"
       ]
     },
     {
@@ -436,10 +436,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000013M/1.jpg",
-        "public/imgs/MiniFocus/An00000013M/2.jpg",
-        "public/imgs/MiniFocus/An00000013M/3.jpg",
-        "public/imgs/MiniFocus/An00000013M/4.jpg"
+        "/imgs/MiniFocus/An00000013M/1.jpg",
+        "/imgs/MiniFocus/An00000013M/2.jpg",
+        "/imgs/MiniFocus/An00000013M/3.jpg",
+        "/imgs/MiniFocus/An00000013M/4.jpg"
       ]
     },
     {
@@ -499,9 +499,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000014M/1.jpg",
-        "public/imgs/MiniFocus/An00000014M/2.jpg",
-        "public/imgs/MiniFocus/An00000014M/3.jpg"
+        "/imgs/MiniFocus/An00000014M/1.jpg",
+        "/imgs/MiniFocus/An00000014M/2.jpg",
+        "/imgs/MiniFocus/An00000014M/3.jpg"
       ]
     },
     {
@@ -561,9 +561,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000015M/1.jpg",
-        "public/imgs/MiniFocus/An00000015M/2.jpg",
-        "public/imgs/MiniFocus/An00000015M/3.jpg"
+        "/imgs/MiniFocus/An00000015M/1.jpg",
+        "/imgs/MiniFocus/An00000015M/2.jpg",
+        "/imgs/MiniFocus/An00000015M/3.jpg"
       ]
     },
     {
@@ -623,9 +623,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000016/1.jpg",
-        "public/imgs/MiniFocus/An00000016/2.jpg",
-        "public/imgs/MiniFocus/An00000016/3.jpg"
+        "/imgs/MiniFocus/An00000016/1.jpg",
+        "/imgs/MiniFocus/An00000016/2.jpg",
+        "/imgs/MiniFocus/An00000016/3.jpg"
       ]
     },
     {
@@ -685,9 +685,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000017/1.jpg",
-        "public/imgs/MiniFocus/An00000017/2.jpg",
-        "public/imgs/MiniFocus/An00000017/3.jpg"
+        "/imgs/MiniFocus/An00000017/1.jpg",
+        "/imgs/MiniFocus/An00000017/2.jpg",
+        "/imgs/MiniFocus/An00000017/3.jpg"
       ]
     },
     {
@@ -747,10 +747,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000018M/1.jpg",
-        "public/imgs/MiniFocus/An00000018M/2.jpg",
-        "public/imgs/MiniFocus/An00000018M/3.jpg",
-        "public/imgs/MiniFocus/An00000018M/4.jpg"
+        "/imgs/MiniFocus/An00000018M/1.jpg",
+        "/imgs/MiniFocus/An00000018M/2.jpg",
+        "/imgs/MiniFocus/An00000018M/3.jpg",
+        "/imgs/MiniFocus/An00000018M/4.jpg"
       ]
     },
     {
@@ -810,9 +810,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000019/1.jpg",
-        "public/imgs/MiniFocus/An00000019/2.jpg",
-        "public/imgs/MiniFocus/An00000019/3.jpg"
+        "/imgs/MiniFocus/An00000019/1.jpg",
+        "/imgs/MiniFocus/An00000019/2.jpg",
+        "/imgs/MiniFocus/An00000019/3.jpg"
       ]
     },
     {
@@ -872,10 +872,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000020/1.jpg",
-        "public/imgs/MiniFocus/An00000020/2.jpg",
-        "public/imgs/MiniFocus/An00000020/3.jpg",
-        "public/imgs/MiniFocus/An00000020/4.jpg"
+        "/imgs/MiniFocus/An00000020/1.jpg",
+        "/imgs/MiniFocus/An00000020/2.jpg",
+        "/imgs/MiniFocus/An00000020/3.jpg",
+        "/imgs/MiniFocus/An00000020/4.jpg"
       ]
     },
     {
@@ -935,8 +935,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000021/1.jpg",
-        "public/imgs/MiniFocus/An00000021/2.jpg"
+        "/imgs/MiniFocus/An00000021/1.jpg",
+        "/imgs/MiniFocus/An00000021/2.jpg"
       ]
     },
     {
@@ -996,9 +996,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000022/1.jpg",
-        "public/imgs/MiniFocus/An00000022/2.jpg",
-        "public/imgs/MiniFocus/An00000022/3.jpg"
+        "/imgs/MiniFocus/An00000022/1.jpg",
+        "/imgs/MiniFocus/An00000022/2.jpg",
+        "/imgs/MiniFocus/An00000022/3.jpg"
       ]
     },
     {
@@ -1058,8 +1058,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000023/1.jpg",
-        "public/imgs/MiniFocus/An00000023/2.jpg"
+        "/imgs/MiniFocus/An00000023/1.jpg",
+        "/imgs/MiniFocus/An00000023/2.jpg"
       ]
     },
     {
@@ -1119,9 +1119,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000024/1.jpg",
-        "public/imgs/MiniFocus/An00000024/2.jpg",
-        "public/imgs/MiniFocus/An00000024/3.jpg"
+        "/imgs/MiniFocus/An00000024/1.jpg",
+        "/imgs/MiniFocus/An00000024/2.jpg",
+        "/imgs/MiniFocus/An00000024/3.jpg"
       ]
     },
     {
@@ -1181,9 +1181,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000025/1.jpg",
-        "public/imgs/MiniFocus/An00000025/2.jpg",
-        "public/imgs/MiniFocus/An00000025/3.jpg"
+        "/imgs/MiniFocus/An00000025/1.jpg",
+        "/imgs/MiniFocus/An00000025/2.jpg",
+        "/imgs/MiniFocus/An00000025/3.jpg"
       ]
     },
     {
@@ -1243,8 +1243,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000026/1.jpg",
-        "public/imgs/MiniFocus/An00000026/2.jpg"
+        "/imgs/MiniFocus/An00000026/1.jpg",
+        "/imgs/MiniFocus/An00000026/2.jpg"
       ]
     },
     {
@@ -1304,8 +1304,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000027M/1.jpg",
-        "public/imgs/MiniFocus/An00000027M/2.jpg"
+        "/imgs/MiniFocus/An00000027M/1.jpg",
+        "/imgs/MiniFocus/An00000027M/2.jpg"
       ]
     },
     {
@@ -1365,9 +1365,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000028M/1.jpg",
-        "public/imgs/MiniFocus/An00000028M/2.jpg",
-        "public/imgs/MiniFocus/An00000028M/3.jpg"
+        "/imgs/MiniFocus/An00000028M/1.jpg",
+        "/imgs/MiniFocus/An00000028M/2.jpg",
+        "/imgs/MiniFocus/An00000028M/3.jpg"
       ]
     },
     {
@@ -1427,10 +1427,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000029M/1.jpg",
-        "public/imgs/MiniFocus/An00000029M/2.jpg",
-        "public/imgs/MiniFocus/An00000029M/3.jpg",
-        "public/imgs/MiniFocus/An00000029M/4.jpg"
+        "/imgs/MiniFocus/An00000029M/1.jpg",
+        "/imgs/MiniFocus/An00000029M/2.jpg",
+        "/imgs/MiniFocus/An00000029M/3.jpg",
+        "/imgs/MiniFocus/An00000029M/4.jpg"
       ]
     },
     {
@@ -1490,9 +1490,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000030M/1.jpg",
-        "public/imgs/MiniFocus/An00000030M/2.jpg",
-        "public/imgs/MiniFocus/An00000030M/3.jpg"
+        "/imgs/MiniFocus/An00000030M/1.jpg",
+        "/imgs/MiniFocus/An00000030M/2.jpg",
+        "/imgs/MiniFocus/An00000030M/3.jpg"
       ]
     },
     {
@@ -1552,9 +1552,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000032M/1.jpg",
-        "public/imgs/MiniFocus/An00000032M/2.jpg",
-        "public/imgs/MiniFocus/An00000032M/3.jpg"
+        "/imgs/MiniFocus/An00000032M/1.jpg",
+        "/imgs/MiniFocus/An00000032M/2.jpg",
+        "/imgs/MiniFocus/An00000032M/3.jpg"
       ]
     },
     {
@@ -1614,12 +1614,12 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000033M/1.jpg",
-        "public/imgs/MiniFocus/An00000033M/2.jpg",
-        "public/imgs/MiniFocus/An00000033M/3.jpg",
-        "public/imgs/MiniFocus/An00000033M/4.jpg",
-        "public/imgs/MiniFocus/An00000033M/5.jpg",
-        "public/imgs/MiniFocus/An00000033M/6.jpg"
+        "/imgs/MiniFocus/An00000033M/1.jpg",
+        "/imgs/MiniFocus/An00000033M/2.jpg",
+        "/imgs/MiniFocus/An00000033M/3.jpg",
+        "/imgs/MiniFocus/An00000033M/4.jpg",
+        "/imgs/MiniFocus/An00000033M/5.jpg",
+        "/imgs/MiniFocus/An00000033M/6.jpg"
       ]
     },
     {
@@ -1679,8 +1679,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000034M/1.jpg",
-        "public/imgs/MiniFocus/An00000034M/2.jpg"
+        "/imgs/MiniFocus/An00000034M/1.jpg",
+        "/imgs/MiniFocus/An00000034M/2.jpg"
       ]
     },
     {
@@ -1740,8 +1740,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000035M/1.jpg",
-        "public/imgs/MiniFocus/An00000035M/2.jpg"
+        "/imgs/MiniFocus/An00000035M/1.jpg",
+        "/imgs/MiniFocus/An00000035M/2.jpg"
       ]
     },
     {
@@ -1801,9 +1801,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000036M/1.jpg",
-        "public/imgs/MiniFocus/An00000036M/2.jpg",
-        "public/imgs/MiniFocus/An00000036M/3.jpg"
+        "/imgs/MiniFocus/An00000036M/1.jpg",
+        "/imgs/MiniFocus/An00000036M/2.jpg",
+        "/imgs/MiniFocus/An00000036M/3.jpg"
       ]
     },
     {
@@ -1863,8 +1863,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000037M/1.jpg",
-        "public/imgs/MiniFocus/An00000037M/2.jpg"
+        "/imgs/MiniFocus/An00000037M/1.jpg",
+        "/imgs/MiniFocus/An00000037M/2.jpg"
       ]
     },
     {
@@ -1924,8 +1924,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000038M/1.jpg",
-        "public/imgs/MiniFocus/An00000038M/2.jpg"
+        "/imgs/MiniFocus/An00000038M/1.jpg",
+        "/imgs/MiniFocus/An00000038M/2.jpg"
       ]
     },
     {
@@ -1985,9 +1985,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000039/1.jpg",
-        "public/imgs/MiniFocus/An00000039/2.jpg",
-        "public/imgs/MiniFocus/An00000039/3.jpg"
+        "/imgs/MiniFocus/An00000039/1.jpg",
+        "/imgs/MiniFocus/An00000039/2.jpg",
+        "/imgs/MiniFocus/An00000039/3.jpg"
       ]
     },
     {
@@ -2047,9 +2047,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000040/1.jpg",
-        "public/imgs/MiniFocus/An00000040/2.jpg",
-        "public/imgs/MiniFocus/An00000040/3.jpg"
+        "/imgs/MiniFocus/An00000040/1.jpg",
+        "/imgs/MiniFocus/An00000040/2.jpg",
+        "/imgs/MiniFocus/An00000040/3.jpg"
       ]
     },
     {
@@ -2109,10 +2109,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000041/1.jpg",
-        "public/imgs/MiniFocus/An00000041/2.jpg",
-        "public/imgs/MiniFocus/An00000041/3.jpg",
-        "public/imgs/MiniFocus/An00000041/4.jpg"
+        "/imgs/MiniFocus/An00000041/1.jpg",
+        "/imgs/MiniFocus/An00000041/2.jpg",
+        "/imgs/MiniFocus/An00000041/3.jpg",
+        "/imgs/MiniFocus/An00000041/4.jpg"
       ]
     },
     {
@@ -2172,8 +2172,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000042/1.jpg",
-        "public/imgs/MiniFocus/An00000042/2.jpg"
+        "/imgs/MiniFocus/An00000042/1.jpg",
+        "/imgs/MiniFocus/An00000042/2.jpg"
       ]
     },
     {
@@ -2229,8 +2229,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000043/1.jpg",
-        "public/imgs/MiniFocus/An00000043/2.jpg"
+        "/imgs/MiniFocus/An00000043/1.jpg",
+        "/imgs/MiniFocus/An00000043/2.jpg"
       ]
     },
     {
@@ -2290,9 +2290,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000044/1.jpg",
-        "public/imgs/MiniFocus/An00000044/2.jpg",
-        "public/imgs/MiniFocus/An00000044/3.jpg"
+        "/imgs/MiniFocus/An00000044/1.jpg",
+        "/imgs/MiniFocus/An00000044/2.jpg",
+        "/imgs/MiniFocus/An00000044/3.jpg"
       ]
     },
     {
@@ -2352,9 +2352,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000045/1.jpg",
-        "public/imgs/MiniFocus/An00000045/2.jpg",
-        "public/imgs/MiniFocus/An00000045/3.jpg"
+        "/imgs/MiniFocus/An00000045/1.jpg",
+        "/imgs/MiniFocus/An00000045/2.jpg",
+        "/imgs/MiniFocus/An00000045/3.jpg"
       ]
     },
     {
@@ -2414,9 +2414,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000046/1.jpg",
-        "public/imgs/MiniFocus/An00000046/2.jpg",
-        "public/imgs/MiniFocus/An00000046/3.jpg"
+        "/imgs/MiniFocus/An00000046/1.jpg",
+        "/imgs/MiniFocus/An00000046/2.jpg",
+        "/imgs/MiniFocus/An00000046/3.jpg"
       ]
     },
     {
@@ -2476,10 +2476,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000047/1.jpg",
-        "public/imgs/MiniFocus/An00000047/2.jpg",
-        "public/imgs/MiniFocus/An00000047/3.jpg",
-        "public/imgs/MiniFocus/An00000047/4.jpg"
+        "/imgs/MiniFocus/An00000047/1.jpg",
+        "/imgs/MiniFocus/An00000047/2.jpg",
+        "/imgs/MiniFocus/An00000047/3.jpg",
+        "/imgs/MiniFocus/An00000047/4.jpg"
       ]
     },
     {
@@ -2539,8 +2539,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000048/1.jpg",
-        "public/imgs/MiniFocus/An00000048/2.jpg"
+        "/imgs/MiniFocus/An00000048/1.jpg",
+        "/imgs/MiniFocus/An00000048/2.jpg"
       ]
     },
     {
@@ -2600,9 +2600,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000049/1.jpg",
-        "public/imgs/MiniFocus/An00000049/2.jpg",
-        "public/imgs/MiniFocus/An00000049/3.jpg"
+        "/imgs/MiniFocus/An00000049/1.jpg",
+        "/imgs/MiniFocus/An00000049/2.jpg",
+        "/imgs/MiniFocus/An00000049/3.jpg"
       ]
     },
     {
@@ -2662,10 +2662,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000050/1.jpg",
-        "public/imgs/MiniFocus/An00000050/2.jpg",
-        "public/imgs/MiniFocus/An00000050/3.jpg",
-        "public/imgs/MiniFocus/An00000050/4.jpg"
+        "/imgs/MiniFocus/An00000050/1.jpg",
+        "/imgs/MiniFocus/An00000050/2.jpg",
+        "/imgs/MiniFocus/An00000050/3.jpg",
+        "/imgs/MiniFocus/An00000050/4.jpg"
       ]
     },
     {
@@ -2725,9 +2725,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000051/1.jpg",
-        "public/imgs/MiniFocus/An00000051/2.jpg",
-        "public/imgs/MiniFocus/An00000051/3.jpg"
+        "/imgs/MiniFocus/An00000051/1.jpg",
+        "/imgs/MiniFocus/An00000051/2.jpg",
+        "/imgs/MiniFocus/An00000051/3.jpg"
       ]
     },
     {
@@ -2787,10 +2787,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000052/1.jpg",
-        "public/imgs/MiniFocus/An00000052/2.jpg",
-        "public/imgs/MiniFocus/An00000052/3.jpg",
-        "public/imgs/MiniFocus/An00000052/4.jpg"
+        "/imgs/MiniFocus/An00000052/1.jpg",
+        "/imgs/MiniFocus/An00000052/2.jpg",
+        "/imgs/MiniFocus/An00000052/3.jpg",
+        "/imgs/MiniFocus/An00000052/4.jpg"
       ]
     },
     {
@@ -2850,9 +2850,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000053/1.jpg",
-        "public/imgs/MiniFocus/An00000053/2.jpg",
-        "public/imgs/MiniFocus/An00000053/3.jpg"
+        "/imgs/MiniFocus/An00000053/1.jpg",
+        "/imgs/MiniFocus/An00000053/2.jpg",
+        "/imgs/MiniFocus/An00000053/3.jpg"
       ]
     },
     {
@@ -2912,8 +2912,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000054M/1.jpg",
-        "public/imgs/MiniFocus/An00000054M/2.jpg"
+        "/imgs/MiniFocus/An00000054M/1.jpg",
+        "/imgs/MiniFocus/An00000054M/2.jpg"
       ]
     },
     {
@@ -2973,9 +2973,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000055/1.jpg",
-        "public/imgs/MiniFocus/An00000055/2.jpg",
-        "public/imgs/MiniFocus/An00000055/3.jpg"
+        "/imgs/MiniFocus/An00000055/1.jpg",
+        "/imgs/MiniFocus/An00000055/2.jpg",
+        "/imgs/MiniFocus/An00000055/3.jpg"
       ]
     },
     {
@@ -3035,9 +3035,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000056/1.jpg",
-        "public/imgs/MiniFocus/An00000056/2.jpg",
-        "public/imgs/MiniFocus/An00000056/3.jpg"
+        "/imgs/MiniFocus/An00000056/1.jpg",
+        "/imgs/MiniFocus/An00000056/2.jpg",
+        "/imgs/MiniFocus/An00000056/3.jpg"
       ]
     },
     {
@@ -3097,8 +3097,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000057/1.jpg",
-        "public/imgs/MiniFocus/An00000057/2.jpg"
+        "/imgs/MiniFocus/An00000057/1.jpg",
+        "/imgs/MiniFocus/An00000057/2.jpg"
       ]
     },
     {
@@ -3158,9 +3158,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000058/1.jpg",
-        "public/imgs/MiniFocus/An00000058/2.jpg",
-        "public/imgs/MiniFocus/An00000058/3.jpg"
+        "/imgs/MiniFocus/An00000058/1.jpg",
+        "/imgs/MiniFocus/An00000058/2.jpg",
+        "/imgs/MiniFocus/An00000058/3.jpg"
       ]
     },
     {
@@ -3220,9 +3220,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000059/1.jpg",
-        "public/imgs/MiniFocus/An00000059/2.jpg",
-        "public/imgs/MiniFocus/An00000059/3.jpg"
+        "/imgs/MiniFocus/An00000059/1.jpg",
+        "/imgs/MiniFocus/An00000059/2.jpg",
+        "/imgs/MiniFocus/An00000059/3.jpg"
       ]
     },
     {
@@ -3282,9 +3282,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000060/1.jpg",
-        "public/imgs/MiniFocus/An00000060/2.jpg",
-        "public/imgs/MiniFocus/An00000060/3.jpg"
+        "/imgs/MiniFocus/An00000060/1.jpg",
+        "/imgs/MiniFocus/An00000060/2.jpg",
+        "/imgs/MiniFocus/An00000060/3.jpg"
       ]
     },
     {
@@ -3344,9 +3344,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000061/1.jpg",
-        "public/imgs/MiniFocus/An00000061/2.jpg",
-        "public/imgs/MiniFocus/An00000061/3.jpg"
+        "/imgs/MiniFocus/An00000061/1.jpg",
+        "/imgs/MiniFocus/An00000061/2.jpg",
+        "/imgs/MiniFocus/An00000061/3.jpg"
       ]
     },
     {
@@ -3406,8 +3406,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000062/1.jpg",
-        "public/imgs/MiniFocus/An00000062/2.jpg"
+        "/imgs/MiniFocus/An00000062/1.jpg",
+        "/imgs/MiniFocus/An00000062/2.jpg"
       ]
     },
     {
@@ -3467,9 +3467,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000063M/1.jpg",
-        "public/imgs/MiniFocus/An00000063M/2.jpg",
-        "public/imgs/MiniFocus/An00000063M/3.jpg"
+        "/imgs/MiniFocus/An00000063M/1.jpg",
+        "/imgs/MiniFocus/An00000063M/2.jpg",
+        "/imgs/MiniFocus/An00000063M/3.jpg"
       ]
     },
     {
@@ -3529,9 +3529,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000064M/1.jpg",
-        "public/imgs/MiniFocus/An00000064M/2.jpg",
-        "public/imgs/MiniFocus/An00000064M/3.jpg"
+        "/imgs/MiniFocus/An00000064M/1.jpg",
+        "/imgs/MiniFocus/An00000064M/2.jpg",
+        "/imgs/MiniFocus/An00000064M/3.jpg"
       ]
     },
     {
@@ -3591,8 +3591,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000065M/1.jpg",
-        "public/imgs/MiniFocus/An00000065M/2.jpg"
+        "/imgs/MiniFocus/An00000065M/1.jpg",
+        "/imgs/MiniFocus/An00000065M/2.jpg"
       ]
     },
     {
@@ -3652,8 +3652,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000066M/1.jpg",
-        "public/imgs/MiniFocus/An00000066M/2.jpg"
+        "/imgs/MiniFocus/An00000066M/1.jpg",
+        "/imgs/MiniFocus/An00000066M/2.jpg"
       ]
     },
     {
@@ -3713,8 +3713,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000067M/1.jpg",
-        "public/imgs/MiniFocus/An00000067M/2.jpg"
+        "/imgs/MiniFocus/An00000067M/1.jpg",
+        "/imgs/MiniFocus/An00000067M/2.jpg"
       ]
     },
     {
@@ -3774,9 +3774,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000068/1.jpg",
-        "public/imgs/MiniFocus/An00000068/2.jpg",
-        "public/imgs/MiniFocus/An00000068/3.jpg"
+        "/imgs/MiniFocus/An00000068/1.jpg",
+        "/imgs/MiniFocus/An00000068/2.jpg",
+        "/imgs/MiniFocus/An00000068/3.jpg"
       ]
     },
     {
@@ -3836,11 +3836,11 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000069/1.jpg",
-        "public/imgs/MiniFocus/An00000069/2.jpg",
-        "public/imgs/MiniFocus/An00000069/3.jpg",
-        "public/imgs/MiniFocus/An00000069/4.jpg",
-        "public/imgs/MiniFocus/An00000069/5.jpg"
+        "/imgs/MiniFocus/An00000069/1.jpg",
+        "/imgs/MiniFocus/An00000069/2.jpg",
+        "/imgs/MiniFocus/An00000069/3.jpg",
+        "/imgs/MiniFocus/An00000069/4.jpg",
+        "/imgs/MiniFocus/An00000069/5.jpg"
       ]
     },
     {
@@ -3900,8 +3900,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000070/1.jpg",
-        "public/imgs/MiniFocus/An00000070/2.jpg"
+        "/imgs/MiniFocus/An00000070/1.jpg",
+        "/imgs/MiniFocus/An00000070/2.jpg"
       ]
     },
     {
@@ -3961,8 +3961,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000071/1.jpg",
-        "public/imgs/MiniFocus/An00000071/2.jpg"
+        "/imgs/MiniFocus/An00000071/1.jpg",
+        "/imgs/MiniFocus/An00000071/2.jpg"
       ]
     },
     {
@@ -4022,10 +4022,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000072/1.jpg",
-        "public/imgs/MiniFocus/An00000072/2.jpg",
-        "public/imgs/MiniFocus/An00000072/3.jpg",
-        "public/imgs/MiniFocus/An00000072/4.jpg"
+        "/imgs/MiniFocus/An00000072/1.jpg",
+        "/imgs/MiniFocus/An00000072/2.jpg",
+        "/imgs/MiniFocus/An00000072/3.jpg",
+        "/imgs/MiniFocus/An00000072/4.jpg"
       ]
     },
     {
@@ -4085,9 +4085,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000073/1.jpg",
-        "public/imgs/MiniFocus/An00000073/2.jpg",
-        "public/imgs/MiniFocus/An00000073/3.jpg"
+        "/imgs/MiniFocus/An00000073/1.jpg",
+        "/imgs/MiniFocus/An00000073/2.jpg",
+        "/imgs/MiniFocus/An00000073/3.jpg"
       ]
     },
     {
@@ -4147,9 +4147,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000074/1.jpg",
-        "public/imgs/MiniFocus/An00000074/2.jpg",
-        "public/imgs/MiniFocus/An00000074/3.jpg"
+        "/imgs/MiniFocus/An00000074/1.jpg",
+        "/imgs/MiniFocus/An00000074/2.jpg",
+        "/imgs/MiniFocus/An00000074/3.jpg"
       ]
     },
     {
@@ -4209,8 +4209,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000075/1.jpg",
-        "public/imgs/MiniFocus/An00000075/2.jpg"
+        "/imgs/MiniFocus/An00000075/1.jpg",
+        "/imgs/MiniFocus/An00000075/2.jpg"
       ]
     },
     {
@@ -4270,10 +4270,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000076/1.jpg",
-        "public/imgs/MiniFocus/An00000076/2.jpg",
-        "public/imgs/MiniFocus/An00000076/3.jpg",
-        "public/imgs/MiniFocus/An00000076/4.jpg"
+        "/imgs/MiniFocus/An00000076/1.jpg",
+        "/imgs/MiniFocus/An00000076/2.jpg",
+        "/imgs/MiniFocus/An00000076/3.jpg",
+        "/imgs/MiniFocus/An00000076/4.jpg"
       ]
     },
     {
@@ -4333,8 +4333,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000077M/1.jpg",
-        "public/imgs/MiniFocus/An00000077M/2.jpg"
+        "/imgs/MiniFocus/An00000077M/1.jpg",
+        "/imgs/MiniFocus/An00000077M/2.jpg"
       ]
     },
     {
@@ -4394,13 +4394,13 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000078M/1.jpg",
-        "public/imgs/MiniFocus/An00000078M/2.jpg",
-        "public/imgs/MiniFocus/An00000078M/3.jpg",
-        "public/imgs/MiniFocus/An00000078M/4.jpg",
-        "public/imgs/MiniFocus/An00000078M/5.jpg",
-        "public/imgs/MiniFocus/An00000078M/6.jpg",
-        "public/imgs/MiniFocus/An00000078M/7.jpg"
+        "/imgs/MiniFocus/An00000078M/1.jpg",
+        "/imgs/MiniFocus/An00000078M/2.jpg",
+        "/imgs/MiniFocus/An00000078M/3.jpg",
+        "/imgs/MiniFocus/An00000078M/4.jpg",
+        "/imgs/MiniFocus/An00000078M/5.jpg",
+        "/imgs/MiniFocus/An00000078M/6.jpg",
+        "/imgs/MiniFocus/An00000078M/7.jpg"
       ]
     },
     {
@@ -4460,9 +4460,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000079M/1.jpg",
-        "public/imgs/MiniFocus/An00000079M/2.jpg",
-        "public/imgs/MiniFocus/An00000079M/3.jpg"
+        "/imgs/MiniFocus/An00000079M/1.jpg",
+        "/imgs/MiniFocus/An00000079M/2.jpg",
+        "/imgs/MiniFocus/An00000079M/3.jpg"
       ]
     },
     {
@@ -4522,9 +4522,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000080M/1.jpg",
-        "public/imgs/MiniFocus/An00000080M/2.jpg",
-        "public/imgs/MiniFocus/An00000080M/3.jpg"
+        "/imgs/MiniFocus/An00000080M/1.jpg",
+        "/imgs/MiniFocus/An00000080M/2.jpg",
+        "/imgs/MiniFocus/An00000080M/3.jpg"
       ]
     },
     {
@@ -4584,8 +4584,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000081M/1.jpg",
-        "public/imgs/MiniFocus/An00000081M/2.jpg"
+        "/imgs/MiniFocus/An00000081M/1.jpg",
+        "/imgs/MiniFocus/An00000081M/2.jpg"
       ]
     },
     {
@@ -4645,10 +4645,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000082/1.jpg",
-        "public/imgs/MiniFocus/An00000082/2.jpg",
-        "public/imgs/MiniFocus/An00000082/3.jpg",
-        "public/imgs/MiniFocus/An00000082/4.jpg"
+        "/imgs/MiniFocus/An00000082/1.jpg",
+        "/imgs/MiniFocus/An00000082/2.jpg",
+        "/imgs/MiniFocus/An00000082/3.jpg",
+        "/imgs/MiniFocus/An00000082/4.jpg"
       ]
     },
     {
@@ -4708,10 +4708,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000083/1.jpg",
-        "public/imgs/MiniFocus/An00000083/2.jpg",
-        "public/imgs/MiniFocus/An00000083/3.jpg",
-        "public/imgs/MiniFocus/An00000083/4.jpg"
+        "/imgs/MiniFocus/An00000083/1.jpg",
+        "/imgs/MiniFocus/An00000083/2.jpg",
+        "/imgs/MiniFocus/An00000083/3.jpg",
+        "/imgs/MiniFocus/An00000083/4.jpg"
       ]
     },
     {
@@ -4771,9 +4771,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000084/1.jpg",
-        "public/imgs/MiniFocus/An00000084/2.jpg",
-        "public/imgs/MiniFocus/An00000084/3.jpg"
+        "/imgs/MiniFocus/An00000084/1.jpg",
+        "/imgs/MiniFocus/An00000084/2.jpg",
+        "/imgs/MiniFocus/An00000084/3.jpg"
       ]
     },
     {
@@ -4833,9 +4833,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000085M/1.jpg",
-        "public/imgs/MiniFocus/An00000085M/2.jpg",
-        "public/imgs/MiniFocus/An00000085M/3.jpg"
+        "/imgs/MiniFocus/An00000085M/1.jpg",
+        "/imgs/MiniFocus/An00000085M/2.jpg",
+        "/imgs/MiniFocus/An00000085M/3.jpg"
       ]
     },
     {
@@ -4895,9 +4895,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000086M/1.jpg",
-        "public/imgs/MiniFocus/An00000086M/2.jpg",
-        "public/imgs/MiniFocus/An00000086M/3.jpg"
+        "/imgs/MiniFocus/An00000086M/1.jpg",
+        "/imgs/MiniFocus/An00000086M/2.jpg",
+        "/imgs/MiniFocus/An00000086M/3.jpg"
       ]
     },
     {
@@ -4957,9 +4957,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000087/1.jpg",
-        "public/imgs/MiniFocus/An00000087/2.jpg",
-        "public/imgs/MiniFocus/An00000087/3.jpg"
+        "/imgs/MiniFocus/An00000087/1.jpg",
+        "/imgs/MiniFocus/An00000087/2.jpg",
+        "/imgs/MiniFocus/An00000087/3.jpg"
       ]
     },
     {
@@ -5019,10 +5019,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000088/1.jpg",
-        "public/imgs/MiniFocus/An00000088/2.jpg",
-        "public/imgs/MiniFocus/An00000088/3.jpg",
-        "public/imgs/MiniFocus/An00000088/4.jpg"
+        "/imgs/MiniFocus/An00000088/1.jpg",
+        "/imgs/MiniFocus/An00000088/2.jpg",
+        "/imgs/MiniFocus/An00000088/3.jpg",
+        "/imgs/MiniFocus/An00000088/4.jpg"
       ]
     },
     {
@@ -5082,10 +5082,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000089M/1.jpg",
-        "public/imgs/MiniFocus/An00000089M/2.jpg",
-        "public/imgs/MiniFocus/An00000089M/3.jpg",
-        "public/imgs/MiniFocus/An00000089M/4.jpg"
+        "/imgs/MiniFocus/An00000089M/1.jpg",
+        "/imgs/MiniFocus/An00000089M/2.jpg",
+        "/imgs/MiniFocus/An00000089M/3.jpg",
+        "/imgs/MiniFocus/An00000089M/4.jpg"
       ]
     },
     {
@@ -5145,10 +5145,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000090M/1.jpg",
-        "public/imgs/MiniFocus/An00000090M/2.jpg",
-        "public/imgs/MiniFocus/An00000090M/3.jpg",
-        "public/imgs/MiniFocus/An00000090M/4.jpg"
+        "/imgs/MiniFocus/An00000090M/1.jpg",
+        "/imgs/MiniFocus/An00000090M/2.jpg",
+        "/imgs/MiniFocus/An00000090M/3.jpg",
+        "/imgs/MiniFocus/An00000090M/4.jpg"
       ]
     },
     {
@@ -5208,8 +5208,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000091M/1.jpg",
-        "public/imgs/MiniFocus/An00000091M/2.jpg"
+        "/imgs/MiniFocus/An00000091M/1.jpg",
+        "/imgs/MiniFocus/An00000091M/2.jpg"
       ]
     },
     {
@@ -5269,10 +5269,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000092/1.jpg",
-        "public/imgs/MiniFocus/An00000092/2.jpg",
-        "public/imgs/MiniFocus/An00000092/3.jpg",
-        "public/imgs/MiniFocus/An00000092/4.jpg"
+        "/imgs/MiniFocus/An00000092/1.jpg",
+        "/imgs/MiniFocus/An00000092/2.jpg",
+        "/imgs/MiniFocus/An00000092/3.jpg",
+        "/imgs/MiniFocus/An00000092/4.jpg"
       ]
     },
     {
@@ -5332,10 +5332,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000093/1.jpg",
-        "public/imgs/MiniFocus/An00000093/2.jpg",
-        "public/imgs/MiniFocus/An00000093/3.jpg",
-        "public/imgs/MiniFocus/An00000093/4.jpg"
+        "/imgs/MiniFocus/An00000093/1.jpg",
+        "/imgs/MiniFocus/An00000093/2.jpg",
+        "/imgs/MiniFocus/An00000093/3.jpg",
+        "/imgs/MiniFocus/An00000093/4.jpg"
       ]
     },
     {
@@ -5395,9 +5395,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000094/1.jpg",
-        "public/imgs/MiniFocus/An00000094/2.jpg",
-        "public/imgs/MiniFocus/An00000094/3.jpg"
+        "/imgs/MiniFocus/An00000094/1.jpg",
+        "/imgs/MiniFocus/An00000094/2.jpg",
+        "/imgs/MiniFocus/An00000094/3.jpg"
       ]
     },
     {
@@ -5457,8 +5457,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000095/1.jpg",
-        "public/imgs/MiniFocus/An00000095/2.jpg"
+        "/imgs/MiniFocus/An00000095/1.jpg",
+        "/imgs/MiniFocus/An00000095/2.jpg"
       ]
     },
     {
@@ -5518,8 +5518,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000096/1.jpg",
-        "public/imgs/MiniFocus/An00000096/2.jpg"
+        "/imgs/MiniFocus/An00000096/1.jpg",
+        "/imgs/MiniFocus/An00000096/2.jpg"
       ]
     },
     {
@@ -5579,8 +5579,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000097/1.jpg",
-        "public/imgs/MiniFocus/An00000097/2.jpg"
+        "/imgs/MiniFocus/An00000097/1.jpg",
+        "/imgs/MiniFocus/An00000097/2.jpg"
       ]
     },
     {
@@ -5640,9 +5640,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000098M/1.jpg",
-        "public/imgs/MiniFocus/An00000098M/2.jpg",
-        "public/imgs/MiniFocus/An00000098M/3.jpg"
+        "/imgs/MiniFocus/An00000098M/1.jpg",
+        "/imgs/MiniFocus/An00000098M/2.jpg",
+        "/imgs/MiniFocus/An00000098M/3.jpg"
       ]
     },
     {
@@ -5702,9 +5702,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An00000099M/1.jpg",
-        "public/imgs/MiniFocus/An00000099M/2.jpg",
-        "public/imgs/MiniFocus/An00000099M/3.jpg"
+        "/imgs/MiniFocus/An00000099M/1.jpg",
+        "/imgs/MiniFocus/An00000099M/2.jpg",
+        "/imgs/MiniFocus/An00000099M/3.jpg"
       ]
     },
     {
@@ -5764,9 +5764,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000100M/1.jpg",
-        "public/imgs/MiniFocus/An000000100M/2.jpg",
-        "public/imgs/MiniFocus/An000000100M/3.jpg"
+        "/imgs/MiniFocus/An000000100M/1.jpg",
+        "/imgs/MiniFocus/An000000100M/2.jpg",
+        "/imgs/MiniFocus/An000000100M/3.jpg"
       ]
     },
     {
@@ -5826,8 +5826,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000101M/1.jpg",
-        "public/imgs/MiniFocus/An000000101M/2.jpg"
+        "/imgs/MiniFocus/An000000101M/1.jpg",
+        "/imgs/MiniFocus/An000000101M/2.jpg"
       ]
     },
     {
@@ -5887,10 +5887,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000102M/1.jpg",
-        "public/imgs/MiniFocus/An000000102M/2.jpg",
-        "public/imgs/MiniFocus/An000000102M/3.jpg",
-        "public/imgs/MiniFocus/An000000102M/4.jpg"
+        "/imgs/MiniFocus/An000000102M/1.jpg",
+        "/imgs/MiniFocus/An000000102M/2.jpg",
+        "/imgs/MiniFocus/An000000102M/3.jpg",
+        "/imgs/MiniFocus/An000000102M/4.jpg"
       ]
     },
     {
@@ -5950,8 +5950,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000103M/1.jpg",
-        "public/imgs/MiniFocus/An000000103M/2.jpg"
+        "/imgs/MiniFocus/An000000103M/1.jpg",
+        "/imgs/MiniFocus/An000000103M/2.jpg"
       ]
     },
     {
@@ -6011,9 +6011,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000104M/1.jpg",
-        "public/imgs/MiniFocus/An000000104M/2.jpg",
-        "public/imgs/MiniFocus/An000000104M/3.jpg"
+        "/imgs/MiniFocus/An000000104M/1.jpg",
+        "/imgs/MiniFocus/An000000104M/2.jpg",
+        "/imgs/MiniFocus/An000000104M/3.jpg"
       ]
     },
     {
@@ -6073,10 +6073,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000105M/1.jpg",
-        "public/imgs/MiniFocus/An000000105M/2.jpg",
-        "public/imgs/MiniFocus/An000000105M/3.jpg",
-        "public/imgs/MiniFocus/An000000105M/4.jpg"
+        "/imgs/MiniFocus/An000000105M/1.jpg",
+        "/imgs/MiniFocus/An000000105M/2.jpg",
+        "/imgs/MiniFocus/An000000105M/3.jpg",
+        "/imgs/MiniFocus/An000000105M/4.jpg"
       ]
     },
     {
@@ -6136,12 +6136,12 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000106M/1.jpg",
-        "public/imgs/MiniFocus/An000000106M/2.jpg",
-        "public/imgs/MiniFocus/An000000106M/3.jpg",
-        "public/imgs/MiniFocus/An000000106M/4.jpg",
-        "public/imgs/MiniFocus/An000000106M/5.jpg",
-        "public/imgs/MiniFocus/An000000106M/6.jpg"
+        "/imgs/MiniFocus/An000000106M/1.jpg",
+        "/imgs/MiniFocus/An000000106M/2.jpg",
+        "/imgs/MiniFocus/An000000106M/3.jpg",
+        "/imgs/MiniFocus/An000000106M/4.jpg",
+        "/imgs/MiniFocus/An000000106M/5.jpg",
+        "/imgs/MiniFocus/An000000106M/6.jpg"
       ]
     },
     {
@@ -6201,9 +6201,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000107/1.jpg",
-        "public/imgs/MiniFocus/An000000107/2.jpg",
-        "public/imgs/MiniFocus/An000000107/3.jpg"
+        "/imgs/MiniFocus/An000000107/1.jpg",
+        "/imgs/MiniFocus/An000000107/2.jpg",
+        "/imgs/MiniFocus/An000000107/3.jpg"
       ]
     },
     {
@@ -6263,10 +6263,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000108/1.jpg",
-        "public/imgs/MiniFocus/An000000108/2.jpg",
-        "public/imgs/MiniFocus/An000000108/3.jpg",
-        "public/imgs/MiniFocus/An000000108/4.jpg"
+        "/imgs/MiniFocus/An000000108/1.jpg",
+        "/imgs/MiniFocus/An000000108/2.jpg",
+        "/imgs/MiniFocus/An000000108/3.jpg",
+        "/imgs/MiniFocus/An000000108/4.jpg"
       ]
     },
     {
@@ -6326,10 +6326,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000109M/1.jpg",
-        "public/imgs/MiniFocus/An000000109M/2.jpg",
-        "public/imgs/MiniFocus/An000000109M/3.jpg",
-        "public/imgs/MiniFocus/An000000109M/4.jpg"
+        "/imgs/MiniFocus/An000000109M/1.jpg",
+        "/imgs/MiniFocus/An000000109M/2.jpg",
+        "/imgs/MiniFocus/An000000109M/3.jpg",
+        "/imgs/MiniFocus/An000000109M/4.jpg"
       ]
     },
     {
@@ -6389,8 +6389,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000110M/1.jpg",
-        "public/imgs/MiniFocus/An000000110M/2.jpg"
+        "/imgs/MiniFocus/An000000110M/1.jpg",
+        "/imgs/MiniFocus/An000000110M/2.jpg"
       ]
     },
     {
@@ -6450,9 +6450,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000111M/1.jpg",
-        "public/imgs/MiniFocus/An000000111M/2.jpg",
-        "public/imgs/MiniFocus/An000000111M/3.jpg"
+        "/imgs/MiniFocus/An000000111M/1.jpg",
+        "/imgs/MiniFocus/An000000111M/2.jpg",
+        "/imgs/MiniFocus/An000000111M/3.jpg"
       ]
     },
     {
@@ -6512,11 +6512,11 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000112M/1.jpg",
-        "public/imgs/MiniFocus/An000000112M/2.jpg",
-        "public/imgs/MiniFocus/An000000112M/3.jpg",
-        "public/imgs/MiniFocus/An000000112M/4.jpg",
-        "public/imgs/MiniFocus/An000000112M/5.jpg"
+        "/imgs/MiniFocus/An000000112M/1.jpg",
+        "/imgs/MiniFocus/An000000112M/2.jpg",
+        "/imgs/MiniFocus/An000000112M/3.jpg",
+        "/imgs/MiniFocus/An000000112M/4.jpg",
+        "/imgs/MiniFocus/An000000112M/5.jpg"
       ]
     },
     {
@@ -6576,8 +6576,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000113/1.jpg",
-        "public/imgs/MiniFocus/An000000113/2.jpg"
+        "/imgs/MiniFocus/An000000113/1.jpg",
+        "/imgs/MiniFocus/An000000113/2.jpg"
       ]
     },
     {
@@ -6637,9 +6637,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000114/1.jpg",
-        "public/imgs/MiniFocus/An000000114/2.jpg",
-        "public/imgs/MiniFocus/An000000114/3.jpg"
+        "/imgs/MiniFocus/An000000114/1.jpg",
+        "/imgs/MiniFocus/An000000114/2.jpg",
+        "/imgs/MiniFocus/An000000114/3.jpg"
       ]
     },
     {
@@ -6699,8 +6699,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000115/1.jpg",
-        "public/imgs/MiniFocus/An000000115/2.jpg"
+        "/imgs/MiniFocus/An000000115/1.jpg",
+        "/imgs/MiniFocus/An000000115/2.jpg"
       ]
     },
     {
@@ -6760,8 +6760,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000116/1.jpg",
-        "public/imgs/MiniFocus/An000000116/2.jpg"
+        "/imgs/MiniFocus/An000000116/1.jpg",
+        "/imgs/MiniFocus/An000000116/2.jpg"
       ]
     },
     {
@@ -6821,10 +6821,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000117M/1.jpg",
-        "public/imgs/MiniFocus/An000000117M/2.jpg",
-        "public/imgs/MiniFocus/An000000117M/3.jpg",
-        "public/imgs/MiniFocus/An000000117M/4.jpg"
+        "/imgs/MiniFocus/An000000117M/1.jpg",
+        "/imgs/MiniFocus/An000000117M/2.jpg",
+        "/imgs/MiniFocus/An000000117M/3.jpg",
+        "/imgs/MiniFocus/An000000117M/4.jpg"
       ]
     },
     {
@@ -6884,10 +6884,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000118M/1.jpg",
-        "public/imgs/MiniFocus/An000000118M/2.jpg",
-        "public/imgs/MiniFocus/An000000118M/3.jpg",
-        "public/imgs/MiniFocus/An000000118M/4.jpg"
+        "/imgs/MiniFocus/An000000118M/1.jpg",
+        "/imgs/MiniFocus/An000000118M/2.jpg",
+        "/imgs/MiniFocus/An000000118M/3.jpg",
+        "/imgs/MiniFocus/An000000118M/4.jpg"
       ]
     },
     {
@@ -6947,10 +6947,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000119M/1.jpg",
-        "public/imgs/MiniFocus/An000000119M/2.jpg",
-        "public/imgs/MiniFocus/An000000119M/3.jpg",
-        "public/imgs/MiniFocus/An000000119M/4.jpg"
+        "/imgs/MiniFocus/An000000119M/1.jpg",
+        "/imgs/MiniFocus/An000000119M/2.jpg",
+        "/imgs/MiniFocus/An000000119M/3.jpg",
+        "/imgs/MiniFocus/An000000119M/4.jpg"
       ]
     },
     {
@@ -7010,8 +7010,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000120/1.jpg",
-        "public/imgs/MiniFocus/An000000120/2.jpg"
+        "/imgs/MiniFocus/An000000120/1.jpg",
+        "/imgs/MiniFocus/An000000120/2.jpg"
       ]
     },
     {
@@ -7071,8 +7071,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000121/1.jpg",
-        "public/imgs/MiniFocus/An000000121/2.jpg"
+        "/imgs/MiniFocus/An000000121/1.jpg",
+        "/imgs/MiniFocus/An000000121/2.jpg"
       ]
     },
     {
@@ -7132,9 +7132,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000122/1.jpg",
-        "public/imgs/MiniFocus/An000000122/2.jpg",
-        "public/imgs/MiniFocus/An000000122/3.jpg"
+        "/imgs/MiniFocus/An000000122/1.jpg",
+        "/imgs/MiniFocus/An000000122/2.jpg",
+        "/imgs/MiniFocus/An000000122/3.jpg"
       ]
     },
     {
@@ -7194,9 +7194,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000123/1.jpg",
-        "public/imgs/MiniFocus/An000000123/2.jpg",
-        "public/imgs/MiniFocus/An000000123/3.jpg"
+        "/imgs/MiniFocus/An000000123/1.jpg",
+        "/imgs/MiniFocus/An000000123/2.jpg",
+        "/imgs/MiniFocus/An000000123/3.jpg"
       ]
     },
     {
@@ -7256,10 +7256,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000124/1.jpg",
-        "public/imgs/MiniFocus/An000000124/2.jpg",
-        "public/imgs/MiniFocus/An000000124/3.jpg",
-        "public/imgs/MiniFocus/An000000124/4.jpg"
+        "/imgs/MiniFocus/An000000124/1.jpg",
+        "/imgs/MiniFocus/An000000124/2.jpg",
+        "/imgs/MiniFocus/An000000124/3.jpg",
+        "/imgs/MiniFocus/An000000124/4.jpg"
       ]
     },
     {
@@ -7319,9 +7319,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000125/1.jpg",
-        "public/imgs/MiniFocus/An000000125/2.jpg",
-        "public/imgs/MiniFocus/An000000125/3.jpg"
+        "/imgs/MiniFocus/An000000125/1.jpg",
+        "/imgs/MiniFocus/An000000125/2.jpg",
+        "/imgs/MiniFocus/An000000125/3.jpg"
       ]
     },
     {
@@ -7381,8 +7381,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000126M/1.jpg",
-        "public/imgs/MiniFocus/An000000126M/2.jpg"
+        "/imgs/MiniFocus/An000000126M/1.jpg",
+        "/imgs/MiniFocus/An000000126M/2.jpg"
       ]
     },
     {
@@ -7442,8 +7442,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000127M/1.jpg",
-        "public/imgs/MiniFocus/An000000127M/2.jpg"
+        "/imgs/MiniFocus/An000000127M/1.jpg",
+        "/imgs/MiniFocus/An000000127M/2.jpg"
       ]
     },
     {
@@ -7503,9 +7503,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000128M/1.jpg",
-        "public/imgs/MiniFocus/An000000128M/2.jpg",
-        "public/imgs/MiniFocus/An000000128M/3.jpg"
+        "/imgs/MiniFocus/An000000128M/1.jpg",
+        "/imgs/MiniFocus/An000000128M/2.jpg",
+        "/imgs/MiniFocus/An000000128M/3.jpg"
       ]
     },
     {
@@ -7565,11 +7565,11 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000129M/1.jpg",
-        "public/imgs/MiniFocus/An000000129M/2.jpg",
-        "public/imgs/MiniFocus/An000000129M/3.jpg",
-        "public/imgs/MiniFocus/An000000129M/4.jpg",
-        "public/imgs/MiniFocus/An000000129M/5.jpg"
+        "/imgs/MiniFocus/An000000129M/1.jpg",
+        "/imgs/MiniFocus/An000000129M/2.jpg",
+        "/imgs/MiniFocus/An000000129M/3.jpg",
+        "/imgs/MiniFocus/An000000129M/4.jpg",
+        "/imgs/MiniFocus/An000000129M/5.jpg"
       ]
     },
     {
@@ -7629,8 +7629,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000130M/1.jpg",
-        "public/imgs/MiniFocus/An000000130M/2.jpg"
+        "/imgs/MiniFocus/An000000130M/1.jpg",
+        "/imgs/MiniFocus/An000000130M/2.jpg"
       ]
     },
     {
@@ -7690,11 +7690,11 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000131M/1.jpg",
-        "public/imgs/MiniFocus/An000000131M/2.jpg",
-        "public/imgs/MiniFocus/An000000131M/3.jpg",
-        "public/imgs/MiniFocus/An000000131M/4.jpg",
-        "public/imgs/MiniFocus/An000000131M/5.jpg"
+        "/imgs/MiniFocus/An000000131M/1.jpg",
+        "/imgs/MiniFocus/An000000131M/2.jpg",
+        "/imgs/MiniFocus/An000000131M/3.jpg",
+        "/imgs/MiniFocus/An000000131M/4.jpg",
+        "/imgs/MiniFocus/An000000131M/5.jpg"
       ]
     },
     {
@@ -7754,8 +7754,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000132M/1.jpg",
-        "public/imgs/MiniFocus/An000000132M/2.jpg"
+        "/imgs/MiniFocus/An000000132M/1.jpg",
+        "/imgs/MiniFocus/An000000132M/2.jpg"
       ]
     },
     {
@@ -7815,8 +7815,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000133M/1.jpg",
-        "public/imgs/MiniFocus/An000000133M/2.jpg"
+        "/imgs/MiniFocus/An000000133M/1.jpg",
+        "/imgs/MiniFocus/An000000133M/2.jpg"
       ]
     },
     {
@@ -7876,9 +7876,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000134M/1.jpg",
-        "public/imgs/MiniFocus/An000000134M/2.jpg",
-        "public/imgs/MiniFocus/An000000134M/3.jpg"
+        "/imgs/MiniFocus/An000000134M/1.jpg",
+        "/imgs/MiniFocus/An000000134M/2.jpg",
+        "/imgs/MiniFocus/An000000134M/3.jpg"
       ]
     },
     {
@@ -7938,8 +7938,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000135M/1.jpg",
-        "public/imgs/MiniFocus/An000000135M/2.jpg"
+        "/imgs/MiniFocus/An000000135M/1.jpg",
+        "/imgs/MiniFocus/An000000135M/2.jpg"
       ]
     },
     {
@@ -7999,10 +7999,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000136M/1.jpg",
-        "public/imgs/MiniFocus/An000000136M/2.jpg",
-        "public/imgs/MiniFocus/An000000136M/3.jpg",
-        "public/imgs/MiniFocus/An000000136M/4.jpg"
+        "/imgs/MiniFocus/An000000136M/1.jpg",
+        "/imgs/MiniFocus/An000000136M/2.jpg",
+        "/imgs/MiniFocus/An000000136M/3.jpg",
+        "/imgs/MiniFocus/An000000136M/4.jpg"
       ]
     },
     {
@@ -8062,10 +8062,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000137M/1.jpg",
-        "public/imgs/MiniFocus/An000000137M/2.jpg",
-        "public/imgs/MiniFocus/An000000137M/3.jpg",
-        "public/imgs/MiniFocus/An000000137M/4.jpg"
+        "/imgs/MiniFocus/An000000137M/1.jpg",
+        "/imgs/MiniFocus/An000000137M/2.jpg",
+        "/imgs/MiniFocus/An000000137M/3.jpg",
+        "/imgs/MiniFocus/An000000137M/4.jpg"
       ]
     },
     {
@@ -8125,10 +8125,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000138M/1.jpg",
-        "public/imgs/MiniFocus/An000000138M/2.jpg",
-        "public/imgs/MiniFocus/An000000138M/3.jpg",
-        "public/imgs/MiniFocus/An000000138M/4.jpg"
+        "/imgs/MiniFocus/An000000138M/1.jpg",
+        "/imgs/MiniFocus/An000000138M/2.jpg",
+        "/imgs/MiniFocus/An000000138M/3.jpg",
+        "/imgs/MiniFocus/An000000138M/4.jpg"
       ]
     },
     {
@@ -8188,10 +8188,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000139M/1.jpg",
-        "public/imgs/MiniFocus/An000000139M/2.jpg",
-        "public/imgs/MiniFocus/An000000139M/3.jpg",
-        "public/imgs/MiniFocus/An000000139M/4.jpg"
+        "/imgs/MiniFocus/An000000139M/1.jpg",
+        "/imgs/MiniFocus/An000000139M/2.jpg",
+        "/imgs/MiniFocus/An000000139M/3.jpg",
+        "/imgs/MiniFocus/An000000139M/4.jpg"
       ]
     },
     {
@@ -8251,10 +8251,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000140M/1.jpg",
-        "public/imgs/MiniFocus/An000000140M/2.jpg",
-        "public/imgs/MiniFocus/An000000140M/3.jpg",
-        "public/imgs/MiniFocus/An000000140M/4.jpg"
+        "/imgs/MiniFocus/An000000140M/1.jpg",
+        "/imgs/MiniFocus/An000000140M/2.jpg",
+        "/imgs/MiniFocus/An000000140M/3.jpg",
+        "/imgs/MiniFocus/An000000140M/4.jpg"
       ]
     },
     {
@@ -8314,10 +8314,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000141M/1.jpg",
-        "public/imgs/MiniFocus/An000000141M/2.jpg",
-        "public/imgs/MiniFocus/An000000141M/3.jpg",
-        "public/imgs/MiniFocus/An000000141M/4.jpg"
+        "/imgs/MiniFocus/An000000141M/1.jpg",
+        "/imgs/MiniFocus/An000000141M/2.jpg",
+        "/imgs/MiniFocus/An000000141M/3.jpg",
+        "/imgs/MiniFocus/An000000141M/4.jpg"
       ]
     },
     {
@@ -8377,10 +8377,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000142M/1.jpg",
-        "public/imgs/MiniFocus/An000000142M/2.jpg",
-        "public/imgs/MiniFocus/An000000142M/3.jpg",
-        "public/imgs/MiniFocus/An000000142M/4.jpg"
+        "/imgs/MiniFocus/An000000142M/1.jpg",
+        "/imgs/MiniFocus/An000000142M/2.jpg",
+        "/imgs/MiniFocus/An000000142M/3.jpg",
+        "/imgs/MiniFocus/An000000142M/4.jpg"
       ]
     },
     {
@@ -8440,10 +8440,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000143M/1.jpg",
-        "public/imgs/MiniFocus/An000000143M/2.jpg",
-        "public/imgs/MiniFocus/An000000143M/3.jpg",
-        "public/imgs/MiniFocus/An000000143M/4.jpg"
+        "/imgs/MiniFocus/An000000143M/1.jpg",
+        "/imgs/MiniFocus/An000000143M/2.jpg",
+        "/imgs/MiniFocus/An000000143M/3.jpg",
+        "/imgs/MiniFocus/An000000143M/4.jpg"
       ]
     },
     {
@@ -8503,10 +8503,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000144M/1.jpg",
-        "public/imgs/MiniFocus/An000000144M/2.jpg",
-        "public/imgs/MiniFocus/An000000144M/3.jpg",
-        "public/imgs/MiniFocus/An000000144M/4.jpg"
+        "/imgs/MiniFocus/An000000144M/1.jpg",
+        "/imgs/MiniFocus/An000000144M/2.jpg",
+        "/imgs/MiniFocus/An000000144M/3.jpg",
+        "/imgs/MiniFocus/An000000144M/4.jpg"
       ]
     },
     {
@@ -8566,10 +8566,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000145M/1.jpg",
-        "public/imgs/MiniFocus/An000000145M/2.jpg",
-        "public/imgs/MiniFocus/An000000145M/3.jpg",
-        "public/imgs/MiniFocus/An000000145M/4.jpg"
+        "/imgs/MiniFocus/An000000145M/1.jpg",
+        "/imgs/MiniFocus/An000000145M/2.jpg",
+        "/imgs/MiniFocus/An000000145M/3.jpg",
+        "/imgs/MiniFocus/An000000145M/4.jpg"
       ]
     },
     {
@@ -8629,10 +8629,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000146M/1.jpg",
-        "public/imgs/MiniFocus/An000000146M/2.jpg",
-        "public/imgs/MiniFocus/An000000146M/3.jpg",
-        "public/imgs/MiniFocus/An000000146M/4.jpg"
+        "/imgs/MiniFocus/An000000146M/1.jpg",
+        "/imgs/MiniFocus/An000000146M/2.jpg",
+        "/imgs/MiniFocus/An000000146M/3.jpg",
+        "/imgs/MiniFocus/An000000146M/4.jpg"
       ]
     },
     {
@@ -8692,10 +8692,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000147M/1.jpg",
-        "public/imgs/MiniFocus/An000000147M/2.jpg",
-        "public/imgs/MiniFocus/An000000147M/3.jpg",
-        "public/imgs/MiniFocus/An000000147M/4.jpg"
+        "/imgs/MiniFocus/An000000147M/1.jpg",
+        "/imgs/MiniFocus/An000000147M/2.jpg",
+        "/imgs/MiniFocus/An000000147M/3.jpg",
+        "/imgs/MiniFocus/An000000147M/4.jpg"
       ]
     },
     {
@@ -8755,8 +8755,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000148/1.jpg",
-        "public/imgs/MiniFocus/An000000148/2.jpg"
+        "/imgs/MiniFocus/An000000148/1.jpg",
+        "/imgs/MiniFocus/An000000148/2.jpg"
       ]
     },
     {
@@ -8816,10 +8816,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000149/1.jpg",
-        "public/imgs/MiniFocus/An000000149/2.jpg",
-        "public/imgs/MiniFocus/An000000149/3.jpg",
-        "public/imgs/MiniFocus/An000000149/4.jpg"
+        "/imgs/MiniFocus/An000000149/1.jpg",
+        "/imgs/MiniFocus/An000000149/2.jpg",
+        "/imgs/MiniFocus/An000000149/3.jpg",
+        "/imgs/MiniFocus/An000000149/4.jpg"
       ]
     },
     {
@@ -8879,10 +8879,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000150/1.jpg",
-        "public/imgs/MiniFocus/An000000150/2.jpg",
-        "public/imgs/MiniFocus/An000000150/3.jpg",
-        "public/imgs/MiniFocus/An000000150/4.jpg"
+        "/imgs/MiniFocus/An000000150/1.jpg",
+        "/imgs/MiniFocus/An000000150/2.jpg",
+        "/imgs/MiniFocus/An000000150/3.jpg",
+        "/imgs/MiniFocus/An000000150/4.jpg"
       ]
     },
     {
@@ -8942,10 +8942,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000151/1.jpg",
-        "public/imgs/MiniFocus/An000000151/2.jpg",
-        "public/imgs/MiniFocus/An000000151/3.jpg",
-        "public/imgs/MiniFocus/An000000151/4.jpg"
+        "/imgs/MiniFocus/An000000151/1.jpg",
+        "/imgs/MiniFocus/An000000151/2.jpg",
+        "/imgs/MiniFocus/An000000151/3.jpg",
+        "/imgs/MiniFocus/An000000151/4.jpg"
       ]
     },
     {
@@ -9005,10 +9005,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000152/1.jpg",
-        "public/imgs/MiniFocus/An000000152/2.jpg",
-        "public/imgs/MiniFocus/An000000152/3.jpg",
-        "public/imgs/MiniFocus/An000000152/4.jpg"
+        "/imgs/MiniFocus/An000000152/1.jpg",
+        "/imgs/MiniFocus/An000000152/2.jpg",
+        "/imgs/MiniFocus/An000000152/3.jpg",
+        "/imgs/MiniFocus/An000000152/4.jpg"
       ]
     },
     {
@@ -9068,10 +9068,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000153M/1.jpg",
-        "public/imgs/MiniFocus/An000000153M/2.jpg",
-        "public/imgs/MiniFocus/An000000153M/3.jpg",
-        "public/imgs/MiniFocus/An000000153M/4.jpg"
+        "/imgs/MiniFocus/An000000153M/1.jpg",
+        "/imgs/MiniFocus/An000000153M/2.jpg",
+        "/imgs/MiniFocus/An000000153M/3.jpg",
+        "/imgs/MiniFocus/An000000153M/4.jpg"
       ]
     },
     {
@@ -9131,9 +9131,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000154M/1.jpg",
-        "public/imgs/MiniFocus/An000000154M/2.jpg",
-        "public/imgs/MiniFocus/An000000154M/3.jpg"
+        "/imgs/MiniFocus/An000000154M/1.jpg",
+        "/imgs/MiniFocus/An000000154M/2.jpg",
+        "/imgs/MiniFocus/An000000154M/3.jpg"
       ]
     },
     {
@@ -9193,9 +9193,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000155M/1.jpg",
-        "public/imgs/MiniFocus/An000000155M/2.jpg",
-        "public/imgs/MiniFocus/An000000155M/3.jpg"
+        "/imgs/MiniFocus/An000000155M/1.jpg",
+        "/imgs/MiniFocus/An000000155M/2.jpg",
+        "/imgs/MiniFocus/An000000155M/3.jpg"
       ]
     },
     {
@@ -9255,9 +9255,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000156/1.jpg",
-        "public/imgs/MiniFocus/An000000156/2.jpg",
-        "public/imgs/MiniFocus/An000000156/3.jpg"
+        "/imgs/MiniFocus/An000000156/1.jpg",
+        "/imgs/MiniFocus/An000000156/2.jpg",
+        "/imgs/MiniFocus/An000000156/3.jpg"
       ]
     },
     {
@@ -9317,8 +9317,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000157/1.jpg",
-        "public/imgs/MiniFocus/An000000157/2.jpg"
+        "/imgs/MiniFocus/An000000157/1.jpg",
+        "/imgs/MiniFocus/An000000157/2.jpg"
       ]
     },
     {
@@ -9378,8 +9378,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000158/1.jpg",
-        "public/imgs/MiniFocus/An000000158/2.jpg"
+        "/imgs/MiniFocus/An000000158/1.jpg",
+        "/imgs/MiniFocus/An000000158/2.jpg"
       ]
     },
     {
@@ -9439,10 +9439,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000159M/1.jpg",
-        "public/imgs/MiniFocus/An000000159M/2.jpg",
-        "public/imgs/MiniFocus/An000000159M/3.jpg",
-        "public/imgs/MiniFocus/An000000159M/4.jpg"
+        "/imgs/MiniFocus/An000000159M/1.jpg",
+        "/imgs/MiniFocus/An000000159M/2.jpg",
+        "/imgs/MiniFocus/An000000159M/3.jpg",
+        "/imgs/MiniFocus/An000000159M/4.jpg"
       ]
     },
     {
@@ -9502,11 +9502,11 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000160M/1.jpg",
-        "public/imgs/MiniFocus/An000000160M/2.jpg",
-        "public/imgs/MiniFocus/An000000160M/3.jpg",
-        "public/imgs/MiniFocus/An000000160M/4.jpg",
-        "public/imgs/MiniFocus/An000000160M/5.jpg"
+        "/imgs/MiniFocus/An000000160M/1.jpg",
+        "/imgs/MiniFocus/An000000160M/2.jpg",
+        "/imgs/MiniFocus/An000000160M/3.jpg",
+        "/imgs/MiniFocus/An000000160M/4.jpg",
+        "/imgs/MiniFocus/An000000160M/5.jpg"
       ]
     },
     {
@@ -9566,11 +9566,11 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000161M/1.jpg",
-        "public/imgs/MiniFocus/An000000161M/2.jpg",
-        "public/imgs/MiniFocus/An000000161M/3.jpg",
-        "public/imgs/MiniFocus/An000000161M/4.jpg",
-        "public/imgs/MiniFocus/An000000161M/5.jpg"
+        "/imgs/MiniFocus/An000000161M/1.jpg",
+        "/imgs/MiniFocus/An000000161M/2.jpg",
+        "/imgs/MiniFocus/An000000161M/3.jpg",
+        "/imgs/MiniFocus/An000000161M/4.jpg",
+        "/imgs/MiniFocus/An000000161M/5.jpg"
       ]
     },
     {
@@ -9630,11 +9630,11 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000162M/1.jpg",
-        "public/imgs/MiniFocus/An000000162M/2.jpg",
-        "public/imgs/MiniFocus/An000000162M/3.jpg",
-        "public/imgs/MiniFocus/An000000162M/4.jpg",
-        "public/imgs/MiniFocus/An000000162M/5.jpg"
+        "/imgs/MiniFocus/An000000162M/1.jpg",
+        "/imgs/MiniFocus/An000000162M/2.jpg",
+        "/imgs/MiniFocus/An000000162M/3.jpg",
+        "/imgs/MiniFocus/An000000162M/4.jpg",
+        "/imgs/MiniFocus/An000000162M/5.jpg"
       ]
     },
     {
@@ -9694,10 +9694,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000163M/1.jpg",
-        "public/imgs/MiniFocus/An000000163M/2.jpg",
-        "public/imgs/MiniFocus/An000000163M/3.jpg",
-        "public/imgs/MiniFocus/An000000163M/4.jpg"
+        "/imgs/MiniFocus/An000000163M/1.jpg",
+        "/imgs/MiniFocus/An000000163M/2.jpg",
+        "/imgs/MiniFocus/An000000163M/3.jpg",
+        "/imgs/MiniFocus/An000000163M/4.jpg"
       ]
     },
     {
@@ -9757,10 +9757,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000164M/1.jpg",
-        "public/imgs/MiniFocus/An000000164M/2.jpg",
-        "public/imgs/MiniFocus/An000000164M/3.jpg",
-        "public/imgs/MiniFocus/An000000164M/4.jpg"
+        "/imgs/MiniFocus/An000000164M/1.jpg",
+        "/imgs/MiniFocus/An000000164M/2.jpg",
+        "/imgs/MiniFocus/An000000164M/3.jpg",
+        "/imgs/MiniFocus/An000000164M/4.jpg"
       ]
     },
     {
@@ -9820,11 +9820,11 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000165M/1.jpg",
-        "public/imgs/MiniFocus/An000000165M/2.jpg",
-        "public/imgs/MiniFocus/An000000165M/3.jpg",
-        "public/imgs/MiniFocus/An000000165M/4.jpg",
-        "public/imgs/MiniFocus/An000000165M/5.jpg"
+        "/imgs/MiniFocus/An000000165M/1.jpg",
+        "/imgs/MiniFocus/An000000165M/2.jpg",
+        "/imgs/MiniFocus/An000000165M/3.jpg",
+        "/imgs/MiniFocus/An000000165M/4.jpg",
+        "/imgs/MiniFocus/An000000165M/5.jpg"
       ]
     },
     {
@@ -9884,11 +9884,11 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000166M/1.jpg",
-        "public/imgs/MiniFocus/An000000166M/2.jpg",
-        "public/imgs/MiniFocus/An000000166M/3.jpg",
-        "public/imgs/MiniFocus/An000000166M/4.jpg",
-        "public/imgs/MiniFocus/An000000166M/5.jpg"
+        "/imgs/MiniFocus/An000000166M/1.jpg",
+        "/imgs/MiniFocus/An000000166M/2.jpg",
+        "/imgs/MiniFocus/An000000166M/3.jpg",
+        "/imgs/MiniFocus/An000000166M/4.jpg",
+        "/imgs/MiniFocus/An000000166M/5.jpg"
       ]
     },
     {
@@ -9948,10 +9948,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000167M/1.jpg",
-        "public/imgs/MiniFocus/An000000167M/2.jpg",
-        "public/imgs/MiniFocus/An000000167M/3.jpg",
-        "public/imgs/MiniFocus/An000000167M/4.jpg"
+        "/imgs/MiniFocus/An000000167M/1.jpg",
+        "/imgs/MiniFocus/An000000167M/2.jpg",
+        "/imgs/MiniFocus/An000000167M/3.jpg",
+        "/imgs/MiniFocus/An000000167M/4.jpg"
       ]
     },
     {
@@ -10011,10 +10011,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000168M/1.jpg",
-        "public/imgs/MiniFocus/An000000168M/2.jpg",
-        "public/imgs/MiniFocus/An000000168M/3.jpg",
-        "public/imgs/MiniFocus/An000000168M/4.jpg"
+        "/imgs/MiniFocus/An000000168M/1.jpg",
+        "/imgs/MiniFocus/An000000168M/2.jpg",
+        "/imgs/MiniFocus/An000000168M/3.jpg",
+        "/imgs/MiniFocus/An000000168M/4.jpg"
       ]
     },
     {
@@ -10074,10 +10074,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000169M/1.jpg",
-        "public/imgs/MiniFocus/An000000169M/2.jpg",
-        "public/imgs/MiniFocus/An000000169M/3.jpg",
-        "public/imgs/MiniFocus/An000000169M/4.jpg"
+        "/imgs/MiniFocus/An000000169M/1.jpg",
+        "/imgs/MiniFocus/An000000169M/2.jpg",
+        "/imgs/MiniFocus/An000000169M/3.jpg",
+        "/imgs/MiniFocus/An000000169M/4.jpg"
       ]
     },
     {
@@ -10137,10 +10137,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000170M/1.jpg",
-        "public/imgs/MiniFocus/An000000170M/2.jpg",
-        "public/imgs/MiniFocus/An000000170M/3.jpg",
-        "public/imgs/MiniFocus/An000000170M/4.jpg"
+        "/imgs/MiniFocus/An000000170M/1.jpg",
+        "/imgs/MiniFocus/An000000170M/2.jpg",
+        "/imgs/MiniFocus/An000000170M/3.jpg",
+        "/imgs/MiniFocus/An000000170M/4.jpg"
       ]
     },
     {
@@ -10200,11 +10200,11 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000171M/1.jpg",
-        "public/imgs/MiniFocus/An000000171M/2.jpg",
-        "public/imgs/MiniFocus/An000000171M/3.jpg",
-        "public/imgs/MiniFocus/An000000171M/4.jpg",
-        "public/imgs/MiniFocus/An000000171M/5.jpg"
+        "/imgs/MiniFocus/An000000171M/1.jpg",
+        "/imgs/MiniFocus/An000000171M/2.jpg",
+        "/imgs/MiniFocus/An000000171M/3.jpg",
+        "/imgs/MiniFocus/An000000171M/4.jpg",
+        "/imgs/MiniFocus/An000000171M/5.jpg"
       ]
     },
     {
@@ -10264,10 +10264,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000172M/1.jpg",
-        "public/imgs/MiniFocus/An000000172M/2.jpg",
-        "public/imgs/MiniFocus/An000000172M/3.jpg",
-        "public/imgs/MiniFocus/An000000172M/4.jpg"
+        "/imgs/MiniFocus/An000000172M/1.jpg",
+        "/imgs/MiniFocus/An000000172M/2.jpg",
+        "/imgs/MiniFocus/An000000172M/3.jpg",
+        "/imgs/MiniFocus/An000000172M/4.jpg"
       ]
     },
     {
@@ -10327,10 +10327,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000173M/1.jpg",
-        "public/imgs/MiniFocus/An000000173M/2.jpg",
-        "public/imgs/MiniFocus/An000000173M/3.jpg",
-        "public/imgs/MiniFocus/An000000173M/4.jpg"
+        "/imgs/MiniFocus/An000000173M/1.jpg",
+        "/imgs/MiniFocus/An000000173M/2.jpg",
+        "/imgs/MiniFocus/An000000173M/3.jpg",
+        "/imgs/MiniFocus/An000000173M/4.jpg"
       ]
     },
     {
@@ -10390,10 +10390,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000174M/1.jpg",
-        "public/imgs/MiniFocus/An000000174M/2.jpg",
-        "public/imgs/MiniFocus/An000000174M/3.jpg",
-        "public/imgs/MiniFocus/An000000174M/4.jpg"
+        "/imgs/MiniFocus/An000000174M/1.jpg",
+        "/imgs/MiniFocus/An000000174M/2.jpg",
+        "/imgs/MiniFocus/An000000174M/3.jpg",
+        "/imgs/MiniFocus/An000000174M/4.jpg"
       ]
     },
     {
@@ -10453,10 +10453,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000175M/1.jpg",
-        "public/imgs/MiniFocus/An000000175M/2.jpg",
-        "public/imgs/MiniFocus/An000000175M/3.jpg",
-        "public/imgs/MiniFocus/An000000175M/4.jpg"
+        "/imgs/MiniFocus/An000000175M/1.jpg",
+        "/imgs/MiniFocus/An000000175M/2.jpg",
+        "/imgs/MiniFocus/An000000175M/3.jpg",
+        "/imgs/MiniFocus/An000000175M/4.jpg"
       ]
     },
     {
@@ -10516,10 +10516,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000176M/1.jpg",
-        "public/imgs/MiniFocus/An000000176M/2.jpg",
-        "public/imgs/MiniFocus/An000000176M/3.jpg",
-        "public/imgs/MiniFocus/An000000176M/4.jpg"
+        "/imgs/MiniFocus/An000000176M/1.jpg",
+        "/imgs/MiniFocus/An000000176M/2.jpg",
+        "/imgs/MiniFocus/An000000176M/3.jpg",
+        "/imgs/MiniFocus/An000000176M/4.jpg"
       ]
     },
     {
@@ -10579,10 +10579,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000177/1.jpg",
-        "public/imgs/MiniFocus/An000000177/2.jpg",
-        "public/imgs/MiniFocus/An000000177/3.jpg",
-        "public/imgs/MiniFocus/An000000177/4.jpg"
+        "/imgs/MiniFocus/An000000177/1.jpg",
+        "/imgs/MiniFocus/An000000177/2.jpg",
+        "/imgs/MiniFocus/An000000177/3.jpg",
+        "/imgs/MiniFocus/An000000177/4.jpg"
       ]
     },
     {
@@ -10642,10 +10642,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000178M/1.jpg",
-        "public/imgs/MiniFocus/An000000178M/2.jpg",
-        "public/imgs/MiniFocus/An000000178M/3.jpg",
-        "public/imgs/MiniFocus/An000000178M/4.jpg"
+        "/imgs/MiniFocus/An000000178/1.jpg",
+        "/imgs/MiniFocus/An000000178/2.jpg",
+        "/imgs/MiniFocus/An000000178/3.jpg",
+        "/imgs/MiniFocus/An000000178/4.jpg"
       ]
     },
     {
@@ -10705,10 +10705,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000179/1.jpg",
-        "public/imgs/MiniFocus/An000000179/2.jpg",
-        "public/imgs/MiniFocus/An000000179/3.jpg",
-        "public/imgs/MiniFocus/An000000179/4.jpg"
+        "/imgs/MiniFocus/An000000179/1.jpg",
+        "/imgs/MiniFocus/An000000179/2.jpg",
+        "/imgs/MiniFocus/An000000179/3.jpg",
+        "/imgs/MiniFocus/An000000179/4.jpg"
       ]
     },
     {
@@ -10768,10 +10768,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000180/1.jpg",
-        "public/imgs/MiniFocus/An000000180/2.jpg",
-        "public/imgs/MiniFocus/An000000180/3.jpg",
-        "public/imgs/MiniFocus/An000000180/4.jpg"
+        "/imgs/MiniFocus/An000000180/1.jpg",
+        "/imgs/MiniFocus/An000000180/2.jpg",
+        "/imgs/MiniFocus/An000000180/3.jpg",
+        "/imgs/MiniFocus/An000000180/4.jpg"
       ]
     },
     {
@@ -10831,10 +10831,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000181M/1.jpg",
-        "public/imgs/MiniFocus/An000000181M/2.jpg",
-        "public/imgs/MiniFocus/An000000181M/3.jpg",
-        "public/imgs/MiniFocus/An000000181M/4.jpg"
+        "/imgs/MiniFocus/An000000181M/1.jpg",
+        "/imgs/MiniFocus/An000000181M/2.jpg",
+        "/imgs/MiniFocus/An000000181M/3.jpg",
+        "/imgs/MiniFocus/An000000181M/4.jpg"
       ]
     },
     {
@@ -10894,10 +10894,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000182M/1.jpg",
-        "public/imgs/MiniFocus/An000000182M/2.jpg",
-        "public/imgs/MiniFocus/An000000182M/3.jpg",
-        "public/imgs/MiniFocus/An000000182M/4.jpg"
+        "/imgs/MiniFocus/An000000182M/1.jpg",
+        "/imgs/MiniFocus/An000000182M/2.jpg",
+        "/imgs/MiniFocus/An000000182M/3.jpg",
+        "/imgs/MiniFocus/An000000182M/4.jpg"
       ]
     },
     {
@@ -10957,10 +10957,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000183M/1.jpg",
-        "public/imgs/MiniFocus/An000000183M/2.jpg",
-        "public/imgs/MiniFocus/An000000183M/3.jpg",
-        "public/imgs/MiniFocus/An000000183M/4.jpg"
+        "/imgs/MiniFocus/An000000183M/1.jpg",
+        "/imgs/MiniFocus/An000000183M/2.jpg",
+        "/imgs/MiniFocus/An000000183M/3.jpg",
+        "/imgs/MiniFocus/An000000183M/4.jpg"
       ]
     },
     {
@@ -11020,10 +11020,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000184M/1.jpg",
-        "public/imgs/MiniFocus/An000000184M/2.jpg",
-        "public/imgs/MiniFocus/An000000184M/3.jpg",
-        "public/imgs/MiniFocus/An000000184M/4.jpg"
+        "/imgs/MiniFocus/An000000184M/1.jpg",
+        "/imgs/MiniFocus/An000000184M/2.jpg",
+        "/imgs/MiniFocus/An000000184M/3.jpg",
+        "/imgs/MiniFocus/An000000184M/4.jpg"
       ]
     },
     {
@@ -11083,10 +11083,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000185M/1.jpg",
-        "public/imgs/MiniFocus/An000000185M/2.jpg",
-        "public/imgs/MiniFocus/An000000185M/3.jpg",
-        "public/imgs/MiniFocus/An000000185M/4.jpg"
+        "/imgs/MiniFocus/An000000185M/1.jpg",
+        "/imgs/MiniFocus/An000000185M/2.jpg",
+        "/imgs/MiniFocus/An000000185M/3.jpg",
+        "/imgs/MiniFocus/An000000185M/4.jpg"
       ]
     },
     {
@@ -11146,10 +11146,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000186M/1.jpg",
-        "public/imgs/MiniFocus/An000000186M/2.jpg",
-        "public/imgs/MiniFocus/An000000186M/3.jpg",
-        "public/imgs/MiniFocus/An000000186M/4.jpg"
+        "/imgs/MiniFocus/An000000186M/1.jpg",
+        "/imgs/MiniFocus/An000000186M/2.jpg",
+        "/imgs/MiniFocus/An000000186M/3.jpg",
+        "/imgs/MiniFocus/An000000186M/4.jpg"
       ]
     },
     {
@@ -11209,10 +11209,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000187M/1.jpg",
-        "public/imgs/MiniFocus/An000000187M/2.jpg",
-        "public/imgs/MiniFocus/An000000187M/3.jpg",
-        "public/imgs/MiniFocus/An000000187M/4.jpg"
+        "/imgs/MiniFocus/An000000187M/1.jpg",
+        "/imgs/MiniFocus/An000000187M/2.jpg",
+        "/imgs/MiniFocus/An000000187M/3.jpg",
+        "/imgs/MiniFocus/An000000187M/4.jpg"
       ]
     },
     {
@@ -11272,10 +11272,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000188M/1.jpg",
-        "public/imgs/MiniFocus/An000000188M/2.jpg",
-        "public/imgs/MiniFocus/An000000188M/3.jpg",
-        "public/imgs/MiniFocus/An000000188M/4.jpg"
+        "/imgs/MiniFocus/An000000188M/1.jpg",
+        "/imgs/MiniFocus/An000000188M/2.jpg",
+        "/imgs/MiniFocus/An000000188M/3.jpg",
+        "/imgs/MiniFocus/An000000188M/4.jpg"
       ]
     },
     {
@@ -11335,10 +11335,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000189M/1.jpg",
-        "public/imgs/MiniFocus/An000000189M/2.jpg",
-        "public/imgs/MiniFocus/An000000189M/3.jpg",
-        "public/imgs/MiniFocus/An000000189M/4.jpg"
+        "/imgs/MiniFocus/An000000189M/1.jpg",
+        "/imgs/MiniFocus/An000000189M/2.jpg",
+        "/imgs/MiniFocus/An000000189M/3.jpg",
+        "/imgs/MiniFocus/An000000189M/4.jpg"
       ]
     },
     {
@@ -11398,10 +11398,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000190M/1.jpg",
-        "public/imgs/MiniFocus/An000000190M/2.jpg",
-        "public/imgs/MiniFocus/An000000190M/3.jpg",
-        "public/imgs/MiniFocus/An000000190M/4.jpg"
+        "/imgs/MiniFocus/An000000190M/1.jpg",
+        "/imgs/MiniFocus/An000000190M/2.jpg",
+        "/imgs/MiniFocus/An000000190M/3.jpg",
+        "/imgs/MiniFocus/An000000190M/4.jpg"
       ]
     },
     {
@@ -11461,10 +11461,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000191M/1.jpg",
-        "public/imgs/MiniFocus/An000000191M/2.jpg",
-        "public/imgs/MiniFocus/An000000191M/3.jpg",
-        "public/imgs/MiniFocus/An000000191M/4.jpg"
+        "/imgs/MiniFocus/An000000191M/1.jpg",
+        "/imgs/MiniFocus/An000000191M/2.jpg",
+        "/imgs/MiniFocus/An000000191M/3.jpg",
+        "/imgs/MiniFocus/An000000191M/4.jpg"
       ]
     },
     {
@@ -11524,10 +11524,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000192M/1.jpg",
-        "public/imgs/MiniFocus/An000000192M/2.jpg",
-        "public/imgs/MiniFocus/An000000192M/3.jpg",
-        "public/imgs/MiniFocus/An000000192M/4.jpg"
+        "/imgs/MiniFocus/An000000192M/1.jpg",
+        "/imgs/MiniFocus/An000000192M/2.jpg",
+        "/imgs/MiniFocus/An000000192M/3.jpg",
+        "/imgs/MiniFocus/An000000192M/4.jpg"
       ]
     },
     {
@@ -11587,10 +11587,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000193M/1.jpg",
-        "public/imgs/MiniFocus/An000000193M/2.jpg",
-        "public/imgs/MiniFocus/An000000193M/3.jpg",
-        "public/imgs/MiniFocus/An000000193M/4.jpg"
+        "/imgs/MiniFocus/An000000193M/1.jpg",
+        "/imgs/MiniFocus/An000000193M/2.jpg",
+        "/imgs/MiniFocus/An000000193M/3.jpg",
+        "/imgs/MiniFocus/An000000193M/4.jpg"
       ]
     },
     {
@@ -11650,10 +11650,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000194M/1.jpg",
-        "public/imgs/MiniFocus/An000000194M/2.jpg",
-        "public/imgs/MiniFocus/An000000194M/3.jpg",
-        "public/imgs/MiniFocus/An000000194M/4.jpg"
+        "/imgs/MiniFocus/An000000194M/1.jpg",
+        "/imgs/MiniFocus/An000000194M/2.jpg",
+        "/imgs/MiniFocus/An000000194M/3.jpg",
+        "/imgs/MiniFocus/An000000194M/4.jpg"
       ]
     },
     {
@@ -11713,10 +11713,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000195M/1.jpg",
-        "public/imgs/MiniFocus/An000000195M/2.jpg",
-        "public/imgs/MiniFocus/An000000195M/3.jpg",
-        "public/imgs/MiniFocus/An000000195M/4.jpg"
+        "/imgs/MiniFocus/An000000195M/1.jpg",
+        "/imgs/MiniFocus/An000000195M/2.jpg",
+        "/imgs/MiniFocus/An000000195M/3.jpg",
+        "/imgs/MiniFocus/An000000195M/4.jpg"
       ]
     },
     {
@@ -11776,11 +11776,11 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000196M/1.jpg",
-        "public/imgs/MiniFocus/An000000196M/2.jpg",
-        "public/imgs/MiniFocus/An000000196M/3.jpg",
-        "public/imgs/MiniFocus/An000000196M/4.jpg",
-        "public/imgs/MiniFocus/An000000196M/5.jpg"
+        "/imgs/MiniFocus/An000000196M/1.jpg",
+        "/imgs/MiniFocus/An000000196M/2.jpg",
+        "/imgs/MiniFocus/An000000196M/3.jpg",
+        "/imgs/MiniFocus/An000000196M/4.jpg",
+        "/imgs/MiniFocus/An000000196M/5.jpg"
       ]
     },
     {
@@ -11840,11 +11840,11 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000197M/1.jpg",
-        "public/imgs/MiniFocus/An000000197M/2.jpg",
-        "public/imgs/MiniFocus/An000000197M/3.jpg",
-        "public/imgs/MiniFocus/An000000197M/4.jpg",
-        "public/imgs/MiniFocus/An000000197M/5.jpg"
+        "/imgs/MiniFocus/An000000197M/1.jpg",
+        "/imgs/MiniFocus/An000000197M/2.jpg",
+        "/imgs/MiniFocus/An000000197M/3.jpg",
+        "/imgs/MiniFocus/An000000197M/4.jpg",
+        "/imgs/MiniFocus/An000000197M/5.jpg"
       ]
     },
     {
@@ -11904,11 +11904,11 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000198M/1.jpg",
-        "public/imgs/MiniFocus/An000000198M/2.jpg",
-        "public/imgs/MiniFocus/An000000198M/3.jpg",
-        "public/imgs/MiniFocus/An000000198M/4.jpg",
-        "public/imgs/MiniFocus/An000000198M/5.jpg"
+        "/imgs/MiniFocus/An000000198M/1.jpg",
+        "/imgs/MiniFocus/An000000198M/2.jpg",
+        "/imgs/MiniFocus/An000000198M/3.jpg",
+        "/imgs/MiniFocus/An000000198M/4.jpg",
+        "/imgs/MiniFocus/An000000198M/5.jpg"
       ]
     },
     {
@@ -11968,11 +11968,11 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000199M/1.jpg",
-        "public/imgs/MiniFocus/An000000199M/2.jpg",
-        "public/imgs/MiniFocus/An000000199M/3.jpg",
-        "public/imgs/MiniFocus/An000000199M/4.jpg",
-        "public/imgs/MiniFocus/An000000199M/5.jpg"
+        "/imgs/MiniFocus/An000000199M/1.jpg",
+        "/imgs/MiniFocus/An000000199M/2.jpg",
+        "/imgs/MiniFocus/An000000199M/3.jpg",
+        "/imgs/MiniFocus/An000000199M/4.jpg",
+        "/imgs/MiniFocus/An000000199M/5.jpg"
       ]
     },
     {
@@ -12032,8 +12032,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000200/1.jpg",
-        "public/imgs/MiniFocus/An000000200/2.jpg"
+        "/imgs/MiniFocus/An000000200/1.jpg",
+        "/imgs/MiniFocus/An000000200/2.jpg"
       ]
     },
     {
@@ -12093,9 +12093,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000201/1.jpg",
-        "public/imgs/MiniFocus/An000000201/2.jpg",
-        "public/imgs/MiniFocus/An000000201/3.jpg"
+        "/imgs/MiniFocus/An000000201/1.jpg",
+        "/imgs/MiniFocus/An000000201/2.jpg",
+        "/imgs/MiniFocus/An000000201/3.jpg"
       ]
     },
     {
@@ -12155,8 +12155,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000202/1.jpg",
-        "public/imgs/MiniFocus/An000000202/2.jpg"
+        "/imgs/MiniFocus/An000000202/1.jpg",
+        "/imgs/MiniFocus/An000000202/2.jpg"
       ]
     },
     {
@@ -12216,10 +12216,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000204/1.jpg",
-        "public/imgs/MiniFocus/An000000204/2.jpg",
-        "public/imgs/MiniFocus/An000000204/3.jpg",
-        "public/imgs/MiniFocus/An000000204/4.jpg"
+        "/imgs/MiniFocus/An000000204M/1.jpg",
+        "/imgs/MiniFocus/An000000204M/2.jpg",
+        "/imgs/MiniFocus/An000000204M/3.jpg"
       ]
     },
     {
@@ -12279,9 +12278,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000205M/1.jpg",
-        "public/imgs/MiniFocus/An000000205M/2.jpg",
-        "public/imgs/MiniFocus/An000000205M/3.jpg"
+        "/imgs/MiniFocus/An000000205M/1.jpg",
+        "/imgs/MiniFocus/An000000205M/2.jpg",
+        "/imgs/MiniFocus/An000000205M/3.jpg"
       ]
     },
     {
@@ -12341,10 +12340,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000206M/1.jpg",
-        "public/imgs/MiniFocus/An000000206M/2.jpg",
-        "public/imgs/MiniFocus/An000000206M/3.jpg",
-        "public/imgs/MiniFocus/An000000206M/4.jpg"
+        "/imgs/MiniFocus/An000000206M/1.jpg",
+        "/imgs/MiniFocus/An000000206M/2.jpg",
+        "/imgs/MiniFocus/An000000206M/3.jpg",
+        "/imgs/MiniFocus/An000000206M/4.jpg"
       ]
     },
     {
@@ -12404,8 +12403,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000207/1.jpg",
-        "public/imgs/MiniFocus/An000000207/2.jpg"
+        "/imgs/MiniFocus/An000000207/1.jpg",
+        "/imgs/MiniFocus/An000000207/2.jpg"
       ]
     },
     {
@@ -12465,10 +12464,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000208/1.jpg",
-        "public/imgs/MiniFocus/An000000208/2.jpg",
-        "public/imgs/MiniFocus/An000000208/3.jpg",
-        "public/imgs/MiniFocus/An000000208/4.jpg"
+        "/imgs/MiniFocus/An000000208/1.jpg",
+        "/imgs/MiniFocus/An000000208/2.jpg",
+        "/imgs/MiniFocus/An000000208/3.jpg",
+        "/imgs/MiniFocus/An000000208/4.jpg"
       ]
     },
     {
@@ -12528,10 +12527,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000209/1.jpg",
-        "public/imgs/MiniFocus/An000000209/2.jpg",
-        "public/imgs/MiniFocus/An000000209/3.jpg",
-        "public/imgs/MiniFocus/An000000209/4.jpg"
+        "/imgs/MiniFocus/An000000209/1.jpg",
+        "/imgs/MiniFocus/An000000209/2.jpg",
+        "/imgs/MiniFocus/An000000209/3.jpg",
+        "/imgs/MiniFocus/An000000209/4.jpg"
       ]
     },
     {
@@ -12591,10 +12590,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000210/1.jpg",
-        "public/imgs/MiniFocus/An000000210/2.jpg",
-        "public/imgs/MiniFocus/An000000210/3.jpg",
-        "public/imgs/MiniFocus/An000000210/4.jpg"
+        "/imgs/MiniFocus/An000000210/1.jpg",
+        "/imgs/MiniFocus/An000000210/2.jpg",
+        "/imgs/MiniFocus/An000000210/3.jpg",
+        "/imgs/MiniFocus/An000000210/4.jpg"
       ]
     },
     {
@@ -12654,10 +12653,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000211/1.jpg",
-        "public/imgs/MiniFocus/An000000211/2.jpg",
-        "public/imgs/MiniFocus/An000000211/3.jpg",
-        "public/imgs/MiniFocus/An000000211/4.jpg"
+        "/imgs/MiniFocus/An000000211/1.jpg",
+        "/imgs/MiniFocus/An000000211/2.jpg",
+        "/imgs/MiniFocus/An000000211/3.jpg",
+        "/imgs/MiniFocus/An000000211/4.jpg"
       ]
     },
     {
@@ -12717,10 +12716,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000212/1.jpg",
-        "public/imgs/MiniFocus/An000000212/2.jpg",
-        "public/imgs/MiniFocus/An000000212/3.jpg",
-        "public/imgs/MiniFocus/An000000212/4.jpg"
+        "/imgs/MiniFocus/An000000212/1.jpg",
+        "/imgs/MiniFocus/An000000212/2.jpg",
+        "/imgs/MiniFocus/An000000212/3.jpg",
+        "/imgs/MiniFocus/An000000212/4.jpg"
       ]
     },
     {
@@ -12780,10 +12779,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000213M/1.jpg",
-        "public/imgs/MiniFocus/An000000213M/2.jpg",
-        "public/imgs/MiniFocus/An000000213M/3.jpg",
-        "public/imgs/MiniFocus/An000000213M/4.jpg"
+        "/imgs/MiniFocus/An000000213M/1.jpg",
+        "/imgs/MiniFocus/An000000213M/2.jpg",
+        "/imgs/MiniFocus/An000000213M/3.jpg",
+        "/imgs/MiniFocus/An000000213M/4.jpg"
       ]
     },
     {
@@ -12843,10 +12842,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000214M/1.jpg",
-        "public/imgs/MiniFocus/An000000214M/2.jpg",
-        "public/imgs/MiniFocus/An000000214M/3.jpg",
-        "public/imgs/MiniFocus/An000000214M/4.jpg"
+        "/imgs/MiniFocus/An000000214M/1.jpg",
+        "/imgs/MiniFocus/An000000214M/2.jpg",
+        "/imgs/MiniFocus/An000000214M/3.jpg",
+        "/imgs/MiniFocus/An000000214M/4.jpg"
       ]
     },
     {
@@ -12906,10 +12905,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000215M/1.jpg",
-        "public/imgs/MiniFocus/An000000215M/2.jpg",
-        "public/imgs/MiniFocus/An000000215M/3.jpg",
-        "public/imgs/MiniFocus/An000000215M/4.jpg"
+        "/imgs/MiniFocus/An000000215M/1.jpg",
+        "/imgs/MiniFocus/An000000215M/2.jpg",
+        "/imgs/MiniFocus/An000000215M/3.jpg",
+        "/imgs/MiniFocus/An000000215M/4.jpg"
       ]
     },
     {
@@ -12969,10 +12968,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000216M/1.jpg",
-        "public/imgs/MiniFocus/An000000216M/2.jpg",
-        "public/imgs/MiniFocus/An000000216M/3.jpg",
-        "public/imgs/MiniFocus/An000000216M/4.jpg"
+        "/imgs/MiniFocus/An000000216M/1.jpg",
+        "/imgs/MiniFocus/An000000216M/2.jpg",
+        "/imgs/MiniFocus/An000000216M/3.jpg",
+        "/imgs/MiniFocus/An000000216M/4.jpg"
       ]
     },
     {
@@ -13032,10 +13031,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000217M/1.jpg",
-        "public/imgs/MiniFocus/An000000217M/2.jpg",
-        "public/imgs/MiniFocus/An000000217M/3.jpg",
-        "public/imgs/MiniFocus/An000000217M/4.jpg"
+        "/imgs/MiniFocus/An000000217M/1.jpg",
+        "/imgs/MiniFocus/An000000217M/2.jpg",
+        "/imgs/MiniFocus/An000000217M/3.jpg",
+        "/imgs/MiniFocus/An000000217M/4.jpg"
       ]
     },
     {
@@ -13095,10 +13094,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000218M/1.jpg",
-        "public/imgs/MiniFocus/An000000218M/2.jpg",
-        "public/imgs/MiniFocus/An000000218M/3.jpg",
-        "public/imgs/MiniFocus/An000000218M/4.jpg"
+        "/imgs/MiniFocus/An000000218M/1.jpg",
+        "/imgs/MiniFocus/An000000218M/2.jpg",
+        "/imgs/MiniFocus/An000000218M/3.jpg",
+        "/imgs/MiniFocus/An000000218M/4.jpg"
       ]
     },
     {
@@ -13158,10 +13157,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000219M/1.jpg",
-        "public/imgs/MiniFocus/An000000219M/2.jpg",
-        "public/imgs/MiniFocus/An000000219M/3.jpg",
-        "public/imgs/MiniFocus/An000000219M/4.jpg"
+        "/imgs/MiniFocus/An000000219M/1.jpg",
+        "/imgs/MiniFocus/An000000219M/2.jpg",
+        "/imgs/MiniFocus/An000000219M/3.jpg",
+        "/imgs/MiniFocus/An000000219M/4.jpg"
       ]
     },
     {
@@ -13221,10 +13220,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000220M/1.jpg",
-        "public/imgs/MiniFocus/An000000220M/2.jpg",
-        "public/imgs/MiniFocus/An000000220M/3.jpg",
-        "public/imgs/MiniFocus/An000000220M/4.jpg"
+        "/imgs/MiniFocus/An000000220M/1.jpg",
+        "/imgs/MiniFocus/An000000220M/2.jpg",
+        "/imgs/MiniFocus/An000000220M/3.jpg",
+        "/imgs/MiniFocus/An000000220M/4.jpg"
       ]
     },
     {
@@ -13284,10 +13283,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000221M/1.jpg",
-        "public/imgs/MiniFocus/An000000221M/2.jpg",
-        "public/imgs/MiniFocus/An000000221M/3.jpg",
-        "public/imgs/MiniFocus/An000000221M/4.jpg"
+        "/imgs/MiniFocus/An000000221M/1.jpg",
+        "/imgs/MiniFocus/An000000221M/2.jpg",
+        "/imgs/MiniFocus/An000000221M/3.jpg",
+        "/imgs/MiniFocus/An000000221M/4.jpg"
       ]
     },
     {
@@ -13347,10 +13346,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000222M/1.jpg",
-        "public/imgs/MiniFocus/An000000222M/2.jpg",
-        "public/imgs/MiniFocus/An000000222M/3.jpg",
-        "public/imgs/MiniFocus/An000000222M/4.jpg"
+        "/imgs/MiniFocus/An000000222M/1.jpg",
+        "/imgs/MiniFocus/An000000222M/2.jpg",
+        "/imgs/MiniFocus/An000000222M/3.jpg",
+        "/imgs/MiniFocus/An000000222M/4.jpg"
       ]
     },
     {
@@ -13410,10 +13409,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000223/1.jpg",
-        "public/imgs/MiniFocus/An000000223/2.jpg",
-        "public/imgs/MiniFocus/An000000223/3.jpg",
-        "public/imgs/MiniFocus/An000000223/4.jpg"
+        "/imgs/MiniFocus/An000000223/1.jpg",
+        "/imgs/MiniFocus/An000000223/2.jpg",
+        "/imgs/MiniFocus/An000000223/3.jpg",
+        "/imgs/MiniFocus/An000000223/4.jpg"
       ]
     },
     {
@@ -13473,10 +13472,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000224/1.jpg",
-        "public/imgs/MiniFocus/An000000224/2.jpg",
-        "public/imgs/MiniFocus/An000000224/3.jpg",
-        "public/imgs/MiniFocus/An000000224/4.jpg"
+        "/imgs/MiniFocus/An000000224/1.jpg",
+        "/imgs/MiniFocus/An000000224/2.jpg",
+        "/imgs/MiniFocus/An000000224/3.jpg",
+        "/imgs/MiniFocus/An000000224/4.jpg"
       ]
     },
     {
@@ -13536,10 +13535,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000225/1.jpg",
-        "public/imgs/MiniFocus/An000000225/2.jpg",
-        "public/imgs/MiniFocus/An000000225/3.jpg",
-        "public/imgs/MiniFocus/An000000225/4.jpg"
+        "/imgs/MiniFocus/An000000225/1.jpg",
+        "/imgs/MiniFocus/An000000225/2.jpg",
+        "/imgs/MiniFocus/An000000225/3.jpg",
+        "/imgs/MiniFocus/An000000225/4.jpg"
       ]
     },
     {
@@ -13599,10 +13598,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000226/1.jpg",
-        "public/imgs/MiniFocus/An000000226/2.jpg",
-        "public/imgs/MiniFocus/An000000226/3.jpg",
-        "public/imgs/MiniFocus/An000000226/4.jpg"
+        "/imgs/MiniFocus/An000000226/1.jpg",
+        "/imgs/MiniFocus/An000000226/2.jpg",
+        "/imgs/MiniFocus/An000000226/3.jpg",
+        "/imgs/MiniFocus/An000000226/4.jpg"
       ]
     },
     {
@@ -13662,10 +13661,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000227/1.jpg",
-        "public/imgs/MiniFocus/An000000227/2.jpg",
-        "public/imgs/MiniFocus/An000000227/3.jpg",
-        "public/imgs/MiniFocus/An000000227/4.jpg"
+        "/imgs/MiniFocus/An000000227/1.jpg",
+        "/imgs/MiniFocus/An000000227/2.jpg",
+        "/imgs/MiniFocus/An000000227/3.jpg",
+        "/imgs/MiniFocus/An000000227/4.jpg"
       ]
     },
     {
@@ -13725,10 +13724,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000228M/1.jpg",
-        "public/imgs/MiniFocus/An000000228M/2.jpg",
-        "public/imgs/MiniFocus/An000000228M/3.jpg",
-        "public/imgs/MiniFocus/An000000228M/4.jpg"
+        "/imgs/MiniFocus/An000000228M/1.jpg",
+        "/imgs/MiniFocus/An000000228M/2.jpg",
+        "/imgs/MiniFocus/An000000228M/3.jpg",
+        "/imgs/MiniFocus/An000000228M/4.jpg"
       ]
     },
     {
@@ -13788,11 +13787,11 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000229M/1.jpg",
-        "public/imgs/MiniFocus/An000000229M/2.jpg",
-        "public/imgs/MiniFocus/An000000229M/3.jpg",
-        "public/imgs/MiniFocus/An000000229M/4.jpg",
-        "public/imgs/MiniFocus/An000000229M/5.jpg"
+        "/imgs/MiniFocus/An000000229M/1.jpg",
+        "/imgs/MiniFocus/An000000229M/2.jpg",
+        "/imgs/MiniFocus/An000000229M/3.jpg",
+        "/imgs/MiniFocus/An000000229M/4.jpg",
+        "/imgs/MiniFocus/An000000229M/5.jpg"
       ]
     },
     {
@@ -13852,10 +13851,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000230M/1.jpg",
-        "public/imgs/MiniFocus/An000000230M/2.jpg",
-        "public/imgs/MiniFocus/An000000230M/3.jpg",
-        "public/imgs/MiniFocus/An000000230M/4.jpg"
+        "/imgs/MiniFocus/An000000230M/1.jpg",
+        "/imgs/MiniFocus/An000000230M/2.jpg",
+        "/imgs/MiniFocus/An000000230M/3.jpg",
+        "/imgs/MiniFocus/An000000230M/4.jpg"
       ]
     },
     {
@@ -13915,9 +13914,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000231M/1.jpg",
-        "public/imgs/MiniFocus/An000000231M/2.jpg",
-        "public/imgs/MiniFocus/An000000231M/3.jpg"
+        "/imgs/MiniFocus/An000000231M/1.jpg",
+        "/imgs/MiniFocus/An000000231M/2.jpg",
+        "/imgs/MiniFocus/An000000231M/3.jpg"
       ]
     },
     {
@@ -13977,8 +13976,8 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000232M/1.jpg",
-        "public/imgs/MiniFocus/An000000232M/2.jpg"
+        "/imgs/MiniFocus/An000000232M/1.jpg",
+        "/imgs/MiniFocus/An000000232M/2.jpg"
       ]
     },
     {
@@ -14038,9 +14037,9 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000233M/1.jpg",
-        "public/imgs/MiniFocus/An000000233M/2.jpg",
-        "public/imgs/MiniFocus/An000000233M/3.jpg"
+        "/imgs/MiniFocus/An000000233M/1.jpg",
+        "/imgs/MiniFocus/An000000233M/2.jpg",
+        "/imgs/MiniFocus/An000000233M/3.jpg"
       ]
     },
     {
@@ -14100,10 +14099,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000234M/1.jpg",
-        "public/imgs/MiniFocus/An000000234M/2.jpg",
-        "public/imgs/MiniFocus/An000000234M/3.jpg",
-        "public/imgs/MiniFocus/An000000234M/4.jpg"
+        "/imgs/MiniFocus/An000000234M/1.jpg",
+        "/imgs/MiniFocus/An000000234M/2.jpg",
+        "/imgs/MiniFocus/An000000234M/3.jpg",
+        "/imgs/MiniFocus/An000000234M/4.jpg"
       ]
     },
     {
@@ -14163,10 +14162,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000235M/1.jpg",
-        "public/imgs/MiniFocus/An000000235M/2.jpg",
-        "public/imgs/MiniFocus/An000000235M/3.jpg",
-        "public/imgs/MiniFocus/An000000235M/4.jpg"
+        "/imgs/MiniFocus/An000000235M/1.jpg",
+        "/imgs/MiniFocus/An000000235M/2.jpg",
+        "/imgs/MiniFocus/An000000235M/3.jpg",
+        "/imgs/MiniFocus/An000000235M/4.jpg"
       ]
     },
     {
@@ -14226,10 +14225,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000236M/1.jpg",
-        "public/imgs/MiniFocus/An000000236M/2.jpg",
-        "public/imgs/MiniFocus/An000000236M/3.jpg",
-        "public/imgs/MiniFocus/An000000236M/4.jpg"
+        "/imgs/MiniFocus/An000000236M/1.jpg",
+        "/imgs/MiniFocus/An000000236M/2.jpg",
+        "/imgs/MiniFocus/An000000236M/3.jpg",
+        "/imgs/MiniFocus/An000000236M/4.jpg"
       ]
     },
     {
@@ -14289,10 +14288,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000237M/1.jpg",
-        "public/imgs/MiniFocus/An000000237M/2.jpg",
-        "public/imgs/MiniFocus/An000000237M/3.jpg",
-        "public/imgs/MiniFocus/An000000237M/4.jpg"
+        "/imgs/MiniFocus/An000000237M/1.jpg",
+        "/imgs/MiniFocus/An000000237M/2.jpg",
+        "/imgs/MiniFocus/An000000237M/3.jpg",
+        "/imgs/MiniFocus/An000000237M/4.jpg"
       ]
     },
     {
@@ -14352,11 +14351,11 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000238M/1.jpg",
-        "public/imgs/MiniFocus/An000000238M/2.jpg",
-        "public/imgs/MiniFocus/An000000238M/3.jpg",
-        "public/imgs/MiniFocus/An000000238M/4.jpg",
-        "public/imgs/MiniFocus/An000000238M/5.jpg"
+        "/imgs/MiniFocus/An000000238M/1.jpg",
+        "/imgs/MiniFocus/An000000238M/2.jpg",
+        "/imgs/MiniFocus/An000000238M/3.jpg",
+        "/imgs/MiniFocus/An000000238M/4.jpg",
+        "/imgs/MiniFocus/An000000238M/5.jpg"
       ]
     },
     {
@@ -14416,10 +14415,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000239M/1.jpg",
-        "public/imgs/MiniFocus/An000000239M/2.jpg",
-        "public/imgs/MiniFocus/An000000239M/3.jpg",
-        "public/imgs/MiniFocus/An000000239M/4.jpg"
+        "/imgs/MiniFocus/An000000239M/1.jpg",
+        "/imgs/MiniFocus/An000000239M/2.jpg",
+        "/imgs/MiniFocus/An000000239M/3.jpg",
+        "/imgs/MiniFocus/An000000239M/4.jpg"
       ]
     },
     {
@@ -14479,10 +14478,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000240M/1.jpg",
-        "public/imgs/MiniFocus/An000000240M/2.jpg",
-        "public/imgs/MiniFocus/An000000240M/3.jpg",
-        "public/imgs/MiniFocus/An000000240M/4.jpg"
+        "/imgs/MiniFocus/An000000240M/1.jpg",
+        "/imgs/MiniFocus/An000000240M/2.jpg",
+        "/imgs/MiniFocus/An000000240M/3.jpg",
+        "/imgs/MiniFocus/An000000240M/4.jpg"
       ]
     },
     {
@@ -14542,10 +14541,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000241M/1.jpg",
-        "public/imgs/MiniFocus/An000000241M/2.jpg",
-        "public/imgs/MiniFocus/An000000241M/3.jpg",
-        "public/imgs/MiniFocus/An000000241M/4.jpg"
+        "/imgs/MiniFocus/An000000241M/1.jpg",
+        "/imgs/MiniFocus/An000000241M/2.jpg",
+        "/imgs/MiniFocus/An000000241M/3.jpg",
+        "/imgs/MiniFocus/An000000241M/4.jpg"
       ]
     },
     {
@@ -14605,10 +14604,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000242M/1.jpg",
-        "public/imgs/MiniFocus/An000000242M/2.jpg",
-        "public/imgs/MiniFocus/An000000242M/3.jpg",
-        "public/imgs/MiniFocus/An000000242M/4.jpg"
+        "/imgs/MiniFocus/An000000242M/1.jpg",
+        "/imgs/MiniFocus/An000000242M/2.jpg",
+        "/imgs/MiniFocus/An000000242M/3.jpg",
+        "/imgs/MiniFocus/An000000242M/4.jpg"
       ]
     },
     {
@@ -14668,12 +14667,12 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000243M/1.jpg",
-        "public/imgs/MiniFocus/An000000243M/2.jpg",
-        "public/imgs/MiniFocus/An000000243M/3.jpg",
-        "public/imgs/MiniFocus/An000000243M/4.jpg",
-        "public/imgs/MiniFocus/An000000243M/5.jpg",
-        "public/imgs/MiniFocus/An000000243M/6.jpg"
+        "/imgs/MiniFocus/An000000243M/1.jpg",
+        "/imgs/MiniFocus/An000000243M/2.jpg",
+        "/imgs/MiniFocus/An000000243M/3.jpg",
+        "/imgs/MiniFocus/An000000243M/4.jpg",
+        "/imgs/MiniFocus/An000000243M/5.jpg",
+        "/imgs/MiniFocus/An000000243M/6.jpg"
       ]
     },
     {
@@ -14733,10 +14732,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000244M/1.jpg",
-        "public/imgs/MiniFocus/An000000244M/2.jpg",
-        "public/imgs/MiniFocus/An000000244M/3.jpg",
-        "public/imgs/MiniFocus/An000000244M/4.jpg"
+        "/imgs/MiniFocus/An000000244M/1.jpg",
+        "/imgs/MiniFocus/An000000244M/2.jpg",
+        "/imgs/MiniFocus/An000000244M/3.jpg",
+        "/imgs/MiniFocus/An000000244M/4.jpg"
       ]
     },
     {
@@ -14796,10 +14795,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000245M/1.jpg",
-        "public/imgs/MiniFocus/An000000245M/2.jpg",
-        "public/imgs/MiniFocus/An000000245M/3.jpg",
-        "public/imgs/MiniFocus/An000000245M/4.jpg"
+        "/imgs/MiniFocus/An000000245M/1.jpg",
+        "/imgs/MiniFocus/An000000245M/2.jpg",
+        "/imgs/MiniFocus/An000000245M/3.jpg",
+        "/imgs/MiniFocus/An000000245M/4.jpg"
       ]
     },
     {
@@ -14859,10 +14858,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000246M/1.jpg",
-        "public/imgs/MiniFocus/An000000246M/2.jpg",
-        "public/imgs/MiniFocus/An000000246M/3.jpg",
-        "public/imgs/MiniFocus/An000000246M/4.jpg"
+        "/imgs/MiniFocus/An000000246M/1.jpg",
+        "/imgs/MiniFocus/An000000246M/2.jpg",
+        "/imgs/MiniFocus/An000000246M/3.jpg",
+        "/imgs/MiniFocus/An000000246M/4.jpg"
       ]
     },
     {
@@ -14922,10 +14921,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000247M/1.jpg",
-        "public/imgs/MiniFocus/An000000247M/2.jpg",
-        "public/imgs/MiniFocus/An000000247M/3.jpg",
-        "public/imgs/MiniFocus/An000000247M/4.jpg"
+        "/imgs/MiniFocus/An000000247M/1.jpg",
+        "/imgs/MiniFocus/An000000247M/2.jpg",
+        "/imgs/MiniFocus/An000000247M/3.jpg",
+        "/imgs/MiniFocus/An000000247M/4.jpg"
       ]
     },
     {
@@ -14985,10 +14984,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000248M/1.jpg",
-        "public/imgs/MiniFocus/An000000248M/2.jpg",
-        "public/imgs/MiniFocus/An000000248M/3.jpg",
-        "public/imgs/MiniFocus/An000000248M/4.jpg"
+        "/imgs/MiniFocus/An000000248M/1.jpg",
+        "/imgs/MiniFocus/An000000248M/2.jpg",
+        "/imgs/MiniFocus/An000000248M/3.jpg",
+        "/imgs/MiniFocus/An000000248M/4.jpg"
       ]
     },
     {
@@ -15048,10 +15047,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000249M/1.jpg",
-        "public/imgs/MiniFocus/An000000249M/2.jpg",
-        "public/imgs/MiniFocus/An000000249M/3.jpg",
-        "public/imgs/MiniFocus/An000000249M/4.jpg"
+        "/imgs/MiniFocus/An000000249M/1.jpg",
+        "/imgs/MiniFocus/An000000249M/2.jpg",
+        "/imgs/MiniFocus/An000000249M/3.jpg",
+        "/imgs/MiniFocus/An000000249M/4.jpg"
       ]
     },
     {
@@ -15111,10 +15110,10 @@
         "ar": "معدن مقاوم للصدا"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000250M/1.jpg",
-        "public/imgs/MiniFocus/An000000250M/2.jpg",
-        "public/imgs/MiniFocus/An000000250M/3.jpg",
-        "public/imgs/MiniFocus/An000000250M/4.jpg"
+        "/imgs/MiniFocus/An000000250M/1.jpg",
+        "/imgs/MiniFocus/An000000250M/2.jpg",
+        "/imgs/MiniFocus/An000000250M/3.jpg",
+        "/imgs/MiniFocus/An000000250M/4.jpg"
       ]
     },
     {
@@ -15174,9 +15173,9 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000251/1.jpg",
-        "public/imgs/MiniFocus/An000000251/2.jpg",
-        "public/imgs/MiniFocus/An000000251/3.jpg"
+        "/imgs/MiniFocus/An000000251/1.jpg",
+        "/imgs/MiniFocus/An000000251/2.jpg",
+        "/imgs/MiniFocus/An000000251/3.jpg"
       ]
     },
     {
@@ -15236,9 +15235,9 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000251/1.jpg",
-        "public/imgs/MiniFocus/An000000251/2.jpg",
-        "public/imgs/MiniFocus/An000000251/3.jpg"
+        "/imgs/MiniFocus/An000000251/1.jpg",
+        "/imgs/MiniFocus/An000000251/2.jpg",
+        "/imgs/MiniFocus/An000000251/3.jpg"
       ]
     },
     {
@@ -15298,10 +15297,10 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000252/1.jpg",
-        "public/imgs/MiniFocus/An000000252/2.jpg",
-        "public/imgs/MiniFocus/An000000252/3.jpg",
-        "public/imgs/MiniFocus/An000000252/4.jpg"
+        "/imgs/MiniFocus/An000000252/1.jpg",
+        "/imgs/MiniFocus/An000000252/2.jpg",
+        "/imgs/MiniFocus/An000000252/3.jpg",
+        "/imgs/MiniFocus/An000000252/4.jpg"
       ]
     },
     {
@@ -15361,10 +15360,10 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000253/1.jpg",
-        "public/imgs/MiniFocus/An000000253/2.jpg",
-        "public/imgs/MiniFocus/An000000253/3.jpg",
-        "public/imgs/MiniFocus/An000000253/4.jpg"
+        "/imgs/MiniFocus/An000000253/1.jpg",
+        "/imgs/MiniFocus/An000000253/2.jpg",
+        "/imgs/MiniFocus/An000000253/3.jpg",
+        "/imgs/MiniFocus/An000000253/4.jpg"
       ]
     },
     {
@@ -15424,10 +15423,10 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000254/1.jpg",
-        "public/imgs/MiniFocus/An000000254/2.jpg",
-        "public/imgs/MiniFocus/An000000254/3.jpg",
-        "public/imgs/MiniFocus/An000000254/4.jpg"
+        "/imgs/MiniFocus/An000000254/1.jpg",
+        "/imgs/MiniFocus/An000000254/2.jpg",
+        "/imgs/MiniFocus/An000000254/3.jpg",
+        "/imgs/MiniFocus/An000000254/4.jpg"
       ]
     },
     {
@@ -15487,11 +15486,11 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000255/1.jpg",
-        "public/imgs/MiniFocus/An000000255/2.jpg",
-        "public/imgs/MiniFocus/An000000255/3.jpg",
-        "public/imgs/MiniFocus/An000000255/4.jpg",
-        "public/imgs/MiniFocus/An000000255/5.jpg"
+        "/imgs/MiniFocus/An000000255/1.jpg",
+        "/imgs/MiniFocus/An000000255/2.jpg",
+        "/imgs/MiniFocus/An000000255/3.jpg",
+        "/imgs/MiniFocus/An000000255/4.jpg",
+        "/imgs/MiniFocus/An000000255/5.jpg"
       ]
     },
     {
@@ -15551,9 +15550,9 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000256/1.jpg",
-        "public/imgs/MiniFocus/An000000256/2.jpg",
-        "public/imgs/MiniFocus/An000000256/3.jpg"
+        "/imgs/MiniFocus/An000000256M/1.jpg",
+        "/imgs/MiniFocus/An000000256M/2.jpg",
+        "/imgs/MiniFocus/An000000256M/3.jpg"
       ]
     },
     {
@@ -15613,9 +15612,9 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000257M/1.jpg",
-        "public/imgs/MiniFocus/An000000257M/2.jpg",
-        "public/imgs/MiniFocus/An000000257M/3.jpg"
+        "/imgs/MiniFocus/An000000257M/1.jpg",
+        "/imgs/MiniFocus/An000000257M/2.jpg",
+        "/imgs/MiniFocus/An000000257M/3.jpg"
       ]
     },
     {
@@ -15675,9 +15674,9 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000258M/1.jpg",
-        "public/imgs/MiniFocus/An000000258M/2.jpg",
-        "public/imgs/MiniFocus/An000000258M/3.jpg"
+        "/imgs/MiniFocus/An000000258M/1.jpg",
+        "/imgs/MiniFocus/An000000258M/2.jpg",
+        "/imgs/MiniFocus/An000000258M/3.jpg"
       ]
     },
     {
@@ -15737,9 +15736,9 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000259M/1.jpg",
-        "public/imgs/MiniFocus/An000000259M/2.jpg",
-        "public/imgs/MiniFocus/An000000259M/3.jpg"
+        "/imgs/MiniFocus/An000000259M/1.jpg",
+        "/imgs/MiniFocus/An000000259M/2.jpg",
+        "/imgs/MiniFocus/An000000259M/3.jpg"
       ]
     },
     {
@@ -15799,9 +15798,9 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000260M/1.jpg",
-        "public/imgs/MiniFocus/An000000260M/2.jpg",
-        "public/imgs/MiniFocus/An000000260M/3.jpg"
+        "/imgs/MiniFocus/An000000260M/1.jpg",
+        "/imgs/MiniFocus/An000000260M/2.jpg",
+        "/imgs/MiniFocus/An000000260M/3.jpg"
       ]
     },
     {
@@ -15861,9 +15860,9 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000261M/1.jpg",
-        "public/imgs/MiniFocus/An000000261M/2.jpg",
-        "public/imgs/MiniFocus/An000000261M/3.jpg"
+        "/imgs/MiniFocus/An000000261M/1.jpg",
+        "/imgs/MiniFocus/An000000261M/2.jpg",
+        "/imgs/MiniFocus/An000000261M/3.jpg"
       ]
     },
     {
@@ -15923,11 +15922,11 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000262M/1.jpg",
-        "public/imgs/MiniFocus/An000000262M/2.jpg",
-        "public/imgs/MiniFocus/An000000262M/3.jpg",
-        "public/imgs/MiniFocus/An000000262M/4.jpg",
-        "public/imgs/MiniFocus/An000000262M/5.jpg"
+        "/imgs/MiniFocus/An000000262M/1.jpg",
+        "/imgs/MiniFocus/An000000262M/2.jpg",
+        "/imgs/MiniFocus/An000000262M/3.jpg",
+        "/imgs/MiniFocus/An000000262M/4.jpg",
+        "/imgs/MiniFocus/An000000262M/5.jpg"
       ]
     },
     {
@@ -15987,11 +15986,11 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000263M/1.jpg",
-        "public/imgs/MiniFocus/An000000263M/2.jpg",
-        "public/imgs/MiniFocus/An000000263M/3.jpg",
-        "public/imgs/MiniFocus/An000000263M/4.jpg",
-        "public/imgs/MiniFocus/An000000263M/5.jpg"
+        "/imgs/MiniFocus/An000000263M/1.jpg",
+        "/imgs/MiniFocus/An000000263M/2.jpg",
+        "/imgs/MiniFocus/An000000263M/3.jpg",
+        "/imgs/MiniFocus/An000000263M/4.jpg",
+        "/imgs/MiniFocus/An000000263M/5.jpg"
       ]
     },
     {
@@ -16051,9 +16050,9 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000264M/1.jpg",
-        "public/imgs/MiniFocus/An000000264M/2.jpg",
-        "public/imgs/MiniFocus/An000000264M/3.jpg"
+        "/imgs/MiniFocus/An000000264M/1.jpg",
+        "/imgs/MiniFocus/An000000264M/2.jpg",
+        "/imgs/MiniFocus/An000000264M/3.jpg"
       ]
     },
     {
@@ -16113,11 +16112,11 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000265M/1.jpg",
-        "public/imgs/MiniFocus/An000000265M/2.jpg",
-        "public/imgs/MiniFocus/An000000265M/3.jpg",
-        "public/imgs/MiniFocus/An000000265M/4.jpg",
-        "public/imgs/MiniFocus/An000000265M/5.jpg"
+        "/imgs/MiniFocus/An000000265M/1.jpg",
+        "/imgs/MiniFocus/An000000265M/2.jpg",
+        "/imgs/MiniFocus/An000000265M/3.jpg",
+        "/imgs/MiniFocus/An000000265M/4.jpg",
+        "/imgs/MiniFocus/An000000265M/5.jpg"
       ]
     },
     {
@@ -16177,10 +16176,10 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000266M/1.jpg",
-        "public/imgs/MiniFocus/An000000266M/2.jpg",
-        "public/imgs/MiniFocus/An000000266M/3.jpg",
-        "public/imgs/MiniFocus/An000000266M/4.jpg"
+        "/imgs/MiniFocus/An000000266M/1.jpg",
+        "/imgs/MiniFocus/An000000266M/2.jpg",
+        "/imgs/MiniFocus/An000000266M/3.jpg",
+        "/imgs/MiniFocus/An000000266M/4.jpg"
       ]
     },
     {
@@ -16240,10 +16239,10 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000267M/1.jpg",
-        "public/imgs/MiniFocus/An000000267M/2.jpg",
-        "public/imgs/MiniFocus/An000000267M/3.jpg",
-        "public/imgs/MiniFocus/An000000267M/4.jpg"
+        "/imgs/MiniFocus/An000000267M/1.jpg",
+        "/imgs/MiniFocus/An000000267M/2.jpg",
+        "/imgs/MiniFocus/An000000267M/3.jpg",
+        "/imgs/MiniFocus/An000000267M/4.jpg"
       ]
     },
     {
@@ -16303,10 +16302,10 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000268M/1.jpg",
-        "public/imgs/MiniFocus/An000000268M/2.jpg",
-        "public/imgs/MiniFocus/An000000268M/3.jpg",
-        "public/imgs/MiniFocus/An000000268M/4.jpg"
+        "/imgs/MiniFocus/An000000268M/1.jpg",
+        "/imgs/MiniFocus/An000000268M/2.jpg",
+        "/imgs/MiniFocus/An000000268M/3.jpg",
+        "/imgs/MiniFocus/An000000268M/4.jpg"
       ]
     },
     {
@@ -16366,9 +16365,9 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000269M/1.jpg",
-        "public/imgs/MiniFocus/An000000269M/2.jpg",
-        "public/imgs/MiniFocus/An000000269M/3.jpg"
+        "/imgs/MiniFocus/An000000269M/1.jpg",
+        "/imgs/MiniFocus/An000000269M/2.jpg",
+        "/imgs/MiniFocus/An000000269M/3.jpg"
       ]
     },
     {
@@ -16428,8 +16427,8 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000270M/1.jpg",
-        "public/imgs/MiniFocus/An000000270M/2.jpg"
+        "/imgs/MiniFocus/An000000270M/1.jpg",
+        "/imgs/MiniFocus/An000000270M/2.jpg"
       ]
     },
     {
@@ -16489,8 +16488,8 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000271M/1.jpg",
-        "public/imgs/MiniFocus/An000000271M/2.jpg"
+        "/imgs/MiniFocus/An000000271M/1.jpg",
+        "/imgs/MiniFocus/An000000271M/2.jpg"
       ]
     },
     {
@@ -16550,9 +16549,9 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000272M/1.jpg",
-        "public/imgs/MiniFocus/An000000272M/2.jpg",
-        "public/imgs/MiniFocus/An000000272M/3.jpg"
+        "/imgs/MiniFocus/An000000272M/1.jpg",
+        "/imgs/MiniFocus/An000000272M/2.jpg",
+        "/imgs/MiniFocus/An000000272M/3.jpg"
       ]
     },
     {
@@ -16612,8 +16611,8 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000273M/1.jpg",
-        "public/imgs/MiniFocus/An000000273M/2.jpg"
+        "/imgs/MiniFocus/An000000273M/1.jpg",
+        "/imgs/MiniFocus/An000000273M/2.jpg"
       ]
     },
     {
@@ -16673,10 +16672,10 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000274M/1.jpg",
-        "public/imgs/MiniFocus/An000000274M/2.jpg",
-        "public/imgs/MiniFocus/An000000274M/3.jpg",
-        "public/imgs/MiniFocus/An000000274M/4.jpg"
+        "/imgs/MiniFocus/An000000274M/1.jpg",
+        "/imgs/MiniFocus/An000000274M/2.jpg",
+        "/imgs/MiniFocus/An000000274M/3.jpg",
+        "/imgs/MiniFocus/An000000274M/4.jpg"
       ]
     },
     {
@@ -16736,10 +16735,10 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000275M/1.jpg",
-        "public/imgs/MiniFocus/An000000275M/2.jpg",
-        "public/imgs/MiniFocus/An000000275M/3.jpg",
-        "public/imgs/MiniFocus/An000000275M/4.jpg"
+        "/imgs/MiniFocus/An000000275M/1.jpg",
+        "/imgs/MiniFocus/An000000275M/2.jpg",
+        "/imgs/MiniFocus/An000000275M/3.jpg",
+        "/imgs/MiniFocus/An000000275M/4.jpg"
       ]
     },
     {
@@ -16799,10 +16798,10 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000276M/1.jpg",
-        "public/imgs/MiniFocus/An000000276M/2.jpg",
-        "public/imgs/MiniFocus/An000000276M/3.jpg",
-        "public/imgs/MiniFocus/An000000276M/4.jpg"
+        "/imgs/MiniFocus/An000000276M/1.jpg",
+        "/imgs/MiniFocus/An000000276M/2.jpg",
+        "/imgs/MiniFocus/An000000276M/3.jpg",
+        "/imgs/MiniFocus/An000000276M/4.jpg"
       ]
     },
     {
@@ -16862,8 +16861,8 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000277/1.jpg",
-        "public/imgs/MiniFocus/An000000277/2.jpg"
+        "/imgs/MiniFocus/An000000277/1.jpg",
+        "/imgs/MiniFocus/An000000277/2.jpg"
       ]
     },
     {
@@ -16923,8 +16922,8 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000278/1.jpg",
-        "public/imgs/MiniFocus/An000000278/2.jpg"
+        "/imgs/MiniFocus/An000000278/1.jpg",
+        "/imgs/MiniFocus/An000000278/2.jpg"
       ]
     },
     {
@@ -16984,8 +16983,8 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000279/1.jpg",
-        "public/imgs/MiniFocus/An000000279/2.jpg"
+        "/imgs/MiniFocus/An000000279/1.jpg",
+        "/imgs/MiniFocus/An000000279/2.jpg"
       ]
     },
     {
@@ -17045,9 +17044,9 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000280/1.jpg",
-        "public/imgs/MiniFocus/An000000280/2.jpg",
-        "public/imgs/MiniFocus/An000000280/3.jpg"
+        "/imgs/MiniFocus/An000000280/1.jpg",
+        "/imgs/MiniFocus/An000000280/2.jpg",
+        "/imgs/MiniFocus/An000000280/3.jpg"
       ]
     },
     {
@@ -17107,8 +17106,8 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000281/1.jpg",
-        "public/imgs/MiniFocus/An000000281/2.jpg"
+        "/imgs/MiniFocus/An000000281/1.jpg",
+        "/imgs/MiniFocus/An000000281/2.jpg"
       ]
     },
     {
@@ -17168,8 +17167,8 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000282/1.jpg",
-        "public/imgs/MiniFocus/An000000282/2.jpg"
+        "/imgs/MiniFocus/An000000282/1.jpg",
+        "/imgs/MiniFocus/An000000282/2.jpg"
       ]
     },
     {
@@ -17229,9 +17228,9 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000283/1.jpg",
-        "public/imgs/MiniFocus/An000000283/2.jpg",
-        "public/imgs/MiniFocus/An000000283/3.jpg"
+        "/imgs/MiniFocus/An000000283/1.jpg",
+        "/imgs/MiniFocus/An000000283/2.jpg",
+        "/imgs/MiniFocus/An000000283/3.jpg"
       ]
     },
     {
@@ -17291,9 +17290,9 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000284/1.jpg",
-        "public/imgs/MiniFocus/An000000284/2.jpg",
-        "public/imgs/MiniFocus/An000000284/3.jpg"
+        "/imgs/MiniFocus/An000000284/1.jpg",
+        "/imgs/MiniFocus/An000000284/2.jpg",
+        "/imgs/MiniFocus/An000000284/3.jpg"
       ]
     },
     {
@@ -17353,10 +17352,10 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000285/1.jpg",
-        "public/imgs/MiniFocus/An000000285/2.jpg",
-        "public/imgs/MiniFocus/An000000285/3.jpg",
-        "public/imgs/MiniFocus/An000000285/4.jpg"
+        "/imgs/MiniFocus/An000000285/1.jpg",
+        "/imgs/MiniFocus/An000000285/2.jpg",
+        "/imgs/MiniFocus/An000000285/3.jpg",
+        "/imgs/MiniFocus/An000000285/4.jpg"
       ]
     },
     {
@@ -17416,9 +17415,9 @@
         "ar": "معدن مقاوم للصدأ"
       },
       "images": [
-        "public/imgs/MiniFocus/An000000286/1.jpg",
-        "public/imgs/MiniFocus/An000000286/2.jpg",
-        "public/imgs/MiniFocus/An000000286/3.jpg"
+        "/imgs/MiniFocus/An000000286/1.jpg",
+        "/imgs/MiniFocus/An000000286/2.jpg",
+        "/imgs/MiniFocus/An000000286/3.jpg"
       ]
     }
   ]
