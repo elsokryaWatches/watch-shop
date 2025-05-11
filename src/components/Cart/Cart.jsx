@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./Cart.css";
 import "../../i18n";
 import { useTranslation } from "react-i18next";
@@ -7,6 +9,12 @@ import Navbar from "../Navbar/Navbar";
 
 export default function Cart() {
   const [t] = useTranslation();
+  const [orderCodes, setOrderCodes] = useState([]);
+
+  useEffect(() => {
+    const storedOrders = JSON.parse(localStorage.getItem("orders")) || [];
+    setOrderCodes(storedOrders);
+  }, []);
 
   return (
     <>
@@ -35,6 +43,7 @@ export default function Cart() {
                   required
                 />
               </div>
+
               <div className="inputContainer row">
                 <label htmlFor="phone" className="col-10">
                   {t("phone nubmer")}
@@ -47,6 +56,7 @@ export default function Cart() {
                   required
                 />
               </div>
+
               <div className="inputContainer row">
                 <label htmlFor="email" className="col-10">
                   {t("email address")}
@@ -58,6 +68,7 @@ export default function Cart() {
                   id="email"
                 />
               </div>
+
               <div className="inputContainer row">
                 <label htmlFor="governorate" className="col-10">
                   {t("gov")}
@@ -66,9 +77,10 @@ export default function Cart() {
                   className="col-10"
                   type="text"
                   name="address"
-                  id="address"
+                  id="governorate"
                 />
               </div>
+
               <div className="inputContainer row">
                 <label htmlFor="city" className="col-10">
                   {t("city")}
@@ -77,9 +89,10 @@ export default function Cart() {
                   className="col-10"
                   type="text"
                   name="address"
-                  id="address"
+                  id="city"
                 />
               </div>
+
               <div className="inputContainer row">
                 <label htmlFor="land_Mark" className="col-10">
                   {t("landMark")}
@@ -88,9 +101,10 @@ export default function Cart() {
                   className="col-10"
                   type="text"
                   name="address"
-                  id="address"
+                  id="land_Mark"
                 />
               </div>
+
               <div className="inputContainer row">
                 <label htmlFor="selected" className="col-10">
                   {t("selected")}
@@ -101,11 +115,17 @@ export default function Cart() {
                   className="col-10"
                   readOnly
                   placeholder={t("cartTextArea")}
+                  value={orderCodes.join(", ")}
                 ></textarea>
               </div>
+
               <div className="submit">
                 <button className="submitBtn" type="submit">
                   {t("send")}
+                </button>
+
+                <button className="editOrders">
+                  <Link to={"/cartcheck"}>{t("editCart")}</Link>
                 </button>
               </div>
             </form>

@@ -84,5 +84,10 @@
   "MiniFocus": "mini focus",
   "search": "search",
   "men": "men",
-  "women": "women"
+  "women": "women",
+  "cart": "cart",
+  "editCart": "edit cart",
+  "ordered": "ordered items",
+  "emptyCart": "cart is empty",
+  "removeFromCart": "remove from cart"
 }

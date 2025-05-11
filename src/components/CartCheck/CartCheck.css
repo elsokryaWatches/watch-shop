@@ -1,0 +1,41 @@
+.cartCheck {
+  text-align: center;
+  h2 {
+    text-align: center;
+    margin: 20px 0px;
+    color: var(--text);
+  }
+
+  p {
+    color: var(--text);
+  }
+
+  .card {
+    border-radius: 0;
+    border: 1px solid var(--primary-color);
+    color: var(--text);
+
+    .removeBtn {
+      border: none;
+      padding: 5px 10px;
+      background-color: #fd0000;
+      color: var(--white);
+    }
+  }
+
+  .toCartBtn {
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--primary-color);
+    text-transform: uppercase !important;
+
+    a {
+      text-decoration: none;
+      color: var(--white);
+    }
+
+    &:hover {
+      outline: 1px solid var(--primary-color);
+    }
+  }
+}

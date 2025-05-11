@@ -1,5 +1,4 @@
 .cart {
-  padding: 50px 0px;
   height: 100vh;
 
   .backgroundLayer {
@@ -14,6 +13,7 @@
   }
   .cartInner {
     justify-content: center;
+    padding: 20px 0px;
 
     .cartForm {
       background-image: linear-gradient(
@@ -70,9 +70,29 @@
           color: var(--primary-color);
           border: none;
           padding: 5px 10px;
-          border-radius: 10px;
+          margin: 0px 5px;
           text-transform: uppercase !important;
           transition: all 0.3s ease-in-out;
+
+          &:hover {
+            background-color: var(--secondry-color);
+            color: var(--text);
+            box-shadow: 0 0 10px var(--white);
+          }
+        }
+
+        .editOrders {
+          background-color: var(--white);
+          border: none;
+          padding: 5px 10px;
+          margin: 0px 5px;
+          text-transform: uppercase !important;
+          transition: all 0.3s ease-in-out;
+
+          a {
+            color: var(--primary-color);
+            text-decoration: none;
+          }
 
           &:hover {
             background-color: var(--secondry-color);

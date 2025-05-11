@@ -18,9 +18,6 @@ export default function About() {
             <div className="text col-md-10 col-lg-6">
               <h2>{t("about us")}</h2>
               <p>{t("aboutUsDesc")}</p>
-              <button className="aboutBtn">
-                <Link to={"/contact"}>{t("contact")}</Link>
-              </button>
             </div>
           </div>
         </div>

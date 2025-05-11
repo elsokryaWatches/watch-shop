@@ -1,5 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBagShopping,
+  faBars,
+  faPhone,
+  faEnvelope,
+} from "@fortawesome/free-solid-svg-icons";
 import {
   faInstagram,
   faFacebook,
@@ -71,6 +76,11 @@ export default function Navbar() {
             <li className="offCanvItem">
               <Link className="offcanvLink" to={"/"}>
                 {t("home")}
+              </Link>
+            </li>
+            <li className="offCanvItem">
+              <Link className="offcanvLink" to={"/cart"}>
+                {t("cart")} <FontAwesomeIcon icon={faBagShopping} />
               </Link>
             </li>
             <li className="offCanvItem">
@@ -215,10 +225,15 @@ export default function Navbar() {
                 <img src="imgs/logo.svg" alt="" />
               </Link>
             </div>
-            <div className="navList col-6">
+            <div className="navList col-7">
               <li className="navItem">
                 <Link className="navLink" to={"/"}>
                   {t("home")}
+                </Link>
+              </li>
+              <li className="navItem">
+                <Link className="navLink" to={"/cart"}>
+                  {t("cart")} <FontAwesomeIcon icon={faBagShopping} />
                 </Link>
               </li>
               <li className="navItem">
