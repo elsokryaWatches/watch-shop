@@ -84,6 +84,11 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="offCanvItem">
+              <Link className="offcanvLink" to={"/admin"}>
+                {t("stuff")}
+              </Link>
+            </li>
+            <li className="offCanvItem">
               <Link className="offcanvLink" to={"/login"}>
                 {t("login")}
               </Link>
@@ -111,7 +116,7 @@ export default function Navbar() {
                 </li>
                 <li className="dropdown-item">
                   <Link
-                    className="navLink"
+                    className="offcanvLink"
                     to={"https://t.me/+UGdVEHUgToXTtkzi"}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -122,7 +127,7 @@ export default function Navbar() {
                 </li>
                 <li className="dropdown-item">
                   <Link
-                    className="navLink"
+                    className="offcanvLink"
                     to={"https://www.facebook.com/share/15gycfcaZc/"}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -133,7 +138,7 @@ export default function Navbar() {
                 </li>
                 <li className="dropdown-item">
                   <Link
-                    className="navLink"
+                    className="offcanvLink"
                     to={"https://www.instagram.com/elsokrya_for_watches"}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -143,7 +148,7 @@ export default function Navbar() {
                   </Link>
                 </li>
                 <li className="dropdown-item">
-                  <Link className="navLink">
+                  <Link className="offcanvLink">
                     <FontAwesomeIcon icon={faPhone} />
                     <span>01550089872</span>
                   </Link>
@@ -162,7 +167,6 @@ export default function Navbar() {
                 type="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
-                to={"/shop"}
               >
                 {t("shop")}
               </Link>
@@ -225,7 +229,7 @@ export default function Navbar() {
                 <img src="imgs/logo.svg" alt="" />
               </Link>
             </div>
-            <div className="navList col-7">
+            <div className="navList col-8">
               <li className="navItem">
                 <Link className="navLink" to={"/"}>
                   {t("home")}
@@ -234,6 +238,11 @@ export default function Navbar() {
               <li className="navItem">
                 <Link className="navLink" to={"/cart"}>
                   {t("cart")} <FontAwesomeIcon icon={faBagShopping} />
+                </Link>
+              </li>
+              <li className="navItem">
+                <Link className="navLink" to={"/admin"}>
+                  {t("stuff")}
                 </Link>
               </li>
               <li className="navItem">

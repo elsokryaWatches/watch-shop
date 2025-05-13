@@ -96,5 +96,8 @@
   "discount_valid_until": "Discount valid until",
   "hours": "hours",
   "minutes": "minutes",
-  "seconds": "seconds"
+  "seconds": "seconds",
+  "stuff": "stuff",
+  "orders": "orders",
+  "crud title": "add / edit"
 }

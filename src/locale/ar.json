@@ -96,5 +96,8 @@
   "discount_valid_until": "مدة الخصم",
   "hours": "ساعه",
   "minutes": "دقيقه",
-  "seconds": "ثانيه"
+  "seconds": "ثانيه",
+  "stuff": "فريق العمل",
+  "orders": "الطلبات",
+  "crud title": "التعديل و الاضافه"
 }

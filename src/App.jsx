@@ -12,6 +12,7 @@ const CartCheck = lazy(() => import("./components/CartCheck/CartCheck"));
 const ProdDetails = lazy(() => import("./components/ProdDetails/ProdDetails"));
 const SignUp = lazy(() => import("./components/Sign_Up/Sign_Up"));
 const LogIn = lazy(() => import("./components/Log_In/Log_In"));
+const Admin = lazy(() => import("./components/Admin/Admin"));
 
 const createRoute = (path, element) => ({
   path,
@@ -36,6 +37,7 @@ export default function App() {
     createRoute("straps", <Straps />),
     createRoute("signup", <SignUp />),
     createRoute("login", <LogIn />),
+    createRoute("admin", <Admin />),
   ]);
   return <RouterProvider router={routes} />;
 }

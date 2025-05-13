@@ -1,0 +1,126 @@
+.admin {
+  padding: 20px 0px;
+
+  .adminInner {
+    justify-content: center;
+    align-items: center;
+
+    .adminNav {
+      text-align: center;
+
+      .adminNavBtn {
+        border: 1px solid var(--primary-color);
+        background-color: transparent;
+        padding: 5px 10px;
+        color: var(--text);
+      }
+
+      .selected {
+        background-color: var(--primary-color);
+        color: var(--white);
+      }
+    }
+
+    .crudSystem {
+      padding: 20px 0px;
+      justify-content: center;
+      align-items: center;
+
+      .formSide {
+        padding: 20px;
+
+        .crudForm {
+          padding: 20px;
+          border-radius: 10px;
+          background-image: linear-gradient(
+            to bottom,
+            var(--secondry-color),
+            var(--primary-color)
+          );
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+
+          .inputContainer {
+            label {
+              color: var(--text);
+              padding: 0;
+            }
+            input {
+              color: var(--text);
+              padding: 5px;
+              border: none;
+              outline: none;
+            }
+          }
+
+          .btns {
+            text-align: center;
+
+            .addBtn,
+            .updateBtn,
+            .resetBtn {
+              padding: 5px 10px;
+              margin: 0px 10px;
+              border: 1px solid var(--white);
+              background-color: transparent;
+              color: var(--white);
+
+              &:hover {
+                background-color: var(--white);
+                color: var(--text);
+              }
+            }
+          }
+        }
+      }
+
+      .cardsSide {
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        .itemCard {
+          border: 1px solid var(--primary-color);
+          color: var(--text);
+          padding: 0;
+
+          .details {
+            padding: 10px;
+
+            .editBtn {
+              padding: 5px 10px;
+              border: none;
+              background-color: var(--primary-color);
+              color: var(--white);
+            }
+          }
+        }
+      }
+    }
+
+    .orders {
+      padding: 20px 0px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      .orderItem {
+        padding: 10px;
+        border: 1px solid var(--primary-color);
+        color: var(--text);
+
+        h4 {
+          padding: 5px 0px;
+        }
+
+        .confirmBtn {
+          padding: 5px 10px;
+          color: var(--white);
+          background-color: var(--primary-color);
+          border: none;
+        }
+      }
+    }
+  }
+}
