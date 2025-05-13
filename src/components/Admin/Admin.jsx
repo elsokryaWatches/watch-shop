@@ -50,7 +50,7 @@ export default function Admin() {
 
             {activeTab === "crud" && (
               <div className="crudSystem row col-12">
-                <div className="formSide col-6">
+                <div className="formSide col-10 col-lg-6">
                   <form method="post" className="crudForm row">
                     <div className="inputContainer col-4 row">
                       <label className="col-12" htmlFor="">
@@ -227,7 +227,7 @@ export default function Admin() {
                   </form>
                 </div>
 
-                <div className="cardsSide row col-6">
+                <div className="cardsSide row col-12 col-lg-6">
                   <div className="itemCard col-5">
                     <img src="" alt="" />
                     <div className="details">
@@ -245,7 +245,7 @@ export default function Admin() {
 
             {activeTab === "orders" && (
               <div className="orders row col-10">
-                <div className="orderItem col-3">
+                <div className="orderItem col-12 col-lg-3">
                   <h4>customer name</h4>
                   <h4>customer phone</h4>
                   <h4>customer emails</h4>
@@ -253,7 +253,7 @@ export default function Admin() {
                   <h4>customer order</h4>
                   <button className="confirmBtn">{t("confirm")}</button>
                 </div>
-                <div className="orderItem col-3">
+                <div className="orderItem col-12 col-lg-3">
                   <h4>customer name</h4>
                   <h4>customer phone</h4>
                   <h4>customer emails</h4>
@@ -261,7 +261,7 @@ export default function Admin() {
                   <h4>customer order</h4>
                   <button className="confirmBtn">{t("confirm")}</button>
                 </div>
-                <div className="orderItem col-3">
+                <div className="orderItem col-12 col-lg-3">
                   <h4>customer name</h4>
                   <h4>customer phone</h4>
                   <h4>customer emails</h4>
