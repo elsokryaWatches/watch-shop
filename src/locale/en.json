@@ -73,7 +73,7 @@
   "movement": "movement",
   "specs": "specs",
   "diameter": "diameter",
-  "case_thickness": "caseThickness",
+  "case_thickness": "case thickness",
   "weight": "weight",
   "features": "features",
   "waterResistant": "waterResistant",
@@ -99,5 +99,11 @@
   "seconds": "seconds",
   "stuff": "stuff",
   "orders": "orders",
-  "crud title": "add / edit"
+  "crud title": "add / edit",
+  "code": "code",
+  "add": "add",
+  "update": "update",
+  "reset": "reset",
+  "edit": "edit",
+  "confirm": "confirm"
 }

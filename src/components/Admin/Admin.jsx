@@ -54,7 +54,7 @@ export default function Admin() {
                   <form method="post" className="crudForm row">
                     <div className="inputContainer col-4 row">
                       <label className="col-12" htmlFor="">
-                        code
+                        {t("code")}
                       </label>
                       <input
                         className="col-12"
@@ -65,7 +65,7 @@ export default function Admin() {
                     </div>
                     <div className="inputContainer col-4 row">
                       <label className="col-12" htmlFor="brand">
-                        brand
+                        {t("brand")}
                       </label>
                       <input
                         className="col-12"
@@ -76,7 +76,7 @@ export default function Admin() {
                     </div>
                     <div className="inputContainer col-4 row">
                       <label className="col-12" htmlFor="model">
-                        model
+                        {t("model")}
                       </label>
                       <input
                         className="col-12"
@@ -87,7 +87,7 @@ export default function Admin() {
                     </div>
                     <div className="inputContainer col-4 row">
                       <label className="col-12" htmlFor="price">
-                        price
+                        {t("price")}
                       </label>
                       <input
                         className="col-12"
@@ -98,7 +98,7 @@ export default function Admin() {
                     </div>
                     <div className="inputContainer col-4 row">
                       <label className="col-12" htmlFor="discount">
-                        discount
+                        {t("discount")}
                       </label>
                       <input
                         className="col-12"
@@ -109,7 +109,7 @@ export default function Admin() {
                     </div>
                     <div className="inputContainer col-4 row">
                       <label className="col-12" htmlFor="discounted_price">
-                        discounted price
+                        {t("discounted price")}
                       </label>
                       <input
                         className="col-12"
@@ -120,7 +120,7 @@ export default function Admin() {
                     </div>
                     <div className="inputContainer col-4 row">
                       <label className="col-12" htmlFor="discount_period">
-                        discount period
+                        {t("discount period")}
                       </label>
                       <input
                         className="col-12"
@@ -131,7 +131,7 @@ export default function Admin() {
                     </div>
                     <div className="inputContainer col-4 row">
                       <label className="col-12" htmlFor="stock">
-                        stock
+                        {t("stock")}
                       </label>
                       <input
                         className="col-12"
@@ -142,7 +142,7 @@ export default function Admin() {
                     </div>
                     <div className="inputContainer col-4  row">
                       <label className="col-12" htmlFor="material">
-                        material
+                        {t("material")}
                       </label>
                       <input
                         className="col-12"
@@ -153,7 +153,7 @@ export default function Admin() {
                     </div>
                     <div className="inputContainer col-4 row">
                       <label className="col-12" htmlFor="movement">
-                        movement
+                        {t("movement")}
                       </label>
                       <input
                         className="col-12"
@@ -164,7 +164,7 @@ export default function Admin() {
                     </div>
                     <div className="inputContainer col-4 row">
                       <label className="col-12" htmlFor="diameter">
-                        diameter
+                        {t("diameter")}
                       </label>
                       <input
                         className="col-12"
@@ -175,7 +175,7 @@ export default function Admin() {
                     </div>
                     <div className="inputContainer col-4 row">
                       <label className="col-12" htmlFor="caseThickness">
-                        case thickness
+                        {t("case_thickness")}
                       </label>
                       <input
                         className="col-12"
@@ -186,7 +186,7 @@ export default function Admin() {
                     </div>
                     <div className="inputContainer col-4 row">
                       <label className="col-12" htmlFor="weight">
-                        weight
+                        {t("weight")}
                       </label>
                       <input
                         className="col-12"
@@ -197,7 +197,7 @@ export default function Admin() {
                     </div>
                     <div className="inputContainer col-4 row">
                       <label className="col-12" htmlFor="features">
-                        features
+                        {t("features")}
                       </label>
                       <input
                         className="col-12"
@@ -208,7 +208,7 @@ export default function Admin() {
                     </div>
                     <div className="inputContainer col-4 row">
                       <label className="col-12" htmlFor="waterResistant">
-                        water resistant
+                        {t("waterResistant")}
                       </label>
                       <input
                         className="col-12"
@@ -219,10 +219,10 @@ export default function Admin() {
                     </div>
                     <div className="btns">
                       <button className="addBtn" name="send">
-                        add
+                        {t("add")}
                       </button>
-                      <button className="updateBtn">update</button>
-                      <button className="resetBtn">reset</button>
+                      <button className="updateBtn">{t("update")}</button>
+                      <button className="resetBtn">{t("reset")}</button>
                     </div>
                   </form>
                 </div>
@@ -236,7 +236,7 @@ export default function Admin() {
                         <h4>500 Egp</h4>
                       </del>
                       <h4>350 egp</h4>
-                      <button className="editBtn">edit</button>
+                      <button className="editBtn">{t("edit")}</button>
                     </div>
                   </div>
                 </div>
@@ -251,7 +251,7 @@ export default function Admin() {
                   <h4>customer emails</h4>
                   <h4>customer address</h4>
                   <h4>customer order</h4>
-                  <button className="confirmBtn">confirm order</button>
+                  <button className="confirmBtn">{t("confirm")}</button>
                 </div>
                 <div className="orderItem col-3">
                   <h4>customer name</h4>
@@ -259,7 +259,7 @@ export default function Admin() {
                   <h4>customer emails</h4>
                   <h4>customer address</h4>
                   <h4>customer order</h4>
-                  <button className="confirmBtn">confirm order</button>
+                  <button className="confirmBtn">{t("confirm")}</button>
                 </div>
                 <div className="orderItem col-3">
                   <h4>customer name</h4>
@@ -267,7 +267,7 @@ export default function Admin() {
                   <h4>customer emails</h4>
                   <h4>customer address</h4>
                   <h4>customer order</h4>
-                  <button className="confirmBtn">confirm order</button>
+                  <button className="confirmBtn">{t("confirm")}</button>
                 </div>
               </div>
             )}

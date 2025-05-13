@@ -32,19 +32,15 @@
         .crudForm {
           padding: 20px;
           border-radius: 10px;
-          background-image: linear-gradient(
-            to bottom,
-            var(--secondry-color),
-            var(--primary-color)
-          );
+          background-color: var(--primary-color);
           justify-content: center;
           align-items: center;
           gap: 10px;
 
           .inputContainer {
             label {
-              color: var(--text);
-              padding: 0;
+              color: var(--white);
+              padding: 5px 0px;
             }
             input {
               color: var(--text);
