@@ -104,6 +104,7 @@ export default function ProdDetails() {
                 {watch.price.original} {watch.price.currency}
               </p>
             </del>
+
             <h3>
               <strong>{t("features")}</strong>
             </h3>
@@ -194,6 +195,53 @@ export default function ProdDetails() {
                 ? t("addedToCart")
                 : t("add to cart")}
             </button>
+
+            <div className="rateField">
+              <form method="post" className="rateForm row">
+                <div className="inputContainer col-7">
+                  <label className="col-10" htmlFor="comment">
+                    add a review
+                  </label>
+                  <input
+                    className="col-10"
+                    type="text"
+                    name="comment"
+                    id="comment"
+                  />
+                </div>
+                <div className="inputContainer col-4">
+                  <label className="col-10" htmlFor="rate">
+                    rate out of 5
+                  </label>
+                  <select name="rate" id="rate">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div>
+                <button className="reviewSend col-3">add review</button>
+              </form>
+              <ul className="reviewsList">
+                <h5>reviews</h5>
+                <li>
+                  <h6>username</h6>
+                  <h6>8/10</h6>
+                  <p>amazing</p>
+                </li>
+                <li>
+                  <h6>username</h6>
+                  <h6>8/10</h6>
+                  <p>amazing</p>
+                </li>
+                <li>
+                  <h6>username</h6>
+                  <h6>8/10</h6>
+                  <p>amazing</p>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

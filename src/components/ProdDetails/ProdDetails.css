@@ -1,4 +1,5 @@
 .prodDet {
+  padding: 30px 0px;
   .imgSide {
     .imgNavBtns {
       .imgNav {
@@ -12,11 +13,14 @@
     }
   }
   .textSide {
+    border: 1px solid var(--primary-color);
+    padding: 10px;
     color: var(--text);
     ul {
       list-style: none;
       padding: 0;
     }
+
     .toCartBtn {
       cursor: pointer;
       padding: 10px 20px;
@@ -27,6 +31,52 @@
 
       &:hover {
         outline: 1px solid var(--primary-color);
+      }
+    }
+
+    .rateField {
+      padding: 10px;
+      margin: 10px 0px;
+      border: 1px solid var(--primary-color);
+
+      .rateForm {
+        padding: 10px;
+        justify-content: start;
+        align-items: end;
+        gap: 10px;
+
+        .inputContainer {
+          padding: 0;
+          label {
+            padding: 5px;
+          }
+          input {
+            padding: 5px;
+            outline: none;
+          }
+          select {
+            padding: 5px;
+          }
+        }
+
+        .reviewSend {
+          padding: 5px 10px;
+          border: none;
+          background-color: var(--primary-color);
+          text-transform: uppercase !important;
+          color: var(--white);
+        }
+      }
+
+      .reviewsList {
+        border-top: 1px solid var(--primary-color);
+        padding: 20px 0px;
+
+        li {
+          padding: 5px 0px;
+          border-top: 1px solid var(--primary-color);
+          border-bottom: 1px solid var(--primary-color);
+        }
       }
     }
   }
