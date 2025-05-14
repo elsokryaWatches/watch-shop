@@ -13,7 +13,6 @@ export default function Home() {
       <Helmet>
         <title>El Sokrya - Home Page</title>
       </Helmet>
-      <About />
       <Watches />
       <Wallets />
       <Belts />
