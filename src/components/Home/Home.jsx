@@ -1,4 +1,3 @@
-import About from "./About/About";
 import Watches from "./Watches/Watches";
 import Wallets from "./Wallets/Wallets";
 import Belts from "./Belts/Belts";

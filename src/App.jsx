@@ -5,6 +5,7 @@ import LoadingSpinner from "./components/LoadingSpinner/LoadingSpinner";
 
 const Home = lazy(() => import("./components/Home/Home"));
 const Skmei = lazy(() => import("./components/Skmei/Skmei"));
+const IBSO = lazy(() => import("./components/IBSO/IBSO"));
 const MiniFocus = lazy(() => import("./components/MiniFocus/MiniFocus"));
 const Straps = lazy(() => import("./components/Straps/Straps"));
 const Cart = lazy(() => import("./components/Cart/Cart"));
@@ -29,6 +30,7 @@ export default function App() {
         createRoute("", <Home />),
         createRoute("skmei", <Skmei />),
         createRoute("minifocus", <MiniFocus />),
+        createRoute("ibso", <IBSO />),
       ],
     },
     createRoute("cart", <Cart />),

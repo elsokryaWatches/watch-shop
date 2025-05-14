@@ -104,5 +104,6 @@
   "update": "update",
   "reset": "reset",
   "edit": "edit",
-  "confirm": "confirm"
+  "confirm": "confirm",
+  "ibso": "IBSO"
 }

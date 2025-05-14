@@ -9,6 +9,7 @@ export default function ShopNav() {
   const buttons = [
     { path: "/skmei", text: "skmei" },
     { path: "/minifocus", text: "MiniFocus" },
+    { path: "/ibso", text: "ibso" },
     { path: "/straps", text: "straps" },
   ];
 
