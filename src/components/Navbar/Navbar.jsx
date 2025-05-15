@@ -330,18 +330,33 @@ export default function Navbar() {
                 </Link>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link className="dropdown-item" to={"/skmei"}>
-                      {t("SKMEI watches")}
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to={"/minifocus"}>
-                      {t("MiniFocus watches")}
+                    <Link className="dropdown-item" to={"/shop"}>
+                      {t("watches")}
                     </Link>
                   </li>
                   <li>
                     <Link className="dropdown-item" to={"/straps"}>
                       {t("straps")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to={"/"}>
+                      {t("wallets")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to={"/"}>
+                      {t("belts")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to={"/"}>
+                      {t("perfumes")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to={"/"}>
+                      {t("shoes")}
                     </Link>
                   </li>
                 </ul>

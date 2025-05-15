@@ -39,7 +39,7 @@ export default function Watches() {
             </div>
             <div className="btns col-10">
               <button className="toShop">
-                <Link to={"/skmei"}>{t("shop")}</Link>
+                <Link to={"/shop"}>{t("shop")}</Link>
               </button>
             </div>
           </div>

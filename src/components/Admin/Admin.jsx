@@ -13,7 +13,7 @@ export default function Admin() {
     const username = prompt("Enter admin username:");
     const password = prompt("Enter admin password:");
 
-    if (username === "elsokarya" && password === "sokarya101") {
+    if (username === "admin" && password === "admin") {
       setAuthenticated(true);
     } else {
       alert("Access denied.");
