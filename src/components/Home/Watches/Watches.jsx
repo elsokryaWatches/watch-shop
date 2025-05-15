@@ -29,7 +29,7 @@ export default function Watches() {
             </div>
             <div className="watchesContent row col-10">
               {watches.map((watch) => (
-                <div className="watch col-2" key={watch.id}>
+                <div className="watch col-lg-2 col-10" key={watch.id}>
                   <img
                     src={watch.images[0]}
                     alt={`${watch.brand.en} ${watch.model.en}`}
