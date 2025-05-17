@@ -72,7 +72,7 @@
   "movement": "movement",
   "specs": "specs",
   "diameter": "diameter",
-  "case_thickness": "case thickness",
+  "caseThickness": "case thickness",
   "weight": "weight",
   "features": "features",
   "waterResistant": "waterResistant",
