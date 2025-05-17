@@ -9,14 +9,34 @@ export default function Watches() {
   const [watches, setWatches] = useState([]);
 
   useEffect(() => {
-    fetch("API/SKMEI.JSON")
-      .then((res) => res.json())
-      .then((data) => {
-        if (data?.watches) {
-          setWatches(data.watches.slice(0, 5));
-        }
-      })
-      .catch((err) => console.error("failed to load watches:", err));
+    const fetchWatches = async () => {
+      try {
+        const [skmeiRes, miniFocusRes] = await Promise.all([
+          fetch("API/SKMEI.JSON"),
+          fetch("API/MiniFocus.JSON"),
+        ]);
+
+        const [skmeiData, miniFocusData] = await Promise.all([
+          skmeiRes.json(),
+          miniFocusRes.json(),
+        ]);
+
+        const allWatches = [
+          ...(skmeiData?.watches || []),
+          ...(miniFocusData?.watches || []),
+        ];
+
+        const shuffled = allWatches.sort(() => 0.5 - Math.random());
+
+        const randomWatches = shuffled.slice(0, 5);
+
+        setWatches(randomWatches);
+      } catch (error) {
+        console.error("Failed to load watches:", error);
+      }
+    };
+
+    fetchWatches();
   }, []);
 
   return (
@@ -30,11 +50,13 @@ export default function Watches() {
             <div className="watchesContent row col-10">
               {watches.map((watch) => (
                 <div className="watch col-lg-2 col-10" key={watch.id}>
-                  <img
-                    src={watch.images[0]}
-                    alt={`${watch.brand.en} ${watch.model.en}`}
-                    onContextMenu={(e) => e.preventDefault()}
-                  />
+                  <Link to={"/product_details"} state={{ watch }}>
+                    <img
+                      src={watch.images[0]}
+                      alt={`${watch.brand.en} ${watch.model.en}`}
+                      onContextMenu={(e) => e.preventDefault()}
+                    />
+                  </Link>
                 </div>
               ))}
             </div>

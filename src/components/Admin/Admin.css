@@ -29,6 +29,18 @@
       .formSide {
         padding: 20px;
 
+        .chooseFunc {
+          padding: 10px 0px;
+          text-align: center;
+
+          select {
+            padding: 5px;
+            background-color: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--text);
+          }
+        }
+
         .crudForm {
           padding: 20px;
           border-radius: 10px;
@@ -36,6 +48,13 @@
           justify-content: center;
           align-items: center;
           gap: 10px;
+
+          .formHeader {
+            text-align: center;
+            h4 {
+              color: var(--white);
+            }
+          }
 
           .inputContainer {
             label {
@@ -47,6 +66,21 @@
               padding: 5px;
               border: none;
               outline: none;
+            }
+            .imageInput {
+              padding: 0;
+            }
+          }
+
+          .searchPanel {
+            padding: 10px 0px;
+            text-align: center;
+            input {
+              color: var(--text);
+              padding: 5px;
+              border: none;
+              outline: none;
+              width: fit-content;
             }
           }
 

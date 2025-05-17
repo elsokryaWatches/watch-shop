@@ -1,83 +1,69 @@
 .prodDet {
   padding: 30px 0px;
-  .imgSide {
-    .imgNavBtns {
-      .imgNav {
-        padding: 5px;
-        border-radius: 0%;
-        border: none;
-        background-color: var(--primary-color);
-        color: var(--white);
-        margin: 0px 10px;
+
+  .prodDetInner {
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    .imgSide {
+      position: relative;
+      overflow: hidden;
+      cursor: crosshair;
+
+      .zoomContainer {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+        position: relative;
+
+        .zoomImage {
+          width: 100%;
+          height: 100%;
+          background-size: 100%;
+          background-repeat: no-repeat;
+          background-position: center;
+          transition: background-position 0.1s ease;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            background-size: 150%;
+          }
+        }
+      }
+
+      .imgNavBtns {
+        .imgNav {
+          padding: 5px;
+          border-radius: 0%;
+          border: none;
+          background-color: var(--primary-color);
+          color: var(--white);
+          margin: 0px 10px;
+        }
       }
     }
-  }
-  .textSide {
-    border: 1px solid var(--primary-color);
-    padding: 10px;
-    color: var(--text);
-    ul {
-      list-style: none;
-      padding: 0;
-    }
 
-    .toCartBtn {
-      cursor: pointer;
-      padding: 10px 20px;
-      border: none;
-      background-color: var(--primary-color);
-      text-transform: uppercase !important;
-      color: var(--white);
-
-      &:hover {
-        outline: 1px solid var(--primary-color);
-      }
-    }
-  }
-  .rateField {
-    padding: 10px;
-    margin: 10px 0px;
-    border: 1px solid var(--primary-color);
-    color: var(--text);
-
-    .rateForm {
+    .textSide {
+      border: 1px solid var(--primary-color);
       padding: 10px;
-      justify-content: start;
-      align-items: end;
-      gap: 10px;
-
-      .inputContainer {
+      color: var(--text);
+      ul {
+        list-style: none;
         padding: 0;
-        label {
-          padding: 5px;
-        }
-        input {
-          padding: 5px;
-          outline: none;
-        }
-        select {
-          padding: 5px;
-        }
       }
 
-      .reviewSend {
-        padding: 5px 10px;
+      .toCartBtn {
+        cursor: pointer;
+        padding: 10px 20px;
         border: none;
         background-color: var(--primary-color);
         text-transform: uppercase !important;
         color: var(--white);
-      }
-    }
 
-    .reviewsList {
-      list-style: none;
-      border-top: 1px solid var(--primary-color);
-      padding: 20px 0px;
-
-      li {
-        padding: 5px 0px;
-        border-top: 1px solid var(--primary-color);
-        border-bottom: 1px solid var(--primary-color);
+        &:hover {
+          outline: 1px solid var(--primary-color);
+        }
       }
     }
   }

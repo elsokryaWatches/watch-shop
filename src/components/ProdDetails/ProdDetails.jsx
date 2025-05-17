@@ -13,6 +13,15 @@ export default function ProdDetails() {
     return JSON.parse(localStorage.getItem("orders")) || [];
   });
 
+  const [zoomPosition, setZoomPosition] = useState(null);
+
+  const handleZoom = (e) => {
+    const { left, top, width, height } = e.target.getBoundingClientRect();
+    const x = ((e.clientX - left) / width) * 100;
+    const y = ((e.clientY - top) / height) * 100;
+    setZoomPosition({ x, y });
+  };
+
   const [remainingTime, setRemainingTime] = useState(null);
 
   useEffect(() => {
@@ -68,16 +77,24 @@ export default function ProdDetails() {
   return (
     <>
       <NavBar />
-      <div className="prodDet container my-5">
-        <div className="row">
-          <div className="imgSide col-md-6 text-center">
-            <img
-              src={watch.images[imageIndex]}
-              alt="watch"
-              className="img-fluid"
-              style={{ maxHeight: "400px" }}
-              onContextMenu={(e) => e.preventDefault()}
-            />
+      <div className="prodDet container">
+        <div className="prodDetInner row">
+          <div className="imgSide col-10 col-lg-5 text-center">
+            <div
+              className="zoomContainer"
+              onMouseMove={(e) => handleZoom(e)}
+              onMouseLeave={() => setZoomPosition(null)}
+            >
+              <div
+                className="zoomImage"
+                style={{
+                  backgroundImage: `url(${watch.images[imageIndex]})`,
+                  backgroundPosition: zoomPosition
+                    ? `${zoomPosition.x}% ${zoomPosition.y}%`
+                    : "center",
+                }}
+              ></div>
+            </div>
             <div className="imgNavBtns mt-2">
               <button onClick={handlePrevImage} className="imgNav">
                 ←
@@ -87,7 +104,8 @@ export default function ProdDetails() {
               </button>
             </div>
           </div>
-          <div className="textSide col-md-6">
+
+          <div className="textSide col-10 col-lg-5">
             <h3>
               {watch.brand[i18n.language]}{" "}
               {typeof watch.model === "object"
@@ -195,53 +213,6 @@ export default function ProdDetails() {
                 ? t("addedToCart")
                 : t("add to cart")}
             </button>
-          </div>
-
-          <div className="rateField col-md-8">
-            <form method="post" className="rateForm row">
-              <div className="inputContainer col-7">
-                <label className="col-10" htmlFor="comment">
-                  add a review
-                </label>
-                <input
-                  className="col-10"
-                  type="text"
-                  name="comment"
-                  id="comment"
-                />
-              </div>
-              <div className="inputContainer col-4">
-                <label className="col-10" htmlFor="rate">
-                  rate out of 5
-                </label>
-                <select name="rate" id="rate">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                </select>
-              </div>
-              <button className="reviewSend col-3">add review</button>
-            </form>
-            <ul className="reviewsList">
-              <h5>reviews</h5>
-              <li>
-                <h6>username</h6>
-                <h6>8/10</h6>
-                <p>amazing</p>
-              </li>
-              <li>
-                <h6>username</h6>
-                <h6>8/10</h6>
-                <p>amazing</p>
-              </li>
-              <li>
-                <h6>username</h6>
-                <h6>8/10</h6>
-                <p>amazing</p>
-              </li>
-            </ul>
           </div>
         </div>
       </div>

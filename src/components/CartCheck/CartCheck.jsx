@@ -75,12 +75,33 @@ export default function CartCheck() {
                         ? watch.model.en
                         : watch.model}
                     </h5>
+                    <p className="price">
+                      {watch.price?.discount_percentage > 0 ? (
+                        <>
+                          <span className="text-muted text-decoration-line-through me-2">
+                            {watch.price.original} {watch.price.currency}
+                          </span>
+                          <span className="text-success fw-bold">
+                            {watch.price.final} {watch.price.currency}
+                          </span>
+                        </>
+                      ) : (
+                        <span className="fw-bold">
+                          {watch.price.final} {watch.price.currency}
+                        </span>
+                      )}
+                    </p>
 
                     <button
-                      className="removeBtn mt-2"
+                      className="removeBtn"
                       onClick={() => handleRemove(watch.code)}
                     >
                       {t("removeFromCart")}
+                    </button>
+                    <button className="details">
+                      <Link to="/product_details" state={{ watch }}>
+                        {t("details")}
+                      </Link>
                     </button>
                   </div>
                 </div>

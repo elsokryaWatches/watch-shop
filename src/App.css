@@ -211,6 +211,21 @@ body {
         text-align: center;
         h2 {
           text-align: center;
+          color: var(--text);
+        }
+      }
+    }
+
+    .strapes {
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0px;
+      gap: 20px;
+      .soonText {
+        text-align: center;
+        h2 {
+          text-align: center;
+          color: var(--text);
         }
       }
     }

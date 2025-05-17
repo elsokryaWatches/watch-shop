@@ -106,5 +106,10 @@
   "reset": "مسح",
   "edit": "تعديل",
   "confirm": "تأكيد الطلب",
-  "ibso": "IBSO"
+  "ibso": "IBSO",
+  "adding / editing watches": "اضافة وتعديل الساعات",
+  "adding / editing straps": "اضافة وتعديل الاسترابات",
+  "search using code...": "البحث باستخدام كود التخزين",
+  "images": "الصور",
+  "color": "اللون"
 }

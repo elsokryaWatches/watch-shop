@@ -1,5 +1,6 @@
 .cartCheck {
   text-align: center;
+  padding: 20px 0px;
   h2 {
     text-align: center;
     margin: 20px 0px;
@@ -16,10 +17,36 @@
     color: var(--text);
 
     .removeBtn {
-      border: none;
+      margin: 0px 5px;
+      border: 1px solid #fd0000;
       padding: 5px 10px;
-      background-color: #fd0000;
-      color: var(--white);
+      background-color: transparent;
+      color: #fd0000;
+
+      &:hover {
+        background-color: #fd0000;
+        color: var(--white);
+      }
+    }
+
+    .details {
+      margin: 0px 5px;
+      border: 1px solid var(--primary-color);
+      padding: 5px 10px;
+      background-color: transparent;
+
+      a {
+        text-decoration: none;
+        color: var(--text);
+      }
+
+      &:hover {
+        background-color: var(--primary-color);
+
+        a {
+          color: var(--white);
+        }
+      }
     }
   }
 

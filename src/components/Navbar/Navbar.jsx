@@ -88,11 +88,6 @@ export default function Navbar() {
                 {t("stuff")}
               </Link>
             </li>
-            <li className="offCanvItem">
-              <Link className="offcanvLink" to={"/login"}>
-                {t("login")}
-              </Link>
-            </li>
             <li className="offCanvItem dropdown">
               <Link
                 className="offcanvLink dropdown-toggle"
@@ -258,11 +253,6 @@ export default function Navbar() {
               <li className="navItem">
                 <Link className="navLink" to={"/admin"}>
                   {t("stuff")}
-                </Link>
-              </li>
-              <li className="navItem">
-                <Link className="navLink" to={"/login"}>
-                  {t("login")}
                 </Link>
               </li>
               <li className="navItem dropdown">

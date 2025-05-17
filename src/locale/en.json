@@ -105,5 +105,10 @@
   "reset": "reset",
   "edit": "edit",
   "confirm": "confirm",
-  "ibso": "IBSO"
+  "ibso": "IBSO",
+  "adding / editing watches": "adding / editing watches",
+  "adding / editing straps": "adding / editing straps",
+  "search using code...": "search using code",
+  "images": "images",
+  "color": "color"
 }
