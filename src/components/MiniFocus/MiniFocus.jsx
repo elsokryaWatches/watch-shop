@@ -87,7 +87,11 @@ export default function MiniFocus() {
           <div className="shopInner row">
             <div className="shopHeader col-12">
               <div className="backgroundLayer">
-                <img src="/imgs/MF-BG.jpg" alt="" />
+                <img
+                  src="/imgs/MF-BG.jpg"
+                  alt=""
+                  onContextMenu={(e) => e.preventDefault()}
+                />
               </div>
               <div className="textLayer">
                 <h2>{t("MiniFocus watches")}</h2>
