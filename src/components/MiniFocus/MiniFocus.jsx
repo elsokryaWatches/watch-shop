@@ -150,7 +150,11 @@ export default function MiniFocus() {
                     </span>
                   </div>
                   <div className="img">
-                    <img src={watch.images[0]} alt="" />
+                    <img
+                      src={watch.images[0]}
+                      alt=""
+                      onContextMenu={(e) => e.preventDefault()}
+                    />
                   </div>
                   <div className="details">
                     <h4 className="name">

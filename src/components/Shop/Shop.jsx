@@ -84,7 +84,11 @@ export default function CombinedShop() {
           <div className="shopInner row">
             <div className="shopHeader col-12">
               <div className="backgroundLayer">
-                <img src="/imgs/AllBrands-BG.jpg" alt="" />
+                <img
+                  src="/imgs/AllBrands-BG.jpg"
+                  alt=""
+                  onContextMenu={(e) => e.preventDefault()}
+                />
               </div>
               <div className="textLayer">
                 <h2>{t("All Watches")}</h2>

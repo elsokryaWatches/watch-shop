@@ -66,6 +66,7 @@ export default function CartCheck() {
                     className="card-img-top"
                     alt={watch.model}
                     style={{ maxHeight: "200px", objectFit: "contain" }}
+                    onContextMenu={(e) => e.preventDefault()}
                   />
                   <div className="card-body">
                     <h5 className="card-title">

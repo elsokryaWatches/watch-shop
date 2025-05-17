@@ -76,6 +76,7 @@ export default function ProdDetails() {
               alt="watch"
               className="img-fluid"
               style={{ maxHeight: "400px" }}
+              onContextMenu={(e) => e.preventDefault()}
             />
             <div className="imgNavBtns mt-2">
               <button onClick={handlePrevImage} className="imgNav">

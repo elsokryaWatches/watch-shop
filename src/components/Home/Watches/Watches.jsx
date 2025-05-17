@@ -33,6 +33,7 @@ export default function Watches() {
                   <img
                     src={watch.images[0]}
                     alt={`${watch.brand.en} ${watch.model.en}`}
+                    onContextMenu={(e) => e.preventDefault()}
                   />
                 </div>
               ))}
