@@ -39,6 +39,7 @@ export default function Admin() {
               >
                 {t("orders")}
               </button>
+
               <button
                 className={`adminNavBtn ${
                   activeTab === "crud" ? "selected" : ""
@@ -136,6 +137,18 @@ export default function Admin() {
                           id="stock"
                         />
                       </div>
+                      <div className="inputContainer col-4 row">
+                        <label className="col-12" htmlFor="gender">
+                          {t("gender")}
+                        </label>
+                        <select className="col-12" name="gender" id="gender">
+                          <option selected disabled>
+                            choose gender
+                          </option>
+                          <option value="men">{t("Men")}</option>
+                          <option value="women">{t("women")}</option>
+                        </select>
+                      </div>
                       <div className="inputContainer col-4  row">
                         <label className="col-12" htmlFor="material">
                           {t("material")}
@@ -200,12 +213,14 @@ export default function Admin() {
                         <label className="col-12" htmlFor="brand">
                           {t("brand")}
                         </label>
-                        <input
-                          className="col-12"
-                          type="text"
-                          name="brand"
-                          id="brand"
-                        />
+                        <select name="brand" id="brand" className="col-12">
+                          <option select disabled>
+                            select the brand
+                          </option>
+                          <option value="skmei">{t("skmei")}</option>
+                          <option value="minifocus">{t("MiniFocus")}</option>
+                          <option value="ibso">{t("ibso")}</option>
+                        </select>
                       </div>
                       <div className="inputContainer col-4 row">
                         <label className="col-12" htmlFor="model">
@@ -272,6 +287,18 @@ export default function Admin() {
                           name="stock"
                           id="stock"
                         />
+                      </div>
+                      <div className="inputContainer col-4 row">
+                        <label className="col-12" htmlFor="gender">
+                          {t("gender")}
+                        </label>
+                        <select className="col-12" name="gender" id="gender">
+                          <option selected disabled>
+                            choose gender
+                          </option>
+                          <option value="men">{t("Men")}</option>
+                          <option value="women">{t("women")}</option>
+                        </select>
                       </div>
                       <div className="inputContainer col-4  row">
                         <label className="col-12" htmlFor="material">
