@@ -56,7 +56,7 @@ export default function IBSO() {
 
   const handleSearch = () => {
     const results = watches.filter((watch) =>
-      `${watch.brand[i18n.language]} ${watch.model}`
+      `${watch.brand[i18n.language]} ${watch.model[i18n.language]}`
         .toLowerCase()
         .includes(searchTerm.toLowerCase())
     );
