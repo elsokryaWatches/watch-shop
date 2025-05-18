@@ -177,7 +177,7 @@ export default function MiniFocus() {
                   </div>
                   <div className="details">
                     <h4 className="name">
-                      {watch.brand[i18n.language]} {watch.model}
+                      {watch.brand[i18n.language]} {watch.model[i18n.language]}
                     </h4>
                     <del>
                       <h5 className="price">

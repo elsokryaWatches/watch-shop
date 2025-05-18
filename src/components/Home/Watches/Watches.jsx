@@ -49,7 +49,10 @@ export default function Watches() {
             </div>
             <div className="watchesContent row col-10">
               {watches.map((watch) => (
-                <div className="watch col-lg-2 col-10" key={watch.id}>
+                <div
+                  className="watch homeSecAnimation col-lg-2 col-10"
+                  key={watch.id}
+                >
                   <Link to={`/product_details/${watch.code}`} state={{ watch }}>
                     <img
                       src={watch.images[0]}
