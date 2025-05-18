@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import UpBtn from "../UpBtn/UpBtn";
 import ShopNav from "../ShopNav";
 import { Helmet } from "react-helmet";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function Skmei() {
   const [t, i18n] = useTranslation();
@@ -17,6 +18,10 @@ export default function Skmei() {
     return JSON.parse(localStorage.getItem("orders")) || [];
   });
 
+  function useQuery() {
+    return new URLSearchParams(useLocation().search);
+  }
+
   useEffect(() => {
     fetch("/API/SKMEI.JSON")
       .then((res) => res.json())
@@ -27,7 +32,17 @@ export default function Skmei() {
       .catch((err) => console.log("failed to fetch watches", err));
   }, []);
 
-  const [currentPage, setCurrentPage] = useState(1);
+  const query = useQuery();
+  const navigate = useNavigate();
+
+  const initialPage = parseInt(query.get("page")) || 1;
+  const [currentPage, setCurrentPage] = useState(initialPage);
+
+  const updatePage = (page) => {
+    setCurrentPage(page);
+    navigate(`?page=${page}`, { replace: true });
+  };
+
   const watchesPerPage = 20;
 
   const indexOfLastWatch = currentPage * watchesPerPage;
@@ -161,9 +176,7 @@ export default function Skmei() {
               <div className="pagination col-12 d-flex justify-content-center mt-4">
                 <button
                   className="prevBtn"
-                  onClick={() =>
-                    setCurrentPage((prev) => Math.max(prev - 1, 1))
-                  }
+                  onClick={() => updatePage(Math.max(currentPage - 1, 1))}
                   disabled={currentPage === 1}
                 >
                   {t("Previous")}
@@ -175,7 +188,7 @@ export default function Skmei() {
                     className={`pagNum mx-1 ${
                       currentPage === index + 1 ? "currPagNum" : "pagNum"
                     }`}
-                    onClick={() => setCurrentPage(index + 1)}
+                    onClick={() => updatePage(index + 1)}
                   >
                     {index + 1}
                   </button>
@@ -184,7 +197,7 @@ export default function Skmei() {
                 <button
                   className="nextBtn"
                   onClick={() =>
-                    setCurrentPage((prev) => Math.min(prev + 1, totalPages))
+                    updatePage(Math.min(currentPage + 1, totalPages))
                   }
                   disabled={currentPage === totalPages}
                 >

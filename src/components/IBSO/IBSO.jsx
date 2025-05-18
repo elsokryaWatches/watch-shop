@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import UpBtn from "../UpBtn/UpBtn";
 import ShopNav from "../ShopNav";
 import { Helmet } from "react-helmet";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function IBSO() {
   const [t, i18n] = useTranslation();
@@ -13,7 +14,6 @@ export default function IBSO() {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState(null);
   const [selectedGender, setSelectedGender] = useState("Men");
-  const [currentPage, setCurrentPage] = useState(1);
   const [addedToCart, setAddedToCart] = useState(() => {
     return JSON.parse(localStorage.getItem("orders")) || [];
   });
@@ -30,6 +30,20 @@ export default function IBSO() {
       })
       .catch(() => setWatches([]));
   }, []);
+
+  function useQuery() {
+    return new URLSearchParams(useLocation().search);
+  }
+
+  const query = useQuery();
+  const navigate = useNavigate();
+  const initialPage = parseInt(query.get("page")) || 1;
+  const [currentPage, setCurrentPage] = useState(initialPage);
+
+  const updatePage = (page) => {
+    setCurrentPage(page);
+    navigate(`?page=${page}`, { replace: true });
+  };
 
   const handleAddToCart = (code) => {
     let orders = JSON.parse(localStorage.getItem("orders")) || [];
@@ -172,7 +186,8 @@ export default function IBSO() {
                       </div>
                       <div className="details">
                         <h4 className="name">
-                          {watch.brand[i18n.language]} {watch.model}
+                          {watch.brand[i18n.language]}{" "}
+                          {watch.model[i18n.language]}
                         </h4>
                         <del>
                           <h5 className="price">
@@ -209,9 +224,7 @@ export default function IBSO() {
                 <div className="pagination col-12 d-flex justify-content-center mt-4">
                   <button
                     className="prevBtn"
-                    onClick={() =>
-                      setCurrentPage((prev) => Math.max(prev - 1, 1))
-                    }
+                    onClick={() => updatePage(Math.max(currentPage - 1, 1))}
                     disabled={currentPage === 1}
                   >
                     {t("Previous")}
@@ -223,7 +236,7 @@ export default function IBSO() {
                       className={`pagNum mx-1 ${
                         currentPage === index + 1 ? "currPagNum" : ""
                       }`}
-                      onClick={() => setCurrentPage(index + 1)}
+                      onClick={() => updatePage(index + 1)}
                     >
                       {index + 1}
                     </button>
@@ -232,7 +245,7 @@ export default function IBSO() {
                   <button
                     className="nextBtn"
                     onClick={() =>
-                      setCurrentPage((prev) => Math.min(prev + 1, totalPages))
+                      updatePage(Math.min(currentPage + 1, totalPages))
                     }
                     disabled={currentPage === totalPages}
                   >

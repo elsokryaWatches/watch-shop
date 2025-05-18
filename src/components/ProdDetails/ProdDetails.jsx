@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import NavBar from "../Navbar/Navbar";
@@ -6,7 +6,9 @@ import "./ProdDetails.css";
 
 export default function ProdDetails() {
   const { state } = useLocation();
-  const { watch } = state || {};
+  const { watch: passedWatch } = state || {};
+  const { code } = useParams(); // Get the code from the URL
+  const [watch, setWatch] = useState(passedWatch); // Initialize watch with passed state
   const [t, i18n] = useTranslation();
   const [imageIndex, setImageIndex] = useState(0);
   const [addedToCart, setAddedToCart] = useState(() => {
@@ -25,6 +27,19 @@ export default function ProdDetails() {
   const [remainingTime, setRemainingTime] = useState(null);
 
   useEffect(() => {
+    if (!passedWatch && code) {
+      const fetchProduct = async () => {
+        try {
+          const response = await fetch(`API/products/${code}.json`);
+          const data = await response.json();
+          setWatch(data.watch);
+        } catch (error) {
+          console.error("Failed to load product:", error);
+        }
+      };
+      fetchProduct();
+    }
+
     if (!watch?.discount?.valid_until) return;
 
     const targetDate = new Date();
@@ -51,7 +66,7 @@ export default function ProdDetails() {
     const intervalId = setInterval(updateCountdown, 1000);
 
     return () => clearInterval(intervalId);
-  }, [watch]);
+  }, [watch, code, passedWatch]);
 
   const handleNextImage = () => {
     setImageIndex((prev) => (prev + 1) % watch.images.length);

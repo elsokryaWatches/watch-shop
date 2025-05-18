@@ -36,7 +36,7 @@ export default function App() {
     },
     createRoute("cart", <Cart />),
     createRoute("cartcheck", <CartCheck />),
-    createRoute("product_details", <ProdDetails />),
+    createRoute("/product_details/:code", <ProdDetails />),
     createRoute("admin", <Admin />),
   ]);
   return <RouterProvider router={routes} />;
