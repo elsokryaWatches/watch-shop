@@ -27,7 +27,7 @@ export default function Straps() {
             <ShopNav />
             <div className="strapes row col-12">
               <div className="soonText col-12">
-                <h2>{t("soon")}</h2>
+                <h1>{t("soon")}</h1>
               </div>
             </div>
           </div>

@@ -98,15 +98,8 @@ export default function IBSO() {
         <div className="container-fluid">
           <div className="shopInner row">
             <div className="shopHeader col-12">
-              <div className="backgroundLayer">
-                <img
-                  src="/imgs/IBSO-BG.jpg"
-                  alt=""
-                  onContextMenu={(e) => e.preventDefault()}
-                />
-              </div>
               <div className="textLayer">
-                <h2>{t("IBSO")}</h2>
+                <h2 className="IBSOHeader">{t("IBSO")}</h2>
               </div>
             </div>
 
@@ -119,7 +112,7 @@ export default function IBSO() {
             ) : watches.length === 0 ? (
               <div className="Watches row col-12">
                 <div className="soonText col-12">
-                  <h2>{t("soon")}</h2>
+                  <h1>{t("soon")}</h1>
                 </div>
               </div>
             ) : (

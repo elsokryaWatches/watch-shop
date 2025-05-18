@@ -82,10 +82,14 @@ body {
         transform: translate(-50%, -50%);
 
         h2 {
-          font-family: Lato-Black, DimaNaskh !important;
+          font-family: Lato-Black, Zain-Regular !important;
           text-transform: uppercase !important;
           color: var(--white);
           filter: drop-shadow(0 0 10px var(--white));
+        }
+
+        .IBSOHeader {
+          color: var(--text);
         }
       }
     }
@@ -209,7 +213,8 @@ body {
 
       .soonText {
         text-align: center;
-        h2 {
+        height: 100dvh;
+        h1 {
           text-align: center;
           color: var(--text);
         }
