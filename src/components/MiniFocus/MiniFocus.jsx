@@ -194,7 +194,10 @@ export default function MiniFocus() {
                   </div>
                   <div className="btns">
                     <button className="moreDetails">
-                      <Link to="/product_details" state={{ watch }}>
+                      <Link
+                        to={`/product_details/${watch.code}`}
+                        state={{ watch }}
+                      >
                         {t("details")}
                       </Link>
                     </button>
