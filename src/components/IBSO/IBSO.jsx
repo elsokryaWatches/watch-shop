@@ -97,9 +97,13 @@ export default function IBSO() {
       <div className="shop">
         <div className="container-fluid">
           <div className="shopInner row">
-            <div className="shopHeader col-12">
+            <div className="shopHeader IBSOHeader col-12">
               <div className="textLayer">
-                <h2 className="IBSOHeader">{t("IBSO")}</h2>
+                <h2 className="IBSOHeaderText">
+                  {t("IBSO")}
+                  <br />
+                  BOERNI AIBISINO
+                </h2>
               </div>
             </div>
 
