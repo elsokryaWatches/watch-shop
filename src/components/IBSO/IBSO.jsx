@@ -102,7 +102,7 @@ export default function IBSO() {
                 <h2 className="IBSOHeaderText">
                   {t("IBSO")}
                   <br />
-                  <h3>BOERNI AIBISINO</h3>
+                  <h6>BOERNI AIBISINO</h6>
                 </h2>
               </div>
             </div>
