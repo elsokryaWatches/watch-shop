@@ -97,13 +97,20 @@ export default function IBSO() {
       <div className="shop">
         <div className="container-fluid">
           <div className="shopInner row">
-            <div className="shopHeader IBSOHeader col-12">
+            <div className="shopHeader col-12">
+              <div className="backgroundLayer">
+                <img
+                  src="/imgs/IBSO-BG.jpg"
+                  alt=""
+                  onContextMenu={(e) => e.preventDefault()}
+                />
+              </div>
               <div className="textLayer">
-                <h2 className="IBSOHeaderText">
+                <h2>
                   {t("IBSO")}
                   <br />
-                  <h6>BOERNI AIBISINO</h6>
                 </h2>
+                <h6>BOERNI AIBISINO</h6>
               </div>
             </div>
 

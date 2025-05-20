@@ -81,20 +81,12 @@ body {
         left: 50%;
         transform: translate(-50%, -50%);
 
-        h2 {
+        h2,
+        h6 {
           font-family: Lato-Black, Zain-Regular !important;
           text-transform: uppercase !important;
           color: var(--white);
           filter: drop-shadow(0 0 10px var(--white));
-        }
-      }
-    }
-
-    .IBSOHeader {
-      padding: 50px 0px;
-      .textLayer {
-        .IBSOHeaderText {
-          color: var(--text);
         }
       }
     }
