@@ -6,6 +6,9 @@ import UpBtn from "../UpBtn/UpBtn";
 import ShopNav from "../ShopNav";
 import { Helmet } from "react-helmet";
 import { useLocation, useNavigate } from "react-router-dom";
+import { collection, query, where, getDocs } from "firebase/firestore";
+import { db } from "../../firebase";
+import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 
 export default function Skmei() {
   const [t, i18n] = useTranslation();
@@ -18,24 +21,43 @@ export default function Skmei() {
     return JSON.parse(localStorage.getItem("orders")) || [];
   });
 
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
   function useQuery() {
     return new URLSearchParams(useLocation().search);
   }
 
   useEffect(() => {
-    fetch("/API/SKMEI.JSON")
-      .then((res) => res.json())
-      .then((data) => {
-        const inStockWatches = data.watches.filter((watch) => watch.stock > 0);
+    const fetchSkmeiWatches = async () => {
+      try {
+        const watchesRef = collection(db, "watches");
+
+        const q = query(watchesRef, where("brand.en", "==", "SKMEI"));
+
+        const querySnapshot = await getDocs(q);
+        const fetchedWatches = querySnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        const inStockWatches = fetchedWatches.filter(
+          (watch) => watch.stock > 0
+        );
         setWatches(inStockWatches);
-      })
-      .catch((err) => console.log("failed to fetch watches", err));
+        setLoading(false);
+      } catch (error) {
+        console.error("Failed to load SKMEI watches from Firestore", error);
+        setError("failed to load SKMEI watches. please try again");
+        setLoading(false);
+      }
+    };
+    fetchSkmeiWatches();
   }, []);
 
-  const query = useQuery();
+  const urlQueryParams = useQuery();
   const navigate = useNavigate();
 
-  const initialPage = parseInt(query.get("page")) || 1;
+  const initialPage = parseInt(urlQueryParams.get("page")) || 1;
   const [currentPage, setCurrentPage] = useState(initialPage);
 
   const updatePage = (page) => {
@@ -45,11 +67,13 @@ export default function Skmei() {
 
   const watchesPerPage = 20;
 
+  const watchesToPaginate = searchResults || watches;
+
   const indexOfLastWatch = currentPage * watchesPerPage;
   const indexOfFirstWatch = indexOfLastWatch - watchesPerPage;
   const currentWatches = watches.slice(indexOfFirstWatch, indexOfLastWatch);
 
-  const totalPages = Math.ceil(watches.length / watchesPerPage);
+  const totalPages = Math.ceil(watchesToPaginate.length / watchesPerPage);
 
   const handleAddToCart = (code) => {
     let orders = JSON.parse(localStorage.getItem("orders")) || [];
@@ -77,6 +101,26 @@ export default function Skmei() {
       handleSearch();
     }
   };
+
+  if (loading) {
+    return (
+      <div className="shop">
+        <div className="container-fluid">
+          <LoadingSpinner />
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="shop">
+        <div className="container-fluid">
+          <p style={{ color: "red" }}>{error}</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <>

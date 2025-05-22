@@ -7,6 +7,10 @@ import ShopNav from "../ShopNav";
 import { Helmet } from "react-helmet";
 import { useLocation, useNavigate } from "react-router-dom";
 
+import { collection, query, getDocs } from "firebase/firestore";
+import { db } from "../../firebase";
+import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
+
 export default function Shop() {
   const [t, i18n] = useTranslation();
   const [watches, setWatches] = useState([]);
@@ -16,24 +20,43 @@ export default function Shop() {
     return JSON.parse(localStorage.getItem("orders")) || [];
   });
 
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
   function useQuery() {
     return new URLSearchParams(useLocation().search);
   }
 
   useEffect(() => {
-    Promise.all([
-      fetch("/API/SKMEI.JSON").then((res) => res.json()),
-      fetch("/API/MiniFocus.JSON").then((res) => res.json()),
-    ])
-      .then(([skmeiData, miniFocusData]) => {
-        const allWatches = [
-          ...skmeiData.watches.filter((w) => w.stock > 0),
-          ...miniFocusData.watches.filter((w) => w.stock > 0),
-        ];
-        const shuffled = allWatches.sort(() => 0.5 - Math.random());
+    const fetchedAllWatches = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+
+        const watchesRef = collection(db, "watches");
+        const q = query(watchesRef);
+
+        const querySnapshot = await getDocs(q);
+
+        const fetchedWatches = querySnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+
+        const inStockWatches = fetchedWatches.filter(
+          (watch) => watch.stock > 0
+        );
+
+        const shuffled = inStockWatches.sort(() => 0.5 - Math.random());
         setWatches(shuffled);
-      })
-      .catch((err) => console.log("Failed to fetch watches", err));
+        setLoading(false);
+      } catch (error) {
+        console.error("Failed to load all watches from Firestore", error);
+        setError("Failed to load watches. Please try again.");
+        setLoading(false);
+      }
+    };
+    fetchedAllWatches();
   }, []);
 
   const handleAddToCart = (code) => {
@@ -69,10 +92,10 @@ export default function Shop() {
     }
   };
 
-  const query = useQuery();
+  const queryParams = useQuery();
   const navigate = useNavigate();
 
-  const initialPage = parseInt(query.get("page")) || 1;
+  const initialPage = parseInt(queryParams.get("page")) || 1;
   const [currentPage, setCurrentPage] = useState(initialPage);
 
   const updatePage = (page) => {
@@ -88,6 +111,26 @@ export default function Shop() {
   const totalPages = Math.ceil(
     (searchResults ?? watches).length / watchesPerPage
   );
+
+  if (loading) {
+    return (
+      <div className="shop">
+        <div className="container-fluid">
+          <LoadingSpinner />
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="shop">
+        <div className="container-fluid">
+          <p style={{ color: "red" }}>{error}</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <>

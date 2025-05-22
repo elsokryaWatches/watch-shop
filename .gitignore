@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Firebase Admin SDK Service Account Key
+/scripts/el-sokrya-firebase-adminsdk-fbsvc-97470f05cf.json

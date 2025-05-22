@@ -1,43 +1,60 @@
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../../firebase";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Watches.css";
 import "../../../i18n";
 import { useTranslation } from "react-i18next";
+import LoadingSpinner from "../../LoadingSpinner/LoadingSpinner";
 
 export default function Watches() {
   const [t] = useTranslation();
   const [watches, setWatches] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchWatches = async () => {
       try {
-        const [skmeiRes, miniFocusRes] = await Promise.all([
-          fetch("API/SKMEI.JSON"),
-          fetch("API/MiniFocus.JSON"),
-        ]);
-
-        const [skmeiData, miniFocusData] = await Promise.all([
-          skmeiRes.json(),
-          miniFocusRes.json(),
-        ]);
-
-        const allWatches = [
-          ...(skmeiData?.watches || []),
-          ...(miniFocusData?.watches || []),
-        ];
+        const querySnapshot = await getDocs(collection(db, "watches"));
+        const allWatches = querySnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
 
         const shuffled = allWatches.sort(() => 0.5 - Math.random());
-
         const randomWatches = shuffled.slice(0, 5);
-
         setWatches(randomWatches);
+        setLoading(false);
       } catch (error) {
-        console.error("Failed to load watches:", error);
+        console.log("failed to load watches from firestore", error);
+        setError("could not load watches. please try again");
+        setLoading(false);
       }
     };
 
     fetchWatches();
   }, []);
+
+  if (loading) {
+    return (
+      <div className="watches homeSecAnimation">
+        <div className="container-fluid">
+          <LoadingSpinner />
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="watches homeSecAnimation">
+        <div className="container-fluid">
+          <p style={{ color: "red" }}>{error}</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <>

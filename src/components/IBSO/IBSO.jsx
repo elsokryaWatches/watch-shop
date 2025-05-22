@@ -6,11 +6,14 @@ import UpBtn from "../UpBtn/UpBtn";
 import ShopNav from "../ShopNav";
 import { Helmet } from "react-helmet";
 import { useLocation, useNavigate } from "react-router-dom";
+import { collection, query, where, getDocs } from "firebase/firestore";
+import { db } from "../../firebase";
+import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 
 export default function IBSO() {
   const [t, i18n] = useTranslation();
 
-  const [watches, setWatches] = useState(null);
+  const [watches, setWatches] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState(null);
   const [selectedGender, setSelectedGender] = useState("Men");
@@ -18,26 +21,47 @@ export default function IBSO() {
     return JSON.parse(localStorage.getItem("orders")) || [];
   });
 
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
   useEffect(() => {
-    fetch("/API/IBSO.JSON")
-      .then((res) => {
-        if (!res.ok) throw new Error("File not found");
-        return res.json();
-      })
-      .then((data) => {
-        const inStockWatches = data.watches.filter((w) => w.stock > 0);
+    const fetchedIbsoWatches = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+
+        const watchesRef = collection(db, "watches");
+
+        const q = query(watchesRef, where("brand.en", "==", "IBSO"));
+
+        const querySnapshot = await getDocs(q);
+
+        const fetchedWatches = querySnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+
+        const inStockWatches = fetchedWatches.filter(
+          (watch) => watch.stock > 0
+        );
+
         setWatches(inStockWatches);
-      })
-      .catch(() => setWatches([]));
+        setLoading(false);
+      } catch (error) {
+        console.error("Failed to load IBSO watches from Firestore", error);
+        setError("Failed to load IBSO watches. Please try again.");
+      }
+    };
+    fetchedIbsoWatches();
   }, []);
 
   function useQuery() {
     return new URLSearchParams(useLocation().search);
   }
 
-  const query = useQuery();
+  const urlQueryParams = useQuery();
   const navigate = useNavigate();
-  const initialPage = parseInt(query.get("page")) || 1;
+  const initialPage = parseInt(urlQueryParams.get("page")) || 1;
   const [currentPage, setCurrentPage] = useState(initialPage);
 
   const updatePage = (page) => {
@@ -55,8 +79,9 @@ export default function IBSO() {
   };
 
   const handleSearch = () => {
+    // Added optional chaining here
     const results = watches.filter((watch) =>
-      `${watch.brand[i18n.language]} ${watch.model[i18n.language]}`
+      `${watch.brand?.[i18n.language]} ${watch.model?.[i18n.language]}`
         .toLowerCase()
         .includes(searchTerm.toLowerCase())
     );
@@ -78,7 +103,7 @@ export default function IBSO() {
   const filteredWatches =
     watches &&
     (searchResults ?? watches).filter((watch) => {
-      const gender = watch.gender[i18n.language] || watch.gender["en"];
+      const gender = watch.gender?.[i18n.language] || watch.gender?.["en"];
       return gender?.toLowerCase() === getLocalizedGender().toLowerCase();
     });
 
@@ -89,6 +114,25 @@ export default function IBSO() {
     filteredWatches?.slice(indexOfFirstWatch, indexOfLastWatch) || [];
   const totalPages = Math.ceil((filteredWatches?.length || 0) / watchesPerPage);
 
+  if (loading) {
+    return (
+      <div className="shop">
+        <div className="container-fluid">
+          <LoadingSpinner />
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="shop">
+        <div className="container-fluid">
+          <p style={{ color: "red" }}>{error}</p>
+        </div>
+      </div>
+    );
+  }
   return (
     <>
       <Helmet>
@@ -116,11 +160,7 @@ export default function IBSO() {
 
             <ShopNav />
 
-            {watches === null ? (
-              <div className="col-12 text-center my-5">
-                <h4>{t("loading")}...</h4>
-              </div>
-            ) : watches.length === 0 ? (
+            {watches.length === 0 ? (
               <div className="Watches row col-12">
                 <div className="soonText col-12">
                   <h1>{t("soon")}</h1>
@@ -171,39 +211,49 @@ export default function IBSO() {
                   {currentWatches.map((watch) => (
                     <div
                       className="watch homeSecAnimation col-9 col-lg-2"
-                      key={watch.code}
+                      key={watch.id}
                     >
                       <div className="discount">
-                        <span className="discount_percentage">
-                          {watch.price.discount_percentage}%
-                        </span>
-                        <span className="discount_period">
-                          {t("for")} {watch.discount.valid_until} {t("days")}
-                        </span>
+                        {watch.price?.discount_percentage && (
+                          <span className="discount_percentage">
+                            {watch.price.discount_percentage}%
+                          </span>
+                        )}
+                        {watch.discount?.valid_until && (
+                          <span className="discount_period">
+                            {t("for")} {watch.discount.valid_until} {t("days")}
+                          </span>
+                        )}
                       </div>
                       <div className="img">
                         <img
-                          src={watch.images[0]}
-                          alt=""
+                          src={watch.images?.[0]}
+                          alt={`${watch.brand?.en} ${watch.model?.en}`}
                           onContextMenu={(e) => e.preventDefault()}
                         />
                       </div>
                       <div className="details">
                         <h4 className="name">
-                          {watch.brand[i18n.language]}{" "}
-                          {watch.model[i18n.language]}
+                          {watch.brand?.[i18n.language]}
+                          {watch.model?.[i18n.language]}
                         </h4>
-                        <del>
-                          <h5 className="price">
-                            {watch.price.original} {watch.price.currency}
+                        {watch.price?.original && (
+                          <del>
+                            <h5 className="price">
+                              {watch.price.original} {watch.price.currency}
+                            </h5>
+                          </del>
+                        )}
+                        {watch.price?.final && (
+                          <h4 className="dis_price">
+                            {watch.price.final} {watch.price.currency}
+                          </h4>
+                        )}
+                        {typeof watch.stock !== "undefined" && (
+                          <h5 className="stock">
+                            <strong>{t("stock")}:</strong> {watch.stock}
                           </h5>
-                        </del>
-                        <h4 className="dis_price">
-                          {watch.price.final} {watch.price.currency}
-                        </h4>
-                        <h5 className="stock">
-                          <strong>{t("stock")}:</strong> {watch.stock}
-                        </h5>
+                        )}
                       </div>
                       <div className="btns">
                         <button className="moreDetails">

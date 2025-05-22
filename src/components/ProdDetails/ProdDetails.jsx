@@ -4,43 +4,63 @@ import { useEffect, useState } from "react";
 import NavBar from "../Navbar/Navbar";
 import "./ProdDetails.css";
 
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../../firebase";
+import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
+
 export default function ProdDetails() {
   const { state } = useLocation();
   const { watch: passedWatch } = state || {};
-  const { code } = useParams(); // Get the code from the URL
-  const [watch, setWatch] = useState(passedWatch); // Initialize watch with passed state
+  const { code } = useParams();
+  const [watch, setWatch] = useState(passedWatch);
   const [t, i18n] = useTranslation();
   const [imageIndex, setImageIndex] = useState(0);
   const [addedToCart, setAddedToCart] = useState(() => {
     return JSON.parse(localStorage.getItem("orders")) || [];
   });
-
   const [zoomPosition, setZoomPosition] = useState(null);
-
-  const handleZoom = (e) => {
-    const { left, top, width, height } = e.target.getBoundingClientRect();
-    const x = ((e.clientX - left) / width) * 100;
-    const y = ((e.clientY - top) / height) * 100;
-    setZoomPosition({ x, y });
-  };
-
   const [remainingTime, setRemainingTime] = useState(null);
+
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    if (passedWatch) {
+      setLoading(false);
+    }
+  }, [passedWatch]);
 
   useEffect(() => {
     if (!passedWatch && code) {
       const fetchProduct = async () => {
         try {
-          const response = await fetch(`API/products/${code}.json`);
-          const data = await response.json();
-          setWatch(data.watch);
+          setLoading(true);
+          setError(null);
+
+          const docRef = doc(db, "watches", code);
+          const docSnap = await getDoc(docRef);
+
+          if (docSnap.exists()) {
+            setWatch({ id: docSnap.id, ...docSnap.data() });
+            setLoading(false);
+          } else {
+            console.warn("No such document in Firestore for code:", code);
+            setError("Product not found.");
+            setLoading(false);
+          }
         } catch (error) {
-          console.error("Failed to load product:", error);
+          console.error("Failed to load product from Firestore:", error);
+          setError("Failed to load product details. Please try again.");
+          setLoading(false);
         }
       };
       fetchProduct();
     }
 
-    if (!watch?.discount?.valid_until) return;
+    if (!watch?.discount?.valid_until) {
+      setRemainingTime(null);
+      return;
+    }
 
     const targetDate = new Date();
     targetDate.setDate(targetDate.getDate() + watch.discount.valid_until);
@@ -68,25 +88,70 @@ export default function ProdDetails() {
     return () => clearInterval(intervalId);
   }, [watch, code, passedWatch]);
 
+  const handleZoom = (e) => {
+    const { left, top, width, height } = e.target.getBoundingClientRect();
+    const x = ((e.clientX - left) / width) * 100;
+    const y = ((e.clientY - top) / height) * 100;
+    setZoomPosition({ x, y });
+  };
+
   const handleNextImage = () => {
-    setImageIndex((prev) => (prev + 1) % watch.images.length);
+    setImageIndex((prev) => (prev + 1) % (watch.images?.length || 1));
   };
 
   const handlePrevImage = () => {
-    setImageIndex((prev) => (prev === 0 ? watch.images.length - 1 : prev - 1));
+    setImageIndex((prev) =>
+      prev === 0
+        ? watch.images?.length
+          ? watch.images.length - 1
+          : 0
+        : prev - 1
+    );
   };
 
   const handleAddToCart = () => {
     let orders = JSON.parse(localStorage.getItem("orders")) || [];
-    if (!orders.includes(watch.code)) {
+
+    if (watch?.code && !orders.includes(watch.code)) {
       orders.push(watch.code);
       localStorage.setItem("orders", JSON.stringify(orders));
       setAddedToCart(orders);
     }
   };
 
+  if (loading) {
+    return (
+      <>
+        <NavBar />
+        <div className="prodDet container">
+          <LoadingSpinner />
+        </div>
+      </>
+    );
+  }
+
+  if (error) {
+    return (
+      <>
+        <NavBar />
+        <div className="prodDet container">
+          <p style={{ color: "red", textAlign: "center" }}>{error}</p>
+        </div>
+      </>
+    );
+  }
+
   if (!watch) {
-    return <div>No product selected.</div>;
+    return (
+      <>
+        <NavBar />
+        <div className="prodDet container">
+          <p style={{ textAlign: "center" }}>
+            {t("No product selected or found.")}
+          </p>
+        </div>
+      </>
+    );
   }
 
   return (
@@ -103,41 +168,48 @@ export default function ProdDetails() {
               <div
                 className="zoomImage"
                 style={{
-                  backgroundImage: `url(${watch.images[imageIndex]})`,
+                  backgroundImage: `url(${watch.images?.[imageIndex] || ""})`,
                   backgroundPosition: zoomPosition
                     ? `${zoomPosition.x}% ${zoomPosition.y}%`
                     : "center",
                 }}
               ></div>
             </div>
-            <div className="imgNavBtns mt-2">
-              <button onClick={handlePrevImage} className="imgNav">
-                ←
-              </button>
-              <button onClick={handleNextImage} className="imgNav">
-                →
-              </button>
-            </div>
+            {watch.images?.length > 1 && (
+              <div className="imgNavBtns mt-2">
+                <button onClick={handlePrevImage} className="imgNav">
+                  ←
+                </button>
+                <button onClick={handleNextImage} className="imgNav">
+                  →
+                </button>
+              </div>
+            )}
           </div>
 
           <div className="textSide col-10 col-lg-5">
             <h3>
-              {watch.brand[i18n.language]}{" "}
+              {watch.brand?.[i18n.language] || watch.brand?.en || ""}
+
               {typeof watch.model === "object"
-                ? watch.model[i18n.language]
-                : watch.model}
+                ? watch.model?.[i18n.language] || watch.model?.en || ""
+                : watch.model || ""}
             </h3>
-            <p>{watch.movement[i18n.language]}</p>
+            <p>{watch.movement?.[i18n.language] || watch.movement?.en || ""}</p>
 
-            <h4 className="text-success">
-              {watch.price.final} {watch.price.currency}
-            </h4>
-            <del>
-              <p>
-                {watch.price.original} {watch.price.currency}
-              </p>
-            </del>
-
+            {watch.price?.final && (
+              <h4 className="text-success">
+                {watch.price.final} {watch.price.currency}
+              </h4>
+            )}
+            {watch.price?.original &&
+              watch.price.final !== watch.price.original && (
+                <del>
+                  <p>
+                    {watch.price.original} {watch.price.currency}
+                  </p>
+                </del>
+              )}
             <h3>
               <strong>{t("features")}</strong>
             </h3>
@@ -148,61 +220,61 @@ export default function ProdDetails() {
                 ))
               ) : (
                 <li>
-                  {watch.features?.[i18n.language] || t("noFeaturesAvailable")}
+                  {watch.features?.[i18n.language] ||
+                    watch.features?.en ||
+                    t("noFeaturesAvailable")}{" "}
                 </li>
               )}
             </ul>
-
             <h3 className="mt-4">
               <strong>{t("details")}</strong>
             </h3>
             <ul>
-              {watch.gender && (
+              {watch.gender?.[i18n.language] && (
                 <li>
                   <strong>{t("gender")}:</strong> {watch.gender[i18n.language]}
                 </li>
               )}
 
-              {watch.movement && (
+              {watch.movement?.[i18n.language] && (
                 <li>
                   <strong>{t("movement")}:</strong>{" "}
                   {watch.movement[i18n.language]}
                 </li>
               )}
 
-              {watch.material && (
+              {watch.material?.[i18n.language] && (
                 <li>
                   <strong>{t("material")}:</strong>{" "}
                   {watch.material[i18n.language]}
                 </li>
               )}
 
-              {watch.outer_frame && (
+              {watch.outer_frame?.[i18n.language] && (
                 <li>
                   <strong>{t("outer_frame")}:</strong>{" "}
                   {watch.outer_frame[i18n.language]}
                 </li>
               )}
 
-              {watch.water_resistance?.[i18n.language] && (
+              {(watch.water_resistance?.[i18n.language] ||
+                watch.waterResistant?.[i18n.language]) && (
                 <li>
                   <strong>{t("waterResistant")}:</strong>{" "}
-                  {watch.water_resistance[i18n.language]}
-                </li>
-              )}
-              {watch.waterResistant?.[i18n.language] && (
-                <li>
-                  <strong>{t("waterResistant")}:</strong>{" "}
-                  {watch.waterResistant[i18n.language]}
+                  {watch.water_resistance?.[i18n.language] ||
+                    watch.waterResistant?.[i18n.language]}
                 </li>
               )}
 
               {watch.specs &&
-                Object.entries(watch.specs).map(([key, val]) => (
-                  <li key={key}>
-                    <strong>{t(key)}:</strong> {val[i18n.language]}
-                  </li>
-                ))}
+                Object.entries(watch.specs).map(
+                  ([key, val]) =>
+                    val?.[i18n.language] && (
+                      <li key={key}>
+                        <strong>{t(key)}:</strong> {val[i18n.language]}
+                      </li>
+                    )
+                )}
 
               {watch.discount?.valid_until && remainingTime && (
                 <li>
@@ -218,7 +290,6 @@ export default function ProdDetails() {
                 </li>
               )}
             </ul>
-
             <button
               className="toCartBtn"
               onClick={handleAddToCart}
