@@ -1,0 +1,56 @@
+.logIn {
+  .logInInner {
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .loginForm {
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      background-image: linear-gradient(
+        to bottom,
+        var(--secondry-color),
+        var(--primary-color)
+      );
+      padding: 50px 20px;
+      border-radius: 10px;
+
+      .inputContainer {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 5px;
+
+        label {
+          padding: 0;
+          color: var(--text);
+        }
+
+        input {
+          border: none;
+          outline: none;
+          padding: 5px;
+          text-transform: none !important;
+          color: var(--text);
+
+          &:focus {
+            outline: none;
+            border: none;
+          }
+        }
+      }
+
+      .loginBtn {
+        width: fit-content;
+        padding: 5px 10px;
+        background-color: var(--white);
+        border: none;
+        color: var(--text);
+      }
+    }
+  }
+}

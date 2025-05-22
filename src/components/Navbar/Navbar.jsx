@@ -17,9 +17,15 @@ import "./Navbar.css";
 import "../../i18n";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
+import { useAuth } from "../Context/AuthContext";
+import { auth } from "../../firebase";
+import { signOut } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [t, i18n] = useTranslation();
+  const { currentUser } = useAuth();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const savedLang = localStorage.getItem("language");
@@ -32,6 +38,17 @@ export default function Navbar() {
     i18n.changeLanguage(language);
     localStorage.setItem("language", language);
   };
+
+  const handleLogOut = async () => {
+    try {
+      await signOut(auth);
+      console.log("user logged out");
+      navigate("/");
+    } catch (error) {
+      console.error("logout error", error.message);
+    }
+  };
+
   return (
     <>
       {/* offcanvas */}
@@ -83,11 +100,26 @@ export default function Navbar() {
                 {t("cart")} <FontAwesomeIcon icon={faBagShopping} />
               </Link>
             </li>
-            <li className="offCanvItem">
-              <Link className="offcanvLink" to={"/admin"}>
-                {t("stuff")}
-              </Link>
-            </li>
+            {currentUser ? (
+              <>
+                <li className="offCanvItem">
+                  <button className="offcanvLink" onClick={handleLogOut}>
+                    {t("logout")}
+                  </button>
+                </li>
+                <li className="offCanvItem">
+                  <Link className="offcanvLink" to={"/admin"}>
+                    {t("stuff")}
+                  </Link>
+                </li>
+              </>
+            ) : (
+              <li className="offCanvItem">
+                <Link className="offcanvLink" to={"/login"}>
+                  {t("login")}
+                </Link>
+              </li>
+            )}
             <li className="offCanvItem dropdown">
               <Link
                 className="offcanvLink dropdown-toggle"
@@ -250,11 +282,26 @@ export default function Navbar() {
                   {t("cart")} <FontAwesomeIcon icon={faBagShopping} />
                 </Link>
               </li>
-              <li className="navItem">
-                <Link className="navLink" to={"/admin"}>
-                  {t("stuff")}
-                </Link>
-              </li>
+              {currentUser ? (
+                <>
+                  <li className="navItem">
+                    <button className="navLink" onClick={handleLogOut}>
+                      {t("logout")}
+                    </button>
+                  </li>
+                  <li className="navItem">
+                    <Link className="navLink" to={"/admin"}>
+                      {t("stuff")}
+                    </Link>
+                  </li>
+                </>
+              ) : (
+                <li className="navItem">
+                  <Link className="navLink" to={"/login"}>
+                    {t("login")}
+                  </Link>
+                </li>
+              )}
               <li className="navItem dropdown">
                 <Link
                   className="navLink dropdown-toggle"

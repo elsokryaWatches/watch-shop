@@ -59,6 +59,11 @@
         margin: auto 0px;
         transition: all 0.3s ease-in-out;
 
+        button {
+          background-color: transparent;
+          border: none;
+        }
+
         .offcanvLink {
           text-decoration: none;
           color: var(--primary-color);
@@ -120,6 +125,11 @@
         display: inline;
         margin: 0px 20px;
         position: relative;
+
+        button {
+          background-color: transparent;
+          border: none;
+        }
 
         .navLink {
           text-decoration: none;

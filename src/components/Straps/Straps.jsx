@@ -3,7 +3,6 @@ import "../../i18n";
 import { useTranslation } from "react-i18next";
 import UpBtn from "../UpBtn/UpBtn";
 import { Helmet } from "react-helmet";
-import Navbar from "../Navbar/Navbar";
 
 export default function Straps() {
   const [t] = useTranslation();

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./Admin.css";
 import Navbar from "../Navbar/Navbar";
 import "../../i18n";
@@ -6,23 +6,9 @@ import { useTranslation } from "react-i18next";
 
 export default function Admin() {
   const [t] = useTranslation();
-  const [authenticated, setAuthenticated] = useState(false);
+
   const [activeTab, setActiveTab] = useState("orders");
   const [crudType, setCrudType] = useState("watches");
-
-  useEffect(() => {
-    const username = prompt("Enter admin username:");
-    const password = prompt("Enter admin password:");
-
-    if (username === "admin" && password === "admin") {
-      setAuthenticated(true);
-    } else {
-      alert("Access denied.");
-      window.location.href = "/";
-    }
-  }, []);
-
-  if (!authenticated) return null;
 
   return (
     <>

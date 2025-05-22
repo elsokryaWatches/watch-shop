@@ -45,7 +45,7 @@
   "skmei": "skmei",
   "straps": "straps",
   "login": "login",
-  "signup": "signup",
+  "logout": "logout",
   "username": "username",
   "password": "password",
   "strapFromTextArea": "needed straps",
