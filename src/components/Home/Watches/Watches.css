@@ -27,9 +27,20 @@
         transition: all 0.3s ease-in-out;
         cursor: pointer;
 
+        a {
+          img {
+            transition: all 0.3s ease-in-out;
+          }
+        }
+
         &:hover {
           margin: 0px 10px;
-          transform: scale(1.1);
+
+          a {
+            img {
+              transform: scale(1.1);
+            }
+          }
         }
       }
     }

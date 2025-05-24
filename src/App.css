@@ -178,6 +178,11 @@ body {
           padding: 0px 10px;
           text-align: center;
 
+          a {
+            text-decoration: none;
+            color: var(--text);
+          }
+
           .price {
             margin: 10px 0px;
           }
@@ -186,8 +191,7 @@ body {
         .btns {
           text-align: center;
 
-          .addToCart,
-          .moreDetails {
+          .addToCart {
             display: block;
             margin: 10px auto;
             padding: 10px;
@@ -223,9 +227,10 @@ body {
       align-items: center;
       padding: 20px 0px;
       gap: 20px;
+
       .soonText {
         text-align: center;
-        h2 {
+        h1 {
           text-align: center;
           color: var(--text);
         }

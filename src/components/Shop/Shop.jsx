@@ -232,9 +232,15 @@ export default function Shop() {
                       />
                     </div>
                     <div className="details">
-                      <h4 className="name">
-                        {brand} {model}
-                      </h4>
+                      <Link
+                        to={`/product_details/${watch.code}`}
+                        state={{ watch }}
+                      >
+                        <h4 className="name">
+                          {watch.brand?.[i18n.language]}&nbsp;
+                          {watch.model?.[i18n.language]}
+                        </h4>
+                      </Link>
                       <del>
                         <h5 className="price">
                           {watch.price.original} {watch.price.currency}
@@ -249,14 +255,6 @@ export default function Shop() {
                       </h5>
                     </div>
                     <div className="btns">
-                      <button className="moreDetails">
-                        <Link
-                          to={`/product_details/${watch.code}`}
-                          state={{ watch }}
-                        >
-                          {t("details")}
-                        </Link>
-                      </button>
                       <button
                         className="addToCart"
                         onClick={() => handleAddToCart(watch.code)}
