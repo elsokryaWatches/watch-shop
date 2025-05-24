@@ -6,6 +6,18 @@
     align-items: center;
     gap: 10px;
 
+    .backContainer {
+      text-align: end;
+
+      .backBtn {
+        background-color: transparent;
+        border: 1px solid var(--primary-color);
+        color: var(--text);
+        padding: 5px 10px;
+        width: fit-content;
+      }
+    }
+
     .imgSide {
       position: relative;
       overflow: hidden;

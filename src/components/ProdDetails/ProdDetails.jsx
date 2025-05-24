@@ -1,14 +1,15 @@
-import { useLocation, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import NavBar from "../Navbar/Navbar";
 import "./ProdDetails.css";
+import { useLocation, useParams, useNavigate } from "react-router-dom";
 
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 
 export default function ProdDetails() {
+  const navigate = useNavigate();
   const { state } = useLocation();
   const { watch: passedWatch } = state || {};
   const { code } = useParams();
@@ -159,6 +160,11 @@ export default function ProdDetails() {
       <NavBar />
       <div className="prodDet container">
         <div className="prodDetInner row">
+          <div className="backContainer col-12">
+            <button className="backBtn" onClick={() => navigate(-1)}>
+              back
+            </button>
+          </div>
           <div className="imgSide col-10 col-lg-5 text-center">
             <div
               className="zoomContainer"
