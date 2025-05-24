@@ -162,7 +162,7 @@ export default function ProdDetails() {
         <div className="prodDetInner row">
           <div className="backContainer col-12">
             <button className="backBtn" onClick={() => navigate(-1)}>
-              back
+              {t("back")}
             </button>
           </div>
           <div className="imgSide col-10 col-lg-5 text-center">
