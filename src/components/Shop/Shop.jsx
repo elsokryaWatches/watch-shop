@@ -112,6 +112,38 @@ export default function Shop() {
     (searchResults ?? watches).length / watchesPerPage
   );
 
+  const getPaginationItems = () => {
+    const items = [];
+    const maxPagesToShow = 4;
+
+    if (totalPages <= maxPagesToShow) {
+      for (let i = 1; i <= totalPages; i++) {
+        items.push(i);
+      }
+    } else {
+      items.push(1);
+
+      const startPage = Math.max(2, currentPage - 1);
+      const endPage = Math.min(totalPages - 1, currentPage + 1);
+
+      if (startPage > 2) {
+        items.push("...");
+      }
+
+      for (let i = startPage; i <= endPage; i++) {
+        items.push(i);
+      }
+
+      if (endPage < totalPages - 1) {
+        items.push("...");
+      }
+
+      items.push(totalPages);
+    }
+
+    return items;
+  };
+
   if (loading) {
     return (
       <div className="shop">
@@ -249,17 +281,23 @@ export default function Shop() {
                 {t("Previous")}
               </button>
 
-              {[...Array(totalPages)].map((_, index) => (
-                <button
-                  key={index}
-                  className={`pagNum mx-1 ${
-                    currentPage === index + 1 ? "currPagNum" : "pagNum"
-                  }`}
-                  onClick={() => updatePage(index + 1)}
-                >
-                  {index + 1}
-                </button>
-              ))}
+              {getPaginationItems().map((item, index) =>
+                item === "..." ? (
+                  <span key={index} className="mx-1">
+                    ...
+                  </span>
+                ) : (
+                  <button
+                    key={index}
+                    className={`pagNum mx-1 ${
+                      currentPage === item ? "currPagNum" : "pagNum"
+                    }`}
+                    onClick={() => updatePage(item)}
+                  >
+                    {item}
+                  </button>
+                )
+              )}
 
               <button
                 className="nextBtn"
