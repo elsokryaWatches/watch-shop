@@ -100,7 +100,7 @@ export default function Navbar() {
                 {t("cart")} <FontAwesomeIcon icon={faBagShopping} />
               </Link>
             </li>
-            {currentUser ? (
+            {currentUser && (
               <>
                 <li className="offCanvItem">
                   <button className="offcanvLink" onClick={handleLogOut}>
@@ -113,12 +113,6 @@ export default function Navbar() {
                   </Link>
                 </li>
               </>
-            ) : (
-              <li className="offCanvItem">
-                <Link className="offcanvLink" to={"/login"}>
-                  {t("login")}
-                </Link>
-              </li>
             )}
             <li className="offCanvItem dropdown">
               <Link
@@ -282,7 +276,8 @@ export default function Navbar() {
                   {t("cart")} <FontAwesomeIcon icon={faBagShopping} />
                 </Link>
               </li>
-              {currentUser ? (
+
+              {currentUser && (
                 <>
                   <li className="navItem">
                     <button className="navLink" onClick={handleLogOut}>
@@ -295,12 +290,6 @@ export default function Navbar() {
                     </Link>
                   </li>
                 </>
-              ) : (
-                <li className="navItem">
-                  <Link className="navLink" to={"/login"}>
-                    {t("login")}
-                  </Link>
-                </li>
               )}
               <li className="navItem dropdown">
                 <Link
