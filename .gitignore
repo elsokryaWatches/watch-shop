@@ -25,3 +25,6 @@ dist-ssr
 
 # Firebase Admin SDK Service Account Key
 /scripts/el-sokrya-firebase-adminsdk-fbsvc-9c435477e9.json
+
+#env
+.env
