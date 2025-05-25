@@ -7,7 +7,8 @@ import ShopNav from "../ShopNav";
 import { Helmet } from "react-helmet";
 import { useLocation, useNavigate } from "react-router-dom";
 import { collection, query, where, getDocs } from "firebase/firestore";
-import { db } from "../../firebase";
+import { db, storage } from "../../firebase";
+import { ref, getDownloadURL } from "firebase/storage";
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 
 export default function MiniFocus() {
@@ -45,7 +46,24 @@ export default function MiniFocus() {
           ...doc.data(),
         }));
 
-        const inStockWatches = fetchedWatches.filter(
+        const watchesWithImageUrls = await Promise.all(
+          fetchedWatches.map(async (watch) => {
+            if (watch.images && watch.images.length > 0) {
+              try {
+                const firstImagePath = watch.images[0];
+                const imageRef = ref(storage, firstImagePath);
+                const imageUrl = await getDownloadURL(imageRef);
+                return { ...watch, firstImageUrl: imageUrl };
+              } catch (imageError) {
+                console.error(`Error fetching image for ${watch.id}`);
+                return { ...watch, firstImageUrl: null };
+              }
+            }
+            return { ...watch, firstImageUrl: null };
+          })
+        );
+
+        const inStockWatches = watchesWithImageUrls.filter(
           (watch) => watch.stock > 0
         );
 
@@ -260,11 +278,17 @@ export default function MiniFocus() {
                         )}
                       </div>
                       <div className="img">
-                        <img
-                          src={watch.images?.[0]}
-                          alt={`${watch.brand?.en} ${watch.model?.en}`}
-                          onContextMenu={(e) => e.preventDefault()}
-                        />
+                        {watch.firstImageUrl ? (
+                          <img
+                            src={watch.firstImageUrl}
+                            alt={watch.brand + " " + watch.model}
+                            onContextMenu={(e) => e.preventDefault()}
+                          />
+                        ) : (
+                          <div className="image-placeholder">
+                            No Image Available
+                          </div>
+                        )}
                       </div>
                       <div className="details">
                         <Link

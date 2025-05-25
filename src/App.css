@@ -214,7 +214,6 @@ body {
 
       .soonText {
         text-align: center;
-        height: 100dvh;
         h1 {
           text-align: center;
           color: var(--text);

@@ -1,5 +1,6 @@
 import { collection, getDocs } from "firebase/firestore";
-import { db } from "../../../firebase";
+import { db, storage } from "../../../firebase";
+import { ref, getDownloadURL } from "firebase/storage";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Watches.css";
@@ -24,7 +25,25 @@ export default function Watches() {
 
         const shuffled = allWatches.sort(() => 0.5 - Math.random());
         const randomWatches = shuffled.slice(0, 5);
-        setWatches(randomWatches);
+
+        const watchesWithImageUrls = await Promise.all(
+          randomWatches.map(async (watch) => {
+            if (watch.images && watch.images.length > 0) {
+              const firstImagePath = watch.images[0];
+              try {
+                const imageRef = ref(storage, firstImagePath);
+                const imageUrl = await getDownloadURL(imageRef);
+                return { ...watch, firstImageUrl: imageUrl };
+              } catch (imageError) {
+                console.error(`error fetching image for ${firstImagePath}`);
+
+                return { ...watch, firstImageUrl: null };
+              }
+            }
+            return { ...watch, firstImageUrl: null };
+          })
+        );
+        setWatches(watchesWithImageUrls);
         setLoading(false);
       } catch (error) {
         console.log("failed to load watches from firestore", error);
@@ -71,11 +90,27 @@ export default function Watches() {
                   key={watch.id}
                 >
                   <Link to={`/product_details/${watch.code}`} state={{ watch }}>
-                    <img
-                      src={watch.images[0]}
-                      alt={`${watch.brand.en} ${watch.model.en}`}
-                      onContextMenu={(e) => e.preventDefault()}
-                    />
+                    {watch.firstImageUrl ? (
+                      <img
+                        src={watch.firstImageUrl}
+                        alt={`${watch.brand.en} ${watch.model.en}`}
+                        onContextMenu={(e) => e.preventDefault()}
+                      />
+                    ) : (
+                      <div
+                        className="image-placeholder"
+                        style={{
+                          width: "100%",
+                          height: "100px",
+                          backgroundColor: "#f0f0f0",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                        }}
+                      >
+                        No Image
+                      </div>
+                    )}
                   </Link>
                 </div>
               ))}

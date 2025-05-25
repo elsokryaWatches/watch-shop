@@ -5,7 +5,8 @@ import "./ProdDetails.css";
 import { useLocation, useParams, useNavigate } from "react-router-dom";
 
 import { doc, getDoc } from "firebase/firestore";
-import { db } from "../../firebase";
+import { db, storage } from "../../firebase";
+import { ref, getDownloadURL } from "firebase/storage";
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 
 export default function ProdDetails() {
@@ -21,15 +22,37 @@ export default function ProdDetails() {
   });
   const [zoomPosition, setZoomPosition] = useState(null);
   const [remainingTime, setRemainingTime] = useState(null);
+  const [imageUrls, setImageUrls] = useState([]);
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     if (passedWatch) {
+      fetchImageUrls(passedWatch.images || []);
       setLoading(false);
     }
   }, [passedWatch]);
+
+  const fetchImageUrls = async (imagePaths) => {
+    try {
+      const urls = await Promise.all(
+        imagePaths.map(async (path) => {
+          try {
+            const imageRef = ref(storage, path);
+            return await getDownloadURL(imageRef);
+          } catch (error) {
+            console.error("Error fetching image URL:", path, error);
+            return null;
+          }
+        })
+      );
+      setImageUrls(urls.filter((url) => url !== null));
+    } catch (error) {
+      console.error("Error fetching image URLs:", error);
+      setImageUrls([]);
+    }
+  };
 
   useEffect(() => {
     if (!passedWatch && code) {
@@ -42,7 +65,10 @@ export default function ProdDetails() {
           const docSnap = await getDoc(docRef);
 
           if (docSnap.exists()) {
-            setWatch({ id: docSnap.id, ...docSnap.data() });
+            const watchData = { id: docSnap.id, ...docSnap.data() };
+            setWatch(watchData);
+            // Fetch image URLs for the watch
+            await fetchImageUrls(watchData.images || []);
             setLoading(false);
           } else {
             console.warn("No such document in Firestore for code:", code);
@@ -97,16 +123,12 @@ export default function ProdDetails() {
   };
 
   const handleNextImage = () => {
-    setImageIndex((prev) => (prev + 1) % (watch.images?.length || 1));
+    setImageIndex((prev) => (prev + 1) % (imageUrls.length || 1));
   };
 
   const handlePrevImage = () => {
     setImageIndex((prev) =>
-      prev === 0
-        ? watch.images?.length
-          ? watch.images.length - 1
-          : 0
-        : prev - 1
+      prev === 0 ? (imageUrls.length ? imageUrls.length - 1 : 0) : prev - 1
     );
   };
 
@@ -166,30 +188,36 @@ export default function ProdDetails() {
             </button>
           </div>
           <div className="imgSide col-10 col-lg-5 text-center">
-            <div
-              className="zoomContainer"
-              onMouseMove={(e) => handleZoom(e)}
-              onMouseLeave={() => setZoomPosition(null)}
-            >
-              <div
-                className="zoomImage"
-                style={{
-                  backgroundImage: `url(${watch.images?.[imageIndex] || ""})`,
-                  backgroundPosition: zoomPosition
-                    ? `${zoomPosition.x}% ${zoomPosition.y}%`
-                    : "center",
-                }}
-              ></div>
-            </div>
-            {watch.images?.length > 1 && (
-              <div className="imgNavBtns mt-2">
-                <button onClick={handlePrevImage} className="imgNav">
-                  ←
-                </button>
-                <button onClick={handleNextImage} className="imgNav">
-                  →
-                </button>
-              </div>
+            {imageUrls.length > 0 ? (
+              <>
+                <div
+                  className="zoomContainer"
+                  onMouseMove={(e) => handleZoom(e)}
+                  onMouseLeave={() => setZoomPosition(null)}
+                >
+                  <div
+                    className="zoomImage"
+                    style={{
+                      backgroundImage: `url(${imageUrls[imageIndex]})`,
+                      backgroundPosition: zoomPosition
+                        ? `${zoomPosition.x}% ${zoomPosition.y}%`
+                        : "center",
+                    }}
+                  ></div>
+                </div>
+                {imageUrls.length > 1 && (
+                  <div className="imgNavBtns mt-2">
+                    <button onClick={handlePrevImage} className="imgNav">
+                      ←
+                    </button>
+                    <button onClick={handleNextImage} className="imgNav">
+                      →
+                    </button>
+                  </div>
+                )}
+              </>
+            ) : (
+              <div className="image-placeholder">No Images Available</div>
             )}
           </div>
 
