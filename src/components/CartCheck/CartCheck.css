@@ -50,8 +50,10 @@
     }
   }
 
-  .toCartBtn {
+  .toCartBtn,
+  .toShopBtn {
     padding: 10px 20px;
+    margin: 0px 10px;
     border: none;
     background-color: var(--primary-color);
     text-transform: uppercase !important;

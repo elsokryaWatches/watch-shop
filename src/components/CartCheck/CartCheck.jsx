@@ -4,12 +4,17 @@ import Navbar from "../Navbar/Navbar";
 import "./CartCheck.css";
 import "../../i18n";
 import { useTranslation } from "react-i18next";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { db, storage } from "../../firebase";
+import { ref, getDownloadURL } from "firebase/storage";
+import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 
 export default function CartCheck() {
   const [t] = useTranslation();
-
   const [orders, setOrders] = useState([]);
-  const [allWatches, setAllWatches] = useState([]);
+  const [orderedWatches, setOrderedWatches] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const storedOrders = JSON.parse(localStorage.getItem("orders")) || [];
@@ -17,27 +22,53 @@ export default function CartCheck() {
   }, []);
 
   useEffect(() => {
-    const fetchAllWatches = async () => {
+    const fetchOrderedWatches = async () => {
       try {
-        const [mfRes, skmeiRes] = await Promise.all([
-          fetch("/API/MiniFocus.JSON"),
-          fetch("/API/SKMEI.JSON"),
-        ]);
+        setLoading(true);
+        setError(null);
 
-        const [mfData, skmeiData] = await Promise.all([
-          mfRes.json(),
-          skmeiRes.json(),
-        ]);
+        if (orders.length === 0) {
+          setOrderedWatches([]);
+          setLoading(false);
+          return;
+        }
 
-        const combinedWatches = [...mfData.watches, ...skmeiData.watches];
-        setAllWatches(combinedWatches);
-      } catch (err) {
-        console.error("Error fetching watches:", err);
+        const watchesRef = collection(db, "watches");
+        const q = query(watchesRef, where("code", "in", orders));
+        const querySnapshot = await getDocs(q);
+
+        const watchesWithImages = await Promise.all(
+          querySnapshot.docs.map(async (doc) => {
+            const watchData = { id: doc.id, ...doc.data() };
+
+            let imageUrl = null;
+            if (watchData.images && watchData.images.length > 0) {
+              try {
+                const imageRef = ref(storage, watchData.images[0]);
+                imageUrl = await getDownloadURL(imageRef);
+              } catch (error) {
+                console.error(`Error fetching image for ${doc.id}:`, error);
+              }
+            }
+
+            return {
+              ...watchData,
+              firstImageUrl: imageUrl,
+            };
+          })
+        );
+
+        setOrderedWatches(watchesWithImages);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching ordered watches:", error);
+        setError("Failed to load watches. Please try again.");
+        setLoading(false);
       }
     };
 
-    fetchAllWatches();
-  }, []);
+    fetchOrderedWatches();
+  }, [orders]);
 
   const handleRemove = (codeToRemove) => {
     const updatedOrders = orders.filter((code) => code !== codeToRemove);
@@ -45,9 +76,27 @@ export default function CartCheck() {
     setOrders(updatedOrders);
   };
 
-  const orderedWatches = allWatches.filter((watch) =>
-    orders.includes(watch.code)
-  );
+  if (loading) {
+    return (
+      <>
+        <Navbar />
+        <div className="cartCheck container">
+          <LoadingSpinner />
+        </div>
+      </>
+    );
+  }
+
+  if (error) {
+    return (
+      <>
+        <Navbar />
+        <div className="cartCheck container">
+          <p style={{ color: "red" }}>{error}</p>
+        </div>
+      </>
+    );
+  }
 
   return (
     <>
@@ -61,13 +110,23 @@ export default function CartCheck() {
             {orderedWatches.map((watch) => (
               <div className="col-12 col-md-4 col-lg-3 mb-4" key={watch.code}>
                 <div className="card h-100 text-center">
-                  <img
-                    src={watch.images[0]}
-                    className="card-img-top"
-                    alt={watch.model}
-                    style={{ maxHeight: "200px", objectFit: "contain" }}
-                    onContextMenu={(e) => e.preventDefault()}
-                  />
+                  {watch.firstImageUrl ? (
+                    <img
+                      src={watch.firstImageUrl}
+                      className="card-img-top"
+                      alt={watch.model?.en || watch.model}
+                      style={{ maxHeight: "200px", objectFit: "contain" }}
+                      onContextMenu={(e) => e.preventDefault()}
+                      onError={(e) => {
+                        e.target.onerror = null;
+                        e.target.src = "/imgs/placeholder.jpg";
+                      }}
+                    />
+                  ) : (
+                    <div className="image-placeholder">
+                      {t("noImageAvailable")}
+                    </div>
+                  )}
                   <div className="card-body">
                     <h5 className="card-title">
                       {watch.brand?.en || watch.brand}{" "}
@@ -99,7 +158,10 @@ export default function CartCheck() {
                       {t("removeFromCart")}
                     </button>
                     <button className="details">
-                      <Link to="/product_details" state={{ watch }}>
+                      <Link
+                        to={`/product_details/${watch.code}`}
+                        state={{ watch }}
+                      >
                         {t("details")}
                       </Link>
                     </button>
@@ -111,6 +173,9 @@ export default function CartCheck() {
         )}
         <button className="toCartBtn">
           <Link to={"/cart"}>{t("to cart")}</Link>
+        </button>
+        <button className="toShopBtn">
+          <Link to={"/shop"}>{t("shop")}</Link>
         </button>
       </div>
     </>

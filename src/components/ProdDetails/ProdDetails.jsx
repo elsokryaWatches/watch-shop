@@ -67,7 +67,6 @@ export default function ProdDetails() {
           if (docSnap.exists()) {
             const watchData = { id: docSnap.id, ...docSnap.data() };
             setWatch(watchData);
-            // Fetch image URLs for the watch
             await fetchImageUrls(watchData.images || []);
             setLoading(false);
           } else {
@@ -84,20 +83,25 @@ export default function ProdDetails() {
       fetchProduct();
     }
 
-    if (!watch?.discount?.valid_until) {
+    let intervalId;
+    if (!watch || !watch.discount || !watch.discount.expiresAt) {
       setRemainingTime(null);
+      if (intervalId) clearInterval(intervalId);
       return;
     }
 
-    const targetDate = new Date();
-    targetDate.setDate(targetDate.getDate() + watch.discount.valid_until);
+    const expiryTimestamp = watch.discount.expiresAt;
+    const targetDate = expiryTimestamp.toDate
+      ? expiryTimestamp.toDate()
+      : new Date(expiryTimestamp);
 
     const updateCountdown = () => {
       const now = new Date();
-      const diff = targetDate - now;
+      const diff = targetDate.getTime() - now.getTime();
 
       if (diff <= 0) {
         setRemainingTime({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        clearInterval(intervalId);
         return;
       }
 
@@ -110,9 +114,14 @@ export default function ProdDetails() {
     };
 
     updateCountdown();
-    const intervalId = setInterval(updateCountdown, 1000);
 
-    return () => clearInterval(intervalId);
+    intervalId = setInterval(updateCountdown, 1000);
+
+    return () => {
+      if (intervalId) {
+        clearInterval(intervalId);
+      }
+    };
   }, [watch, code, passedWatch]);
 
   const handleZoom = (e) => {
@@ -310,7 +319,7 @@ export default function ProdDetails() {
                     )
                 )}
 
-              {watch.discount?.valid_until && remainingTime && (
+              {watch.discount?.expiresAt && remainingTime && (
                 <li>
                   <strong>{t("discount_valid_until")}:</strong>{" "}
                   {remainingTime.days} {t("days")} {remainingTime.hours}{" "}

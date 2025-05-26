@@ -239,7 +239,7 @@ export default function Shop() {
                         {watch.price.discount_percentage}%
                       </span>
                       <span className="discount_period">
-                        {t("for")} {watch.discount.valid_until} {t("days")}
+                        {t("for")} {watch.discount.duration_days} {t("days")}
                       </span>
                     </div>
                     <div className="img">

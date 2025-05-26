@@ -27,7 +27,7 @@
       align-items: start;
 
       .formSide {
-        padding: 20px;
+        padding: 0px 10px;
 
         .chooseFunc {
           padding: 10px 0px;
@@ -38,6 +38,29 @@
             background-color: transparent;
             border: 1px solid var(--primary-color);
             color: var(--text);
+          }
+        }
+
+        .searchPanel {
+          padding: 10px 0px;
+          text-align: center;
+          align-content: center !important ;
+
+          input {
+            color: var(--text);
+            padding: 5px;
+            border: 1px solid var(--primary-color);
+            outline: none;
+            width: fit-content;
+          }
+
+          button {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 0;
+            background-color: var(--primary-color);
+            color: var(--white);
+            margin: 0px 5px;
           }
         }
 
@@ -78,18 +101,6 @@
             }
           }
 
-          .searchPanel {
-            padding: 10px 0px;
-            text-align: center;
-            input {
-              color: var(--text);
-              padding: 5px;
-              border: none;
-              outline: none;
-              width: fit-content;
-            }
-          }
-
           .btns {
             text-align: center;
 
@@ -114,12 +125,20 @@
       .cardsSide {
         justify-content: center;
         align-items: center;
+        text-align: center;
         gap: 10px;
 
         .itemCard {
+          text-align: center;
           border: 1px solid var(--primary-color);
           color: var(--text);
           padding: 0;
+
+          img {
+            width: 15.625rem;
+            height: 15.625rem;
+            object-fit: contain;
+          }
 
           .details {
             padding: 10px;
@@ -127,8 +146,17 @@
             .editBtn {
               padding: 5px 10px;
               border: none;
-              background-color: var(--primary-color);
+              background-color: #0065fd;
               color: var(--white);
+              margin: 0px 5px;
+            }
+
+            .deleteBtn {
+              padding: 5px 10px;
+              border: none;
+              background-color: #fd0000;
+              color: var(--white);
+              margin: 0px 5px;
             }
           }
         }

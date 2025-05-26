@@ -271,7 +271,8 @@ export default function IBSO() {
                         )}
                         {watch.discount?.valid_until && (
                           <span className="discount_period">
-                            {t("for")} {watch.discount.valid_until} {t("days")}
+                            {t("for")} {watch.discount.duration_days}
+                            {t("days")}
                           </span>
                         )}
                       </div>
