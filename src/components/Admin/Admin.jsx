@@ -853,9 +853,9 @@ export default function Admin() {
                           <option value="" disabled>
                             select the brand
                           </option>
-                          <option value="skmei">{t("skmei")}</option>
-                          <option value="minifocus">{t("MiniFocus")}</option>
-                          <option value="ibso">{t("ibso")}</option>
+                          <option value="SKMEI">{t("skmei")}</option>
+                          <option value="Mini Focus">{t("MiniFocus")}</option>
+                          <option value="IBSO">{t("ibso")}</option>
                         </select>
                       </div>
                       <div className="inputContainer col-4 row">
@@ -948,7 +948,7 @@ export default function Admin() {
                           disabled={isSubmitting}
                         />
                       </div>
-                      {watchFormData.brand !== "skmei" && (
+                      {watchFormData.brand !== "SKMEI" && (
                         <div className="inputContainer col-4 row">
                           <label className="col-12" htmlFor="watchGender">
                             {t("gender")}

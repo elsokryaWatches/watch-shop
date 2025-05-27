@@ -130,7 +130,6 @@
 
         .itemCard {
           text-align: center;
-          border: 1px solid var(--primary-color);
           color: var(--text);
           padding: 0;
 
@@ -141,7 +140,9 @@
           }
 
           .details {
-            padding: 10px;
+            margin: 5px 0px;
+            padding: 5px 10px;
+            border: 1px solid var(--primary-color);
 
             .editBtn {
               padding: 5px 10px;

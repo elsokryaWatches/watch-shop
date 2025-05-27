@@ -46,12 +46,27 @@ export default function Skmei() {
           fetchedWatches.map(async (watch) => {
             if (watch.images && watch.images.length > 0) {
               try {
-                const firstImagePath = watch.images[0];
+                let firstImagePath = watch.images[0];
+                if (watch.gender) {
+                  if (watch.gender === "male") {
+                    if (!firstImagePath.includes("/M/")) {
+                      firstImagePath = firstImagePath.replace(
+                        "/imgs/",
+                        "/imgs/M/"
+                      );
+                    }
+                  } else if (watch.gender === "female") {
+                    firstImagePath = firstImagePath.replace("/W/", "/");
+                  }
+                }
                 const imageRef = ref(storage, firstImagePath);
                 const imageUrl = await getDownloadURL(imageRef);
                 return { ...watch, firstImageUrl: imageUrl };
               } catch (imageError) {
-                console.error(`Error fetching image for ${watch.id}`);
+                console.error(
+                  `Error fetching image for ${watch.id}:`,
+                  imageError
+                );
                 return { ...watch, firstImageUrl: null };
               }
             }
@@ -63,6 +78,7 @@ export default function Skmei() {
           (watch) => watch.stock > 0
         );
         setWatches(inStockWatches);
+
         setLoading(false);
       } catch (error) {
         console.error("Failed to load SKMEI watches from Firestore", error);
@@ -86,11 +102,15 @@ export default function Skmei() {
 
   const watchesPerPage = 20;
 
-  const watchesToPaginate = searchResults || watches;
+  const watchesToPaginate = searchResults !== null ? searchResults : watches;
 
   const indexOfLastWatch = currentPage * watchesPerPage;
   const indexOfFirstWatch = indexOfLastWatch - watchesPerPage;
-  const currentWatches = watches.slice(indexOfFirstWatch, indexOfLastWatch);
+
+  const currentWatchesToDisplay = watchesToPaginate.slice(
+    indexOfFirstWatch,
+    indexOfLastWatch
+  );
 
   const totalPages = Math.ceil(watchesToPaginate.length / watchesPerPage);
 
@@ -104,13 +124,24 @@ export default function Skmei() {
   };
 
   const handleSearch = () => {
-    const results = watches.filter((watch) =>
-      `${watch.brand[i18n.language]} ${watch.model[i18n.language]} ${
-        watch.movement[i18n.language]
-      }`
+    const results = watches.filter((watch) => {
+      const brand =
+        typeof watch.brand === "object"
+          ? watch.brand?.[i18n.language]
+          : watch.brand;
+      const model =
+        typeof watch.model === "object"
+          ? watch.model?.[i18n.language]
+          : watch.model;
+      const movement =
+        typeof watch.movement === "object"
+          ? watch.movement?.[i18n.language]
+          : watch.movement;
+
+      return `${brand || ""} ${model || ""} ${movement || ""}`
         .toLowerCase()
-        .includes(searchTerm.toLowerCase())
-    );
+        .includes(searchTerm.toLowerCase());
+    });
     setSearchResults(results);
     setCurrentPage(1);
   };
@@ -207,22 +238,24 @@ export default function Skmei() {
                 {t("search")}
               </button>
             </div>
+
             <div className="Watches row col-12">
-              {(searchResults || currentWatches)
-                .slice(indexOfFirstWatch, indexOfLastWatch)
-                .map((watch) => (
+              {currentWatchesToDisplay.length > 0 ? (
+                currentWatchesToDisplay.map((watch) => (
                   <div
                     className="watch homeSecAnimation col-9 col-lg-2"
                     key={watch.code}
                   >
-                    <div className="discount">
-                      <span className="discount_percentage">
-                        {watch.price.discount_percentage}%
-                      </span>
-                      <span className="discount_period">
-                        {t("for")} {watch.discount.duration_days} {t("days")}
-                      </span>
-                    </div>
+                    {watch.price?.discount_percentage > 0 && (
+                      <div className="discount">
+                        <span className="discount_percentage">
+                          {watch.price?.discount_percentage}%
+                        </span>
+                        <span className="discount_period">
+                          {t("for")} {watch.discount?.duration_days} {t("days")}{" "}
+                        </span>
+                      </div>
+                    )}
                     <div className="img">
                       {watch.firstImageUrl ? (
                         <img
@@ -242,18 +275,30 @@ export default function Skmei() {
                         state={{ watch }}
                       >
                         <h4 className="name">
-                          {watch.brand[i18n.language]}&nbsp;
-                          {watch.model[i18n.language]}
+                          {watch.brand?.[i18n.language]}&nbsp;
+                          {watch.model?.[i18n.language]}
                         </h4>
                       </Link>
 
-                      <del>
-                        <h5 className="price">
-                          {watch.price.original} {watch.price.currency}
-                        </h5>
-                      </del>
+                      {watch.price?.discount_percentage > 0 &&
+                      watch.price?.original ? (
+                        <del>
+                          <h5 className="price">
+                            {watch.price.original} {watch.price.currency}
+                          </h5>
+                        </del>
+                      ) : null}
                       <h4 className="dis_price">
-                        {watch.price.final} {watch.price.currency}
+                        {watch.price?.discount_percentage > 0 &&
+                        watch.price?.final ? (
+                          <>
+                            {watch.price.final} {watch.price.currency}
+                          </>
+                        ) : (
+                          <>
+                            {watch.price?.original} {watch.price.currency}
+                          </>
+                        )}
                       </h4>
                       <h5 className="stock">
                         <strong>{t("stock")}: </strong>
@@ -272,44 +317,49 @@ export default function Skmei() {
                       </button>
                     </div>
                   </div>
-                ))}
-              <div className="pagination col-12 d-flex justify-content-center mt-4">
-                <button
-                  className="prevBtn"
-                  onClick={() => updatePage(Math.max(currentPage - 1, 1))}
-                  disabled={currentPage === 1}
-                >
-                  {t("Previous")}
-                </button>
+                ))
+              ) : (
+                <div className="col-12 text-center mt-5">
+                  <h4>{t("No watches found matching your search.")}</h4>
+                </div>
+              )}
+            </div>
+            <div className="pagination col-12 d-flex justify-content-center mt-4">
+              <button
+                className="prevBtn"
+                onClick={() => updatePage(Math.max(currentPage - 1, 1))}
+                disabled={currentPage === 1}
+              >
+                {t("Previous")}
+              </button>
 
-                {getPaginationItems().map((item, index) =>
-                  item === "..." ? (
-                    <span key={index} className="mx-1">
-                      ...
-                    </span>
-                  ) : (
-                    <button
-                      key={index}
-                      className={`pagNum mx-1 ${
-                        currentPage === item ? "currPagNum" : "pagNum"
-                      }`}
-                      onClick={() => updatePage(item)}
-                    >
-                      {item}
-                    </button>
-                  )
-                )}
+              {getPaginationItems().map((item, index) =>
+                item === "..." ? (
+                  <span key={index} className="mx-1">
+                    ...
+                  </span>
+                ) : (
+                  <button
+                    key={index}
+                    className={`pagNum mx-1 ${
+                      currentPage === item ? "currPagNum" : "pagNum"
+                    }`}
+                    onClick={() => updatePage(item)}
+                  >
+                    {item}
+                  </button>
+                )
+              )}
 
-                <button
-                  className="nextBtn"
-                  onClick={() =>
-                    updatePage(Math.min(currentPage + 1, totalPages))
-                  }
-                  disabled={currentPage === totalPages}
-                >
-                  {t("Next")}
-                </button>
-              </div>
+              <button
+                className="nextBtn"
+                onClick={() =>
+                  updatePage(Math.min(currentPage + 1, totalPages))
+                }
+                disabled={currentPage === totalPages}
+              >
+                {t("Next")}
+              </button>
             </div>
             <div className="toCart col-10">
               <button className="toCartBtn">

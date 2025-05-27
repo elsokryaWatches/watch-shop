@@ -234,14 +234,18 @@ export default function Shop() {
                     className="watch homeSecAnimation col-9 col-lg-2"
                     key={watch.code}
                   >
-                    <div className="discount">
-                      <span className="discount_percentage">
-                        {watch.price.discount_percentage}%
-                      </span>
-                      <span className="discount_period">
-                        {t("for")} {watch.discount.duration_days} {t("days")}
-                      </span>
-                    </div>
+                    {watch.price?.discount_percentage > 0 && (
+                      <div className="discount">
+                        <span className="discount_percentage">
+                          {watch.price?.discount_percentage}%
+                        </span>
+
+                        <span className="discount_period">
+                          {t("for")}
+                          {watch.discount?.duration_days} {t("days")}
+                        </span>
+                      </div>
+                    )}
                     <div className="img">
                       {watch.firstImageUrl ? (
                         <img
@@ -265,13 +269,25 @@ export default function Shop() {
                           {watch.model?.[i18n.language]}
                         </h4>
                       </Link>
-                      <del>
-                        <h5 className="price">
-                          {watch.price.original} {watch.price.currency}
-                        </h5>
-                      </del>
+                      {watch.price?.discount_percentage > 0 &&
+                      watch.price?.original ? (
+                        <del>
+                          <h5 className="price">
+                            {watch.price.original} {watch.price.currency}
+                          </h5>
+                        </del>
+                      ) : null}
                       <h4 className="dis_price">
-                        {watch.price.final} {watch.price.currency}
+                        {watch.price?.discount_percentage > 0 &&
+                        watch.price?.final ? (
+                          <>
+                            {watch.price.final} {watch.price.currency}
+                          </>
+                        ) : (
+                          <>
+                            {watch.price?.original} {watch.price.currency}
+                          </>
+                        )}
                       </h4>
                       <h5 className="stock">
                         <strong>{t("stock")}: </strong>

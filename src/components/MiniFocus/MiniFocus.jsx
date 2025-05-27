@@ -36,9 +36,7 @@ export default function MiniFocus() {
         setError(null);
 
         const watchesRef = collection(db, "watches");
-
         const q = query(watchesRef, where("brand.en", "==", "Mini Focus"));
-
         const querySnapshot = await getDocs(q);
 
         const fetchedWatches = querySnapshot.docs.map((doc) => ({
@@ -50,12 +48,38 @@ export default function MiniFocus() {
           fetchedWatches.map(async (watch) => {
             if (watch.images && watch.images.length > 0) {
               try {
-                const firstImagePath = watch.images[0];
+                let firstImagePath = watch.images[0];
+
+                const gender =
+                  typeof watch.gender === "string"
+                    ? watch.gender.toLowerCase()
+                    : "";
+
+                if (gender === "male") {
+                  if (!firstImagePath.includes("/M/")) {
+                    const parts = firstImagePath.split("/");
+
+                    if (parts[1] === "imgs") {
+                      const insertIndex = parts[2] === "" ? 2 : 2;
+                      parts.splice(insertIndex, 0, "M");
+                      firstImagePath = parts.join("/");
+
+                      firstImagePath = firstImagePath.replace(/\/\/+/g, "/");
+                    }
+                  }
+                } else if (gender === "female") {
+                  firstImagePath = firstImagePath.replace("/M/", "/");
+                  firstImagePath = firstImagePath.replace("/W/", "/");
+                }
+
                 const imageRef = ref(storage, firstImagePath);
                 const imageUrl = await getDownloadURL(imageRef);
                 return { ...watch, firstImageUrl: imageUrl };
               } catch (imageError) {
-                console.error(`Error fetching image for ${watch.id}`);
+                console.error(
+                  `Error fetching image for ${watch.id}:`,
+                  imageError
+                );
                 return { ...watch, firstImageUrl: null };
               }
             }
@@ -112,9 +136,18 @@ export default function MiniFocus() {
     return selectedGender;
   };
 
-  const filteredByGender = (searchResults ?? watches).filter((watch) => {
-    const watchGender = watch.gender?.[i18n.language] || watch.gender?.["en"];
-    return watchGender?.toLowerCase() === getLocalizedGender().toLowerCase();
+  const watchesAfterSearch = searchResults !== null ? searchResults : watches;
+
+  const filteredByGender = watchesAfterSearch.filter((watch) => {
+    const watchGender =
+      typeof watch.gender === "object"
+        ? watch.gender?.[i18n.language] || watch.gender?.["en"]
+        : watch.gender;
+
+    return (
+      typeof watchGender === "string" &&
+      watchGender.toLowerCase() === getLocalizedGender().toLowerCase()
+    );
   });
 
   const urlQueryParams = useQuery();
@@ -131,10 +164,12 @@ export default function MiniFocus() {
   const watchesPerPage = 20;
   const indexOfLastWatch = currentPage * watchesPerPage;
   const indexOfFirstWatch = indexOfLastWatch - watchesPerPage;
-  const currentWatches = filteredByGender.slice(
+
+  const currentWatchesToDisplay = filteredByGender.slice(
     indexOfFirstWatch,
     indexOfLastWatch
   );
+
   const totalPages = Math.ceil(filteredByGender.length / watchesPerPage);
 
   const getPaginationItems = () => {
@@ -212,7 +247,7 @@ export default function MiniFocus() {
 
             <ShopNav />
 
-            {watches.length === 0 ? (
+            {watches.length === 0 && !loading && !error ? (
               <div className="Watches row col-12">
                 <div className="soonText col-12">
                   <h1>{t("soon")}</h1>
@@ -241,6 +276,7 @@ export default function MiniFocus() {
                     }`}
                     onClick={() => {
                       setSelectedGender("Men");
+                      setSearchResults(null);
                       setCurrentPage(1);
                     }}
                   >
@@ -252,6 +288,7 @@ export default function MiniFocus() {
                     }`}
                     onClick={() => {
                       setSelectedGender("Women");
+                      setSearchResults(null);
                       setCurrentPage(1);
                     }}
                   >
@@ -260,79 +297,93 @@ export default function MiniFocus() {
                 </div>
 
                 <div className="Watches row col-12">
-                  {currentWatches.map((watch) => (
-                    <div
-                      className="watch homeSecAnimation col-9 col-lg-2"
-                      key={watch.id}
-                    >
-                      <div className="discount">
-                        {watch.price?.discount_percentage && (
-                          <span className="discount_percentage">
-                            {watch.price.discount_percentage}%
-                          </span>
-                        )}
-                        {watch.discount?.valid_until && (
-                          <span className="discount_period">
-                            {t("for")} {watch.discount.duration_days}
-                            {t("days")}
-                          </span>
-                        )}
-                      </div>
-                      <div className="img">
-                        {watch.firstImageUrl ? (
-                          <img
-                            src={watch.firstImageUrl}
-                            alt={watch.brand + " " + watch.model}
-                            onContextMenu={(e) => e.preventDefault()}
-                          />
-                        ) : (
-                          <div className="image-placeholder">
-                            No Image Available
+                  {currentWatchesToDisplay.length > 0 ? (
+                    currentWatchesToDisplay.map((watch) => (
+                      <div
+                        className="watch homeSecAnimation col-9 col-lg-2"
+                        key={watch.id}
+                      >
+                        {watch.price?.discount_percentage > 0 && (
+                          <div className="discount">
+                            <span className="discount_percentage">
+                              {watch.price.discount_percentage}%
+                            </span>
+                            <span className="discount_period">
+                              {t("for")} {watch.discount?.duration_days}{" "}
+                              {t("days")}
+                            </span>
                           </div>
                         )}
-                      </div>
-                      <div className="details">
-                        <Link
-                          to={`/product_details/${watch.code}`}
-                          state={{ watch }}
-                        >
-                          <h4 className="name">
-                            {watch.brand?.[i18n.language]}&nbsp;
-                            {watch.model?.[i18n.language]}
-                          </h4>
-                        </Link>
-                        {watch.price?.original && (
-                          <del>
-                            <h5 className="price">
-                              {watch.price.original} {watch.price.currency}
-                            </h5>
-                          </del>
-                        )}
-                        {watch.price?.final && (
+                        <div className="img">
+                          {watch.firstImageUrl ? (
+                            <img
+                              src={watch.firstImageUrl}
+                              alt={watch.brand + " " + watch.model}
+                              onContextMenu={(e) => e.preventDefault()}
+                            />
+                          ) : (
+                            <div className="image-placeholder">
+                              No Image Available
+                            </div>
+                          )}
+                        </div>
+                        <div className="details">
+                          <Link
+                            to={`/product_details/${watch.code}`}
+                            state={{ watch }}
+                          >
+                            <h4 className="name">
+                              {watch.brand?.[i18n.language]}&nbsp;
+                              {watch.model?.[i18n.language]}
+                            </h4>
+                          </Link>
+                          {watch.price?.discount_percentage > 0 &&
+                          watch.price?.original ? (
+                            <del>
+                              <h5 className="price">
+                                {watch.price.original} {watch.price.currency}
+                              </h5>
+                            </del>
+                          ) : null}
                           <h4 className="dis_price">
-                            {watch.price.final} {watch.price.currency}
+                            {watch.price?.discount_percentage > 0 &&
+                            watch.price?.final ? (
+                              <>
+                                {watch.price.final} {watch.price.currency}
+                              </>
+                            ) : (
+                              <>
+                                {watch.price?.original} {watch.price.currency}
+                              </>
+                            )}
                           </h4>
-                        )}
-                        {typeof watch.stock !== "undefined" && (
-                          <h5 className="stock">
-                            <strong>{t("stock")}: </strong>
-                            {watch.stock}
-                          </h5>
-                        )}
+                          {typeof watch.stock !== "undefined" && (
+                            <h5 className="stock">
+                              <strong>{t("stock")}: </strong>
+                              {watch.stock}
+                            </h5>
+                          )}
+                        </div>
+                        <div className="btns">
+                          <button
+                            className="addToCart"
+                            onClick={() => handleAddToCart(watch.code)}
+                            disabled={addedToCart.includes(watch.code)}
+                          >
+                            {addedToCart.includes(watch.code)
+                              ? t("addedToCart")
+                              : t("add to cart")}
+                          </button>
+                        </div>
                       </div>
-                      <div className="btns">
-                        <button
-                          className="addToCart"
-                          onClick={() => handleAddToCart(watch.code)}
-                          disabled={addedToCart.includes(watch.code)}
-                        >
-                          {addedToCart.includes(watch.code)
-                            ? t("addedToCart")
-                            : t("add to cart")}
-                        </button>
-                      </div>
+                    ))
+                  ) : (
+                    <div className="col-12 text-center mt-5">
+                      <h4>
+                        {t("No watches found matching your search or filters.")}
+                      </h4>
                     </div>
-                  ))}
+                  )}
                 </div>
 
                 <div className="pagination col-12 d-flex justify-content-center mt-4">

@@ -240,19 +240,24 @@ export default function ProdDetails() {
             </h3>
             <p>{watch.movement?.[i18n.language] || watch.movement?.en || ""}</p>
 
-            {watch.price?.final && (
-              <h4 className="text-success">
-                {watch.price.final} {watch.price.currency}
-              </h4>
-            )}
-            {watch.price?.original &&
-              watch.price.final !== watch.price.original && (
-                <del>
-                  <p>
-                    {watch.price.original} {watch.price.currency}
-                  </p>
-                </del>
+            {watch.price?.discount_percentage > 0 && watch.price?.original ? (
+              <del>
+                <h5 className="price">
+                  {watch.price.original} {watch.price.currency}
+                </h5>
+              </del>
+            ) : null}
+            <h4 className="dis_price">
+              {watch.price?.discount_percentage > 0 && watch.price?.final ? (
+                <>
+                  {watch.price.final} {watch.price.currency}
+                </>
+              ) : (
+                <>
+                  {watch.price?.original} {watch.price.currency}
+                </>
               )}
+            </h4>
             <h3>
               <strong>{t("features")}</strong>
             </h3>
