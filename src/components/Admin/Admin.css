@@ -170,19 +170,48 @@
       gap: 10px;
 
       .orderItem {
-        padding: 10px;
+        margin: 0 !important;
+        padding: 0 !important;
         border: 1px solid var(--primary-color);
         color: var(--text);
 
-        h4 {
-          padding: 5px 0px;
+        .orderHeader {
+          background-color: var(--primary-color);
+          padding: 5px;
+          h4 {
+            margin: 0 !important;
+            padding: 0 !important;
+            color: var(--white);
+          }
         }
 
-        .confirmBtn {
+        .orderDetails {
+          padding: 10px 5px;
+
+          h6 {
+            border-bottom: 1px solid var(--primary-color);
+            margin: 0 !important;
+            padding: 5px 0px;
+          }
+        }
+
+        .btns {
           padding: 5px 10px;
-          color: var(--white);
-          background-color: var(--primary-color);
-          border: none;
+          text-align: center;
+
+          .confirmBtn {
+            padding: 5px 10px;
+            color: var(--white);
+            background-color: var(--primary-color);
+            border: none;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+              color: var(--primary-color);
+              background-color: var(--white);
+              outline: 1px solid var(--primary-color);
+            }
+          }
         }
       }
     }

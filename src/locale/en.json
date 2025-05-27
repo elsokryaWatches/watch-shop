@@ -111,5 +111,6 @@
   "search using code...": "search using code",
   "images": "images",
   "color": "color",
-  "back": "back"
+  "back": "back",
+  "orderSuccessMessage": "your order is submitted and we will contact you soon"
 }

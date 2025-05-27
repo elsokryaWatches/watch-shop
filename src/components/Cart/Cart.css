@@ -71,14 +71,8 @@
           border: none;
           padding: 5px 10px;
           margin: 0px 5px;
-          text-transform: uppercase !important;
           transition: all 0.3s ease-in-out;
-
-          &:hover {
-            background-color: var(--secondry-color);
-            color: var(--text);
-            box-shadow: 0 0 10px var(--white);
-          }
+          cursor: pointer;
         }
 
         .editOrders {
@@ -92,12 +86,6 @@
           a {
             color: var(--primary-color);
             text-decoration: none;
-          }
-
-          &:hover {
-            background-color: var(--secondry-color);
-            color: var(--text);
-            box-shadow: 0 0 10px var(--white);
           }
         }
       }

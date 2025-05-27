@@ -21,6 +21,7 @@ import {
   startAt,
   endAt,
   limit,
+  onSnapshot,
 } from "firebase/firestore";
 
 import {
@@ -95,6 +96,8 @@ export default function Admin() {
   const [submitError, setSubmitError] = useState(null);
 
   const [editingProduct, setEditingProduct] = useState(null);
+
+  const [orders, setOrders] = useState([]);
 
   const handleWatchInputChange = (e) => {
     const { name, value } = e.target;
@@ -670,6 +673,19 @@ export default function Admin() {
     );
   };
 
+  const handleConfirmOrder = async (orderId) => {
+    if (
+      window.confirm("Are you sure you want to confirm and remove this order?")
+    ) {
+      try {
+        await deleteDoc(doc(db, "orders", orderId));
+        console.log("Order confirmed and deleted successfully!");
+      } catch (error) {
+        console.error("Error confirming/deleting order: ", error);
+      }
+    }
+  };
+
   useEffect(() => {
     const lowercasedSearch = searchCode.toLowerCase();
     if (lowercasedSearch === "") {
@@ -694,6 +710,30 @@ export default function Admin() {
   useEffect(() => {
     resetForms();
   }, [crudType]);
+
+  useEffect(() => {
+    const fetchOrders = () => {
+      const ordersCollectionRef = collection(db, "orders");
+      const q = query(ordersCollectionRef, orderBy("orderDate", "desc"));
+
+      const unsubscribe = onSnapshot(
+        q,
+        (snapshot) => {
+          const fetchOrders = snapshot.docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data(),
+          }));
+          setOrders(fetchOrders);
+        },
+        (error) => {
+          console.log("error fetching orders:", error);
+        }
+      );
+
+      return () => unsubscribe();
+    };
+    fetchOrders();
+  }, []);
 
   return (
     <>
@@ -1454,30 +1494,67 @@ export default function Admin() {
 
             {activeTab === "orders" && (
               <div className="orders row col-10">
-                <div className="orderItem col-12 col-lg-3">
-                  <h4>customer name</h4>
-                  <h4>customer phone</h4>
-                  <h4>customer emails</h4>
-                  <h4>customer address</h4>
-                  <h4>customer orders</h4>
-                  <button className="confirmBtn">{t("confirm")}</button>
-                </div>
-                <div className="orderItem col-12 col-lg-3">
-                  <h4>customer name</h4>
-                  <h4>customer phone</h4>
-                  <h4>customer emails</h4>
-                  <h4>customer address</h4>
-                  <h4>customer orders</h4>
-                  <button className="confirmBtn">{t("confirm")}</button>
-                </div>
-                <div className="orderItem col-12 col-lg-3">
-                  <h4>customer name</h4>
-                  <h4>customer phone</h4>
-                  <h4>customer emails</h4>
-                  <h4>customer address</h4>
-                  <h4>customer orders</h4>
-                  <button className="confirmBtn">{t("confirm")}</button>
-                </div>
+                {orders.length === 0 ? (
+                  <p className="col-12 text-center">
+                    {t("noOrdersYet") || "No new orders yet."}
+                  </p>
+                ) : (
+                  orders.map((order) => (
+                    <div
+                      className="orderItem row col-12 col-lg-3"
+                      key={order.id}
+                    >
+                      <div className="orderHeader col-12">
+                        <h4>
+                          Order ID: <br /> {order.id}
+                        </h4>
+                      </div>
+
+                      <div className="orderDetails col-12">
+                        <h6>
+                          Name : <br /> {order.customer?.fullName || "N/A"}
+                        </h6>
+                        <h6>
+                          Phone : <br /> {order.customer?.phoneNumber || "N/A"}
+                        </h6>
+                        <h6>
+                          Email : <br /> {order.customer?.emailAddress || "N/A"}
+                        </h6>
+                        <h6>
+                          Address : <br />
+                          {order.customer?.address?.city || "N/A"},
+                          {order.customer?.address?.governorate || "N/A"},
+                          <br />
+                          Landmark : <br />
+                          {order.customer?.address?.landMark || "N/A"}
+                        </h6>
+                        <h6>
+                          Ordered Codes : <br />
+                          {order.productCodes && order.productCodes.length > 0
+                            ? order.productCodes.join(", ")
+                            : "N/A"}
+                        </h6>
+                        <h6>
+                          Order Date : <br />
+                          {order.orderDate
+                            ? new Date(
+                                order.orderDate.toDate()
+                              ).toLocaleString()
+                            : "N/A"}
+                        </h6>
+                      </div>
+
+                      <div className="btns col-12">
+                        <button
+                          className="confirmBtn"
+                          onClick={() => handleConfirmOrder(order.id)}
+                        >
+                          {t("confirm")}
+                        </button>
+                      </div>
+                    </div>
+                  ))
+                )}
               </div>
             )}
           </div>
