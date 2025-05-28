@@ -89,6 +89,16 @@
           }
         }
       }
+
+      .submission-message {
+        padding: 5px;
+        width: fit-content;
+        margin: auto;
+        color: #1efd00 !important;
+        background-color: #00000077;
+        border-radius: 5px;
+        text-align: center;
+      }
     }
   }
 }

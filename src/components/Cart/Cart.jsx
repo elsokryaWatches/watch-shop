@@ -98,7 +98,6 @@ export default function Cart() {
             <form className="cartForm col-10" onSubmit={handleSubmit}>
               <div className="header">
                 <img src="/imgs/logo.svg" alt="El Sokrya Logo" />
-
                 <h6>01550089872</h6>
               </div>
               <div className="inputContainer row">

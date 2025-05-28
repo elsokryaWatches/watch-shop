@@ -109,7 +109,7 @@ export default function CartCheck() {
           <div className="row">
             {orderedWatches.map((watch) => (
               <div className="col-12 col-md-4 col-lg-3 mb-4" key={watch.code}>
-                <div className="card h-100 text-center">
+                <div className="card text-center">
                   {watch.firstImageUrl ? (
                     <img
                       src={watch.firstImageUrl}
@@ -134,22 +134,26 @@ export default function CartCheck() {
                         ? watch.model.en
                         : watch.model}
                     </h5>
-                    <p className="price">
-                      {watch.price?.discount_percentage > 0 ? (
+                    {watch.price?.discount_percentage > 0 &&
+                    watch.price?.original ? (
+                      <del>
+                        <h5 className="price">
+                          {watch.price.original} {watch.price.currency}
+                        </h5>
+                      </del>
+                    ) : null}
+                    <h4 className="dis_price">
+                      {watch.price?.discount_percentage > 0 &&
+                      watch.price?.final ? (
                         <>
-                          <span className="text-muted text-decoration-line-through me-2">
-                            {watch.price.original} {watch.price.currency}
-                          </span>
-                          <span className="text-success fw-bold">
-                            {watch.price.final} {watch.price.currency}
-                          </span>
+                          {watch.price.final} {watch.price.currency}
                         </>
                       ) : (
-                        <span className="fw-bold">
-                          {watch.price.final} {watch.price.currency}
-                        </span>
+                        <>
+                          {watch.price?.original} {watch.price.currency}
+                        </>
                       )}
-                    </p>
+                    </h4>
 
                     <button
                       className="removeBtn"
