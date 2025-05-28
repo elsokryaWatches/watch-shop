@@ -90,7 +90,7 @@ export default function IBSO() {
       } catch (error) {
         console.error("Failed to load IBSO watches from Firestore", error);
         setError("Failed to load IBSO watches. Please try again.");
-        setLoading(false); // Ensure loading is set to false even on error
+        setLoading(false);
       }
     };
     fetchedIbsoWatches();
@@ -197,25 +197,6 @@ export default function IBSO() {
     return items;
   };
 
-  if (loading) {
-    return (
-      <div className="shop">
-        <div className="container-fluid">
-          <LoadingSpinner />
-        </div>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="shop">
-        <div className="container-fluid">
-          <p style={{ color: "red" }}>{error}</p>
-        </div>
-      </div>
-    );
-  }
   return (
     <>
       <Helmet>
@@ -292,138 +273,154 @@ export default function IBSO() {
                   </button>
                 </div>
 
-                <div className="Watches row col-12">
-                  {currentWatchesToDisplay.length > 0 ? (
-                    currentWatchesToDisplay.map((watch) => (
-                      <div
-                        className="watch homeSecAnimation col-9 col-lg-2"
-                        key={watch.id}
-                      >
-                        {watch.price?.discount_percentage > 0 && (
-                          <div className="discount">
-                            <span className="discount_percentage">
-                              {watch.price.discount_percentage}%
-                            </span>
-                            <span className="discount_period">
-                              {t("for")} {watch.discount?.duration_days}{" "}
-                              {t("days")}
-                            </span>
-                          </div>
-                        )}
-                        <div className="img">
-                          {watch.firstImageUrl ? (
-                            <img
-                              src={watch.firstImageUrl}
-                              alt={watch.brand + " " + watch.model}
-                              onContextMenu={(e) => e.preventDefault()}
-                            />
-                          ) : (
-                            <div className="image-placeholder">
-                              No Image Available
-                            </div>
-                          )}
-                        </div>
-                        <div className="details">
-                          <Link
-                            to={`/product_details/${watch.code}`}
-                            state={{ watch }}
+                {loading ? (
+                  <div className="col-12 d-flex justify-content-center my-5">
+                    <LoadingSpinner />
+                  </div>
+                ) : error ? (
+                  <div className="col-12">
+                    <p style={{ color: "red" }}>{error}</p>
+                  </div>
+                ) : (
+                  <>
+                    <div className="Watches row col-12">
+                      {currentWatchesToDisplay.length > 0 ? (
+                        currentWatchesToDisplay.map((watch) => (
+                          <div
+                            className="watch homeSecAnimation col-9 col-lg-2"
+                            key={watch.id}
                           >
-                            <h4 className="name">
-                              {watch.brand?.[i18n.language]}&nbsp;
-                              {watch.model?.[i18n.language]}
-                            </h4>
-                          </Link>
-                          {watch.price?.discount_percentage > 0 &&
-                          watch.price?.original ? (
-                            <del>
-                              <h5 className="price">
-                                {watch.price.original} {watch.price.currency}
-                              </h5>
-                            </del>
-                          ) : null}
-                          <h4 className="dis_price">
-                            {watch.price?.discount_percentage > 0 &&
-                            watch.price?.final ? (
-                              <>
-                                {watch.price.final} {watch.price.currency}
-                              </>
-                            ) : (
-                              <>
-                                {watch.price?.original} {watch.price.currency}
-                              </>
+                            {watch.price?.discount_percentage > 0 && (
+                              <div className="discount">
+                                <span className="discount_percentage">
+                                  {watch.price.discount_percentage}%
+                                </span>
+                                <span className="discount_period">
+                                  {t("for")} {watch.discount?.duration_days}{" "}
+                                  {t("days")}
+                                </span>
+                              </div>
+                            )}
+                            <div className="img">
+                              {watch.firstImageUrl ? (
+                                <img
+                                  src={watch.firstImageUrl}
+                                  alt={watch.brand + " " + watch.model}
+                                  onContextMenu={(e) => e.preventDefault()}
+                                />
+                              ) : (
+                                <div className="image-placeholder">
+                                  No Image Available
+                                </div>
+                              )}
+                            </div>
+                            <div className="details">
+                              <Link
+                                to={`/product_details/${watch.code}`}
+                                state={{ watch }}
+                              >
+                                <h4 className="name">
+                                  {watch.brand?.[i18n.language]}&nbsp;
+                                  {watch.model?.[i18n.language]}
+                                </h4>
+                              </Link>
+                              {watch.price?.discount_percentage > 0 &&
+                              watch.price?.original ? (
+                                <del>
+                                  <h5 className="price">
+                                    {watch.price.original}{" "}
+                                    {watch.price.currency}
+                                  </h5>
+                                </del>
+                              ) : null}
+                              <h4 className="dis_price">
+                                {watch.price?.discount_percentage > 0 &&
+                                watch.price?.final ? (
+                                  <>
+                                    {watch.price.final} {watch.price.currency}
+                                  </>
+                                ) : (
+                                  <>
+                                    {watch.price?.original}{" "}
+                                    {watch.price.currency}
+                                  </>
+                                )}
+                              </h4>
+                              {typeof watch.stock !== "undefined" && (
+                                <h5 className="stock">
+                                  <strong>{t("stock")}:</strong> {watch.stock}
+                                </h5>
+                              )}
+                            </div>
+                            <div className="btns">
+                              <button
+                                className="addToCart"
+                                onClick={() => handleAddToCart(watch.code)}
+                                disabled={addedToCart.includes(watch.code)}
+                              >
+                                {addedToCart.includes(watch.code)
+                                  ? t("addedToCart")
+                                  : t("add to cart")}
+                              </button>
+                            </div>
+                          </div>
+                        ))
+                      ) : (
+                        <div className="col-12 text-center mt-5">
+                          <h4>
+                            {t(
+                              "No watches found matching your search or filters."
                             )}
                           </h4>
-                          {typeof watch.stock !== "undefined" && (
-                            <h5 className="stock">
-                              <strong>{t("stock")}:</strong> {watch.stock}
-                            </h5>
-                          )}
                         </div>
-                        <div className="btns">
-                          <button
-                            className="addToCart"
-                            onClick={() => handleAddToCart(watch.code)}
-                            disabled={addedToCart.includes(watch.code)}
-                          >
-                            {addedToCart.includes(watch.code)
-                              ? t("addedToCart")
-                              : t("add to cart")}
-                          </button>
-                        </div>
-                      </div>
-                    ))
-                  ) : (
-                    <div className="col-12 text-center mt-5">
-                      <h4>
-                        {t("No watches found matching your search or filters.")}
-                      </h4>
+                      )}
                     </div>
-                  )}
-                </div>
 
-                <div className="pagination col-12 d-flex justify-content-center mt-4">
-                  <button
-                    className="prevBtn"
-                    onClick={() => updatePage(Math.max(currentPage - 1, 1))}
-                    disabled={currentPage === 1}
-                  >
-                    {t("Previous")}
-                  </button>
-
-                  {getPaginationItems().map((item, index) =>
-                    item === "..." ? (
-                      <span key={index} className="mx-1">
-                        ...
-                      </span>
-                    ) : (
+                    <div className="pagination col-12 d-flex justify-content-center mt-4">
                       <button
-                        key={index}
-                        className={`pagNum mx-1 ${
-                          currentPage === item ? "currPagNum" : "pagNum"
-                        }`}
-                        onClick={() => updatePage(item)}
+                        className="prevBtn"
+                        onClick={() => updatePage(Math.max(currentPage - 1, 1))}
+                        disabled={currentPage === 1}
                       >
-                        {item}
+                        {t("Previous")}
                       </button>
-                    )
-                  )}
 
-                  <button
-                    className="nextBtn"
-                    onClick={() =>
-                      updatePage(Math.min(currentPage + 1, totalPages))
-                    }
-                    disabled={currentPage === totalPages}
-                  >
-                    {t("Next")}
-                  </button>
-                </div>
+                      {getPaginationItems().map((item, index) =>
+                        item === "..." ? (
+                          <span key={index} className="mx-1">
+                            ...
+                          </span>
+                        ) : (
+                          <button
+                            key={index}
+                            className={`pagNum mx-1 ${
+                              currentPage === item ? "currPagNum" : "pagNum"
+                            }`}
+                            onClick={() => updatePage(item)}
+                          >
+                            {item}
+                          </button>
+                        )
+                      )}
 
-                <div className="toCart col-10">
-                  <button className="toCartBtn">
-                    <Link to={"/cart"}>{t("to cart")}</Link>
-                  </button>
-                </div>
+                      <button
+                        className="nextBtn"
+                        onClick={() =>
+                          updatePage(Math.min(currentPage + 1, totalPages))
+                        }
+                        disabled={currentPage === totalPages}
+                      >
+                        {t("Next")}
+                      </button>
+                    </div>
+
+                    <div className="toCart col-10">
+                      <button className="toCartBtn">
+                        <Link to={"/cart"}>{t("to cart")}</Link>
+                      </button>
+                    </div>
+                  </>
+                )}
               </>
             )}
           </div>

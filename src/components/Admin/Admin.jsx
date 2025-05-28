@@ -53,32 +53,41 @@ export default function Admin() {
 
   const [watchFormData, setWatchFormData] = useState({
     code: "",
-    brand: "",
-    model: "",
+    brand: { en: "", ar: "" },
+    model_en: "",
+    model_ar: "",
     price: "",
     discount: "",
     discounted_price: "",
     discount_period: "",
     stock: "",
-    gender: "",
-    material: "",
-    movement: "",
+    gender_en: "",
+    gender_ar: "",
+    material_en: "",
+    material_ar: "",
+    movement_en: "",
+    movement_ar: "",
     diameter: "",
     caseThickness: "",
     weight: "",
-    features: "",
+    features_en: "",
+    features_ar: "",
     waterResistant: "",
   });
 
   const [strapFormData, setStrapFormData] = useState({
     code: "",
-    brand: "",
-    model: "",
+    brand: { en: "", ar: "" },
+    model_en: "",
+    model_ar: "",
     price: "",
-    color: "",
+    color_en: "",
+    color_ar: "",
     stock: "",
-    gender: "",
-    material: "",
+    gender_en: "",
+    gender_ar: "",
+    material_en: "",
+    material_ar: "",
   });
 
   const [selectedImages, setSelectedImages] = useState([]);
@@ -101,48 +110,81 @@ export default function Admin() {
 
   const handleWatchInputChange = (e) => {
     const { name, value } = e.target;
-    setWatchFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+    if (name === "brand") {
+      try {
+        const brandValue = JSON.parse(value);
+        setWatchFormData((prevData) => ({
+          ...prevData,
+          [name]: brandValue,
+        }));
+      } catch (error) {
+        console.error("Error parsing brand value:", error);
+      }
+    } else {
+      setWatchFormData((prevData) => ({
+        ...prevData,
+        [name]: value,
+      }));
+    }
   };
 
   const handleStrapInputChange = (e) => {
     const { name, value } = e.target;
-    setStrapFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+    if (name === "brand") {
+      try {
+        const brandValue = JSON.parse(value);
+        setStrapFormData((prevData) => ({
+          ...prevData,
+          [name]: brandValue,
+        }));
+      } catch (error) {
+        console.error("Error parsing brand value:", error);
+      }
+    } else {
+      setStrapFormData((prevData) => ({
+        ...prevData,
+        [name]: value,
+      }));
+    }
   };
 
   const resetForms = () => {
     setWatchFormData({
       code: "",
-      brand: "",
-      model: "",
+      brand: { en: "", ar: "" },
+      model_en: "",
+      model_ar: "",
       price: "",
       discount: "",
       discounted_price: "",
       discount_period: "",
       stock: "",
-      gender: "",
-      material: "",
-      movement: "",
+      gender_en: "",
+      gender_ar: "",
+      material_en: "",
+      material_ar: "",
+      movement_en: "",
+      movement_ar: "",
       diameter: "",
       caseThickness: "",
       weight: "",
-      features: "",
+      features_en: "",
+      features_ar: "",
       waterResistant: "",
     });
     setStrapFormData({
       code: "",
-      brand: "",
-      model: "",
+      brand: { en: "", ar: "" },
+      model_en: "",
+      model_ar: "",
       price: "",
-      color: "",
+      color_en: "",
+      color_ar: "",
       stock: "",
-      gender: "",
-      material: "",
+      gender_en: "",
+      gender_ar: "",
+      material_en: "",
+      material_ar: "",
     });
     setSelectedImages([]);
     setExistingImageUrls([]);
@@ -233,12 +275,13 @@ export default function Admin() {
     if (
       !formDataToUse.code ||
       !formDataToUse.brand ||
-      !formDataToUse.model ||
+      !formDataToUse.model_en ||
+      !formDataToUse.model_ar ||
       !formDataToUse.price ||
       !formDataToUse.stock
     ) {
       setSubmitError(
-        "Please fill in all required fields (Code, Brand, Model, Price, Stock)."
+        "Please fill in all required fields (Code, Brand, Model (English & Arabic), Price, Stock)."
       );
       setIsSubmitting(false);
       return;
@@ -279,30 +322,20 @@ export default function Admin() {
             : new Date(),
       };
 
-      const setLocalizedMap = (key, value) => {
-        if (!value) return null;
+      const setLocalizedMap = (baseName) => {
+        const enValue = formDataToUse[`${baseName}_en`];
+        const arValue = formDataToUse[`${baseName}_ar`];
+        if (!enValue && !arValue) return null;
         return {
-          en: value,
-          ar: t(value, { lng: "ar" }) || value,
+          en: enValue || "",
+          ar: arValue || "",
         };
       };
 
-      productDataForFirestore.brand = setLocalizedMap(
-        "brand",
-        formDataToUse.brand
-      );
-      productDataForFirestore.model = setLocalizedMap(
-        "model",
-        formDataToUse.model
-      );
-      productDataForFirestore.gender = setLocalizedMap(
-        "gender",
-        formDataToUse.gender
-      );
-      productDataForFirestore.material = setLocalizedMap(
-        "material",
-        formDataToUse.material
-      );
+      productDataForFirestore.brand = formDataToUse.brand;
+      productDataForFirestore.model = setLocalizedMap("model");
+      productDataForFirestore.gender = setLocalizedMap("gender");
+      productDataForFirestore.material = setLocalizedMap("material");
       productDataForFirestore.price = {
         currency: "EGP",
         original: parseFloat(formDataToUse.price || 0),
@@ -342,18 +375,9 @@ export default function Admin() {
       }
 
       if (crudType === "watches") {
-        productDataForFirestore.movement = setLocalizedMap(
-          "movement",
-          formDataToUse.movement
-        );
-        productDataForFirestore.features = setLocalizedMap(
-          "features",
-          formDataToUse.features
-        );
-        productDataForFirestore.water_resistance = setLocalizedMap(
-          "waterResistant",
-          formDataToUse.waterResistant
-        );
+        productDataForFirestore.movement = setLocalizedMap("movement");
+        productDataForFirestore.features = setLocalizedMap("features");
+        productDataForFirestore.water_resistance = formDataToUse.waterResistant;
 
         if (
           formDataToUse.diameter ||
@@ -361,24 +385,15 @@ export default function Admin() {
           formDataToUse.weight
         ) {
           productDataForFirestore.specs = {
-            diameter: setLocalizedMap("diameter", formDataToUse.diameter),
-            caseThickness: setLocalizedMap(
-              "caseThickness",
-              formDataToUse.caseThickness
-            ),
-            weight: setLocalizedMap("weight", formDataToUse.weight),
+            diameter: formDataToUse.diameter || null,
+            caseThickness: formDataToUse.caseThickness || null,
+            weight: formDataToUse.weight || null,
           };
         }
 
-        productDataForFirestore.outer_frame = setLocalizedMap(
-          "outer_frame",
-          "Stainless Steel"
-        );
+        productDataForFirestore.outer_frame = "Stainless Steel";
       } else {
-        productDataForFirestore.color = setLocalizedMap(
-          "color",
-          formDataToUse.color
-        );
+        productDataForFirestore.color = setLocalizedMap("color");
       }
 
       Object.keys(productDataForFirestore).forEach((key) => {
@@ -463,9 +478,7 @@ export default function Admin() {
 
             if (key === "createdAt" || key === "updatedAt") {
               processedProduct[key] = value;
-            }
-
-            if (key === "images") {
+            } else if (key === "images") {
               processedProduct.images = value;
             } else if (key === "price") {
               processedProduct.price = value.original || 0;
@@ -498,17 +511,24 @@ export default function Admin() {
                 processedProduct.discountRemainingDays = 0;
               }
             } else if (key === "specs") {
-              processedProduct.diameter = getLocalizedValue(value.diameter);
-              processedProduct.caseThickness = getLocalizedValue(
-                value.caseThickness
-              );
-              processedProduct.weight = getLocalizedValue(value.weight);
+              processedProduct.diameter = value.diameter || "";
+              processedProduct.caseThickness = value.caseThickness || "";
+              processedProduct.weight = value.weight || "";
             } else if (key === "water_resistance") {
-              processedProduct.waterResistant = getLocalizedValue(value);
+              processedProduct.waterResistant = value || "";
             } else if (key === "outer_frame") {
-              processedProduct.outerFrame = getLocalizedValue(value);
+              processedProduct.outerFrame = value || "";
+            } else if (
+              typeof value === "object" &&
+              value !== null &&
+              (value.en !== undefined || value.ar !== undefined)
+            ) {
+              // This is a localized field (model, gender, material, movement, features, color)
+              processedProduct[`${key}_en`] = value.en || "";
+              processedProduct[`${key}_ar`] = value.ar || "";
+              processedProduct[key] = getLocalizedValue(value); // For display using current language
             } else {
-              processedProduct[key] = getLocalizedValue(value);
+              processedProduct[key] = value; // Non-localized string fields like brand, code, stock
             }
           }
         }
@@ -583,31 +603,40 @@ export default function Admin() {
       setWatchFormData({
         code: product.code || "",
         brand: product.brand || "",
-        model: product.model || "",
+        model_en: product.model?.en || "",
+        model_ar: product.model?.ar || "",
         price: product.price || 0,
         discount: product.discount || 0,
         discounted_price: product.discounted_price || 0,
         discount_period: product.discount_period || 0,
         stock: product.stock || 0,
-        gender: product.gender || "",
-        material: product.material || "",
-        movement: product.movement || "",
+        gender_en: product.gender?.en || "",
+        gender_ar: product.gender?.ar || "",
+        material_en: product.material?.en || "",
+        material_ar: product.material?.ar || "",
+        movement_en: product.movement?.en || "",
+        movement_ar: product.movement?.ar || "",
         diameter: product.diameter || "",
         caseThickness: product.caseThickness || "",
         weight: product.weight || "",
-        features: product.features || "",
+        features_en: product.features?.en || "",
+        features_ar: product.features?.ar || "",
         waterResistant: product.waterResistant || "",
       });
     } else {
       setStrapFormData({
         code: product.code || "",
         brand: product.brand || "",
-        model: product.model || "",
+        model_en: product.model?.en || "",
+        model_ar: product.model?.ar || "",
         price: product.price || 0,
-        color: product.color || "",
+        color_en: product.color?.en || "",
+        color_ar: product.color?.ar || "",
         stock: product.stock || 0,
-        gender: product.gender || "",
-        material: product.material || "",
+        gender_en: product.gender?.en || "",
+        gender_ar: product.gender?.ar || "",
+        material_en: product.material?.en || "",
+        material_ar: product.material?.ar || "",
       });
     }
   };
@@ -693,7 +722,7 @@ export default function Admin() {
       console.log(
         "DEBUG useEffect: IDs in 'filteredProducts' (no search):",
         products.map((p) => p.id)
-      ); // <-- Add this line
+      );
     } else {
       const filtered = products.filter(
         (product) =>
@@ -846,30 +875,47 @@ export default function Admin() {
                           name="brand"
                           id="watchBrand"
                           className="col-12"
-                          value={watchFormData.brand}
+                          value={JSON.stringify(watchFormData.brand)}
                           onChange={handleWatchInputChange}
                           disabled={isSubmitting}
                         >
                           <option value="" disabled>
                             select the brand
                           </option>
-                          <option value="SKMEI">{t("skmei")}</option>
-                          <option value="Mini Focus">{t("MiniFocus")}</option>
-                          <option value="IBSO">{t("ibso")}</option>
+                          <option value='{"en":"SKMEI","ar":"SKMEI"}'>
+                            {t("skmei")}
+                          </option>
+                          <option value='{"en":"Mini Focus","ar":"مينى فوكس"}'>
+                            {t("MiniFocus")}
+                          </option>
+                          <option value='{"en":"IBSO","ar":"IBSO"}'>
+                            {t("ibso")}
+                          </option>
                         </select>
                       </div>
                       <div className="inputContainer col-4 row">
-                        <label className="col-12" htmlFor="watchModel">
+                        <label className="col-12" htmlFor="watchModel_en">
                           {t("model")}
                         </label>
                         <input
                           className="col-12"
                           type="text"
-                          name="model"
-                          id="watchModel"
-                          value={watchFormData.model}
+                          name="model_en"
+                          id="watchModel_en"
+                          value={watchFormData.model_en}
                           onChange={handleWatchInputChange}
                           disabled={isSubmitting}
+                          placeholder={t("english")}
+                        />
+                        <input
+                          className="col-12"
+                          type="text"
+                          name="model_ar"
+                          id="watchModel_ar"
+                          value={watchFormData.model_ar}
+                          onChange={handleWatchInputChange}
+                          disabled={isSubmitting}
+                          placeholder={t("arabic")}
                         />
                       </div>
                       <div className="inputContainer col-4 row">
@@ -948,53 +994,81 @@ export default function Admin() {
                           disabled={isSubmitting}
                         />
                       </div>
-                      {watchFormData.brand !== "SKMEI" && (
+                      {watchFormData.brand.en !== "SKMEI" && (
                         <div className="inputContainer col-4 row">
-                          <label className="col-12" htmlFor="watchGender">
+                          <label className="col-12" htmlFor="watchGender_en">
                             {t("gender")}
                           </label>
-                          <select
+                          <input
                             className="col-12"
-                            name="gender"
-                            id="watchGender"
-                            value={watchFormData.gender}
+                            type="text"
+                            name="gender_en"
+                            id="watchGender_en"
+                            value={watchFormData.gender_en}
                             onChange={handleWatchInputChange}
                             disabled={isSubmitting}
-                          >
-                            <option value="" disabled>
-                              choose gender
-                            </option>
-                            <option value="men">{t("Men")}</option>
-                            <option value="women">{t("women")}</option>
-                          </select>
+                            placeholder={t("english")}
+                          />
+                          <input
+                            className="col-12"
+                            type="text"
+                            name="gender_ar"
+                            id="watchGender_ar"
+                            value={watchFormData.gender_ar}
+                            onChange={handleWatchInputChange}
+                            disabled={isSubmitting}
+                            placeholder={t("arabic")}
+                          />
                         </div>
                       )}
                       <div className="inputContainer col-4 row">
-                        <label className="col-12" htmlFor="watchMaterial">
+                        <label className="col-12" htmlFor="watchMaterial_en">
                           {t("material")}
                         </label>
                         <input
                           className="col-12"
                           type="text"
-                          name="material"
-                          id="watchMaterial"
-                          value={watchFormData.material}
+                          name="material_en"
+                          id="watchMaterial_en"
+                          value={watchFormData.material_en}
                           onChange={handleWatchInputChange}
                           disabled={isSubmitting}
+                          placeholder={t("english")}
+                        />
+                        <input
+                          className="col-12"
+                          type="text"
+                          name="material_ar"
+                          id="watchMaterial_ar"
+                          value={watchFormData.material_ar}
+                          onChange={handleWatchInputChange}
+                          disabled={isSubmitting}
+                          placeholder={t("arabic")}
                         />
                       </div>
                       <div className="inputContainer col-4 row">
-                        <label className="col-12" htmlFor="watchMovement">
+                        <label className="col-12" htmlFor="watchMovement_en">
                           {t("movement")}
                         </label>
                         <input
                           className="col-12"
                           type="text"
-                          name="movement"
-                          id="watchMovement"
-                          value={watchFormData.movement}
+                          name="movement_en"
+                          id="watchMovement_en"
+                          value={watchFormData.movement_en}
                           onChange={handleWatchInputChange}
                           disabled={isSubmitting}
+                          placeholder={t("english")}
+                        />
+                        <input
+                          className="col-12"
+                          type="text"
+                          name="movement_ar"
+                          id="watchMovement_ar"
+                          value={watchFormData.movement_ar}
+                          onChange={handleWatchInputChange}
+                          disabled={isSubmitting}
+                          placeholder={t("arabic")}
                         />
                       </div>
                       <div className="inputContainer col-4 row">
@@ -1040,17 +1114,28 @@ export default function Admin() {
                         />
                       </div>
                       <div className="inputContainer col-4 row">
-                        <label className="col-12" htmlFor="watchFeatures">
+                        <label className="col-12" htmlFor="watchFeatures_en">
                           {t("features")}
                         </label>
                         <input
                           className="col-12"
                           type="text"
-                          name="features"
-                          id="watchFeatures"
-                          value={watchFormData.features}
+                          name="features_en"
+                          id="watchFeatures_en"
+                          value={watchFormData.features_en}
                           onChange={handleWatchInputChange}
                           disabled={isSubmitting}
+                          placeholder={t("english")}
+                        />
+                        <input
+                          className="col-12"
+                          type="text"
+                          name="features_ar"
+                          id="watchFeatures_ar"
+                          value={watchFormData.features_ar}
+                          onChange={handleWatchInputChange}
+                          disabled={isSubmitting}
+                          placeholder={t("arabic")}
                         />
                       </div>
                       <div className="inputContainer col-4 row">
@@ -1199,28 +1284,51 @@ export default function Admin() {
                         <label className="col-12" htmlFor="strapBrand">
                           {t("brand")}
                         </label>
-                        <input
-                          className="col-12"
-                          type="text"
+                        <select
                           name="brand"
                           id="strapBrand"
-                          value={strapFormData.brand}
+                          className="col-12"
+                          value={JSON.stringify(strapFormData.brand)}
                           onChange={handleStrapInputChange}
                           disabled={isSubmitting}
-                        />
+                        >
+                          <option value="" disabled>
+                            select the brand
+                          </option>
+                          <option value='{"en":"SKMEI","ar":"SKMEI"}'>
+                            {t("skmei")}
+                          </option>
+                          <option value='{"en":"Mini Focus","ar":"مينى فوكس"}'>
+                            {t("MiniFocus")}
+                          </option>
+                          <option value='{"en":"IBSO","ar":"IBSO"}'>
+                            {t("ibso")}
+                          </option>
+                        </select>
                       </div>
                       <div className="inputContainer col-4 row">
-                        <label className="col-12" htmlFor="strapModel">
+                        <label className="col-12" htmlFor="strapModel_en">
                           {t("model")}
                         </label>
                         <input
                           className="col-12"
                           type="text"
-                          name="model"
-                          id="strapModel"
-                          value={strapFormData.model}
+                          name="model_en"
+                          id="strapModel_en"
+                          value={strapFormData.model_en}
                           onChange={handleStrapInputChange}
                           disabled={isSubmitting}
+                          placeholder={t("english")}
+                        />
+                        <input
+                          className="col-12"
+                          type="text"
+                          name="model_ar"
+                          id="strapModel_ar"
+                          value={strapFormData.model_ar}
+                          onChange={handleStrapInputChange}
+                          disabled={isSubmitting}
+                          placeholder={t("arabic")}
                         />
                       </div>
                       <div className="inputContainer col-4 row">
@@ -1238,17 +1346,28 @@ export default function Admin() {
                         />
                       </div>
                       <div className="inputContainer col-4 row">
-                        <label className="col-12" htmlFor="strapColor">
+                        <label className="col-12" htmlFor="strapColor_en">
                           {t("color")}
                         </label>
                         <input
                           className="col-12"
                           type="text"
-                          name="color"
-                          id="strapColor"
-                          value={strapFormData.color}
+                          name="color_en"
+                          id="strapColor_en"
+                          value={strapFormData.color_en}
                           onChange={handleStrapInputChange}
                           disabled={isSubmitting}
+                          placeholder={t("english")}
+                        />
+                        <input
+                          className="col-12"
+                          type="text"
+                          name="color_ar"
+                          id="strapColor_ar"
+                          value={strapFormData.color_ar}
+                          onChange={handleStrapInputChange}
+                          disabled={isSubmitting}
+                          placeholder={t("arabic")}
                         />
                       </div>
                       <div className="inputContainer col-4 row">
@@ -1266,36 +1385,53 @@ export default function Admin() {
                         />
                       </div>
                       <div className="inputContainer col-4 row">
-                        <label className="col-12" htmlFor="strapGender">
+                        <label className="col-12" htmlFor="strapGender_en">
                           {t("gender")}
                         </label>
-                        <select
+                        <input
                           className="col-12"
-                          name="gender"
-                          id="strapGender"
-                          value={strapFormData.gender}
+                          type="text"
+                          name="gender_en"
+                          id="strapGender_en"
+                          value={strapFormData.gender_en}
                           onChange={handleStrapInputChange}
                           disabled={isSubmitting}
-                        >
-                          <option value="" disabled>
-                            choose gender
-                          </option>
-                          <option value="men">{t("Men")}</option>
-                          <option value="women">{t("women")}</option>
-                        </select>
+                          placeholder={t("english")}
+                        />
+                        <input
+                          className="col-12"
+                          type="text"
+                          name="gender_ar"
+                          id="strapGender_ar"
+                          value={strapFormData.gender_ar}
+                          onChange={handleStrapInputChange}
+                          disabled={isSubmitting}
+                          placeholder={t("arabic")}
+                        />
                       </div>
                       <div className="inputContainer col-4 row">
-                        <label className="col-12" htmlFor="strapMaterial">
+                        <label className="col-12" htmlFor="strapMaterial_en">
                           {t("material")}
                         </label>
                         <input
                           className="col-12"
                           type="text"
-                          name="material"
-                          id="strapMaterial"
-                          value={strapFormData.material}
+                          name="material_en"
+                          id="strapMaterial_en"
+                          value={strapFormData.material_en}
                           onChange={handleStrapInputChange}
                           disabled={isSubmitting}
+                          placeholder={t("english")}
+                        />
+                        <input
+                          className="col-12"
+                          type="text"
+                          name="material_ar"
+                          id="strapMaterial_ar"
+                          value={strapFormData.material_ar}
+                          onChange={handleStrapInputChange}
+                          disabled={isSubmitting}
+                          placeholder={t("arabic")}
                         />
                       </div>
                       <div className="inputContainer col-4 row">
@@ -1305,7 +1441,6 @@ export default function Admin() {
 
                         {editingProduct && existingImageUrls.length > 0 && (
                           <div className="form-group mb-3 col-12">
-                            {" "}
                             <label>{t("Existing Images")}:</label>
                             <div className="d-flex flex-wrap gap-2 mt-2">
                               {existingImageUrls.map((imagePath, index) => {

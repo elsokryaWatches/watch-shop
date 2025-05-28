@@ -80,6 +80,7 @@
           }
 
           .inputContainer {
+            gap: 5px;
             label {
               color: var(--white);
               padding: 5px 0px;
