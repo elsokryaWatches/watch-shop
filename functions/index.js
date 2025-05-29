@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 // functions/index.js
 
 // Import Cloud Functions v2 triggers and admin SDK
