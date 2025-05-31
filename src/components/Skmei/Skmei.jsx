@@ -187,7 +187,7 @@ export default function Skmei() {
   return (
     <>
       <Helmet>
-        <title>El Sokrya - SKMEI Collection</title>
+        <title>El Sokarya - SKMEI Collection</title>
       </Helmet>
       <div className="shop">
         <div className="container-fluid">

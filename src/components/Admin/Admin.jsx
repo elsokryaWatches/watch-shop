@@ -767,7 +767,7 @@ export default function Admin() {
   return (
     <>
       <Helmet>
-        <title>El Sokrya - Admin</title>
+        <title>El Sokarya - Admin</title>
       </Helmet>
       <Navbar />
       <div className="admin">

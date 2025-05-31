@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import Navbar from "../Navbar/Navbar";
 import "./CartCheck.css";
 import "../../i18n";
@@ -100,6 +101,9 @@ export default function CartCheck() {
 
   return (
     <>
+      <Helmet>
+        <title>El Sokarya - Cart check</title>
+      </Helmet>
       <Navbar />
       <div className="cartCheck container mt-4">
         <h2>{t("ordered")}</h2>

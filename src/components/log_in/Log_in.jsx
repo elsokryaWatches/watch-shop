@@ -1,6 +1,7 @@
 import "./Log_in.css";
 import "../../i18n";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet";
 import { useState } from "react";
 import { auth } from "../../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
@@ -56,6 +57,9 @@ export default function Log_in() {
 
   return (
     <>
+      <Helmet>
+        <title>El Sokarya - Log in</title>
+      </Helmet>
       <div className="logIn">
         <div className="container-fluid">
           <div className="logInInner row">

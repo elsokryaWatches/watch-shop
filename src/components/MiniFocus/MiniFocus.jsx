@@ -207,7 +207,7 @@ export default function MiniFocus() {
   return (
     <>
       <Helmet>
-        <title>El Sokrya - Mini Focus Collection</title>
+        <title>El Sokarya - Mini Focus Collection</title>
       </Helmet>
       <div className="shop">
         <div className="container-fluid">

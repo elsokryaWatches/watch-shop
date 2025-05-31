@@ -165,7 +165,7 @@ export default function Shop() {
   return (
     <>
       <Helmet>
-        <title>El Sokrya - All Watches</title>
+        <title>El Sokarya - All Watches</title>
       </Helmet>
       <div className="shop">
         <div className="container-fluid">

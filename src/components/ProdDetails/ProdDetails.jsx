@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import NavBar from "../Navbar/Navbar";
 import "./ProdDetails.css";
 import { useLocation, useParams, useNavigate } from "react-router-dom";
@@ -188,6 +189,9 @@ export default function ProdDetails() {
 
   return (
     <>
+      <Helmet>
+        <title>El Sokarya - Details</title>
+      </Helmet>
       <NavBar />
       <div className="prodDet container">
         <div className="prodDetInner row">

@@ -200,7 +200,7 @@ export default function IBSO() {
   return (
     <>
       <Helmet>
-        <title>El Sokrya - IBSO Collection</title>
+        <title>El Sokarya - IBSO Collection</title>
       </Helmet>
       <div className="shop">
         <div className="container-fluid">

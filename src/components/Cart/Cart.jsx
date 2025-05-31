@@ -88,7 +88,7 @@ export default function Cart() {
   return (
     <>
       <Helmet>
-        <title>El Sokrya - Cart</title>
+        <title>El Sokarya - Cart</title>
       </Helmet>
       <Navbar />
       <div className="cart">

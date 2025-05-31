@@ -10,7 +10,7 @@ export default function Straps() {
   return (
     <>
       <Helmet>
-        <title>El Sokrya - Straps</title>
+        <title>El Sokarya - Straps</title>
       </Helmet>
       <div className="shop">
         <div className="container-fluid">

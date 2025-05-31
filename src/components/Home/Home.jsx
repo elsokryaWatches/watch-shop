@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>El Sokrya - Home Page</title>
+        <title>El Sokarya - Home Page</title>
       </Helmet>
       <Watches />
       <Wallets />
