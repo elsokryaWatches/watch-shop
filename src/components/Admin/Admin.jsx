@@ -67,12 +67,16 @@ export default function Admin() {
     material_ar: "",
     movement_en: "",
     movement_ar: "",
-    diameter: "",
-    caseThickness: "",
-    weight: "",
+    diameter_en: "",
+    diameter_ar: "",
+    caseThickness_en: "",
+    caseThickness_ar: "",
+    weight_en: "",
+    weight_ar: "",
     features_en: "",
     features_ar: "",
-    waterResistant: "",
+    waterResistant_en: "",
+    waterResistant_ar: "",
   });
 
   const [strapFormData, setStrapFormData] = useState({
@@ -165,12 +169,16 @@ export default function Admin() {
       material_ar: "",
       movement_en: "",
       movement_ar: "",
-      diameter: "",
-      caseThickness: "",
-      weight: "",
+      diameter_en: "",
+      diameter_ar: "",
+      caseThickness_en: "",
+      caseThickness_ar: "",
+      weight_en: "",
+      weight_ar: "",
       features_en: "",
       features_ar: "",
-      waterResistant: "",
+      waterResistant_en: "",
+      waterResistant_ar: "",
     });
     setStrapFormData({
       code: "",
@@ -379,17 +387,24 @@ export default function Admin() {
         productDataForFirestore.features = setLocalizedMap("features");
         productDataForFirestore.water_resistance = formDataToUse.waterResistant;
 
-        if (
-          formDataToUse.diameter ||
-          formDataToUse.caseThickness ||
-          formDataToUse.weight
-        ) {
-          productDataForFirestore.specs = {
-            diameter: formDataToUse.diameter || null,
-            caseThickness: formDataToUse.caseThickness || null,
-            weight: formDataToUse.weight || null,
+        const setSpecValue = (baseName) => {
+          const enValue = formDataToUse[`${baseName}_en`];
+          const arValue = formDataToUse[`${baseName}_ar`];
+          if (!enValue && !arValue) return null;
+          return {
+            en: enValue || "",
+            ar: arValue || "",
           };
-        }
+        };
+
+        productDataForFirestore.specs = {
+          diameter: setSpecValue("diameter"),
+          caseThickness: setSpecValue("caseThickness"),
+          weight: setSpecValue("weight"),
+        };
+
+        productDataForFirestore.water_resistance =
+          setSpecValue("waterResistant");
 
         productDataForFirestore.outer_frame = "Stainless Steel";
       } else {
@@ -511,11 +526,17 @@ export default function Admin() {
                 processedProduct.discountRemainingDays = 0;
               }
             } else if (key === "specs") {
-              processedProduct.diameter = value.diameter || "";
-              processedProduct.caseThickness = value.caseThickness || "";
-              processedProduct.weight = value.weight || "";
+              processedProduct.diameter_en = value.diameter?.en || "";
+              processedProduct.diameter_ar = value.diameter?.ar || "";
+              processedProduct.caseThickness_en = value.caseThickness?.en || "";
+              processedProduct.caseThickness_ar = value.caseThickness?.ar || "";
+              processedProduct.weight_en = value.weight?.en || "";
+              processedProduct.weight_ar = value.weight?.ar || "";
             } else if (key === "water_resistance") {
-              processedProduct.waterResistant = value || "";
+              processedProduct.waterResistant_en =
+                value.waterResistant?.en || "";
+              processedProduct.waterResistant_ar =
+                value.waterResistant?.ar || "";
             } else if (key === "outer_frame") {
               processedProduct.outerFrame = value || "";
             } else if (
@@ -523,12 +544,11 @@ export default function Admin() {
               value !== null &&
               (value.en !== undefined || value.ar !== undefined)
             ) {
-              // This is a localized field (model, gender, material, movement, features, color)
               processedProduct[`${key}_en`] = value.en || "";
               processedProduct[`${key}_ar`] = value.ar || "";
-              processedProduct[key] = getLocalizedValue(value); // For display using current language
+              processedProduct[key] = getLocalizedValue(value);
             } else {
-              processedProduct[key] = value; // Non-localized string fields like brand, code, stock
+              processedProduct[key] = value;
             }
           }
         }
@@ -616,12 +636,16 @@ export default function Admin() {
         material_ar: product.material?.ar || "",
         movement_en: product.movement?.en || "",
         movement_ar: product.movement?.ar || "",
-        diameter: product.diameter || "",
-        caseThickness: product.caseThickness || "",
-        weight: product.weight || "",
+        diameter_en: product.diameter?.en || "",
+        diameter_ar: product.diameter?.ar || "",
+        caseThickness_en: product.caseThickness?.en || "",
+        caseThickness_ar: product.caseThickness?.ar || "",
+        weight_en: product.weight?.en || "",
+        weight_ar: product.weight?.ar || "",
+        waterResistant_en: product.waterResistant?.en || "",
+        waterResistant_ar: product.waterResistant?.ar || "",
         features_en: product.features?.en || "",
         features_ar: product.features?.ar || "",
-        waterResistant: product.waterResistant || "",
       });
     } else {
       setStrapFormData({
@@ -1078,11 +1102,22 @@ export default function Admin() {
                         <input
                           className="col-12"
                           type="text"
-                          name="diameter"
-                          id="watchDiameter"
-                          value={watchFormData.diameter}
+                          name="diameter_en"
+                          id="watchDiameter_en"
+                          value={watchFormData.diameter_en}
                           onChange={handleWatchInputChange}
                           disabled={isSubmitting}
+                          placeholder={t("english")}
+                        />
+                        <input
+                          className="col-12"
+                          type="text"
+                          name="diameter_ar"
+                          id="watchDiameter_ar"
+                          value={watchFormData.diameter_ar}
+                          onChange={handleWatchInputChange}
+                          disabled={isSubmitting}
+                          placeholder={t("arabic")}
                         />
                       </div>
                       <div className="inputContainer col-4 row">
@@ -1092,11 +1127,22 @@ export default function Admin() {
                         <input
                           className="col-12"
                           type="text"
-                          name="caseThickness"
-                          id="watchCaseThickness"
-                          value={watchFormData.caseThickness}
+                          name="caseThickness_en"
+                          id="watchCaseThickness_en"
+                          value={watchFormData.caseThickness_en}
                           onChange={handleWatchInputChange}
                           disabled={isSubmitting}
+                          placeholder={t("english")}
+                        />
+                        <input
+                          className="col-12"
+                          type="text"
+                          name="caseThickness_ar"
+                          id="watchCaseThickness_ar"
+                          value={watchFormData.caseThickness_ar}
+                          onChange={handleWatchInputChange}
+                          disabled={isSubmitting}
+                          placeholder={t("arabic")}
                         />
                       </div>
                       <div className="inputContainer col-4 row">
@@ -1106,11 +1152,22 @@ export default function Admin() {
                         <input
                           className="col-12"
                           type="text"
-                          name="weight"
-                          id="watchWeight"
-                          value={watchFormData.weight}
+                          name="weight_en"
+                          id="watchWeight_en"
+                          value={watchFormData.weight_en}
                           onChange={handleWatchInputChange}
                           disabled={isSubmitting}
+                          placeholder={t("english")}
+                        />
+                        <input
+                          className="col-12"
+                          type="text"
+                          name="weight_ar"
+                          id="watchWeight_ar"
+                          value={watchFormData.weight_ar}
+                          onChange={handleWatchInputChange}
+                          disabled={isSubmitting}
+                          placeholder={t("arabic")}
                         />
                       </div>
                       <div className="inputContainer col-4 row">
@@ -1145,11 +1202,22 @@ export default function Admin() {
                         <input
                           className="col-12"
                           type="text"
-                          name="waterResistant"
-                          id="watchWaterResistant"
-                          value={watchFormData.waterResistant}
+                          name="waterResistant_en"
+                          id="watchWaterResistant_en"
+                          value={watchFormData.waterResistant_en}
                           onChange={handleWatchInputChange}
                           disabled={isSubmitting}
+                          placeholder={t("english")}
+                        />
+                        <input
+                          className="col-12"
+                          type="text"
+                          name="waterResistant_ar"
+                          id="watchWaterResistant_ar"
+                          value={watchFormData.waterResistant_ar}
+                          onChange={handleWatchInputChange}
+                          disabled={isSubmitting}
+                          placeholder={t("arabic")}
                         />
                       </div>
                       <div className="inputContainer col-4 row">

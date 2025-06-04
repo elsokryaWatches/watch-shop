@@ -112,5 +112,8 @@
   "images": "images",
   "color": "color",
   "back": "back",
-  "orderSuccessMessage": "your order is submitted and we will contact you soon"
+  "orderSuccessMessage": "your order is submitted and we will contact you soon",
+  "mm": "mm",
+  "gm": "gm",
+  "m": "m"
 }

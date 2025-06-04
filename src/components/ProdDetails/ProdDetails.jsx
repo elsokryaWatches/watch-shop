@@ -187,6 +187,14 @@ export default function ProdDetails() {
     );
   }
 
+  // Helper function to get localized or direct value
+  const getLocalizedOrDirectValue = (field) => {
+    if (typeof field === "object" && field !== null) {
+      return field[i18n.language] || field.en || "";
+    }
+    return field || "";
+  };
+
   return (
     <>
       <Helmet>
@@ -236,13 +244,10 @@ export default function ProdDetails() {
 
           <div className="textSide col-10 col-lg-5">
             <h3>
-              {watch.brand?.[i18n.language] || watch.brand?.en || ""}
-
-              {typeof watch.model === "object"
-                ? watch.model?.[i18n.language] || watch.model?.en || ""
-                : watch.model || ""}
+              {getLocalizedOrDirectValue(watch.brand)}{" "}
+              {getLocalizedOrDirectValue(watch.model)}
             </h3>
-            <p>{watch.movement?.[i18n.language] || watch.movement?.en || ""}</p>
+            <p>{getLocalizedOrDirectValue(watch.movement)}</p>
 
             {watch.price?.discount_percentage > 0 && watch.price?.original ? (
               <del>
@@ -272,8 +277,7 @@ export default function ProdDetails() {
                 ))
               ) : (
                 <li>
-                  {watch.features?.[i18n.language] ||
-                    watch.features?.en ||
+                  {getLocalizedOrDirectValue(watch.features) ||
                     t("noFeaturesAvailable")}{" "}
                 </li>
               )}
@@ -282,48 +286,43 @@ export default function ProdDetails() {
               <strong>{t("details")}</strong>
             </h3>
             <ul>
-              {watch.gender?.[i18n.language] && (
+              {watch.gender && (
                 <li>
-                  <strong>{t("gender")}:</strong> {watch.gender[i18n.language]}
+                  <strong>{t("gender")}:</strong>{" "}
+                  {getLocalizedOrDirectValue(watch.gender)}
                 </li>
               )}
 
-              {watch.movement?.[i18n.language] && (
+              {watch.movement && (
                 <li>
                   <strong>{t("movement")}:</strong>{" "}
-                  {watch.movement[i18n.language]}
+                  {getLocalizedOrDirectValue(watch.movement)}
                 </li>
               )}
 
-              {watch.material?.[i18n.language] && (
+              {watch.material && (
                 <li>
                   <strong>{t("material")}:</strong>{" "}
-                  {watch.material[i18n.language]}
+                  {getLocalizedOrDirectValue(watch.material)}
                 </li>
               )}
 
-              {watch.outer_frame?.[i18n.language] && (
+              {(watch.water_resistance || watch.waterResistant) && (
                 <li>
-                  <strong>{t("outer_frame")}:</strong>{" "}
-                  {watch.outer_frame[i18n.language]}
-                </li>
-              )}
-
-              {(watch.water_resistance?.[i18n.language] ||
-                watch.waterResistant?.[i18n.language]) && (
-                <li>
-                  <strong>{t("waterResistant")}:</strong>{" "}
-                  {watch.water_resistance?.[i18n.language] ||
-                    watch.waterResistant?.[i18n.language]}
+                  <strong>{t("waterResistant")}:</strong>
+                  {getLocalizedOrDirectValue(
+                    watch.water_resistance || watch.waterResistant
+                  )}
                 </li>
               )}
 
               {watch.specs &&
                 Object.entries(watch.specs).map(
                   ([key, val]) =>
-                    val?.[i18n.language] && (
+                    val && (
                       <li key={key}>
-                        <strong>{t(key)}:</strong> {val[i18n.language]}
+                        <strong>{t(key)}:</strong>
+                        {getLocalizedOrDirectValue(val)}
                       </li>
                     )
                 )}
