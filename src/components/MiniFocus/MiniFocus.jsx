@@ -17,6 +17,7 @@ export default function MiniFocus() {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState(null);
   const [selectedGender, setSelectedGender] = useState("Men");
+  const [filterOption, setFilterOption] = useState("");
 
   const [addedToCart, setAddedToCart] = useState(() => {
     return JSON.parse(localStorage.getItem("orders")) || [];
@@ -111,6 +112,12 @@ export default function MiniFocus() {
     setAddedToCart((prev) => [...prev, code]);
   };
 
+  const handleFilterChange = (e) => {
+    const selectedValue = e.target.value;
+    setFilterOption(selectedValue);
+    setCurrentPage(1);
+  };
+
   const handleSearch = () => {
     const results = watches.filter((watch) =>
       `${watch.brand?.[i18n.language] || ""} ${
@@ -136,7 +143,37 @@ export default function MiniFocus() {
     return selectedGender;
   };
 
-  const watchesAfterSearch = searchResults !== null ? searchResults : watches;
+  const getFilteredAndSortedWatches = () => {
+    let filteredWatches = [...watches];
+
+    if (filterOption === "cheap") {
+      filteredWatches.sort((a, b) => {
+        const priceA = a.price?.final || a.price?.original || 0;
+        const priceB = b.price?.final || b.price?.original || 0;
+        return priceA - priceB;
+      });
+    } else if (filterOption === "expensive") {
+      filteredWatches.sort((a, b) => {
+        const priceA = a.price?.final || a.price?.original || 0;
+        const priceB = b.price?.final || b.price?.original || 0;
+        return priceB - priceA;
+      });
+    } else if (filterOption === "discounts") {
+      filteredWatches = filteredWatches.filter(
+        (watch) => watch.price?.discount_percentage > 0
+      );
+      filteredWatches.sort(
+        (a, b) => b.price?.discount_percentage - a.price?.discount_percentage
+      );
+    }
+    return filteredWatches;
+  };
+
+  const filteredAndSortedWatches = getFilteredAndSortedWatches();
+
+  const watchesAfterSearch = searchTerm
+    ? searchResults
+    : filteredAndSortedWatches;
 
   const filteredByGender = watchesAfterSearch.filter((watch) => {
     const watchGender =
@@ -236,6 +273,19 @@ export default function MiniFocus() {
             ) : (
               <>
                 <div className="search-bar col-12 my-3 d-flex justify-content-center">
+                  <select
+                    className="filterProds"
+                    value={filterOption}
+                    onChange={handleFilterChange}
+                  >
+                    <option disabled value="">
+                      {t("filter by")}
+                    </option>
+                    <option value="">{t("all")}</option>
+                    <option value="cheap">{t("cheapest")}</option>
+                    <option value="expensive">{t("most expensive")}</option>
+                    <option value="discounts">{t("discounts")}</option>
+                  </select>
                   <input
                     type="text"
                     placeholder={t("search")}
