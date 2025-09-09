@@ -5,7 +5,7 @@ import NavBar from "../Navbar/Navbar";
 import "./ProdDetails.css";
 import { useLocation, useParams, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { doc, getDoc } from "firebase/firestore";
+import { doc, getDoc, collection, getDocs } from "firebase/firestore";
 import { db, storage } from "../../firebase";
 import { ref, getDownloadURL } from "firebase/storage";
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
@@ -24,6 +24,7 @@ export default function ProdDetails() {
   const [zoomPosition, setZoomPosition] = useState(null);
   const [remainingTime, setRemainingTime] = useState(null);
   const [imageUrls, setImageUrls] = useState([]);
+  const [suggestedWatches, setSuggestedWatches] = useState([]);
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -56,33 +57,75 @@ export default function ProdDetails() {
   };
 
   useEffect(() => {
-    if (!passedWatch && code) {
-      const fetchProduct = async () => {
-        try {
-          setLoading(true);
-          setError(null);
+    const fetchProductAndSuggestions = async () => {
+      try {
+        setLoading(true);
+        setError(null);
 
+        let currentWatchData = passedWatch;
+        if (!currentWatchData && code) {
           const docRef = doc(db, "watches", code);
           const docSnap = await getDoc(docRef);
 
           if (docSnap.exists()) {
-            const watchData = { id: docSnap.id, ...docSnap.data() };
-            setWatch(watchData);
-            await fetchImageUrls(watchData.images || []);
-            setLoading(false);
+            currentWatchData = { id: docSnap.id, ...docSnap.data() };
+            setWatch(currentWatchData);
+            await fetchImageUrls(currentWatchData.images || []);
           } else {
             console.warn("No such document in Firestore for code:", code);
             setError("Product not found.");
             setLoading(false);
+            return;
           }
-        } catch (error) {
-          console.error("Failed to load product from Firestore:", error);
-          setError("Failed to load product details. Please try again.");
-          setLoading(false);
         }
-      };
-      fetchProduct();
-    }
+
+        if (currentWatchData) {
+          const watchesCollection = collection(db, "watches");
+          const watchesSnapshot = await getDocs(watchesCollection);
+          const allWatches = watchesSnapshot.docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data(),
+          }));
+
+          const suggestions = allWatches
+            .filter(
+              (w) =>
+                w.model.en === currentWatchData.model.en &&
+                w.id !== currentWatchData.id
+            )
+            .slice(0, 5);
+
+          const suggestionsWithImageUrls = await Promise.all(
+            suggestions.map(async (sugg) => {
+              if (sugg.images && sugg.images.length > 0) {
+                try {
+                  const firstImageUrl = await getDownloadURL(
+                    ref(storage, sugg.images[0])
+                  );
+                  return { ...sugg, imageUrl: firstImageUrl };
+                } catch (e) {
+                  console.error(
+                    "Error fetching suggestion image:",
+                    sugg.images[0],
+                    e
+                  );
+                  return { ...sugg, imageUrl: null };
+                }
+              }
+              return { ...sugg, imageUrl: null };
+            })
+          );
+          setSuggestedWatches(suggestionsWithImageUrls);
+        }
+
+        setLoading(false);
+      } catch (error) {
+        console.error("Failed to load product from Firestore:", error);
+        setError("Failed to load product details. Please try again.");
+        setLoading(false);
+      }
+    };
+    fetchProductAndSuggestions();
 
     let intervalId;
     if (!watch || !watch.discount || !watch.discount.expiresAt) {
@@ -187,7 +230,6 @@ export default function ProdDetails() {
     );
   }
 
-  // Helper function to get localized or direct value
   const getLocalizedOrDirectValue = (field) => {
     if (typeof field === "object" && field !== null) {
       return field[i18n.language] || field.en || "";
@@ -202,12 +244,13 @@ export default function ProdDetails() {
       </Helmet>
       <NavBar />
       <div className="prodDet container">
-        <div className="prodDetInner row">
+        <div className="prodDetInner row  m-0">
           <div className="backContainer col-12">
             <button className="backBtn" onClick={() => navigate(-1)}>
               {t("back")}
             </button>
           </div>
+
           <div className="imgSide col-10 col-lg-5 text-center">
             {imageUrls.length > 0 ? (
               <>
@@ -231,6 +274,7 @@ export default function ProdDetails() {
                     <button onClick={handlePrevImage} className="imgNav">
                       ←
                     </button>
+
                     <button onClick={handleNextImage} className="imgNav">
                       →
                     </button>
@@ -248,11 +292,11 @@ export default function ProdDetails() {
               {getLocalizedOrDirectValue(watch.model)}
             </h3>
             <p>{getLocalizedOrDirectValue(watch.movement)}</p>
-
             {watch.price?.discount_percentage > 0 && watch.price?.original ? (
               <del>
                 <h5 className="price">
-                  {watch.price.original} {watch.price.currency}
+                  {watch.price.original}
+                  {watch.price.currency}
                 </h5>
               </del>
             ) : null}
@@ -263,7 +307,8 @@ export default function ProdDetails() {
                 </>
               ) : (
                 <>
-                  {watch.price?.original} {watch.price.currency}
+                  {watch.price?.original}
+                  {watch.price.currency}
                 </>
               )}
             </h4>
@@ -278,7 +323,7 @@ export default function ProdDetails() {
               ) : (
                 <li>
                   {getLocalizedOrDirectValue(watch.features) ||
-                    t("noFeaturesAvailable")}{" "}
+                    t("noFeaturesAvailable")}
                 </li>
               )}
             </ul>
@@ -331,10 +376,12 @@ export default function ProdDetails() {
                 <li>
                   <strong>{t("discount_valid_until")}:</strong>{" "}
                   {remainingTime.days} {t("days")} {remainingTime.hours}{" "}
-                  {t("hours")} {remainingTime.minutes} {t("minutes")}{" "}
-                  {remainingTime.seconds} {t("seconds")}
+                  {t("hours")} {remainingTime.minutes}
+                  {t("minutes")} {remainingTime.seconds}
+                  {t("seconds")}
                 </li>
               )}
+
               {"stock" in watch && (
                 <li>
                   <strong>{t("stock")}:</strong> {watch.stock}
@@ -354,6 +401,35 @@ export default function ProdDetails() {
               <Link to={"/cart"}>{t("checkout")}</Link>
             </button>
           </div>
+
+          {suggestedWatches.length > 0 && (
+            <div className="col-12 prodSugg row justify-content-center align-items-center text-center">
+              <h4>{t("also find")}</h4>
+              {suggestedWatches.map((sugg, index) => (
+                <div className="podSuggCard col-lg-3 col-4" key={index}>
+                  <Link
+                    to={`/product_details/${sugg.id}`}
+                    state={{ watch: sugg }}
+                  >
+                    {sugg.imageUrl ? (
+                      <img
+                        src={sugg.imageUrl}
+                        alt={`${getLocalizedOrDirectValue(
+                          sugg.brand
+                        )} ${getLocalizedOrDirectValue(sugg.model)}`}
+                      />
+                    ) : (
+                      <div className="image-placeholder">No Image</div>
+                    )}
+                    <h5 className="mt-2 mb-0">
+                      {getLocalizedOrDirectValue(sugg.brand)}
+                    </h5>
+                    <h6>{getLocalizedOrDirectValue(sugg.model)}</h6>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </>
