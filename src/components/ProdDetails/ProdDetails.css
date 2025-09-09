@@ -65,13 +65,21 @@
         padding: 0;
       }
 
-      .toCartBtn {
+      .toCartBtn,
+      .toCheckoutBtn {
         cursor: pointer;
         padding: 10px 20px;
+        margin-inline-end: 10px;
         border: none;
         background-color: var(--primary-color);
         text-transform: uppercase !important;
         color: var(--white);
+
+        a {
+          color: var(--white);
+          text-decoration: none;
+          text-transform: uppercase !important;
+        }
 
         &:hover {
           outline: 1px solid var(--primary-color);

@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 import NavBar from "../Navbar/Navbar";
 import "./ProdDetails.css";
 import { useLocation, useParams, useNavigate } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 import { doc, getDoc } from "firebase/firestore";
 import { db, storage } from "../../firebase";
 import { ref, getDownloadURL } from "firebase/storage";
@@ -349,6 +349,9 @@ export default function ProdDetails() {
               {addedToCart.includes(watch.code)
                 ? t("addedToCart")
                 : t("add to cart")}
+            </button>
+            <button className="toCheckoutBtn">
+              <Link to={"/cart"}>{t("checkout")}</Link>
             </button>
           </div>
         </div>
