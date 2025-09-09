@@ -116,5 +116,10 @@
   "mm": "mm",
   "gm": "gm",
   "m": "m",
-  "checkout": "checkout"
+  "checkout": "checkout",
+  "filter by": "filter by",
+  "cheapest": "cheapest",
+  "most expensive": "most expensive",
+  "discounts": "discounts",
+  "all": "all"
 }

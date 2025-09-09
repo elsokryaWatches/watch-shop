@@ -6,7 +6,6 @@ import UpBtn from "../UpBtn/UpBtn";
 import ShopNav from "../ShopNav";
 import { Helmet } from "react-helmet";
 import { useLocation, useNavigate } from "react-router-dom";
-
 import { collection, query, getDocs } from "firebase/firestore";
 import { db, storage } from "../../firebase";
 import { ref, getDownloadURL } from "firebase/storage";
@@ -20,7 +19,7 @@ export default function Shop() {
   const [addedToCart, setAddedToCart] = useState(() => {
     return JSON.parse(localStorage.getItem("orders")) || [];
   });
-
+  const [filterOption, setFilterOption] = useState("");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -86,6 +85,12 @@ export default function Shop() {
     setAddedToCart((prev) => [...prev, code]);
   };
 
+  const handleFilterChange = (e) => {
+    const selectedValue = e.target.value;
+    setFilterOption(selectedValue);
+    setCurrentPage(1);
+  };
+
   const handleSearch = () => {
     const results = watches.filter((watch) => {
       const brand =
@@ -121,14 +126,44 @@ export default function Shop() {
     navigate(`?page=${page}`, { replace: true });
   };
 
+  const getFilteredAndSortedWatches = () => {
+    let filteredWatches = [...watches];
+
+    if (filterOption === "cheap") {
+      filteredWatches.sort((a, b) => {
+        const priceA = a.price?.final || a.price?.original || 0;
+        const priceB = b.price?.final || b.price?.original || 0;
+        return priceA - priceB;
+      });
+    } else if (filterOption === "expensive") {
+      filteredWatches.sort((a, b) => {
+        const priceA = a.price?.final || a.price?.original || 0;
+        const priceB = b.price?.final || b.price?.original || 0;
+        return priceB - priceA;
+      });
+    } else if (filterOption === "discounts") {
+      filteredWatches = filteredWatches.filter(
+        (watch) => watch.price?.discount_percentage > 0
+      );
+      filteredWatches.sort(
+        (a, b) => b.price?.discount_percentage - a.price?.discount_percentage
+      );
+    }
+    return filteredWatches;
+  };
+
+  const filteredAndSortedWatches = getFilteredAndSortedWatches();
+
+  const watchesToDisplay = searchTerm
+    ? searchResults
+    : filteredAndSortedWatches;
+
   const watchesPerPage = 20;
-  const visibleWatches = (searchResults ?? watches).slice(
+  const visibleWatches = watchesToDisplay.slice(
     (currentPage - 1) * watchesPerPage,
     currentPage * watchesPerPage
   );
-  const totalPages = Math.ceil(
-    (searchResults ?? watches).length / watchesPerPage
-  );
+  const totalPages = Math.ceil(watchesToDisplay.length / watchesPerPage);
 
   const getPaginationItems = () => {
     const items = [];
@@ -186,6 +221,19 @@ export default function Shop() {
             <ShopNav />
 
             <div className="search-bar col-12 my-3 d-flex justify-content-center">
+              <select
+                className="filterProds"
+                value={filterOption}
+                onChange={handleFilterChange}
+              >
+                <option disabled value="">
+                  {t("filter by")}
+                </option>
+                <option value="">{t("all")}</option>
+                <option value="cheap">{t("cheapest")}</option>
+                <option value="expensive">{t("most expensive")}</option>
+                <option value="discounts">{t("discounts")}</option>
+              </select>
               <input
                 type="text"
                 placeholder={t("search")}

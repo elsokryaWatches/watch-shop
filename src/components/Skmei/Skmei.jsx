@@ -17,6 +17,7 @@ export default function Skmei() {
 
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState(null);
+  const [filterOption, setFilterOption] = useState("");
 
   const [addedToCart, setAddedToCart] = useState(() => {
     return JSON.parse(localStorage.getItem("orders")) || [];
@@ -102,18 +103,6 @@ export default function Skmei() {
 
   const watchesPerPage = 20;
 
-  const watchesToPaginate = searchResults !== null ? searchResults : watches;
-
-  const indexOfLastWatch = currentPage * watchesPerPage;
-  const indexOfFirstWatch = indexOfLastWatch - watchesPerPage;
-
-  const currentWatchesToDisplay = watchesToPaginate.slice(
-    indexOfFirstWatch,
-    indexOfLastWatch
-  );
-
-  const totalPages = Math.ceil(watchesToPaginate.length / watchesPerPage);
-
   const handleAddToCart = (code) => {
     let orders = JSON.parse(localStorage.getItem("orders")) || [];
     if (!orders.includes(code)) {
@@ -121,6 +110,12 @@ export default function Skmei() {
       localStorage.setItem("orders", JSON.stringify(orders));
     }
     setAddedToCart((prev) => [...prev, code]);
+  };
+
+  const handleFilterChange = (e) => {
+    const selectedValue = e.target.value;
+    setFilterOption(selectedValue);
+    setCurrentPage(1);
   };
 
   const handleSearch = () => {
@@ -151,6 +146,48 @@ export default function Skmei() {
       handleSearch();
     }
   };
+
+  const getFilteredAndSortedWatches = () => {
+    let filteredWatches = [...watches];
+
+    if (filterOption === "cheap") {
+      filteredWatches.sort((a, b) => {
+        const priceA = a.price?.final || a.price?.original || 0;
+        const priceB = b.price?.final || b.price?.original || 0;
+        return priceA - priceB;
+      });
+    } else if (filterOption === "expensive") {
+      filteredWatches.sort((a, b) => {
+        const priceA = a.price?.final || a.price?.original || 0;
+        const priceB = b.price?.final || b.price?.original || 0;
+        return priceB - priceA;
+      });
+    } else if (filterOption === "discounts") {
+      filteredWatches = filteredWatches.filter(
+        (watch) => watch.price?.discount_percentage > 0
+      );
+      filteredWatches.sort(
+        (a, b) => b.price?.discount_percentage - a.price?.discount_percentage
+      );
+    }
+    return filteredWatches;
+  };
+
+  const filteredAndSortedWatches = getFilteredAndSortedWatches();
+
+  const watchesToPaginate = searchTerm
+    ? searchResults
+    : filteredAndSortedWatches;
+
+  const indexOfLastWatch = currentPage * watchesPerPage;
+  const indexOfFirstWatch = indexOfLastWatch - watchesPerPage;
+
+  const currentWatchesToDisplay = watchesToPaginate.slice(
+    indexOfFirstWatch,
+    indexOfLastWatch
+  );
+
+  const totalPages = Math.ceil(watchesToPaginate.length / watchesPerPage);
 
   const getPaginationItems = () => {
     const items = [];
@@ -206,6 +243,19 @@ export default function Skmei() {
             </div>
             <ShopNav />
             <div className="search-bar col-12 my-3 d-flex justify-content-center">
+              <select
+                className="filterProds"
+                value={filterOption}
+                onChange={handleFilterChange}
+              >
+                <option disabled value="">
+                  {t("filter by")}
+                </option>
+                <option value="">{t("all")}</option>
+                <option value="cheap">{t("cheapest")}</option>
+                <option value="expensive">{t("most expensive")}</option>
+                <option value="discounts">{t("discounts")}</option>
+              </select>
               <input
                 type="text"
                 placeholder={t("search")}
