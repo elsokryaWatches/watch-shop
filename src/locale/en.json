@@ -115,5 +115,6 @@
   "orderSuccessMessage": "your order is submitted and we will contact you soon",
   "mm": "mm",
   "gm": "gm",
-  "m": "m"
+  "m": "m",
+  "checkout": "checkout"
 }
