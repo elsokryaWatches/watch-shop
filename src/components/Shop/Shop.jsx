@@ -220,9 +220,9 @@ export default function Shop() {
 
             <ShopNav />
 
-            <div className="search-bar col-12 my-3 d-flex justify-content-center">
+            <div className="search-bar col-12 my-3 d-flex row justify-content-center mx-0 px-0">
               <select
-                className="filterProds"
+                className="filterProds col-3 col-lg-1"
                 value={filterOption}
                 onChange={handleFilterChange}
               >
@@ -240,7 +240,7 @@ export default function Shop() {
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 onKeyDown={handleKeyDown}
-                className="form-control w-50 me-2"
+                className="form-control w-50 mx-1 col-4 col-lg-5"
               />
               <button onClick={handleSearch} className="searchBtn">
                 {t("search")}
@@ -248,7 +248,7 @@ export default function Shop() {
             </div>
 
             {loading ? (
-              <div className="col-12 d-flex justify-content-center my-5">
+              <div className="col-12 d-flex justify-content-center">
                 <LoadingSpinner />
               </div>
             ) : error ? (
