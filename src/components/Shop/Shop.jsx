@@ -155,7 +155,7 @@ export default function Shop() {
   const filteredAndSortedWatches = getFilteredAndSortedWatches();
 
   const watchesToDisplay = searchTerm
-    ? searchResults
+    ? searchResults || []
     : filteredAndSortedWatches;
 
   const watchesPerPage = 20;

@@ -63,6 +63,8 @@ export default function Admin() {
     stock: "",
     gender_en: "",
     gender_ar: "",
+    color_en: "",
+    color_ar: "",
     material_en: "",
     material_ar: "",
     movement_en: "",
@@ -407,6 +409,7 @@ export default function Admin() {
           setSpecValue("waterResistant");
 
         productDataForFirestore.outer_frame = "Stainless Steel";
+        productDataForFirestore.color = setLocalizedMap("color");
       } else {
         productDataForFirestore.color = setLocalizedMap("color");
       }
@@ -632,6 +635,8 @@ export default function Admin() {
         stock: product.stock || 0,
         gender_en: product.gender?.en || "",
         gender_ar: product.gender?.ar || "",
+        color_en: product.color?.en || "",
+        color_ar: product.color?.ar || "",
         material_en: product.material?.en || "",
         material_ar: product.material?.ar || "",
         movement_en: product.movement?.en || "",
@@ -1045,6 +1050,32 @@ export default function Admin() {
                           />
                         </div>
                       )}
+
+                      <div className="inputContainer col-4 row">
+                        <label className="col-12" htmlFor="watchColor_en">
+                          {t("color")}
+                        </label>
+                        <input
+                          className="col-12"
+                          type="text"
+                          name="color_en"
+                          id="watchColor_en"
+                          value={watchFormData.color_en}
+                          onChange={handleWatchInputChange}
+                          disabled={isSubmitting}
+                          placeholder={t("english")}
+                        />
+                        <input
+                          className="col-12"
+                          type="text"
+                          name="color_ar"
+                          id="watchColor_ar"
+                          value={watchFormData.color_ar}
+                          onChange={handleWatchInputChange}
+                          disabled={isSubmitting}
+                          placeholder={t("arabic")}
+                        />
+                      </div>
                       <div className="inputContainer col-4 row">
                         <label className="col-12" htmlFor="watchMaterial_en">
                           {t("material")}

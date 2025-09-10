@@ -176,7 +176,7 @@ export default function Skmei() {
   const filteredAndSortedWatches = getFilteredAndSortedWatches();
 
   const watchesToPaginate = searchTerm
-    ? searchResults
+    ? searchResults || []
     : filteredAndSortedWatches;
 
   const indexOfLastWatch = currentPage * watchesPerPage;
