@@ -89,6 +89,15 @@ export default function Watches() {
             <h2>{t("watches")}</h2>
           </div>
           <div className="watchesContent row col-10">
+            {watches.length === 0 && (
+              <div className="col-12 text-center my-5">
+                <p className="no-products-message">
+                  {t(
+                    "No products available at the moment. Please check back later."
+                  )}
+                </p>
+              </div>
+            )}
             {watches.map((watch) => (
               <div
                 className="watch homeSecAnimation col-lg-2 col-10"

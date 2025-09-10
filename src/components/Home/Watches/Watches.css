@@ -23,6 +23,12 @@
       align-items: center;
       gap: 20px;
 
+      .no-products-message {
+        color: var(--text);
+        margin: 0;
+        padding: 0;
+      }
+
       .watch {
         transition: all 0.3s ease-in-out;
         cursor: pointer;
