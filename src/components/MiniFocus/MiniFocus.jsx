@@ -264,219 +264,211 @@ export default function MiniFocus() {
 
             <ShopNav />
 
-            {watches.length === 0 && !loading && !error ? (
-              <div className="Watches row col-12">
-                <div className="soonText col-12">
-                  <h1>{t("soon")}</h1>
-                </div>
+            <>
+              <div className="search-bar col-12 my-3 d-flex justify-content-center">
+                <select
+                  className="filterProds"
+                  value={filterOption}
+                  onChange={handleFilterChange}
+                >
+                  <option disabled value="">
+                    {t("filter by")}
+                  </option>
+                  <option value="">{t("all")}</option>
+                  <option value="cheap">{t("cheapest")}</option>
+                  <option value="expensive">{t("most expensive")}</option>
+                  <option value="discounts">{t("discounts")}</option>
+                </select>
+                <input
+                  type="text"
+                  placeholder={t("search")}
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  onKeyDown={handleKeyDown}
+                  className="form-control w-50 me-2"
+                />
+                <button onClick={handleSearch} className="searchBtn">
+                  {t("search")}
+                </button>
               </div>
-            ) : (
-              <>
-                <div className="search-bar col-12 my-3 d-flex justify-content-center">
-                  <select
-                    className="filterProds"
-                    value={filterOption}
-                    onChange={handleFilterChange}
-                  >
-                    <option disabled value="">
-                      {t("filter by")}
-                    </option>
-                    <option value="">{t("all")}</option>
-                    <option value="cheap">{t("cheapest")}</option>
-                    <option value="expensive">{t("most expensive")}</option>
-                    <option value="discounts">{t("discounts")}</option>
-                  </select>
-                  <input
-                    type="text"
-                    placeholder={t("search")}
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    onKeyDown={handleKeyDown}
-                    className="form-control w-50 me-2"
-                  />
-                  <button onClick={handleSearch} className="searchBtn">
-                    {t("search")}
-                  </button>
-                </div>
 
-                <div className="genderFilter d-flex justify-content-center">
-                  <button
-                    className={`navBtn ${
-                      selectedGender === "Men" ? "selected" : ""
-                    }`}
-                    onClick={() => {
-                      setSelectedGender("Men");
-                      setSearchResults(null);
-                      setCurrentPage(1);
-                    }}
-                  >
-                    {t("men")}
-                  </button>
-                  <button
-                    className={`navBtn ${
-                      selectedGender === "Women" ? "selected" : ""
-                    }`}
-                    onClick={() => {
-                      setSelectedGender("Women");
-                      setSearchResults(null);
-                      setCurrentPage(1);
-                    }}
-                  >
-                    {t("women")}
-                  </button>
+              <div className="genderFilter d-flex justify-content-center">
+                <button
+                  className={`navBtn ${
+                    selectedGender === "Men" ? "selected" : ""
+                  }`}
+                  onClick={() => {
+                    setSelectedGender("Men");
+                    setSearchResults(null);
+                    setCurrentPage(1);
+                  }}
+                >
+                  {t("men")}
+                </button>
+                <button
+                  className={`navBtn ${
+                    selectedGender === "Women" ? "selected" : ""
+                  }`}
+                  onClick={() => {
+                    setSelectedGender("Women");
+                    setSearchResults(null);
+                    setCurrentPage(1);
+                  }}
+                >
+                  {t("women")}
+                </button>
+              </div>
+              {loading ? (
+                <div className="col-12 d-flex justify-content-center my-5">
+                  <LoadingSpinner />
                 </div>
-                {loading ? (
-                  <div className="col-12 d-flex justify-content-center my-5">
-                    <LoadingSpinner />
-                  </div>
-                ) : error ? (
-                  <div className="col-12">
-                    <p style={{ color: "red" }}>{error}</p>
-                  </div>
-                ) : (
-                  <>
-                    {currentWatchesToDisplay.length === 0 && (
-                      <div className="col-12 text-center my-5">
-                        <p className="no-products-message">
-                          {searchTerm || filterOption !== ""
-                            ? t(
-                                "No products found matching your search or filter criteria."
-                              )
-                            : t(
-                                "No products available at the moment. Please check back later."
-                              )}
-                        </p>
-                      </div>
-                    )}
-                    <div className="Watches row col-12">
-                      {currentWatchesToDisplay.map((watch) => (
-                        <div
-                          className="watch homeSecAnimation col-9 col-lg-2"
-                          key={watch.id}
-                        >
-                          {watch.price?.discount_percentage > 0 && (
-                            <div className="discount">
-                              <span className="discount_percentage">
-                                {watch.price.discount_percentage}%
-                              </span>
-                              <span className="discount_period">
-                                {t("for")} {watch.discount?.duration_days}{" "}
-                                {t("days")}
-                              </span>
+              ) : error ? (
+                <div className="col-12">
+                  <p style={{ color: "red" }}>{error}</p>
+                </div>
+              ) : (
+                <>
+                  {currentWatchesToDisplay.length === 0 && (
+                    <div className="col-12 text-center my-5">
+                      <p className="no-products-message">
+                        {searchTerm || filterOption !== ""
+                          ? t(
+                              "No products found matching your search or filter criteria."
+                            )
+                          : t(
+                              "No products available at the moment. Please check back later."
+                            )}
+                      </p>
+                    </div>
+                  )}
+                  <div className="Watches row col-12">
+                    {currentWatchesToDisplay.map((watch) => (
+                      <div
+                        className="watch homeSecAnimation col-9 col-lg-2"
+                        key={watch.id}
+                      >
+                        {watch.price?.discount_percentage > 0 && (
+                          <div className="discount">
+                            <span className="discount_percentage">
+                              {watch.price.discount_percentage}%
+                            </span>
+                            <span className="discount_period">
+                              {t("for")} {watch.discount?.duration_days}{" "}
+                              {t("days")}
+                            </span>
+                          </div>
+                        )}
+                        <div className="img">
+                          {watch.firstImageUrl ? (
+                            <img
+                              src={watch.firstImageUrl}
+                              alt={watch.brand + " " + watch.model}
+                              onContextMenu={(e) => e.preventDefault()}
+                            />
+                          ) : (
+                            <div className="image-placeholder">
+                              No Image Available
                             </div>
                           )}
-                          <div className="img">
-                            {watch.firstImageUrl ? (
-                              <img
-                                src={watch.firstImageUrl}
-                                alt={watch.brand + " " + watch.model}
-                                onContextMenu={(e) => e.preventDefault()}
-                              />
-                            ) : (
-                              <div className="image-placeholder">
-                                No Image Available
-                              </div>
-                            )}
-                          </div>
-                          <div className="details">
-                            <Link
-                              to={`/product_details/${watch.code}`}
-                              state={{ watch }}
-                            >
-                              <h4 className="name">
-                                {watch.brand?.[i18n.language]}&nbsp;
-                                {watch.model?.[i18n.language]}
-                              </h4>
-                            </Link>
-                            {watch.price?.discount_percentage > 0 &&
-                            watch.price?.original ? (
-                              <del>
-                                <h5 className="price">
-                                  {watch.price.original} {watch.price.currency}
-                                </h5>
-                              </del>
-                            ) : null}
-                            <h4 className="dis_price">
-                              {watch.price?.discount_percentage > 0 &&
-                              watch.price?.final ? (
-                                <>
-                                  {watch.price.final} {watch.price.currency}
-                                </>
-                              ) : (
-                                <>
-                                  {watch.price?.original} {watch.price.currency}
-                                </>
-                              )}
-                            </h4>
-                            {typeof watch.stock !== "undefined" && (
-                              <h5 className="stock">
-                                <strong>{t("stock")}: </strong>
-                                {watch.stock}
-                              </h5>
-                            )}
-                          </div>
-                          <div className="btns">
-                            <button
-                              className="addToCart"
-                              onClick={() => handleAddToCart(watch.code)}
-                              disabled={addedToCart.includes(watch.code)}
-                            >
-                              {addedToCart.includes(watch.code)
-                                ? t("addedToCart")
-                                : t("add to cart")}
-                            </button>
-                          </div>
                         </div>
-                      ))}
-                    </div>
-
-                    <div className="pagination col-12 d-flex justify-content-center mt-4">
-                      <button
-                        className="prevBtn"
-                        onClick={() => updatePage(Math.max(currentPage - 1, 1))}
-                        disabled={currentPage === 1}
-                      >
-                        {t("Previous")}
-                      </button>
-
-                      {getPaginationItems().map((item, index) =>
-                        item === "..." ? (
-                          <span key={index} className="mx-1">
-                            ...
-                          </span>
-                        ) : (
-                          <button
-                            key={index}
-                            className={`pagNum mx-1 ${
-                              currentPage === item ? "currPagNum" : "pagNum"
-                            }`}
-                            onClick={() => updatePage(item)}
+                        <div className="details">
+                          <Link
+                            to={`/product_details/${watch.code}`}
+                            state={{ watch }}
                           >
-                            {item}
+                            <h4 className="name">
+                              {watch.brand?.[i18n.language]}&nbsp;
+                              {watch.model?.[i18n.language]}
+                            </h4>
+                          </Link>
+                          {watch.price?.discount_percentage > 0 &&
+                          watch.price?.original ? (
+                            <del>
+                              <h5 className="price">
+                                {watch.price.original} {watch.price.currency}
+                              </h5>
+                            </del>
+                          ) : null}
+                          <h4 className="dis_price">
+                            {watch.price?.discount_percentage > 0 &&
+                            watch.price?.final ? (
+                              <>
+                                {watch.price.final} {watch.price.currency}
+                              </>
+                            ) : (
+                              <>
+                                {watch.price?.original} {watch.price.currency}
+                              </>
+                            )}
+                          </h4>
+                          {typeof watch.stock !== "undefined" && (
+                            <h5 className="stock">
+                              <strong>{t("stock")}: </strong>
+                              {watch.stock}
+                            </h5>
+                          )}
+                        </div>
+                        <div className="btns">
+                          <button
+                            className="addToCart"
+                            onClick={() => handleAddToCart(watch.code)}
+                            disabled={addedToCart.includes(watch.code)}
+                          >
+                            {addedToCart.includes(watch.code)
+                              ? t("addedToCart")
+                              : t("add to cart")}
                           </button>
-                        )
-                      )}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
 
-                      <button
-                        className="nextBtn"
-                        onClick={() =>
-                          updatePage(Math.min(currentPage + 1, totalPages))
-                        }
-                        disabled={currentPage === totalPages}
-                      >
-                        {t("Next")}
-                      </button>
-                    </div>
+                  <div className="pagination col-12 d-flex justify-content-center mt-4">
+                    <button
+                      className="prevBtn"
+                      onClick={() => updatePage(Math.max(currentPage - 1, 1))}
+                      disabled={currentPage === 1}
+                    >
+                      {t("Previous")}
+                    </button>
 
-                    <div className="toCart col-10">
-                      <button className="toCartBtn">
-                        <Link to={"/cart"}>{t("to cart")}</Link>
-                      </button>
-                    </div>
-                  </>
-                )}
-              </>
-            )}
+                    {getPaginationItems().map((item, index) =>
+                      item === "..." ? (
+                        <span key={index} className="mx-1">
+                          ...
+                        </span>
+                      ) : (
+                        <button
+                          key={index}
+                          className={`pagNum mx-1 ${
+                            currentPage === item ? "currPagNum" : "pagNum"
+                          }`}
+                          onClick={() => updatePage(item)}
+                        >
+                          {item}
+                        </button>
+                      )
+                    )}
+
+                    <button
+                      className="nextBtn"
+                      onClick={() =>
+                        updatePage(Math.min(currentPage + 1, totalPages))
+                      }
+                      disabled={currentPage === totalPages}
+                    >
+                      {t("Next")}
+                    </button>
+                  </div>
+
+                  <div className="toCart col-10">
+                    <button className="toCartBtn">
+                      <Link to={"/cart"}>{t("to cart")}</Link>
+                    </button>
+                  </div>
+                </>
+              )}
+            </>
           </div>
         </div>
       </div>
