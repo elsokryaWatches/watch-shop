@@ -11,7 +11,7 @@ export default function Shoes() {
         <div className="container-fluid">
           <div className="shoesInner row">
             <div className="shoesHeader col-12">
-              <h2>{t("shoes")}</h2>
+              <h2>{t("soon")}</h2>
             </div>
             <div className="shoesContents col-12">
               <h3>{t("soon")}</h3>
