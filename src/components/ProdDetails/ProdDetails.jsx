@@ -338,6 +338,13 @@ export default function ProdDetails() {
                 </li>
               )}
 
+              {watch.color && (
+                <li>
+                  <strong>{t("color")}:</strong>{" "}
+                  {getLocalizedOrDirectValue(watch.color)}
+                </li>
+              )}
+
               {watch.movement && (
                 <li>
                   <strong>{t("movement")}:</strong>{" "}
@@ -403,7 +410,7 @@ export default function ProdDetails() {
           </div>
 
           {suggestedWatches.length > 0 && (
-            <div className="col-12 prodSugg row justify-content-center align-items-center text-center">
+            <div className="col-12 prodSugg row justify-content-start align-items-center text-center">
               <h4>{t("also find")}</h4>
               {suggestedWatches.map((sugg, index) => (
                 <div className="podSuggCard col-lg-3 col-4" key={index}>
@@ -425,6 +432,7 @@ export default function ProdDetails() {
                       {getLocalizedOrDirectValue(sugg.brand)}
                     </h5>
                     <h6>{getLocalizedOrDirectValue(sugg.model)}</h6>
+                    <h6>{getLocalizedOrDirectValue(sugg.color)}</h6>
                   </Link>
                 </div>
               ))}

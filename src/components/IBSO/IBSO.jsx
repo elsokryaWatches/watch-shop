@@ -179,7 +179,7 @@ export default function IBSO() {
   const filteredAndSortedWatches = getFilteredAndSortedWatches();
 
   const watchesAfterSearch = searchTerm
-    ? searchResults
+    ? searchResults || []
     : filteredAndSortedWatches;
 
   const filteredByGender = watchesAfterSearch.filter((watch) => {
