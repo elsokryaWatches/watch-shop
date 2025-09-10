@@ -279,91 +279,98 @@ export default function Skmei() {
               </div>
             ) : (
               <>
+                {currentWatchesToDisplay.length === 0 && (
+                  <div className="col-12 text-center my-5">
+                    <p className="no-products-message">
+                      {searchTerm || filterOption !== ""
+                        ? t(
+                            "No products found matching your search or filter criteria."
+                          )
+                        : t(
+                            "No products available at the moment. Please check back later."
+                          )}
+                    </p>
+                  </div>
+                )}
                 <div className="Watches row col-12">
-                  {currentWatchesToDisplay.length > 0 ? (
-                    currentWatchesToDisplay.map((watch) => (
-                      <div
-                        className="watch homeSecAnimation col-9 col-lg-2"
-                        key={watch.code}
-                      >
-                        {watch.price?.discount_percentage > 0 && (
-                          <div className="discount">
-                            <span className="discount_percentage">
-                              {watch.price?.discount_percentage}%
-                            </span>
-                            <span className="discount_period">
-                              {t("for")} {watch.discount?.duration_days}{" "}
-                              {t("days")}{" "}
-                            </span>
+                  {currentWatchesToDisplay.map((watch) => (
+                    <div
+                      className="watch homeSecAnimation col-9 col-lg-2"
+                      key={watch.code}
+                    >
+                      {watch.price?.discount_percentage > 0 && (
+                        <div className="discount">
+                          <span className="discount_percentage">
+                            {watch.price?.discount_percentage}%
+                          </span>
+                          <span className="discount_period">
+                            {t("for")} {watch.discount?.duration_days}{" "}
+                            {t("days")}{" "}
+                          </span>
+                        </div>
+                      )}
+                      <div className="img">
+                        {watch.firstImageUrl ? (
+                          <img
+                            src={watch.firstImageUrl}
+                            alt={watch.brand + " " + watch.model}
+                            onContextMenu={(e) => e.preventDefault()}
+                          />
+                        ) : (
+                          <div className="image-placeholder">
+                            No Image Available
                           </div>
                         )}
-                        <div className="img">
-                          {watch.firstImageUrl ? (
-                            <img
-                              src={watch.firstImageUrl}
-                              alt={watch.brand + " " + watch.model}
-                              onContextMenu={(e) => e.preventDefault()}
-                            />
-                          ) : (
-                            <div className="image-placeholder">
-                              No Image Available
-                            </div>
-                          )}
-                        </div>
-                        <div className="details">
-                          <Link
-                            to={`/product_details/${watch.code}`}
-                            state={{ watch }}
-                          >
-                            <h4 className="name">
-                              {watch.brand?.[i18n.language]}&nbsp;
-                              {watch.model?.[i18n.language]}
-                            </h4>
-                          </Link>
-
-                          {watch.price?.discount_percentage > 0 &&
-                          watch.price?.original ? (
-                            <del>
-                              <h5 className="price">
-                                {watch.price.original} {watch.price.currency}
-                              </h5>
-                            </del>
-                          ) : null}
-                          <h4 className="dis_price">
-                            {watch.price?.discount_percentage > 0 &&
-                            watch.price?.final ? (
-                              <>
-                                {watch.price.final} {watch.price.currency}
-                              </>
-                            ) : (
-                              <>
-                                {watch.price?.original} {watch.price.currency}
-                              </>
-                            )}
-                          </h4>
-                          <h5 className="stock">
-                            <strong>{t("stock")}: </strong>
-                            {watch.stock}
-                          </h5>
-                        </div>
-                        <div className="btns">
-                          <button
-                            className="addToCart"
-                            onClick={() => handleAddToCart(watch.code)}
-                            disabled={addedToCart.includes(watch.code)}
-                          >
-                            {addedToCart.includes(watch.code)
-                              ? t("addedToCart")
-                              : t("add to cart")}
-                          </button>
-                        </div>
                       </div>
-                    ))
-                  ) : (
-                    <div className="col-12 text-center mt-5">
-                      <h4>{t("No watches found matching your search.")}</h4>
+                      <div className="details">
+                        <Link
+                          to={`/product_details/${watch.code}`}
+                          state={{ watch }}
+                        >
+                          <h4 className="name">
+                            {watch.brand?.[i18n.language]}&nbsp;
+                            {watch.model?.[i18n.language]}
+                          </h4>
+                        </Link>
+
+                        {watch.price?.discount_percentage > 0 &&
+                        watch.price?.original ? (
+                          <del>
+                            <h5 className="price">
+                              {watch.price.original} {watch.price.currency}
+                            </h5>
+                          </del>
+                        ) : null}
+                        <h4 className="dis_price">
+                          {watch.price?.discount_percentage > 0 &&
+                          watch.price?.final ? (
+                            <>
+                              {watch.price.final} {watch.price.currency}
+                            </>
+                          ) : (
+                            <>
+                              {watch.price?.original} {watch.price.currency}
+                            </>
+                          )}
+                        </h4>
+                        <h5 className="stock">
+                          <strong>{t("stock")}: </strong>
+                          {watch.stock}
+                        </h5>
+                      </div>
+                      <div className="btns">
+                        <button
+                          className="addToCart"
+                          onClick={() => handleAddToCart(watch.code)}
+                          disabled={addedToCart.includes(watch.code)}
+                        >
+                          {addedToCart.includes(watch.code)
+                            ? t("addedToCart")
+                            : t("add to cart")}
+                        </button>
+                      </div>
                     </div>
-                  )}
+                  ))}
                 </div>
                 <div className="pagination col-12 d-flex justify-content-center mt-4">
                   <button

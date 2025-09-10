@@ -257,6 +257,19 @@ export default function Shop() {
               </div>
             ) : (
               <>
+                {visibleWatches.length === 0 && (
+                  <div className="col-12 text-center my-5">
+                    <p className="no-products-message">
+                      {searchTerm || filterOption !== ""
+                        ? t(
+                            "No products found matching your search or filter criteria."
+                          )
+                        : t(
+                            "No products available at the moment. Please check back later."
+                          )}
+                    </p>
+                  </div>
+                )}
                 <div className="Watches row col-12">
                   {visibleWatches.map((watch) => {
                     const brand =
