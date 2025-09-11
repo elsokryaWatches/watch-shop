@@ -219,7 +219,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link className="dropdown-item" to={"/"}>
-                    {t("shoes")}
+                    {t("soon")}
                   </Link>
                 </li>
               </ul>
@@ -397,7 +397,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link className="dropdown-item" to={"/"}>
-                      {t("shoes")}
+                      {t("soon")}
                     </Link>
                   </li>
                 </ul>

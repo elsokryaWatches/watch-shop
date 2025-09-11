@@ -91,7 +91,8 @@ export default function ProdDetails() {
             .filter(
               (w) =>
                 w.model.en === currentWatchData.model.en &&
-                w.id !== currentWatchData.id
+                w.id !== currentWatchData.id &&
+                w.stock > 0 
             )
             .slice(0, 5);
 

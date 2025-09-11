@@ -536,10 +536,16 @@ export default function Admin() {
               processedProduct.weight_en = value.weight?.en || "";
               processedProduct.weight_ar = value.weight?.ar || "";
             } else if (key === "water_resistance") {
-              processedProduct.waterResistant_en =
-                value.waterResistant?.en || "";
-              processedProduct.waterResistant_ar =
-                value.waterResistant?.ar || "";
+              if (typeof value === "string") {
+                processedProduct.waterResistant_en = value;
+                processedProduct.waterResistant_ar = value;
+              } else if (typeof value === "object" && value !== null) {
+                processedProduct.waterResistant_en = value.en || "";
+                processedProduct.waterResistant_ar = value.ar || "";
+              } else {
+                processedProduct.waterResistant_en = "";
+                processedProduct.waterResistant_ar = "";
+              }
             } else if (key === "outer_frame") {
               processedProduct.outerFrame = value || "";
             } else if (
@@ -623,6 +629,23 @@ export default function Admin() {
     setSubmitError(null);
 
     if (crudType === "watches") {
+      let waterResistant_en = "";
+      let waterResistant_ar = "";
+
+      if (typeof product.water_resistance === "string") {
+        waterResistant_en = product.water_resistance;
+        waterResistant_ar = product.water_resistance;
+      } else if (
+        typeof product.water_resistance === "object" &&
+        product.water_resistance !== null
+      ) {
+        waterResistant_en = product.water_resistance.en || "";
+        waterResistant_ar = product.water_resistance.ar || "";
+      } else {
+        waterResistant_en = product.waterResistant_en || "";
+        waterResistant_ar = product.waterResistant_ar || "";
+      }
+
       setWatchFormData({
         code: product.code || "",
         brand: product.brand || "",
@@ -647,8 +670,8 @@ export default function Admin() {
         caseThickness_ar: product.caseThickness_ar || "",
         weight_en: product.weight_en || "",
         weight_ar: product.weight_ar || "",
-        waterResistant_en: product.waterResistant_en || "",
-        waterResistant_ar: product.waterResistant_ar || "",
+        waterResistant_en: waterResistant_en || "",
+        waterResistant_ar: waterResistant_ar || "",
         features_en: product.features_en || "",
         features_ar: product.features_ar || "",
       });
